@@ -24,9 +24,7 @@ $ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-### Deployment (Manual)
-
-We are full CI/CD with GitHub Actions, but if you want to deploy manually, you can use the following command.
+### Deployment
 
 Using SSH:
 
@@ -40,9 +38,4 @@ Not using SSH:
 $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `main` branch.
-
-### Resources
-
-- [Docusaurus Documentation](https://docusaurus.io/)
-- [Markdown Basic Syntax](https://www.markdownguide.org/basic-syntax/)
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
