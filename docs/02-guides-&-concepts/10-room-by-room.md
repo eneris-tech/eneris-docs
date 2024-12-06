@@ -1,1 +1,0 @@
-# Room-by-room inspections
