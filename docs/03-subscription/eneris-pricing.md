@@ -8,9 +8,11 @@ As a new user, your account has access to the **Free Trial** for 30 days. The Fr
 
 After 30 days, your account will be automatically enrolled into the **Free Subscription**, where you may continue to create two free reports every 30 days.
 
-## Need more than two free reports?
+:::tip[Tip]
 
-Subscribe to the [**Monthly Subscription** or **Annual Subscription**](https://www.eneris.ca/pricing) plans to create unlimited reports.
+Subscribe to the [**Monthly Subscription** or **Annual Subscription**](https://www.eneris.ca/pricing) plan to create unlimited reports.
+
+:::
 
 ## Multi-inspector mode
 
