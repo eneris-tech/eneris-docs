@@ -1,1 +1,7 @@
 # ISN account integration
+
+Inspectors on a paid subscription may choose to connect Eneris with their ISN account. Doing so automatically syncs newly created reports with the connected ISN account.
+
+We only recommend using this feature if you have previously relied on ISN to run your business.
+
+[Click here to learn how to find your ISN credentials.](http://help.inspectionsupport.net/articles/2191507-finding-access-keys-in-isn)
