@@ -1,4 +1,4 @@
-# Report settings
+# Account and report settings
 
 Account and report settings may be updated through the **Settings** menu.
 

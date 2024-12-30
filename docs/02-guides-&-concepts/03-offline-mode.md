@@ -8,7 +8,7 @@ The Eneris iOS and Android Apps include an **Offline Mode**, which enables you t
 ## How to enable Offline Mode
 
 1. Create a new inspection or select the inspection you would like to perform in Offline Mode.
-2. At the top of the **General** page select the **Use Offline** button.
+2. At the top of the **General** tab select the `Use Offline` button.
 
 ![offline-mode-1.webp](./img/offline-mode-1.webp)
 
@@ -25,11 +25,11 @@ Follow these simple steps:
 1. Find an area with cellular reception or wifi connection.
     - Depending on your inspection, this may be when you are in a certain area of the property or back at your own office.
 2. Navigate to the **General** page of the inspection.
-3. Select **Sync to Cloud - Ready**.
+3. Select `Sync to Cloud - Ready`.
 
 ![offline-mode-3.webp](./img/offline-mode-3.webp)
 
-4. Select **Begin Sync**.
+4. Select `Begin Sync`.
 
 ![offline-mode-4.webp](./img/offline-mode-4.webp)
 
@@ -43,8 +43,8 @@ Online Mode is required to generate the finalized inspection report. Follow thes
 
 1. Find an area with strong cellular or wifi connection.
     - Depending on your inspection, this may be when you are back at your office or in a certain area of the property.
-2. Navigate to the **General** page of the inspection.
-3. Select **Exit Offline Mode**.
+2. Navigate to the **General** tab of the inspection.
+3. Select `Exit Offline Mode`.
 
 ![offline-mode-6.webp](./img/offline-mode-6.webp)
 
@@ -52,7 +52,7 @@ Online Mode is required to generate the finalized inspection report. Follow thes
 
 ![offline-mode-7.webp](./img/offline-mode-7.webp)
 
-5. Select **OK**.
+5. Select `OK`.
 
 ![offline-mode-8.webp](./img/offline-mode-8.webp)
 

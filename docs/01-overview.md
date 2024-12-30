@@ -4,7 +4,7 @@
 
 asdf
 
-## Why Eneirs?
+## Why Eneris?
 
 asdf
 

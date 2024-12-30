@@ -1,1 +1,42 @@
 # Reports
+
+Eneris enables each inspector to input inspection details based on their preferences and association guidelines. That said, there are a few best practices that may be beneficial to follow to ensure better readability in the final inspection report.
+
+## Guided tutorial
+
+When you first create a new account a guided tutorial will help you understand the basics of completing an inspection report in Eneris.
+
+If you would like to restart this guided tutorial:
+
+1. Navigate to the `Settings` menu.
+2. Select the `Start Tour` button.
+
+![reports-1.webp](./img/reports-1.webp)
+
+## Sample reports
+
+Sample **PDF reports**:
+
+- [PDF report sample 1](https://eneris-prod0.s3-us-west-1.amazonaws.com/8704e0c27c83730cb1f118fed3f3f37e/irYiPLhLt6X7faNMr?prevUrlPath=%2F)
+- [PDF report sample 2](https://eneris-prod0.s3-us-west-1.amazonaws.com/50eaa2346bf971880a96d8707e90fffe/THDYQe2SfE4hNH8Ez?prevUrlPath=%2F)
+
+Sample **PDF summaries**:
+
+- [PDF summary sample 1](https://eneris-prod0.s3-us-west-1.amazonaws.com/33b852da593cf3a84920d5d827bc2889/EotvxYSxHKLorNCS3?prevUrlPath=%2F)
+- [PDF summary sample 2](https://eneris-prod0.s3-us-west-1.amazonaws.com/50eaa2346bf971880a96d8707e90fffe/JW8doLYRWdnhEL8gW?prevUrlPath=%2F)
+
+Sample **web reports**:
+
+- [Web report sample 1](https://ener.is/presentation/anbTwYyctiLsJQG3T1?prevUrlPath=%2F)
+- [Web report sample 2](https://ener.is/presentation/2ZNdNMSZkGz3qQkSq?prevUrlPath=%2F)
+
+## Report writing best practices
+
+Here are a couple of tips to optimize the length of inspection reports completed in Eneris:
+
+1. Consider entering business details, SOP templates, custom report comments, etc. prior to your first on-site inspection.
+2. Create the inspection (i.e., enter the property address, client name, date/time of the inspection, and any other general comments) prior to arriving on-site.
+    - If the property is in an area where you know there is poor cellular reception enter `Offline Mode` prior to arriving on-site.
+3. Using the `Additional Notes` field for longer text comments will result in better readability in the final report.
+    - The `Description`, `Condition`, `Risk`, and `Location` fields benefit from shorter text entries.
+4. Taking inspection photos in landscape (horizontal) mode, while not required, helps reduce the overall length of inspection reports.
