@@ -49,11 +49,6 @@ At first glance, you'll see a dashboard which will provide you with insights int
 
 ![collecting-payments-8.webp](./img/collecting-payments-8.webp)
 
-In Stripe, navigating to **Settings → Billing → Invoice template** allows you to control what is displayed in your invoice, payment terms, and other details.
-
-![collecting-payments-9.webp](./img/collecting-payments-9.webp)
-
-
 In Stripe, navigating to **Settings → Business → Branding** allows you to customize your logos and icons across both online invoices and invoice PDFs.
 
 ![collecting-payments-10.webp](./img/collecting-payments-10.webp)

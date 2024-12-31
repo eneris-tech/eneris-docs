@@ -1,10 +1,12 @@
-# Share report
+# Generate and share reports
 
 Learn about the different options to share your finalized inspection report.
 
 ## PDF report, PDF summary, & Web report
 
 Eneris can generate **PDF reports**, **PDF summaries**, and **web reports**.
+
+The three options are not mutually exclusive. Feel free to generate one, two, or all three types of reports for each completed inspection.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

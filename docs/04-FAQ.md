@@ -28,15 +28,16 @@ https://play.google.com/store/apps/details?id=ca.eneris.ener.is&utm_source=Verif
 
 <summary>Data</summary>
 <p>
-### How long will inspection reports be available in Eneris?
+
+## How long will inspection reports be available in Eneris?
 
 Inspection reports are kept indefinitely, unless specifically stated otherwise. We do not delete inspection reports to save space.
 
-### Does Eneris share my inspection data and client information with third-parties such as insurance firms?
+## Does Eneris share my inspection data and client information with third-parties such as insurance firms?
 
 No. Eneris is solely dedicated to providing home inspectors with quality inspection software and does not have any incentive to share/sell your information.
 
-### Supported languages
+## Supported languages
 
 At this time, the only officially supported language is English. Additional language support is planned.
 </p>
@@ -46,11 +47,12 @@ At this time, the only officially supported language is English. Additional lang
 
 <summary>Customer support</summary>
 <p>
-### How to contact Eneris support
+
+## How to contact Eneris support
 
 Please email [support@eneris.ca](mailto:support@eneris.ca) or call our support number [1-888-500-0504](tel:1-888-500-0504).
 
-### Support hours
+## Support hours
 
 Our support hours are **Monday to Friday 8am to 5pm PST (excluding Canadian holidays)**.
 </p>

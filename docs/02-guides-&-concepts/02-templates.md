@@ -1,6 +1,6 @@
 # Templates
 
-Templates allow for the customization of inspection lists, and the pre-filling of report fields. Once saved, they are available for selection when creating a new report, and in any report's `General` ****tab.
+Templates allow for the customization of inspection lists, and the pre-filling of report fields. Once saved, they are available for selection when creating a new report, and in any report's `General` tab.
 
 Templates are critical to an efficient inspection workflow on-site. Eneris allows for easy customization of templates and includes the most commonly used templates in US and Canadian markets to help you get started quickly.
 
