@@ -26,16 +26,25 @@ import TabItem from '@theme/TabItem';
     ### Generate PDF reports
     1. Navigate into the desired inspection.
     2. Scroll to the bottom of the `General` tab.
-    3. Select `Create PDF`*.
+    3. Select `Create PDF`.
+
     ![generate-pdf-report-1.webp](./img/generate-pdf-report-1.webp)
+
     4. `View PDF Report` will appear once the PDF has been generated.
+
     ![generate-pdf-report-2.webp](./img/generate-pdf-report-2.webp)
+    
     5. The PDF report may now be shared.
 
-    ****Note**: This creates a PDF report based on the inspection results **at the time of the report generation**. If any changes are made to the inspection items the `Update PDF Report` button must be selected to generate a PDF report with the latest updates.*
+    :::warning[Warning]
 
+    This creates a PDF report based on the inspection results **at the time of the report generation**. If any changes are made to the inspection items the `Update PDF Report` button must be selected to generate a PDF report with the latest updates.
+
+    :::
+    
   </TabItem>
-    <TabItem value="PDF summary" label="PDF summary">
+
+ <TabItem value="PDF summary" label="PDF summary">
     PDF summaries are a shortened version of the PDF report. Items in the PDF summaries have a recommended action for the client and/or a summary label was applied to the item.
 
     :::info[Info]
@@ -49,14 +58,23 @@ import TabItem from '@theme/TabItem';
     ### Generate PDF summaries
     1. Navigate into the desired inspection.
     2. Scroll to the bottom of the `General` tab.
-    3. Select `Create PDF Summary`*.
+    3. Select `Create PDF Summary`.
+
     ![generate-pdf-summary-1.webp](./img/generate-pdf-summary-1.webp)
+
     4. `View PDF Summary` will appear once the PDF has been generated.
+
     ![generate-pdf-summary-2.webp](./img/generate-pdf-summary-2.webp)
+
     5. The PDF summary may now be shared.
 
-    ****Note**: This creates a PDF summary based on the inspection results **at the time of the report generation**. If any changes are made to the inspection items the `Update PDF Summary` button must be selected to generate a PDF summary with the latest updates.*
+    :::warning[Warning]
+
+    This creates a PDF summary based on the inspection results **at the time of the report generation**. If any changes are made to the inspection items the `Update PDF Summary` button must be selected to generate a PDF summary with the latest updates.
+
+    :::
   </TabItem>
+
   <TabItem value="Web report" label="Web report">
     Web reports offer recipients a way to access the inspection results through a webpage URL.
 
@@ -72,8 +90,11 @@ import TabItem from '@theme/TabItem';
     1. Navigate into the desired inspection.
     2. Scroll to the bottom of the `General` tab.
     3. In the `Publish Report` section select `Publish`.
+
     ![publish-web-report-1.webp](./img/publish-web-report-1.webp)
+
     4. This generates a webpage URL that you may share manually with clients and key contacts.
+
     ![publish-web-report-2.webp](./img/publish-web-report-2.webp)
 
     :::info[Info]
@@ -106,7 +127,9 @@ import TabItem from '@theme/TabItem';
     2. Select `Presentations & PDFs`.
     3. Select `Web Presentation Settings`.
     4. Select `On` for the “Automatically Publish Report after Invoice is Settled” setting.
+
     ![auto-publish-web-report-1.webp](./img/auto-publish-web-report-1.webp)
+
     5. Select `Save Web Presentation Settings`.
   </TabItem>
 </Tabs>
@@ -117,9 +140,13 @@ Follow the steps below to share the PDF report & PDF summary with clients and ke
 1. Navigate into the desired inspection.
 2. Scroll to the bottom of the `General` tab.
 3. In the `Share Report` section select `Share by Email`.
+
 ![share-pdf-1.webp](./img/share-pdf-1.webp)
+
 4. The `To` and `Subject` fields will be automatically populated. Input any other notes in the `Additional Messages` field, as desired.
+
 ![share-pdf-2.webp](./img/share-pdf-2.webp)
+
 5. Select `Include PDF Report`, `Include PDF Summary`, or both.
 6. Select `Send`.
 
