@@ -118,7 +118,7 @@ const config: Config = {
           ],
         },
       ],
-      // copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} Designed and built by Eneris`,
     },
     prism: {
       theme: prismThemes.github,
