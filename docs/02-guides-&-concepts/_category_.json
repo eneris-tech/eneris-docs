@@ -2,7 +2,6 @@
   "label": "Guides & Concepts",
   "position": 2,
   "link": {
-    "type": "generated-index",
-    "description": "How to activate your subscription."
+    "type": "generated-index"
   }
 }
