@@ -1,6 +1,7 @@
 {
   "label": "Subscription",
   "position": 4,
+  "className": "hidden",
   "link": {
     "type": "generated-index",
     "description": "How to activate your subscription."
