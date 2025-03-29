@@ -38,17 +38,6 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -72,11 +61,10 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'documentationSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Documentation',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
       ],
     },
     footer: {
