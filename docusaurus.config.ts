@@ -80,45 +80,35 @@ const config: Config = {
       ],
     },
     footer: {
-      style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Documentation',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Overview',
+              to: '/docs/overview',
+            },
+            {
+              label: 'FAQ',
+              to: '/docs/FAQ',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'About',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Eneris',
+              href: 'https://eneris.ca',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
+              label: 'Contact Us',
+              href: 'https://www.eneris.ca/contact-us',
+            }
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Designed and built by Eneris`,
+      copyright: `© ${new Date().getFullYear()} Designed and built by Eneris Technologies Inc.`,
     },
     prism: {
       theme: prismThemes.github,
