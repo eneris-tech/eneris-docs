@@ -1,6 +1,6 @@
 # Collect payments
 
-Eneris has partnered with Stripe to provide inspectors with a secure end-to-end payment platform. You can quickly and easily accept online payments from your clients with minimal credit card processing fees.
+Eneris has an integration with Stripe to provide inspectors with a secure end-to-end payment platform. You can quickly and easily accept online payments from your clients with minimal credit card processing fees.
 
 To enable this feature, see the setup guide below.
 
@@ -8,7 +8,7 @@ To enable this feature, see the setup guide below.
 
 1. Navigate to `Settings`.
 2. Select the `Invoicing & Collection` submenu.
-3. Select the `Connect with Stripe`button.
+3. Select the `Connect with Stripe` button.
 
 ![collecting-payments-1.webp](./img/collecting-payments-1.webp)
 
@@ -39,7 +39,7 @@ Please ensure that you use the email address and contact information associated 
 
 ![collecting-payments-6.webp](./img/collecting-payments-6.webp)
 
-## **Customize invoices & branding**
+## Customize invoices & branding
 
 Following a successful connection between Eneris and Stripe, a link to your Stripe Dashboard will be available in Settings. Select the **Go to Stripe Dashboard** button to log-in to your account with the username and password you had created in the **Connect Eneris with Stripe** section above.
 
@@ -53,7 +53,7 @@ In Stripe, navigating to **Settings → Business → Branding** allows you to c
 
 ![collecting-payments-10.webp](./img/collecting-payments-10.webp)
 
-## **Collect payments**
+## Collect payments
 
 Any invoice created in Eneris can be collected in one click: either on-site or via an email sent to your client before or after the inspection.
 
@@ -67,7 +67,7 @@ Example of the **Online Payment Portal** and the **Collect Now** page:
 
 ![collecting-payments-13.webp](./img/collecting-payments-13.webp)
 
-## **Auto publish reports on payment**
+## Auto publish reports on payment
 
 Eneris allows for the [web version](https://ener.is/presentation/2ZNdNMSZkGz3qQkSq) of the inspection report to be published automatically when a successful payment is made through Stripe.
 
@@ -77,16 +77,18 @@ To enable this:
 2. Select `Presentation & PDFs`.
 3. Select `Web Presentation Settings`.
 4. Toggle the "Automatically Publish Report after Invoice is Settled” setting to `On`.
-    
+
 ![collecting-payments-14.webp](./img/collecting-payments-14.webp)
-    
+
 5. Select `Save Web Presentation Settings`.
 
 ## Payment collection fees
 
 **Eneris** does not charge any payment collection fees.
 
-**Stripe** charges a payment collection fee of 2.9% + $0.30 per transaction.
+**Stripe** charges a payment collection fee of 2.9% + $0.30 per transaction. Additionally, Stripe charges a separate 0.4% invoicing fee per invoice.
+- e.g., On a $500 USD payment Stripe will charge (($500 * 2.9% + $0.30) + ($500 * 0.4%)) = $16.80 USD.
+- [Learn more about Stripe's fees on their website](https://stripe.com/en-ca/pricing).
 
 ## Payment deposit times
 
