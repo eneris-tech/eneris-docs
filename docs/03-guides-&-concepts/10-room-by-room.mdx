@@ -1,3 +1,13 @@
+import ImageRoomByRoom1 from './img/room-by-room-1.webp';
+import ImageRoomByRoom2 from './img/room-by-room-2.webp';
+import ImageRoomByRoom3 from './img/room-by-room-3.webp';
+import ImageRoomByRoom4 from './img/room-by-room-4.webp';
+import ImageRoomByRoom5 from './img/room-by-room-5.webp';
+import ImageRoomByRoom6 from './img/room-by-room-6.webp';
+import ImageRoomByRoom7 from './img/room-by-room-7.webp';
+import ImageRoomByRoom8 from './img/room-by-room-8.webp';
+import ImageRoomByRoom9 from './img/room-by-room-9.webp';
+
 # Room-by-room inspection
 
 If an inspector wishes to inspect a property on a room-by-room basis they may wish to enable **Room-by-Room** mode instead of inspecting the property by system.
@@ -8,23 +18,23 @@ In the following example, we will consider the case in which a home inspector wi
 
 Select the `Sort by Rooms` option and observe the menu switch to show rooms instead of systems.
 
-![room-by-room-1.webp](./img/room-by-room-1.webp)
+<img src={ImageRoomByRoom1} style={{ maxWidth: '700px', width: '100%' }} alt="Sort by rooms button" />
 
 The `Manage Rooms` button can optionally be clicked to configure rooms and their ordering.
 
-![room-by-room-2.webp](./img/room-by-room-2.webp)
+<img src={ImageRoomByRoom2} style={{ maxWidth: '700px', width: '100%' }} alt="Manage rooms button" />
 
 ## Add report data to first room
 
 Click the `Flooring` item to expand it and add more observations.
 
-![room-by-room-3.webp](./img/room-by-room-3.webp)
+<img src={ImageRoomByRoom3} style={{ maxWidth: '600px', width: '100%' }} alt="Select the flooring item to expand the menu" />
 
 The *interior* label to the right of `Flooring` specifies that this item belongs to the *interior* system of the home, and will be shown under **Interior** in the final web and PDF reports.
 
 When expanded, a series of labels are shown as surrounded by the red box below.
 
-![room-by-room-4.webp](./img/room-by-room-4.webp)
+<img src={ImageRoomByRoom4} style={{ maxWidth: '600px', width: '100%' }} alt="Labels within the flooring item" />
 
 - `Item 1` is a *tab* specifying the first item to note to the client with regards to `Flooring` as a part of the property's **Interior** system.
 - `+ Additional Item` will add a new tab in which more information on a different issue can be entered, while still linking back to `Flooring`.
@@ -35,20 +45,20 @@ When expanded, a series of labels are shown as surrounded by the red box below.
 
 As mentioned above, a notable issue was found regarding the `Flooring` in the `Living Room`. Selecting `Living Room` shows items typically inspected in that room.
 
-![room-by-room-5.webp](./img/room-by-room-5.webp)
+<img src={ImageRoomByRoom5} style={{ maxWidth: '600px', width: '100%' }} alt="Select living room to enter inspection results for that room" />
 
 The `Flooring` subject currently has 0 entries in the `Living Room`, as noted by the 0 to the right of the subject. Clicking `+ Additional Item` will add a new Item.
 
-![room-by-room-6.webp](./img/room-by-room-6.webp)
+<img src={ImageRoomByRoom6} style={{ maxWidth: '600px', width: '100%' }} alt="Add an additional flooring item as part of the living room" />
 
 After clicking `+ Additional Item`, `Item 2` has been created with **Living Room** automatically entered in the `Location` box.
 
-![room-by-room-7.webp](./img/room-by-room-7.webp)
+<img src={ImageRoomByRoom7} style={{ maxWidth: '600px', width: '100%' }} alt="A new flooring item has been created for the living room" />
 
 ## Report view from a client’s perspective
 
 The issues observed with Flooring are shown in the Web and PDF reports in a manner that clearly conveys each detail to your client.
 
-![room-by-room-8.webp](./img/room-by-room-8.webp)
+<img src={ImageRoomByRoom8} style={{ maxWidth: '600px', width: '100%' }} alt="Room-by-room web report example" />
 
-![room-by-room-9.webp](./img/room-by-room-9.webp)
+<img src={ImageRoomByRoom9} style={{ maxWidth: '600px', width: '100%' }} alt="Room-by-room PDF report example" />

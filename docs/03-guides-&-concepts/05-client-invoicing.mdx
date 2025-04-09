@@ -1,3 +1,11 @@
+import ImageClientInvoicing1 from './img/client-invoicing-1.webp';
+import ImageClientInvoicing2 from './img/client-invoicing-2.webp';
+import ImageClientInvoicing3 from './img/client-invoicing-3.webp';
+import ImageClientInvoicing4 from './img/client-invoicing-4.webp';
+import ImageClientInvoicing5 from './img/client-invoicing-5.webp';
+import ImageClientInvoicing6 from './img/client-invoicing-6.webp';
+import ImageClientInvoicing7 from './img/client-invoicing-7.webp';
+
 # Client invoicing
 
 Invoices can be easily generated, shared, and marked as paid within Eneris.
@@ -8,27 +16,27 @@ Invoices can be easily generated, shared, and marked as paid within Eneris.
 2. In the **General** page scroll down to the `Client Invoicing` section.
 3. Select `+ Create Invoice`.
 
-![client-invoicing-1.webp](./img/client-invoicing-1.webp)
+<img src={ImageClientInvoicing1} style={{ maxWidth: '600px', width: '100%' }} alt="Create invoice button" />
 
 4. Select the relevant line items.
     - Select `Add Custom Line Item` if a new line item needs to be created. After filling in the info, select the blue `+` button to finalize adding the custom line item.
         - This new line item will be saved as a selectable option for future inspections.
 
-![client-invoicing-2.webp](./img/client-invoicing-2.webp)
+<img src={ImageClientInvoicing2} style={{ maxWidth: '600px', width: '100%' }} alt="Adding items to the invoice" />
 
 5. Select `Save`.
 6. The selections will now reflect in the `Client Invoicing` section.
     - If you have connected your Stripe account to Eneris to accept online payments you may use the `Collect Now` and/or the `Email Online Invoice` options at the bottom.
     - If you have not connected your Stripe account to Eneris, continue with the steps below.
 
-![client-invoicing-3.webp](./img/client-invoicing-3.webp)
+<img src={ImageClientInvoicing3} style={{ maxWidth: '600px', width: '100%' }} alt="Selections reflected in the Client Invoicing section" />
 
 7. Select `Generate PDF` .
 8. Select `View Invoice` to review the PDF invoice that was generated.
 
-![client-invoicing-4.webp](./img/client-invoicing-4.webp)
+<img src={ImageClientInvoicing4} style={{ maxWidth: '600px', width: '100%' }} alt="Select the View Invoice button" />
 
-![client-invoicing-5.webp](./img/client-invoicing-5.webp)
+<img src={ImageClientInvoicing5} style={{ maxWidth: '600px', width: '100%' }} alt="Invoice has been generated as a PDF" />
 
 ## Sharing invoices
 
@@ -38,8 +46,8 @@ After an invoice has been created, select `Email Invoice` to send the invoice to
 
 1. Select `Mark as Settled` and choose the appropriate payment method once the invoice has been paid. The `Client Invoicing` section will automatically update with the selection.
 
-![client-invoicing-6.webp](./img/client-invoicing-6.webp)
+<img src={ImageClientInvoicing6} style={{ maxWidth: '600px', width: '100%' }} alt="Invoice can be seen marked as paid" />
 
 2. Select `Generate PDF` again to include the payment method and date on the PDF invoice.
 
-![client-invoicing-7.webp](./img/client-invoicing-7.webp)
+<img src={ImageClientInvoicing7} style={{ maxWidth: '600px', width: '100%' }} alt="Regenerate the PDF to see the paid indicator directly in the invoice" />
