@@ -23,7 +23,7 @@ This is your guide to getting started with Eneris. If you’re new to using soft
 
 Eneris is a home inspection platform, that helps you generate professional and interactive inspection reports with ease.
 
-With Eneris, you can attach your findings (photos, video, and text) to every inspection item and then use that information to generate a report for your client, which helps them make an informed decision on the property.
+With Eneris, you can attach your findings (photos, video, and text) to every inspection item and then use that information to generate a report for your client, or your team, which helps them make an informed decision on the property.
 
 **Let’s get started** ✨
 
