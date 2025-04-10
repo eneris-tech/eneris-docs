@@ -14,8 +14,8 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Eneris was designed with efficiency and customizability in mind to enable
+        you to do your best work.
       </>
     ),
   },
@@ -24,18 +24,18 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Eneris allows you to focus on delivering an exceptional experience for
+        your clients to grow your business.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Fit for all home inspection companies',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Suitable for self-employed inspectors, small to midsize businesses, and
+        large enterprises involved in home inspections.
       </>
     ),
   },
