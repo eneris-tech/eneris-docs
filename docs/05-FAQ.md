@@ -38,7 +38,7 @@ Inspection reports are kept indefinitely, unless specifically stated otherwise. 
 
 <summary>Does Eneris share my inspection data and client information with third-parties such as insurance firms?</summary>
 <p>
-No. Eneris is solely dedicated to providing home inspectors with quality inspection software and does not have any incentive to share/sell your information.
+No. Eneris is solely dedicated to providing property inspectors with quality inspection software and does not have any incentive to share/sell your information.
 </p>
 </details>
 

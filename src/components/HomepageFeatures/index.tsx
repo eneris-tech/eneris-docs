@@ -30,12 +30,12 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Fit for all home inspection companies',
+    title: 'Fit for all property inspectors',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
         Suitable for self-employed inspectors, small to midsize businesses, and
-        large enterprises involved in home inspections.
+        large enterprises involved in property inspections.
       </>
     ),
   },
