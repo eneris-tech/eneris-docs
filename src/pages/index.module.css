@@ -23,6 +23,11 @@
 }
 
 .heroHomepage {
-  --ifm-hero-background-color: var(--ifm-color-primary);
   --ifm-hero-text-color: var(--ifm-font-color-base-inverse);
+}
+
+.homeButtonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }

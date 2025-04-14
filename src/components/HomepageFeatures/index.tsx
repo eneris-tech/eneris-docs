@@ -11,7 +11,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('/img/clipboard-check.svg').default,
     description: (
       <>
         Eneris was designed with efficiency and customizability in mind to enable
@@ -20,18 +20,18 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Complete Reports On-Site',
+    Svg: require('/img/devices.svg').default,
     description: (
       <>
-        Eneris allows you to focus on delivering an exceptional experience for
-        your clients to grow your business.
+        Deliver a full property inspection report with photos and videos included
+        before leaving the property.
       </>
     ),
   },
   {
     title: 'Fit for all property inspectors',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('/img/people.svg').default,
     description: (
       <>
         Suitable for self-employed inspectors, small to midsize businesses, and
@@ -45,7 +45,7 @@ function Feature({title, Svg, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <Svg className={styles.featureSvg} role="img"/>
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
