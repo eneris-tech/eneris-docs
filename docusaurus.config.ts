@@ -77,6 +77,14 @@ const config: Config = {
               to: '/docs/overview',
             },
             {
+              label: 'Get Started',
+              to: '/docs/get-started',
+            },
+            {
+              label: 'Guides & Concepts',
+              to: '/docs/category/guides--concepts',
+            },
+            {
               label: 'FAQ',
               to: '/docs/FAQ',
             },
