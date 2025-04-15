@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Eneris Documentation',
+  title: 'Eneris User Guide',
   tagline: 'Make inspection reports easy',
   favicon: 'img/favicon.ico',
 
