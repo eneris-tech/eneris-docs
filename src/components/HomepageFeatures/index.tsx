@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import Link from '@docusaurus/Link';
 
 type FeatureItem = {
   title: string;
@@ -63,6 +64,13 @@ export default function HomepageFeatures(): JSX.Element {
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
+        </div>
+        <div style={{justifyContent: 'center', display: 'flex'}}>
+          <Link
+            className="button button--primary button--lg"
+            to="/docs/overview">
+            See documentation
+          </Link>
         </div>
       </div>
     </section>
