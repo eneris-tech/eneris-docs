@@ -1,3 +1,8 @@
+---
+# Hide subscription category
+pagination_prev: null
+---
+
 <details>
 
 <summary>Which mobile devices are supported?</summary>
