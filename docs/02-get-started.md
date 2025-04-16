@@ -63,7 +63,7 @@ You will then be redirected inside the inspection you just created.
 
 :::info[Info]
 
-*This section will cover how to enter data into your inspection reports. `Templates` make this process even simpler and you can find additional information about templates [here](https://docs.ener.is/docs/guides-&-concepts/templates).*
+*This section will cover how to enter data into your inspection reports. `Templates` make this process even simpler and you can find additional information about templates [here](/docs/guides-&-concepts/templates).*
 
 :::
 
