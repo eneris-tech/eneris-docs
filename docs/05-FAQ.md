@@ -49,7 +49,7 @@ No. Eneris is solely dedicated to providing property inspectors with quality ins
 
 <details>
 
-<summary>What languages are spported?</summary>
+<summary>What languages are supported?</summary>
 <p>
 At this time, the only officially supported language is English. Additional language support is planned.
 </p>
