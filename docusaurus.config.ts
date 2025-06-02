@@ -15,7 +15,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'kingsley-eneris', // Usually your GitHub org/user name.
+  organizationName: 'eneris-tech', // Usually your GitHub org/user name.
   projectName: 'eneris-docs', // Usually your repo name.
   deploymentBranch: 'gh-pages',
 
