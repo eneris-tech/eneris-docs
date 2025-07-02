@@ -1,6 +1,26 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import type { NavbarItem } from '@docusaurus/theme-common';
+
+// Toggle this to true to enable the Elevate version of the docs
+const isElevateEnabled = false;
+
+const navbarItems: NavbarItem[] = [
+  {
+    type: 'docSidebar',
+    sidebarId: 'documentationSidebar',
+    position: 'left',
+    label: 'Documentation',
+  },
+];
+
+if (isElevateEnabled) {
+  navbarItems.push({
+    type: 'docsVersionDropdown',
+    position: 'right',
+  });
+}
 
 const config: Config = {
   title: 'Eneris User Guide',
@@ -37,6 +57,22 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          lastVersion: 'legacy',
+          includeCurrentVersion: isElevateEnabled,
+          versions: {
+            ...(isElevateEnabled ? {
+              current: {
+                label: 'Current',
+                path: '/',
+                banner: 'none',
+              },
+            } : {}),
+            legacy: {
+              label: 'Legacy',
+              path: isElevateEnabled ? '/legacy' : '/',
+              banner: 'none'
+            }
+          }
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -58,14 +94,7 @@ const config: Config = {
         alt: 'Eneris Logo',
         src: 'img/welcome_logo.png',
       },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'documentationSidebar',
-          position: 'left',
-          label: 'Documentation',
-        },
-      ],
+      items: navbarItems,
     },
     footer: {
       links: [
