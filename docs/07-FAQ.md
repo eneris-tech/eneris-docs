@@ -60,5 +60,3 @@ At this time, the only officially supported language is English. Additional lang
 See the delete my account section. [link here]
 </p>
 </details>
-
-<details>
