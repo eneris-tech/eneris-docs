@@ -1,6 +1,6 @@
 {
-  "label": "Guides & Concepts",
-  "position": 3,
+  "label": "Account",
+  "position": 5,
   "link": {
     "type": "generated-index"
   }

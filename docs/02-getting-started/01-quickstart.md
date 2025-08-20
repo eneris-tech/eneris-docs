@@ -1,4 +1,4 @@
-# Getting started
+# Quickstart
 
 Welcome to Eneris, your ideal property inspection platform.
 
