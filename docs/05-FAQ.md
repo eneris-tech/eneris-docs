@@ -7,13 +7,11 @@ pagination_prev: null
 
 <summary>Which mobile devices are supported?</summary>
 <p>
-Apple (iOS and PadOS) and Android (phones and tablet) devices are supported.
+Apple (iOS and iPadOS) and Android (phones and tablet) devices are supported.
 
-[Download Eneris for Apple iOS and iPadOS devices here.](
-https://apps.apple.com/us/app/eneris/id1448765778)
+Download Eneris for Apple iOS and iPadOS devices here. [link here]
 
-[Download Eneris for Android devices here.](
-https://play.google.com/store/apps/details?id=ca.eneris.ener.is)
+Download Eneris for Android devices here. [link here]
 </p>
 </details>
 
@@ -35,7 +33,7 @@ The officially supported browsers are:
 
 <summary>How long will inspection reports be available in Eneris?</summary>
 <p>
-Inspection reports are kept indefinitely, unless specifically stated otherwise. We do not delete inspection reports to save space.
+Inspection data is kept indefinitely, unless specifically stated otherwise (such as account deletion requests) [link to delete my account]. We do not delete inspection reports to save storage space.
 </p>
 </details>
 
@@ -57,16 +55,10 @@ At this time, the only officially supported language is English. Additional lang
 
 <details>
 
-<summary>How do I contact Eneris support?</summary>
+<summary>How do I delete my account?</summary>
 <p>
-Please email [support@eneris.ca](mailto:support@eneris.ca) or call our support number [1-888-500-0504](tel:1-888-500-0504).
+See the delete my account section. [link here]
 </p>
 </details>
 
 <details>
-
-<summary>What are your support hours?</summary>
-<p>
-Our support hours are **Monday to Friday 8am to 5pm PST (excluding Canadian holidays)**.
-</p>
-</details>
