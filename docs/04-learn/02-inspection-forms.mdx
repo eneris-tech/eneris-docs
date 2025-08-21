@@ -1,3 +1,252 @@
-
+import ImageInspectionForms1 from './img/inspection-forms-1.webp';
+import ImageInspectionForms2 from './img/inspection-forms-2.webp';
+import ImageInspectionForms3 from './img/inspection-forms-3.webp';
+import ImageInspectionForms4 from './img/inspection-forms-4.webp';
+import ImageInspectionForms5 from './img/inspection-forms-5.webp';
+import ImageInspectionForms6 from './img/inspection-forms-6.webp';
+import ImageInspectionForms7 from './img/inspection-forms-7.webp';
+import ImageInspectionForms8 from './img/inspection-forms-8.gif';
+import ImageInspectionForms9 from './img/inspection-forms-9.gif';
+import ImageInspectionForms10 from './img/inspection-forms-10.webp';
+import ImageInspectionForms11 from './img/inspection-forms-11.webp';
+import ImageInspectionForms12 from './img/inspection-forms-12.webp';
+import ImageInspectionForms13 from './img/inspection-forms-13.webp';
+import ImageInspectionForms14 from './img/inspection-forms-14.webp';
 
 # Inspection Forms
+
+An **Inspection Form** is where the **bulk of your inspection data is entered and organized**. It contains all the categories, components, fields, and field options used to document your insights during an inspection.
+
+Each form acts as a structured workspace, allowing you to:
+
+- Record detailed insights (e.g. roof is in good condition, mold on interior wall, water heater needs replacement, etc.)
+- Attach media (photos, videos)
+- Select field options or enter free-form notes
+- Add general limitations to your inspection
+- Customize what’s shown in the final report
+
+Whether you’re performing a home inspection, mold inspection, asbestos inspection — or any other type of inspection — **Inspection Forms** keep your data organized, clear, and report-ready.
+
+## How Form Templates and Inspection Forms are related
+
+**Form Templates** [link to form templates] allow for the customization of inspection lists, and the pre-filling of report fields. Once saved, they are available for selection when creating a new **Inspection** [link to inspections],
+
+<img src={ImageInspectionForms1} style={{ maxWidth: '250px', width: '100%' }} alt="Inspection form example." />
+
+and when adding a new **Inspection Form** to an existing **Inspection**.
+
+<img src={ImageInspectionForms2} style={{ maxWidth: '250px', width: '100%' }} alt="Inspection form selection." />
+
+:::info
+
+If we were to put it into simpler terms:
+
+- Think of a **Form Template** as a physical document you *could* bring with you to any inspection.
+- If you decide to bring a copy of one of those documents with you to an inspection it is now an **Inspection Form** for that particular job.
+
+:::
+
+## **Many Inspection Forms to one Inspection**
+
+Each **Inspection** can have one or more **Inspection Forms** associated with it. **Inspection Forms** allow you to associate different types of inspections with a single inspection site visit.
+
+- e.g., If you are certified to perform multiple types of inspections (e.g. home inspection, asbestos inspection, radon inspection, etc.) on a property then you can pre-setup various Form **Templates** [link to [form templates](https://www.notion.so/Form-Templates-226d9f0aeb5a80ae8feed89bd3ebe833?pvs=21)]and load them into the same **Inspection**.
+
+    <img src={ImageInspectionForms3} style={{ maxWidth: '250px', width: '100%' }} alt="Multiple inspection forms example." />
+
+
+Each **Inspection Form** allows you to generate a distinct PDF report pertaining specifically to the inspection performed.
+
+## Inspection Form framework
+
+This is the data structure of your Inspection Form:
+
+- **Category** — A high-level system (e.g. Interior, Roofing)
+- **Component** — A specific element within a system (e.g. Flooring, Gutters)
+- **Insight** — A specific observation (e.g. Water damage)
+- **Field** — A specific input area (e.g. Description, Condition, Risk, Location, Recommended Action)
+- **Field Option** — Predefined choices within a field (e.g. “Minor”, “Major”, “Not Present”)
+
+This structure helps keep your reports organized and easy to navigate.
+
+:::info
+
+Every part of the framework is customizable. Here are some example use cases:
+
+- If a **category** is unavailable by default, you can create it. Link to `add new inspection categories` instruction below
+- If you’re a roofing contractor and never inspect HVAC systems, you can delete the HVAC category.
+- If the **component** you are inspecting has different areas (living room flooring vs. kitchen flooring) in different conditions then you can create multiple **insights**.
+- If you’re an Eneris admin at your company and need to edit the **field options** to use company approved terminology, you can do so quickly and without needing to interact with the Eneris team (but we’re always happy to help).
+
+:::
+
+## Inspection Form Sections
+
+### Report title
+
+Set the title that appears on the report’s cover page
+
+<img src={ImageInspectionForms4} style={{ maxWidth: '250px', width: '100%' }} alt="Report title cover page example." />
+
+and in the **Inspection Forms** section.
+
+<img src={ImageInspectionForms5} style={{ maxWidth: '250px', width: '100%' }} alt="Report title in inspection forms section." />
+
+:::info
+
+You must Sync [hyperlink to Syncing] the **Inspection Form** in order for the Report Title to update at both locations.
+
+:::
+
+### Primary photo
+
+This is the main image shown on the report’s cover page.
+
+- A wide exterior photo of the property is commonly used.
+
+<img src={ImageInspectionForms6} style={{ maxWidth: '250px', width: '100%' }} alt="Primary photo example." />
+
+### Inspection Categories
+
+The categories of inspection items.
+
+#### Editing Inspection Categories
+
+Edit **Inspection Categories** by selecting the pencil icon.
+
+<img src={ImageInspectionForms7} style={{ maxWidth: '250px', width: '100%' }} alt="Editing inspection categories." />
+
+Press and hold a category to reorder.
+
+<img src={ImageInspectionForms8} style={{ maxWidth: '250px', width: '100%' }} alt="Reordering inspection categories." />
+
+Select the pencil icon next to a category to:
+
+- Edit the category name
+- Update the category icon
+- Delete the category
+
+#### Add new Inspection Categories
+
+1. Select the pencil icon next to the main **Inspection Categories** section.
+2. Scroll to the bottom and locate the **Add new category** section.
+3. Enter a category name and select an icon.
+4. Select `Create new category`.
+
+<img src={ImageInspectionForms9} style={{ maxWidth: '250px', width: '100%' }} alt="Add new inspection categories." />
+
+### Inspection overview
+
+This section enables you to add **General limitations** and **Shared Fields**.
+
+#### General limitations
+
+Allows you to note any non-category specific limitation associated with your **Inspection**.
+
+- **Limitation**: Shorter length comments (500 characters max)
+- **Additional notes:** Longer length comments (5,000 characters max)
+- **Photos & videos:** Attach supporting photos and videos regarding limitations.
+
+Here’s what the **General limitations** page looks like when it is filled out:
+
+<img src={ImageInspectionForms10} style={{ maxWidth: '250px', width: '100%' }} alt="General limitations page example." />
+
+Here’s how it will show up in the PDF report:
+
+<img src={ImageInspectionForms11} style={{ maxWidth: '250px', width: '100%' }} alt="General limitations in PDF report." />
+
+:::info
+
+Keep in mind that this is for **general** **limitations**.
+
+This part of our documentation [link to the `Guide` page that mentions category limitations] explains how to enter **category-specific** **limitations**.
+
+:::
+
+#### Shared Fields
+
+**Shared Fields** automatically appear in every component of your Form Template [link to form template]. Use them for any common inputs in your inspection workflow.
+
+- e.g. You may want a `Risk` or `Location` field available in every component. Creating it as a **Shared Field** means you only need to create them once and they will be available in every component.
+
+This helps you save time and keeps your workflow and data entry consistent.
+
+### Form properties
+
+This section contains important information about your **Inspection Form**.
+
+#### Form ID
+
+The unique identifier of the particular **Inspection Form** you are currently reviewing.
+
+#### Status
+
+Status is comprised of three timestamps which detail when the **Inspection Form** was:
+
+1. Most recently synced.
+2. Most recently saved.
+3. Created.
+
+:::info
+
+For more information on **Syncing** click here. For more information on **Saving** click here. [Link to Saving and Syncing]
+
+:::
+
+#### Sync
+
+There’s also a `Sync` button on the right side.
+
+<img src={ImageInspectionForms12} style={{ maxWidth: '250px', width: '100%' }} alt="Inspection form sync options." />
+
+:::info
+
+For more information on **Syncing** click here. For more information on **Saving** click here. Link to Saving and Syncing
+
+:::
+
+### Reports
+
+This section allows you to preview PDF changes, manage published reports, and share the final PDF report with your client(s).
+
+#### Preview changes
+
+Allows you to quickly check how your report looks before publishing. [link to [previewing a report](https://www.notion.so/Reports-226d9f0aeb5a80de843ef4dd0f700533?pvs=21)]
+
+#### Open latest published PDF report
+
+Opens a menu for the most recently synced PDF report.
+
+Inside, you will see options to:
+
+- Open the finalized PDF report your client(s) would receive.
+- Toggle the report to public or private. Link to private vs public reports
+- `Share` the report.
+- Copy the report URL.
+- `Delete report`, which deletes the specific published report [link to [publishing a report](https://www.notion.so/Reports-226d9f0aeb5a80de843ef4dd0f700533?pvs=21)] you are currently reviewing.
+
+<img src={ImageInspectionForms13} style={{ maxWidth: '250px', width: '100%' }} alt="Published report options." />
+
+#### Share
+
+Allows you to email the completed PDF report [link to [sharing a report](https://www.notion.so/Reports-226d9f0aeb5a80de843ef4dd0f700533?pvs=21)].
+
+#### View all published reports
+
+Shows the report history [link to [report history](https://www.notion.so/Reports-226d9f0aeb5a80de843ef4dd0f700533?pvs=21)] of published reports.
+
+<img src={ImageInspectionForms14} style={{ maxWidth: '250px', width: '100%' }} alt="View all published reports." />
+
+### Publish
+
+The `Publish` button publishes your report. link to [publishing a report](https://www.notion.so/Reports-226d9f0aeb5a80de843ef4dd0f700533?pvs=21)
+
+### Return to inspection
+
+Navigates you back to the main **Inspection** page.
+
+### Delete form
+
+Deletes the **Inspection Form** you are currently in.
+
+- You can always add new **Inspection Forms** in the **Inspection** page.
