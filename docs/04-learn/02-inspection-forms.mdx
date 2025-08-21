@@ -64,6 +64,8 @@ This is the data structure of your Inspection Form:
 - **Category** — A high-level system (e.g. Interior, Roofing)
 - **Component** — A specific element within a system (e.g. Flooring, Gutters)
 - **Insight** — A specific observation (e.g. Water damage)
+    - Each insight is a separate item in the report, which means you can have multiple entries of the same component.
+        - e.g., During your inspection you may be inspecting multiple exterior doors. If both the front door and the back door are damaged in *different* ways you could create separate insights for the exterior door component.
 - **Field** — A specific input area (e.g. Description, Condition, Risk, Location, Recommended Action)
 - **Field Option** — Predefined choices within a field (e.g. “Minor”, “Major”, “Not Present”)
 
