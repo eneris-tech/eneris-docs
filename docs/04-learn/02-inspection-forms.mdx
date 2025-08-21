@@ -12,6 +12,8 @@ import ImageInspectionForms11 from './img/inspection-forms-11.webp';
 import ImageInspectionForms12 from './img/inspection-forms-12.webp';
 import ImageInspectionForms13 from './img/inspection-forms-13.webp';
 import ImageInspectionForms14 from './img/inspection-forms-14.webp';
+import ImageInspectionFormFramework from './img/inspection-form-framework.webp';
+
 
 # Inspection Forms
 
@@ -31,11 +33,11 @@ Whether you’re performing a home inspection, mold inspection, asbestos inspect
 
 **Form Templates** [link to form templates] allow for the customization of inspection lists, and the pre-filling of report fields. Once saved, they are available for selection when creating a new **Inspection** [link to inspections],
 
-<img src={ImageInspectionForms1} style={{ maxWidth: '250px', width: '100%' }} alt="Inspection form example." />
+<img src={ImageInspectionForms1} style={{ maxWidth: '250px', width: '100%' }} alt="Selecting a Form Template when creating a new inspection.." />
 
 and when adding a new **Inspection Form** to an existing **Inspection**.
 
-<img src={ImageInspectionForms2} style={{ maxWidth: '250px', width: '100%' }} alt="Inspection form selection." />
+<img src={ImageInspectionForms2} style={{ maxWidth: '250px', width: '100%' }} alt="Adding a Form Template to an existing Inspection." />
 
 :::info
 
@@ -52,7 +54,7 @@ Each **Inspection** can have one or more **Inspection Forms** associated with it
 
 - e.g., If you are certified to perform multiple types of inspections (e.g. home inspection, asbestos inspection, radon inspection, etc.) on a property then you can pre-setup various Form **Templates** [link to [form templates](https://www.notion.so/Form-Templates-226d9f0aeb5a80ae8feed89bd3ebe833?pvs=21)]and load them into the same **Inspection**.
 
-    <img src={ImageInspectionForms3} style={{ maxWidth: '250px', width: '100%' }} alt="Multiple inspection forms example." />
+    <img src={ImageInspectionForms3} style={{ maxWidth: '250px', width: '100%' }} alt="Multiple inspection Forms example." />
 
 
 Each **Inspection Form** allows you to generate a distinct PDF report pertaining specifically to the inspection performed.
@@ -68,6 +70,8 @@ This is the data structure of your Inspection Form:
         - e.g., During your inspection you may be inspecting multiple exterior doors. If both the front door and the back door are damaged in *different* ways you could create separate insights for the exterior door component.
 - **Field** — A specific input area (e.g. Description, Condition, Risk, Location, Recommended Action)
 - **Field Option** — Predefined choices within a field (e.g. “Minor”, “Major”, “Not Present”)
+
+<img src={ImageInspectionFormFramework} style={{ maxWidth: '900px', width: '100%' }} alt="Inspection Form framework diagram." />
 
 This structure helps keep your reports organized and easy to navigate.
 
@@ -92,11 +96,11 @@ Set the title that appears on the report’s cover page
 
 and in the **Inspection Forms** section.
 
-<img src={ImageInspectionForms5} style={{ maxWidth: '250px', width: '100%' }} alt="Report title in inspection forms section." />
+<img src={ImageInspectionForms5} style={{ maxWidth: '250px', width: '100%' }} alt="Report title in Inspection Forms section." />
 
 :::info
 
-You must Sync [hyperlink to Syncing] the **Inspection Form** in order for the Report Title to update at both locations.
+You must **Sync** [hyperlink to Syncing] the **Inspection Form** in order for the Report Title to update at both locations.
 
 :::
 
@@ -106,7 +110,7 @@ This is the main image shown on the report’s cover page.
 
 - A wide exterior photo of the property is commonly used.
 
-<img src={ImageInspectionForms6} style={{ maxWidth: '250px', width: '100%' }} alt="Primary photo example." />
+<img src={ImageInspectionForms6} style={{ maxWidth: '250px', width: '100%' }} alt="Primary photo section." />
 
 ### Inspection Categories
 
@@ -116,11 +120,11 @@ The categories of inspection items.
 
 Edit **Inspection Categories** by selecting the pencil icon.
 
-<img src={ImageInspectionForms7} style={{ maxWidth: '250px', width: '100%' }} alt="Editing inspection categories." />
+<img src={ImageInspectionForms7} style={{ maxWidth: '250px', width: '100%' }} alt="Editing Inspection Categories." />
 
 Press and hold a category to reorder.
 
-<img src={ImageInspectionForms8} style={{ maxWidth: '250px', width: '100%' }} alt="Reordering inspection categories." />
+<img src={ImageInspectionForms8} style={{ maxWidth: '250px', width: '100%' }} alt="Reordering Inspection Categories." />
 
 Select the pencil icon next to a category to:
 
@@ -135,7 +139,7 @@ Select the pencil icon next to a category to:
 3. Enter a category name and select an icon.
 4. Select `Create new category`.
 
-<img src={ImageInspectionForms9} style={{ maxWidth: '250px', width: '100%' }} alt="Add new inspection categories." />
+<img src={ImageInspectionForms9} style={{ maxWidth: '250px', width: '100%' }} alt="Adding new Inspection Categories." />
 
 ### Inspection overview
 
@@ -173,6 +177,14 @@ This part of our documentation [link to the `Guide` page that mentions category 
 
 This helps you save time and keeps your workflow and data entry consistent.
 
+:::info
+
+You can remove a **Shared Field** from a component if it’s not required. However, note that you will not be able to re-add it at this time.
+
+The `Status` field, `Recommended Action` field, and `Summary Label` fields cannot be deleted. They can only be hidden.
+
+:::
+
 ### Form properties
 
 This section contains important information about your **Inspection Form**.
@@ -199,7 +211,7 @@ For more information on **Syncing** click here. For more information on **Saving
 
 There’s also a `Sync` button on the right side.
 
-<img src={ImageInspectionForms12} style={{ maxWidth: '250px', width: '100%' }} alt="Inspection form sync options." />
+<img src={ImageInspectionForms12} style={{ maxWidth: '250px', width: '100%' }} alt="Snyc button in Inspection Form." />
 
 :::info
 
@@ -227,7 +239,7 @@ Inside, you will see options to:
 - Copy the report URL.
 - `Delete report`, which deletes the specific published report [link to [publishing a report](https://www.notion.so/Reports-226d9f0aeb5a80de843ef4dd0f700533?pvs=21)] you are currently reviewing.
 
-<img src={ImageInspectionForms13} style={{ maxWidth: '250px', width: '100%' }} alt="Published report options." />
+<img src={ImageInspectionForms13} style={{ maxWidth: '250px', width: '100%' }} alt="Open latest published PDF report menu." />
 
 #### Share
 
