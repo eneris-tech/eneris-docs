@@ -38,7 +38,7 @@ Once logged in, you’ll be able to create, edit, and sync reports just like on 
 
 :::
 
-### **Android**
+### Android
 
 Eneris is available on the Google Play Store for Android phones and tablets. Follow the instructions below or click here [link here] to download the app.
 
