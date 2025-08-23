@@ -13,6 +13,19 @@ import ImageGetStarted12 from './img/get-started-12.webp';
 import ImageGetStarted13 from './img/get-started-13.webp';
 import ImageGetStarted14 from './img/get-started-14.webp';
 
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+
+export function TemplateLink() {
+  const { siteConfig } = useDocusaurusContext();
+  const { isElevateEnabled } = siteConfig.customFields;
+
+  const link = isElevateEnabled
+    ? '/docs/legacy/guides-&-concepts/templates'
+    : '/docs/guides-&-concepts/templates';
+
+  return <a href={link}>here</a>;
+}
+
 # Get Started
 
 Welcome to Eneris, your ideal property inspection platform.
@@ -63,7 +76,7 @@ You will then be redirected inside the inspection you just created.
 
 :::info[Info]
 
-*This section will cover how to enter data into your inspection reports. `Templates` make this process even simpler and you can find additional information about templates [here](/docs/guides-&-concepts/templates).*
+*This section will cover how to enter data into your inspection reports. `Templates` make this process even simpler and you can find additional information about templates <TemplateLink />.*
 
 :::
 
