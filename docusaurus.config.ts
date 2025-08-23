@@ -105,13 +105,16 @@ const config: Config = {
               label: 'Overview',
               to: '/docs/overview',
             },
+            // TODO: Even if elevate is enabled, I need these two links to navigation to the corresponding pages.
+            // So the versioned_docs will need a separate implementation for the footer.
             {
               label: 'Get Started',
-              to: '/docs/get-started',
+              to: isElevateEnabled ? '/docs/getting-started/quickstart' : '/docs/get-started',
+
             },
             {
               label: 'Guides & Concepts',
-              to: '/docs/category/guides--concepts',
+              to: isElevateEnabled ? '/docs/category/learn' : '/docs/category/guides--concepts',
             },
             {
               label: 'FAQ',
@@ -147,6 +150,9 @@ const config: Config = {
       searchParameters: {},
       insights: true,
     },
+    customFields: {
+      isElevateEnabled,
+    }
   } satisfies Preset.ThemeConfig,
 };
 
