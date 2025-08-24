@@ -137,3 +137,9 @@
   --ifm-alert-background-color: var(--ifm-surface-error);
   --ifm-alert-border-color: var(--ifm-color-error);
 }
+
+.badge--secondary {
+  background-color: var(--ifm-surface-secondary);
+  border-color: var(--ifm-surface-secondary);
+  color: var(--ifm-color-typography);
+}
