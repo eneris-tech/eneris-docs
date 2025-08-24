@@ -10,7 +10,7 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero', styles.heroBanner, styles.heroHomepage)}>
+    <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
@@ -19,14 +19,14 @@ function HomepageHeader() {
         <div className={clsx('row', styles.homeButtonContainer)}>
           <div className={styles.buttons}>
             <Link
-              className="button button--secondary button--lg"
+              className="button button--primary button--lg"
               to="/docs/overview">
               See documentation
             </Link>
           </div>
           <div className={styles.buttons}>
             <Link
-              className="button button--outline button--lg heroButton"
+              className="button button--outline button--lg hero-button-secondary"
               to="https://ener.is/join?utm_source=docs"
               target="_blank"
               rel="noopener noreferrer">
@@ -44,7 +44,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={siteConfig.title}
-      description="Description will go into a meta tag in <head />">
+      description="Explore our guides and examples to start using Eneris.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

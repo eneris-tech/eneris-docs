@@ -24,7 +24,7 @@ if (isElevateEnabled) {
 
 const config: Config = {
   title: 'Eneris User Guide',
-  tagline: 'Make inspection reports easy',
+  tagline: 'Explore our guides and examples to start using Eneris.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here

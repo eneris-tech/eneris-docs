@@ -22,10 +22,6 @@
   justify-content: center;
 }
 
-.heroHomepage {
-  --ifm-hero-text-color: var(--ifm-font-color-base-inverse);
-}
-
 .homeButtonContainer {
   display: flex;
   justify-content: center;
