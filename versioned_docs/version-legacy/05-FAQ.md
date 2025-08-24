@@ -7,7 +7,7 @@ pagination_prev: null
 
 <summary>Which mobile devices are supported?</summary>
 <p>
-Apple (iOS and PadOS) and Android (phones and tablet) devices are supported.
+Apple (iOS and iPadOS) and Android (phones and tablet) devices are supported.
 
 [Download Eneris for Apple iOS and iPadOS devices here.](
 https://apps.apple.com/us/app/eneris/id1448765778)
