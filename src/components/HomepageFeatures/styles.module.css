@@ -10,3 +10,13 @@
   width: 200px;
   fill: var(--ifm-color-primary);
 }
+
+.buttonDefault {
+  background-color: var(--ifm-color-default);
+  color: var(--ifm-color-typography-light);
+}
+
+.buttonDefault:hover {
+  opacity: 0.7;
+  color: var(--ifm-color-typography-light);
+}

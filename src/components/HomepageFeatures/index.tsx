@@ -67,7 +67,7 @@ export default function HomepageFeatures(): JSX.Element {
         </div>
         <div style={{justifyContent: 'center', display: 'flex'}}>
           <Link
-            className="button button--primary button--lg"
+            className={clsx('button button--lg', styles.buttonDefault)}
             to="/docs/overview">
             See documentation
           </Link>
