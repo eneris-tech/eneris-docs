@@ -1,3 +1,130 @@
-
+import ImageOfflineForms1 from './img/offline-forms-1.webp';
+import ImageOfflineForms2 from './img/offline-forms-2.webp';
+import ImageOfflineForms3 from './img/offline-forms-3.webp';
+import ImageOfflineForms4 from './img/offline-forms-4.webp';
 
 # Offline Forms
+
+Eneris is built for inspectors whether they have internet access or not. With **Offline Forms**, you can access your **Inspection Forms** [link to [inspection forms](https://www.notion.so/Inspection-Forms-22cd9f0aeb5a80f9906ce9df5b4cea45?pvs=21)]  anytime, anywhere.
+
+- **Work without internet** – Work on inspections while completely offline.
+- **Automatic saving** – All changes are saved locally to your device (as long as storage space is available).
+- **Reliable access** – Previously synced **Inspection Forms** [link to [syncing](https://www.notion.so/Syncing-22cd9f0aeb5a80c7846ce549d62c1183?pvs=21)] stay available offline for up to 30 days.
+
+:::info
+
+Synced **Offline Forms** will be automatically removed from your device if it has been more than 30 days since the inspection date **and** the last synced time is more than 30 days.
+
+- This automation is in place to help ensure your mobile device storage remains free.
+
+:::
+
+## Offline Forms
+
+An **Offline Form** is the locally saved offline data of an **Inspection Form** [link to [Inspection Form](https://www.notion.so/Inspection-Forms-22cd9f0aeb5a80f9906ce9df5b4cea45?pvs=21)]. i.e., It is the **Inspection Form** data that is saved to your mobile device.
+
+<img src={ImageOfflineForms1} style={{ maxWidth: '250px', width: '100%' }} alt="Offline Form list." />
+
+Saving the **Inspection Form** [link to [Inspection Form](https://www.notion.so/Inspection-Forms-22cd9f0aeb5a80f9906ce9df5b4cea45?pvs=21)] data to your mobile device allows you to continue working on **Inspections** [link to [Inspections](https://www.notion.so/Inspections-226d9f0aeb5a8068b23fe5f466d0b8a8?pvs=21)] even when you have no internet connection.
+
+:::info
+
+**Offline Forms** are local saves of **Inspection Forms** [link to [Inspection Form](https://www.notion.so/Inspection-Forms-22cd9f0aeb5a80f9906ce9df5b4cea45?pvs=21)] only and not the entire **Inspection** [link to [Inspections](https://www.notion.so/Inspections-226d9f0aeb5a8068b23fe5f466d0b8a8?pvs=21)].
+
+- This means certain actions will be unavailable when conducting inspections without internet. Specifically, the following actions are unavailable:
+    - Publishing your report [link [here](https://www.notion.so/Reports-226d9f0aeb5a80de843ef4dd0f700533?pvs=21)]
+    - Sharing your report [link [here](https://www.notion.so/Reports-226d9f0aeb5a80de843ef4dd0f700533?pvs=21)]
+    - Any actions from the **Inspection** menu
+        - Adding or updating contacts
+        - Adding or updating property details
+        - Updating the **Inspector Profile** [link [here](https://www.notion.so/Inspections-226d9f0aeb5a8068b23fe5f466d0b8a8?pvs=21)]
+        - Adding or updating general notes and the internal memo
+
+Once you’ve completed the physical inspection of the property and filled out the **Inspection Form**, reconnect to the internet to publish and share the report with your client(s).
+
+:::
+
+## Creating Offline Forms
+
+An **Offline Form** is automatically created when you create an **Inspection** [link to [Inspections](https://www.notion.so/Inspections-226d9f0aeb5a8068b23fe5f466d0b8a8?pvs=21)] on your device.
+
+- **Offline Forms** are linked to **Inspection Forms** [link to [Inspection Form](https://www.notion.so/Inspection-Forms-22cd9f0aeb5a80f9906ce9df5b4cea45?pvs=21)]. Since each **Inspection** can have multiple **Inspection Forms** [link the [beginning part of this sentence to here](https://www.notion.so/Inspection-Forms-22cd9f0aeb5a80f9906ce9df5b4cea45?pvs=21)] it also means each **Inspection** can have multiple **Offline Forms** (i.e., one **Offline Form** per type of inspection you are performing at the property).
+- Anytime you navigate into an Inspection Form from the mobile app, if the form does not exist on the device, we will download all the necessary files to your device, so it may take longer to load the form when you open it the first time.
+
+In the **Offline Forms** page, when you select the sync [link to [syncing](https://www.notion.so/Syncing-22cd9f0aeb5a80c7846ce549d62c1183?pvs=21)] button:
+
+1. All forms that have not been synced will attempt to sync.
+2. Old **Offline Forms** will be removed from your device storage [link to [offline form storage - automatic delete](https://www.notion.so/Offline-Forms-226d9f0aeb5a80b1aceac29afa949c64?pvs=21)].
+3. New **Offline Forms** that have been created but not yet saved to your device will be saved.
+
+There can be four types of symbols next to each **Offline Form**. They represent the state of the form.
+
+- Green checkmark - All changes in the **Offline Form** are synced.
+    - This **does not** mean the **Offline Form** is pulling the latest changes from the cloud. It is only pushing the **Offline Form** changes to the cloud.
+        - To pull the latest changes from the cloud onto your mobile device, you would need to go into the particular **Inspection Form** and manually select the sync button.
+            - This is only required when you want the latest working version of the **Inspection Form** on your mobile device.
+- Grey circular dot - Pending changes that are saved offline need to be synced.
+- Warning triangle - Syncing has failed and an error message should be displayed along with it.
+- Spinner - Sync is in progress.
+
+:::tip
+
+To ensure your changes appear on all devices remember to sync [link to [syncing](https://www.notion.so/Syncing-22cd9f0aeb5a80c7846ce549d62c1183?pvs=21)] your changes first!
+
+:::
+
+## Offline Form storage
+
+To help manage your device’s limited storage, Eneris handles **Offline Forms** with the following rules.
+
+### Automatic delete
+
+Synced **Offline Forms** will be automatically removed from your device if it has been more than 30 days since the inspection date **and** the last synced time is more than 30 days.
+
+### Automatic re-download
+
+If you make new changes to an **Inspection** [link to [inspection](https://www.notion.so/Inspections-226d9f0aeb5a8068b23fe5f466d0b8a8?pvs=21)] older than 30 days, the **Offline Form** will be re-saved to your device for another 30 days.
+
+### Manual delete
+
+You can manually remove offline forms if you need to free up space.
+
+:::info
+
+Deleting **Offline Forms** from you mobile device **does not** delete the inspection data from Eneris’ cloud servers. You will always be able to access past inspections as **we do not delete your data to free up space**.
+
+These rules help ensure Eneris runs smoothly while respecting your device’s storage limits.
+
+:::
+
+## Accessing Offline Forms
+
+Once the **Offline Form** is saved onto your mobile device you can access it without internet connection. This enables you to continue your onsite inspection without any delays.
+
+:::tip
+
+Reminder that **Offline Forms** are local saves of **Inspection Forms** only and not the entire **Inspection**.
+
+- This means certain actions will be unavailable when conducting inspections without internet. See the info callout here for more info [link to [here](https://www.notion.so/Offline-Forms-226d9f0aeb5a80b1aceac29afa949c64?pvs=21)]
+
+:::
+
+### Losing internet connection before navigating into an Inspection Form
+
+If you have the Eneris application open and lose internet connection before navigating into an **Inspection Form** there are two ways to access your **Offline Forms**.
+
+1. Through the **Quick access** section on the home page
+
+<img src={ImageOfflineForms2} style={{ maxWidth: '250px', width: '100%' }} alt="Accessing Offline Forms through quick access." />
+
+1. Through the hamburger menu
+
+<img src={ImageOfflineForms3} style={{ maxWidth: '250px', width: '100%' }} alt="Accessing offline forms through the sidebar menu." />
+
+### Losing internet connection before the Eneris application has been opened
+
+If you lose internet connection before opening the Eneris application it will take you to the sign-in page upon opening the app. Instead of signing in, which won’t work because internet connection is unavailable, select the `View offline forms` button.
+
+<img src={ImageOfflineForms4} style={{ maxWidth: '250px', width: '100%' }} alt="View Offline Forms button on sign-in screen." />
+
+This will directly take you into the **Offline Forms** menu where you can select the relevant option.
