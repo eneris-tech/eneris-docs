@@ -8,7 +8,7 @@ This is your guide to getting started with Eneris. If you’re new to using soft
 
 Eneris is a property inspection platform that helps you generate professional and interactive inspection reports with ease.
 
-With Eneris, you can attach your findings (photos, video, and text) to every inspection item and then use that information to generate a report for your client, or your team, which helps them make an informed decision on the property.
+With Eneris, you can attach your findings (photos, video, and text) to every inspection item and present that information in a report for your client, or your team.
 
 **Let’s get started**
 
@@ -40,7 +40,7 @@ Once logged in, you’ll be able to create, edit, and sync reports just like on 
 
 ### Android
 
-Eneris is available on the Google Play Store for Android phones and tablets. Follow the instructions below or click here [link here] to download the app.
+Eneris is available on the Google Play Store for Android phones and tablets. Follow the instructions below or [click here](https://play.google.com/store/apps/details?id=is.ener.app) to download the app.
 
 1. Open the **Google Play Store** on your Android device.
 2. Search for **Eneris**.
@@ -50,7 +50,7 @@ Eneris is available on the Google Play Store for Android phones and tablets. Fol
 
 :::info
 
-Once logged in, you’ll be able to create, edit, and sync reports just like on desktop—plus work entirely offline when needed.
+Once logged in, you’ll be able to create, edit, and sync reports just like on desktop—plus work entirely offline when needed. To learn how the app works offline, see here [link to offline forms].
 
 :::
 

@@ -35,14 +35,12 @@ If you’re looking for a reporting platform that doubles as a business intellig
 
 :::
 
-## When you can’t use Eneris?
+## What are the minimum requirements to use Eneris?
 
-There are a few cases where you won’t be able to use Eneris at all:
+To use Eneris, you must have access to a supported device.
 
-- You **don’t have access to a supported mobile device.**
-    - In addition to web (laptops and desktops), Eneris is supported on Apple (iOS and iPadOS) and Android devices. Minimum operating system and storage space requirements must be met.
-- You’re using a **Windows-only phone or tablet** (Eneris does not currently support Windows devices).
-- You perform inspections that **don’t result in client-facing reports** (Eneris is designed for structured reporting and delivery).
+- In addition to web (laptops and desktops), Eneris is supported on Apple (iOS and iPadOS) and Android devices. Minimum operating system and storage space requirements must be met.
+    - See the Quickstart [link to [quickstart](https://www.notion.so/Quickstart-226d9f0aeb5a805fb0a9c560b1d6df29?pvs=21)] page for links to download Eneris.
 
 :::info[Let's chat]
 
