@@ -11,7 +11,7 @@ Apple (iOS and iPadOS) and Android (phones and tablet) devices are supported.
 
 Download Eneris for Apple iOS and iPadOS devices here. [link here]
 
-Download Eneris for Android devices here. [link here]
+[Download Eneris for Android devices here.](https://play.google.com/store/apps/details?id=is.ener.app)
 </p>
 </details>
 
@@ -33,7 +33,7 @@ The officially supported browsers are:
 
 <summary>How long will inspection reports be available in Eneris?</summary>
 <p>
-Inspection data is kept indefinitely, unless specifically stated otherwise (such as account deletion requests) [link to delete my account]. We do not delete inspection reports to save storage space.
+Inspection data is kept indefinitely, unless specifically stated otherwise ([such as account deletion requests](/docs/account/settings#delete-my-account)). We do not delete inspection reports to save storage space.
 </p>
 </details>
 
@@ -57,6 +57,6 @@ At this time, the only officially supported language is English. Additional lang
 
 <summary>How do I delete my account?</summary>
 <p>
-See the delete my account section. [link here]
+See the [delete my account](/docs/account/settings#delete-my-account) section.
 </p>
 </details>
