@@ -50,7 +50,7 @@ Eneris is available on the Google Play Store for Android phones and tablets. Fol
 
 :::info
 
-Once logged in, you’ll be able to create, edit, and sync reports just like on desktop—plus work entirely offline when needed. To learn how the app works offline, see here [link to offline forms].
+Once logged in, you’ll be able to create, edit, and sync reports just like on desktop—plus work entirely offline when needed. To learn how the app works offline, see our documentation on [**Offline Forms**](/docs/concepts/offline-forms).
 
 :::
 
@@ -58,8 +58,8 @@ Once logged in, you’ll be able to create, edit, and sync reports just like on 
 
 In addition to mobile devices, Eneris can also be accessed on the web (desktop or laptop computer).
 
-Simply sign up for an Eneris account [link here] and create, edit, and sync reports just like on your mobile devices.
+Simply [sign up for an Eneris account](https://app.ener.is/sign-up) and create, edit, and sync reports just like on your mobile devices.
 
 ## Migrate account from Eneris Legacy
 
-Migrating your account from Eneris Legacy (our original application)? Check out this guide here [link to [here](https://www.notion.so/Migrating-your-account-from-Eneris-Legacy-239d9f0aeb5a807e9c94da05346ddbf9?pvs=21)].
+Migrating your account from Eneris Legacy (our original application)? Check out the [migration guide](/docs/getting-started/migrating-your-account-from-eneris-legacy).

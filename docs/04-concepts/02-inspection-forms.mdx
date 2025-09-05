@@ -32,7 +32,7 @@ Whether you’re performing a home inspection, mold inspection, asbestos inspect
 
 ## How Form Templates and Inspection Forms are related
 
-**Form Templates** [link to form templates] allow for the customization of inspection lists, and the pre-filling of report fields. Once saved, they are available for selection when creating a new **Inspection** [link to inspections],
+[**Form Templates**](/docs/concepts/form-templates) allow for the customization of inspection lists, and the pre-filling of report fields. Once saved, they are available for selection when creating a new [**Inspection**](/docs/concepts/inspections),
 
 <img src={ImageInspectionForms1} style={{ maxWidth: '250px', width: '100%' }} alt="Selecting a Form Template when creating a new inspection.." />
 
@@ -40,7 +40,7 @@ and when adding a new **Inspection Form** to an existing **Inspection**.
 
 <img src={ImageInspectionForms2} style={{ maxWidth: '250px', width: '100%' }} alt="Adding a Form Template to an existing Inspection." />
 
-:::info
+:::tip
 
 If we were to put it into simpler terms:
 
@@ -51,9 +51,9 @@ If we were to put it into simpler terms:
 
 ## Many Inspection Forms to one Inspection
 
-Each **Inspection** can have one or more **Inspection Forms** associated with it. **Inspection Forms** allow you to associate different types of inspections with a single inspection site visit.
+Each **Inspection** can have one or more [**Inspection Forms**](/docs/concepts/inspection-forms) associated with it. **Inspection Forms** allow you to associate different types of inspections with a single inspection site visit.
 
-- e.g., If you are certified to perform multiple types of inspections (e.g. home inspection, asbestos inspection, radon inspection, etc.) on a property then you can pre-setup various Form **Templates** [link to [form templates](https://www.notion.so/Form-Templates-226d9f0aeb5a80ae8feed89bd3ebe833?pvs=21)]and load them into the same **Inspection**.
+- e.g., If you are certified to perform multiple types of inspections (e.g. home inspection, asbestos inspection, radon inspection, etc.) on a property then you can pre-setup various [**Form Templates**](/docs/concepts/form-templates) and load them into the same **Inspection**.
 
     <img src={ImageInspectionForms3} style={{ maxWidth: '250px', width: '100%' }} alt="Multiple inspection Forms example." />
 
@@ -80,7 +80,7 @@ This structure helps keep your reports organized and easy to navigate.
 
 Every part of the framework is customizable. Here are some example use cases:
 
-- If a **category** is unavailable by default, you can create it. Link to `add new inspection categories` instruction below
+- If a **category** is unavailable by default, [you can create it](/docs/concepts/customizing-inspection-forms#creating-categories).
 - If you’re a roofing contractor and never inspect HVAC systems, you can delete the HVAC category.
 - If the **component** you are inspecting has different areas (living room flooring vs. kitchen flooring) in different conditions then you can create multiple **insights**.
 - If you’re an Eneris admin at your company and need to edit the **field options** to use company approved terminology, you can do so quickly and without needing to interact with the Eneris team (but we’re always happy to help).
@@ -101,7 +101,7 @@ and in the **Inspection Forms** section.
 
 :::info
 
-You must **Sync** [hyperlink to Syncing] the **Inspection Form** in order for the Report Title to update at both locations.
+You must [**Sync**](/docs/concepts/syncing) the **Inspection Form** in order for the Report Title to update at both locations.
 
 :::
 
@@ -166,13 +166,13 @@ Here’s how it will show up in the PDF report:
 
 Keep in mind that this is for **general** **limitations**.
 
-This part of our documentation [link to the `Guide` page that mentions category limitations] explains how to enter **category-specific** **limitations**.
+You may also enter **category-specific** **limitations**.
 
 :::
 
 #### Shared Fields
 
-**Shared Fields** automatically appear in every component of your Form Template [link to form template]. Use them for any common inputs in your inspection workflow.
+**Shared Fields** automatically appear in every component of your [**Form Template**](/docs/concepts/form-templates). Use them for any common inputs in your inspection workflow.
 
 - e.g. You may want a `Risk` or `Location` field available in every component. Creating it as a **Shared Field** means you only need to create them once and they will be available in every component.
 
@@ -182,7 +182,7 @@ This helps you save time and keeps your workflow and data entry consistent.
 
 You can delete a **Shared Field** from a component if it’s not required. However, note that you will not be able to re-add it at this time.
 
-The `Status` field, `Recommended Action` field, and `Summary Label` fields cannot be deleted. They can only be hidden [link to [field visibility](https://www.notion.so/Customizing-Inspection-Forms-24dd9f0aeb5a802fa284eac48dd9f673?pvs=21)].
+The `Status` field, `Recommended Action` field, and `Summary Label` fields cannot be deleted. [They can only be hidden](/docs/concepts/customizing-inspection-forms#field-visibility).
 
 :::
 
@@ -204,7 +204,7 @@ Status is comprised of three timestamps which detail when the **Inspection Form*
 
 :::info
 
-For more information on **Syncing** click here. For more information on **Saving** click here. [Link to Saving and Syncing]
+For more information on **Syncing** [click here](/docs/concepts/syncing). For more information on **Saving** [click here](/docs/concepts/saving).
 
 :::
 
@@ -216,7 +216,7 @@ There’s also a `Sync` button on the right side.
 
 :::info
 
-For more information on **Syncing** click here. For more information on **Saving** click here. Link to Saving and Syncing
+For more information on **Syncing** [click here](/docs/concepts/syncing). For more information on **Saving** [click here](/docs/concepts/saving).
 
 :::
 
@@ -233,7 +233,7 @@ This section allows you to preview PDF changes, manage published reports, and sh
 
 #### Preview changes
 
-Allows you to quickly check how your report looks before publishing. [link to [previewing a report](https://www.notion.so/Reports-226d9f0aeb5a80de843ef4dd0f700533?pvs=21)]
+Allows you to [quickly check how your report looks](/docs/concepts/reports#publishing-a-report) before publishing.
 
 #### Open latest published PDF report
 
@@ -242,26 +242,26 @@ Opens a menu for the most recently synced PDF report.
 Inside, you will see options to:
 
 - Open the finalized PDF report your client(s) would receive.
-- Toggle the report to public or private. Link to private vs public reports
+- Toggle the report to [public or private](/docs/concepts/reports#public-vs-private-reports).
 - `Share` the report.
 - Copy the report URL.
-- `Delete report`, which deletes the specific published report [link to [publishing a report](https://www.notion.so/Reports-226d9f0aeb5a80de843ef4dd0f700533?pvs=21)] you are currently reviewing.
+- `Delete report`, which deletes the specific [published report](/docs/concepts/reports#publishing-a-report) you are currently reviewing.
 
 <img src={ImageInspectionForms14} style={{ maxWidth: '250px', width: '100%' }} alt="Open latest published PDF report menu." />
 
 #### Share
 
-Allows you to email the completed PDF report [link to [sharing a report](https://www.notion.so/Reports-226d9f0aeb5a80de843ef4dd0f700533?pvs=21)].
+Allows you to [email the completed PDF report](/docs/concepts/reports#sharing-a-report).
 
 #### View all published reports
 
-Shows the report history [link to [report history](https://www.notion.so/Reports-226d9f0aeb5a80de843ef4dd0f700533?pvs=21)] of published reports.
+Shows the history of published reports.
 
 <img src={ImageInspectionForms15} style={{ maxWidth: '250px', width: '100%' }} alt="View all published reports." />
 
 ### Publish
 
-The `Publish` button publishes your report. link to [publishing a report](https://www.notion.so/Reports-226d9f0aeb5a80de843ef4dd0f700533?pvs=21)
+The `Publish` button [publishes your report](/docs/concepts/reports#publishing-a-report).
 
 ### Return to inspection
 

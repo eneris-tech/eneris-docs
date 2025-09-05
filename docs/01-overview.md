@@ -60,4 +60,4 @@ To learn more about the relaunch, check out our blog post. [Insert hyperlink]
 
 ## Get started
 
-Check out the next section to get started. [link [here](https://www.notion.so/Getting-started-226d9f0aeb5a805fb0a9c560b1d6df29?pvs=21)]
+Check out the next section to [get started](/docs/getting-started/quickstart).

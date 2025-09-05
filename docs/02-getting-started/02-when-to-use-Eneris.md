@@ -40,7 +40,7 @@ If you’re looking for a reporting platform that doubles as a business intellig
 To use Eneris, you must have access to a supported device.
 
 - In addition to web (laptops and desktops), Eneris is supported on Apple (iOS and iPadOS) and Android devices. Minimum operating system and storage space requirements must be met.
-    - See the Quickstart [link to [quickstart](https://www.notion.so/Quickstart-226d9f0aeb5a805fb0a9c560b1d6df29?pvs=21)] page for links to download Eneris.
+    - See the [Quickstart](/docs/getting-started/quickstart) page for links to access and download Eneris.
 
 :::info[Let's chat]
 
