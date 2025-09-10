@@ -9,12 +9,12 @@ Eneris is built for property inspectors who want fast, modern, and field-ready r
 - You’re a **solo inspector or part of a small team** and want a straightforward tool that doesn’t require training.
 - You’re a **large organization** and value being able to customize your reporting platform without needing to reach out to a support team at every turn.
 - You want to **complete reports on-site**, with or without internet.
-- You’re looking for a **clean, mobile-first interface** that helps you focus on your findings—not on formatting.
+- You’re looking for a **clean, mobile-first interface** that helps you focus on your findings — not on formatting.
 - You value **simple, customizable templates** that align with industry standards like ASHI, InterNACHI, or your own SOP.
 
 :::tip[Great fit]
 
-If your ideal workflow involves minimal typing, visual indicators for outstanding inspection items, and seamless sharing with clients—Eneris will likely feel like a good fit.
+If your ideal workflow involves minimal typing, visual indicators for outstanding inspection items, and seamless sharing with clients — Eneris will likely feel like a good fit.
 
 :::
 
