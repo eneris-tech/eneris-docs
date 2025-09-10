@@ -32,7 +32,7 @@ A few key benefits include:
 - **Easily create reports.**
     - Generate polished PDFs with a clean layout, embedded photos, and zero formatting headaches.
 - **Fully customizable templates.**
-    - Standardize your process across the team or create different templates for different job types. You're in control—from layout to language.
+    - Standardize your process across the team or create different templates for different job types. You're in control — from layout to language.
 - **Solo and multi-inspector ready.**
     - Track jobs, assign inspectors, and ensure consistency across every report. Everything your team needs to work smarter, together.
 - **Works offline.**
@@ -52,7 +52,7 @@ If you’ve been using, or following, Eneris for a while you’ll notice that th
 
 Redeveloping Eneris is necessary to simplify, improve reliability, and increase the speed of your reporting which enables you to do your best work.
 
-Rebuilding software from scratch is like demolishing a house down to its foundation—it takes more time, effort, and risk but results in a modern, efficient system.
+Rebuilding software from scratch is like demolishing a house down to its foundation — it takes more time, effort, and risk but results in a modern, efficient system.
 
 **Our mission remains the same: build the best inspection report writing platform for you to grow your business.**
 

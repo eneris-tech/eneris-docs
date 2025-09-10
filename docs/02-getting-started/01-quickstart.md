@@ -20,7 +20,7 @@ What we’ll be covering:
 
 ## Download Eneris on your mobile device
 
-Eneris is available on Apple and Android devices (phones and tablets) so you can complete reports in the field—online or offline.
+Eneris is available on Apple and Android devices (phones and tablets) so you can complete reports in the field — online or offline.
 
 ### Apple
 
@@ -34,7 +34,7 @@ You can download Eneris directly from the App Store on your iPhone or iPad. Foll
 
 :::info
 
-Once logged in, you’ll be able to create, edit, and sync reports just like on desktop—plus work entirely offline when needed.
+Once logged in, you’ll be able to create, edit, and sync reports just like on desktop — plus work entirely offline when needed.
 
 :::
 
@@ -50,7 +50,7 @@ Eneris is available on the Google Play Store for Android phones and tablets. Fol
 
 :::info
 
-Once logged in, you’ll be able to create, edit, and sync reports just like on desktop—plus work entirely offline when needed. To learn how the app works offline, see our documentation on [**Offline Forms**](/docs/concepts/offline-forms).
+Once logged in, you’ll be able to create, edit, and sync reports just like on desktop — plus work entirely offline when needed. To learn how the app works offline, see our documentation on [**Offline Forms**](/docs/concepts/offline-forms).
 
 :::
 
