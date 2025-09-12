@@ -114,7 +114,7 @@ const config: Config = {
             },
             {
               label: 'Guides & Concepts',
-              to: isElevateEnabled ? '/docs/category/learn' : '/docs/category/guides--concepts',
+              to: isElevateEnabled ? '/docs/category/concepts' : '/docs/category/guides--concepts',
             },
             {
               label: 'FAQ',
@@ -131,12 +131,16 @@ const config: Config = {
             },
             {
               label: 'Contact Us',
-              href: 'https://www.eneris.ca/contact-us',
+              ...(isElevateEnabled ? {
+                to: '/docs/support/contact-support',
+              } : {
+                href: 'https://www.eneris.ca/contact-us',
+              }),
             }
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Designed and built by Eneris Technologies Inc.`,
+      copyright: `© ${new Date().getFullYear()} Eneris Technologies Inc.`,
     },
     prism: {
       theme: prismThemes.github,
