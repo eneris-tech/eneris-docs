@@ -10,13 +10,29 @@ Eneris is a property inspection platform that helps you generate professional an
 
 With Eneris, you can attach your findings (photos, video, and text) to every inspection item and present that information in a report for your client, or your team.
 
-**Let’s get started**
+### Let’s get started
 
 What we’ll be covering:
 
-1. Downloading Eneris on your mobile device
-2. Accessing Eneris on web (desktop or laptop computer)
-3. [Optional] Migrate account from Eneris Legacy
+1. Signing up for an Eneris account
+2. Downloading Eneris on your mobile device
+3. Accessing Eneris on web (desktop or laptop computer)
+4. [Optional] Migrate account from Eneris Legacy
+
+## Signing up for an Eneris account
+To use Eneris, you must first sign up for an account.
+
+Signing up for an account must be **completed on an internet browser** (i.e, Not on our mobile application). You may [sign up for an account here](https://app.ener.is/sign-up).
+
+:::info
+
+Were you a user of Eneris Legacy (our original application)? This version of Eneris is a standalone application, which means you must **create a new account**.
+
+- You may use the same email address, if desired.
+
+If you would like to migrate your account from Eneris Legacy check out the [migration guide](/docs/getting-started/migrating-your-account-from-eneris-legacy).
+
+:::
 
 ## Download Eneris on your mobile device
 
@@ -30,7 +46,7 @@ You can download Eneris directly from the App Store on your iPhone or iPad. Foll
 2. In the search bar, type `Eneris` and press search.
 3. Look for the Eneris logo and select the `Eneris - Elevate` app from the results.
 4. Select `Get`, or the cloud icon if you’ve downloaded the app previously, to install.
-5. After downloading, open the app and sign up or into your Eneris account.
+5. After downloading, open the app and sign in to your Eneris account.
 
 :::info
 
@@ -46,7 +62,7 @@ Eneris is available on the Google Play Store for Android phones and tablets. Fol
 2. Search for **Eneris**.
 3. Select the `Eneris - Elevate` app from the list of results.
 4. Select **Install**.
-5. After downloading, open the app and sign up or into your Eneris account.
+5. After downloading, open the app and sign in to your Eneris account.
 
 :::info
 
