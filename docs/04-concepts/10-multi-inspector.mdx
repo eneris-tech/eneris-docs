@@ -1,5 +1,76 @@
----
-draft: true
----
+import MultiInspector1 from './img/multi-inspector-1.webp';
 
 # Multi-Inspector
+
+Multi-inspector mode allows multiple inspectors to work together. It’s designed for inspection companies or teams that need visibility across schedules, inspections, and reports while maintaining clear roles and responsibilities.
+
+With multi-inspector enabled, administrators and schedulers can:
+
+- Assign different inspectors to individual inspections
+- Assign multiple inspectors to the same inspection
+- Track each inspector’s workload using a shared calendar
+- Keep inspection data and reports organized by team member
+- Enable collaboration while maintaining accountability
+
+Whether you’re a small team or a growing business, multi-inspector mode helps you stay coordinated and efficient.
+
+
+## Roles and permissions
+
+Before getting started with multi-inspector mode, it helps to understand the different roles and what each can do.
+
+Expand the table below to learn more.
+
+<details>
+  <summary>**Roles and permissions table**</summary>
+
+import PermissionsTable from '/src/components/Multi-inspector/PermissionsTable';
+
+<PermissionsTable />
+
+</details>
+
+## Teams and Team Owners
+
+Definitions of a **Team** and a **Team Owner** in Eneris.
+
+### Team
+
+A **Team** is defined as all individuals who have been invited to access some, or all, of your organization’s inspection data in Eneris.
+
+### Team owner
+
+A **Team owner** is a single individual who is the main point of contact between Eneris and your organization.
+
+## Configuring multi-inspector mode
+
+Learn how to setup multi-inspector mode.
+
+:::info
+
+Multi-inspector mode can only be setup by those with the **Admin** role.
+
+:::
+
+### Manage accounts and roles
+
+In the settings menu, locate the `Team & access` section and select `Manage accounts and roles`.
+
+You will then see a list of team members.
+
+- Select each team member to edit their role or delete their account.
+- Select the edit button to add new team members, edit the team owner, or delete the team.
+
+<img src={MultiInspector1} style={{ maxWidth: '250px', width: '100%' }} alt="Multi-inspector settings." />
+
+## Syncing for multi-inspector
+
+Multi-inspector mode allows multiple inspectors to inspect the same property and combine their insights together into a single cohesive report.
+
+Eneris smartly merges each inspectors’ insights when their insights are [synced](/docs/concepts/syncing).
+
+:::tip
+
+Each inspector will need to sync and refresh the inspection to view the latest updates from their colleagues. Take a look at [syncing](/docs/concepts/syncing) for more information.
+
+:::
