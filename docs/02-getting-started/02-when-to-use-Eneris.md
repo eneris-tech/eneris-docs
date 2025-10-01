@@ -20,14 +20,14 @@ If your ideal workflow involves minimal typing, visual indicators for outstandin
 
 ## When is Eneris not the best option?
 
-Eneris isn’t built for every type of workflow. As of **August 2025**, Eneris may not be the right tool for you at this time if:
+Eneris isn’t built for every type of workflow. As of **October 2025**, Eneris may not be the right tool for you at this time if:
 
 - You require **complex integrations** with large enterprise software stacks or CRMs.
 - You need **fully custom report designs**, like branded templates with unique layouts, columns, or detailed engineering calculations.
 - You’re expecting **advanced analytics dashboards** or inspection trend tracking over time.
 - You need **extensive back office customization options** (such as the ability to automate every customer touch point).
 
-Eneris focuses on inspection reporting speed, clarity, and consistency. We may eventually built out the above capabilities, but they are not currently available as of **August 2025**.
+Eneris focuses on inspection reporting speed, clarity, and consistency. We may eventually built out the above capabilities, but they are not currently available as of **October 2025**.
 
 :::warning[Explore more specialized tools]
 
