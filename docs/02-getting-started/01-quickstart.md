@@ -50,7 +50,7 @@ You can download Eneris directly from the App Store on your iPhone or iPad. Foll
 
 :::info
 
-Once logged in, you’ll be able to create, edit, and sync reports just like on desktop — plus work entirely offline when needed.
+Once logged in, you’ll be able to create, edit, and sync reports just like on desktop — plus work entirely offline when needed. To learn how the app works offline, see our documentation on [**Offline Forms**](/docs/concepts/offline-forms).
 
 :::
 
