@@ -14,7 +14,7 @@ Eneris is built for property inspectors who want fast, modern, and field-ready r
 
 :::tip[Great fit]
 
-If your ideal workflow involves minimal typing, visual indicators for outstanding inspection items, and seamless sharing with clients — Eneris will likely feel like a good fit.
+If your ideal workflow involves minimal typing, visual indicators for outstanding inspection items, and seamless sharing with clients — Eneris will likely be a good fit.
 
 :::
 
