@@ -20,9 +20,7 @@ What we’ll be covering:
 4. [Optional] Migrate account from Eneris Legacy
 
 ## Signing up for an Eneris account
-To use Eneris, you must first sign up for an account.
-
-Signing up for an account must be **completed on an internet browser** (i.e, Not on our mobile application). You may [sign up for an account here](https://app.ener.is/sign-up).
+To use Eneris, you must first [sign up for an account](https://app.ener.is/sign-up).
 
 :::info
 
@@ -42,11 +40,12 @@ Eneris is available on Apple and Android devices (phones and tablets) so you can
 
 You can download Eneris directly from the App Store on your iPhone or iPad. Follow the instructions below or click here [link here] to download the app.
 
-1. Open the **App Store** on your device.
-2. In the search bar, type `Eneris` and press search.
-3. Look for the Eneris logo and select the `Eneris - Elevate` app from the results.
-4. Select `Get`, or the cloud icon if you’ve downloaded the app previously, to install.
-5. After downloading, open the app and sign in to your Eneris account.
+1. To use Eneris, you must first [sign up for an account](https://app.ener.is/sign-up).
+2. Once you have created an account, open the **App Store** on your device.
+3. In the search bar, type `Eneris` and press search.
+4. Look for the Eneris logo and select the `Eneris - Elevate` app from the results.
+5. Select `Get`, or the cloud icon if you’ve downloaded the app previously, to install.
+6. After downloading, open the app and sign in to your Eneris account.
 
 :::info
 
@@ -62,7 +61,7 @@ Eneris is available on the Google Play Store for Android phones and tablets. Fol
 2. Search for **Eneris**.
 3. Select the `Eneris - Elevate` app from the list of results.
 4. Select **Install**.
-5. After downloading, open the app and sign in to your Eneris account.
+5. After downloading, open the app and sign up or sign in to your Eneris account.
 
 :::info
 
