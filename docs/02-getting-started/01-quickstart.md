@@ -28,7 +28,7 @@ Were you a user of Eneris Legacy (our original application)? This version of Ene
 
 - You may use the same email address, if desired.
 
-If you would like to migrate your account from Eneris Legacy check out the [migration guide](/docs/getting-started/migrating-your-account-from-eneris-legacy).
+If you would like to migrate your account from Eneris Legacy check out the [migration guide](/docs/getting-started/migrating-your-account-from-Eneris-Legacy).
 
 :::
 
@@ -77,4 +77,4 @@ Simply [sign up for an Eneris account](https://app.ener.is/sign-up) and create, 
 
 ## Migrate account from Eneris Legacy
 
-Migrating your account from Eneris Legacy (our original application)? Check out the [migration guide](/docs/getting-started/migrating-your-account-from-eneris-legacy).
+Migrating your account from Eneris Legacy (our original application)? Check out the [migration guide](/docs/getting-started/migrating-your-account-from-Eneris-Legacy).
