@@ -62,7 +62,7 @@ const config: Config = {
           versions: {
             ...(isElevateEnabled ? {
               current: {
-                label: 'Current',
+                label: 'Latest',
                 path: '/',
                 banner: 'none',
               },
