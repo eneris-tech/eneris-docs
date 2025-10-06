@@ -29,7 +29,7 @@ export default function PermissionsTable() {
     ['Create Inspector Profile', '✅', '✅', '🚫'],
     ['Edit Inspector Profile', '✅', '✅', '🚫'],
     ['Delete Inspector Profiles', '✅', '✅', '🚫'],
-    ['List Contacts', '✅', '✅', '🚫'],
+    ['List Contacts', '✅', '✅', '✅'],
     ['View Contact', '✅', '✅', '✅'],
     ['Create Contact', '✅', '✅', '✅'],
     ['Edit Contact', '✅', '✅', '✅'],
