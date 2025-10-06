@@ -108,7 +108,7 @@ const config: Config = {
             // Footer can only have one link to the current version of the docs.
             // https://github.com/facebook/docusaurus/issues/7402
             {
-              label: 'Get Started',
+              label: isElevateEnabled ? 'Getting Started' : 'Get Started',
               to: isElevateEnabled ? '/docs/getting-started/quickstart' : '/docs/get-started',
 
             },
