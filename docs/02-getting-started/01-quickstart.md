@@ -38,7 +38,7 @@ Eneris is available on Apple and Android devices (phones and tablets) so you can
 
 ### Apple
 
-You can download Eneris directly from the App Store on your iPhone or iPad. Follow the instructions below or click here [link here] to download the app.
+You can download Eneris directly from the App Store on your iPhone or iPad. Follow the instructions below or [click here](https://apps.apple.com/us/app/eneris-elevate/id6572289028) to download the app.
 
 1. To use Eneris, you must first [sign up for an account](https://app.ener.is/sign-up).
 2. Once you have created an account, open the **App Store** on your device.
