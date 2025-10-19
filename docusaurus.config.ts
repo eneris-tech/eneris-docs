@@ -57,7 +57,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          lastVersion: 'legacy',
+          lastVersion: isElevateEnabled ? 'current' : 'legacy',
           includeCurrentVersion: isElevateEnabled,
           versions: {
             ...(isElevateEnabled ? {
