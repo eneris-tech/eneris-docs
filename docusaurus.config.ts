@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type { NavbarItem } from '@docusaurus/theme-common';
 
 // Toggle this to true to enable the Elevate version of the docs
-const isElevateEnabled = false;
+const isElevateEnabled = true;
 
 const navbarItems: NavbarItem[] = [
   {
