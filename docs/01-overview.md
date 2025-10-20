@@ -42,7 +42,7 @@ A few key benefits include:
 
 ## Eneris vs. Eneris Legacy
 
-If you’ve been using, or following, Eneris for a while you’ll notice that the latest version of Eneris looks quite different! This is because we relaunched Eneris in August 2025.
+If you’ve been using, or following, Eneris for a while you’ll notice that the latest version of Eneris looks quite different! This is because we relaunched Eneris in October 2025.
 
 - The original version of Eneris is now referred to as **Eneris Legacy**. The current version of Eneris is referred to as **Eneris Elevate**.
 
@@ -56,7 +56,7 @@ Rebuilding software from scratch is like demolishing a house down to its foundat
 
 **Our mission remains the same: build the best inspection report writing platform for you to grow your business.**
 
-To learn more about the relaunch, check out our blog post. [Insert hyperlink]
+To learn more about the relaunch, check out our [blog post](https://www.eneris.ca/blog/elevate-launch).
 
 ## Get started
 
