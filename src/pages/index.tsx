@@ -27,7 +27,7 @@ function HomepageHeader() {
           <div className={styles.buttons}>
             <Link
               className="button button--outline button--lg hero-button-secondary"
-              to="https://ener.is/join?utm_source=docs"
+              to="https://app.ener.is/sign-up"
               target="_blank"
               rel="noopener noreferrer">
               Create account
