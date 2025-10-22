@@ -13,8 +13,6 @@ import ImageGetStarted12 from './img/get-started-12.webp';
 import ImageGetStarted13 from './img/get-started-13.webp';
 import ImageGetStarted14 from './img/get-started-14.webp';
 
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-
 # Get Started
 
 Welcome to Eneris, your ideal property inspection platform.
@@ -65,7 +63,7 @@ You will then be redirected inside the inspection you just created.
 
 :::info[Info]
 
-*This section will cover how to enter data into your inspection reports. `Templates` make this process even simpler and you can find additional information about templates <TemplateLink />.*
+*This section will cover how to enter data into your inspection reports. `Templates` make this process even simpler and you can find additional information about templates [here](/docs/legacy/guides-&-concepts/templates).*
 
 :::
 
@@ -125,15 +123,3 @@ See the following examples of how the `Repair and Replace` button and `Replace
 To customize the `Recommended Action` options, navigate to `Settings` > `Report Data Entry` > `Recommended Action Customization`. Changes made will be reflected on any **new reports created after the change is made**.
 
 <img src={ImageGetStarted14} style={{ maxWidth: '800px', width: '100%' }} alt="Customize Recommended Action buttons" />
-
-
-export function TemplateLink() {
-  const { siteConfig } = useDocusaurusContext();
-  const { isElevateEnabled } = siteConfig.customFields;
-
-  const link = isElevateEnabled
-    ? '/docs/legacy/guides-&-concepts/templates'
-    : '/docs/guides-&-concepts/templates';
-
-  return <a href={link}>here</a>;
-}

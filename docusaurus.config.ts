@@ -3,9 +3,6 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import type { NavbarItem } from '@docusaurus/theme-common';
 
-// Toggle this to true to enable the Elevate version of the docs
-const isElevateEnabled = true;
-
 const navbarItems: NavbarItem[] = [
   {
     type: 'docSidebar',
@@ -13,14 +10,11 @@ const navbarItems: NavbarItem[] = [
     position: 'left',
     label: 'Documentation',
   },
-];
-
-if (isElevateEnabled) {
-  navbarItems.push({
+  {
     type: 'docsVersionDropdown',
     position: 'right',
-  });
-}
+  },
+];
 
 const config: Config = {
   title: 'Eneris User Guide',
@@ -57,19 +51,17 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          lastVersion: isElevateEnabled ? 'current' : 'legacy',
-          includeCurrentVersion: isElevateEnabled,
+          lastVersion: 'current',
+          includeCurrentVersion: true,
           versions: {
-            ...(isElevateEnabled ? {
-              current: {
-                label: 'Latest',
-                path: '/',
-                banner: 'none',
-              },
-            } : {}),
+            current: {
+              label: 'Latest',
+              path: '/',
+              banner: 'none',
+            },
             legacy: {
               label: 'Legacy',
-              path: isElevateEnabled ? '/legacy' : '/',
+              path: '/legacy',
               banner: 'none'
             }
           }
@@ -108,13 +100,12 @@ const config: Config = {
             // Footer can only have one link to the current version of the docs.
             // https://github.com/facebook/docusaurus/issues/7402
             {
-              label: isElevateEnabled ? 'Getting Started' : 'Get Started',
-              to: isElevateEnabled ? '/docs/getting-started/quickstart' : '/docs/get-started',
-
+              label: 'Getting Started',
+              to: '/docs/getting-started/quickstart',
             },
             {
               label: 'Guides & Concepts',
-              to: isElevateEnabled ? '/docs/category/concepts' : '/docs/category/guides--concepts',
+              to: '/docs/category/concepts',
             },
             {
               label: 'FAQ',
@@ -131,11 +122,7 @@ const config: Config = {
             },
             {
               label: 'Contact Us',
-              ...(isElevateEnabled ? {
-                to: '/docs/support/contact-support',
-              } : {
-                href: 'https://www.eneris.ca/contact-us',
-              }),
+              to: '/docs/support/contact-support',
             }
           ],
         },
@@ -155,9 +142,6 @@ const config: Config = {
       insights: true,
     },
   } satisfies Preset.ThemeConfig,
-  customFields: {
-    isElevateEnabled,
-  },
   plugins: [
     [
       'posthog-docusaurus',
