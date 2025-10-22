@@ -47,9 +47,9 @@ GIT_USER=<username> yarn deploy
 ## Architecture & Structure
 
 ### Versioning System
-The documentation supports multiple versions controlled by the `isElevateEnabled` flag in `docusaurus.config.ts`:
-- **Legacy version**: Currently the default, serves at root path `/`
-- **Current/Elevate version**: Feature-flagged, will serve new documentation when enabled
+The documentation supports multiple versions:
+- **Current/Latest version (Elevate)**: Serves at root path `/`
+- **Legacy version**: Serves at `/legacy` path
 - Version switching impacts navigation paths and sidebar structure
 
 ### Key Configuration Files
@@ -58,8 +58,8 @@ The documentation supports multiple versions controlled by the `isElevateEnabled
 - `versions.json`: Tracks available documentation versions
 
 ### Content Structure
-- `/docs/`: Current documentation (shown when Elevate is enabled)
-- `/versioned_docs/version-legacy/`: Legacy documentation (currently default)
+- `/docs/`: Current/Latest documentation (Elevate)
+- `/versioned_docs/version-legacy/`: Legacy documentation
 - `/versioned_sidebars/`: Version-specific sidebar configurations
 - `/static/`: Static assets including images and icons
 - `/src/`: React components and custom pages
