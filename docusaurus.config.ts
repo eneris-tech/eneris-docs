@@ -157,7 +157,17 @@ const config: Config = {
   } satisfies Preset.ThemeConfig,
   customFields: {
     isElevateEnabled,
-  }
+  },
+  plugins: [
+    [
+      'posthog-docusaurus',
+      {
+        apiKey: 'phc_w6sxLsAcQgUg0TfjdZh4jjZhHj53LpKoxaSBR7rWKcP',
+        appUrl: 'https://events.ener.is',
+        enableInDevelopment: false,
+      },
+    ],
+  ],
 };
 
 export default config;
