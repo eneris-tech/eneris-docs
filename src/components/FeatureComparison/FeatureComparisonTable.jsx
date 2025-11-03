@@ -26,7 +26,6 @@ export default function FeatureTable() {
     ['Custom files', 'Planned', 'Available', ''],
     ['TREC + Wind Mitigation + 4 Point', 'Planned', 'Available', ''],
     ['Standards of practice', 'Planned', 'Available', ''],
-    ['Progress report', 'Planned', 'Available', ''],
     ['Automations', 'Planned', 'Unplanned', ''],
     ['ISN integration support', 'Unplanned', 'Available', 'More scheduling and invoicing capabilities to come.']
   ];
