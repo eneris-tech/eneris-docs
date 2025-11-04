@@ -42,26 +42,41 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `main` branch.
 
-### Capturing Product Screenshots
+### Capturing Product Screenshots (mobile)
+As of November 4th, 2025 our product documentation only reflects mobile devices. Specifically, we use iPhone screenshots.
 
-We use a tool named [Shottr](https://shottr.cc/). It's a handy and lightweight screenshotting tool with many capabilities to highlight, blur, and edit screenshots. There are more advanced features like OCR, scrolling screenshots, and a screen ruler. Shottr's own documentation is limited, but this [external blog post](https://www.podfeet.com/blog/2023/05/shottr/) is a good reference.
+After taking the screenshots (on a physical device or an emulator), we may need to edit them and/or compress the images.
 
-#### Steps
+### Editing images
+We may need to add simple edits to the images to draw the readers' attention to a specific area of interest.
+
+To do this, we use a tool named [Shottr](https://shottr.cc/). It's a handy and lightweight screenshotting tool with many capabilities to highlight, blur, and edit screenshots. There are more advanced features like OCR, scrolling screenshots, and a screen ruler. Shottr's own documentation is limited, but this [external blog post](https://www.podfeet.com/blog/2023/05/shottr/) is a good reference.
+
+#### Editing steps
 1. Download and install Shottr.
-2. Take a screenshot.
+2. Open the screenshot in Shottr.
 3. Press the keyboard shortcut **"s"** to select the *spotlight tool*. This highlights a specific area in a box and greys out everything else.
+    - See the section below for default spotlight settings (only need to set up once).
+4. Save image.
+5. Rename the image (follow existing naming convention).
 
-#### Eneris documentation standards:
-- Default spotlight box color: `#F05539`
-- Default darkness for areas outside the spotlight box: **3** (set by selecting the box created by the spotlight and pressing keys 1–9 to adjust)
+#### Standards and default settings for product documentation images/GIFs
+To ensure the screenshots are consistent:
+- Ensure your mobile device is not on power saving mode to prevent yellow battery icons.
+- Ensure "Battery percentage" is disabled.
+- Default spotlight box color in Shottr: `#F05539`
+- Default darkness for areas outside the spotlight box in Shottr: **3** (set by selecting the box created by the spotlight and pressing keys 1–9 to adjust. Only need to do this once and Shottr will save your selection.)
+- Default mobile screenshot dimensions in our product documentation is 250px.
+- All images and GIFs must include alt text.
+- Follow the existing naming convetion for the other images in product documentation.
 
-### Processing and Compressing Images
+### Compressing Images
 
-All images used in product documentation must be stored in our [Google Drive](https://drive.google.com/drive/folders/1rRqEVpJUR3RIKZTu7BPR7ZM_0kk-7ma0). Find the location where you added the image and upload within the correct subfolder. Each image should include both the original and a compressed version.
+All images used in product documentation must be stored in our [Google Drive](https://drive.google.com/drive/folders/1rRqEVpJUR3RIKZTu7BPR7ZM_0kk-7ma0). Find the equivalent directory of where you added the image in the product documentation and upload within the correct subfolder. **Each image should include both the original and a compressed version.**
 
-#### Steps
+#### Image compression steps
 1. Save the original image in the appropriate folder in Google Drive.
-2. Review the existing file naming conventions and follow them for consistency.
+    - Ensure you follow the standards and default settings instructions above.
 3. Use [Squoosh](https://squoosh.app/) to compress and convert the original image to `.webp` format.
 4. Save the compressed image in the relevant **Compressed** folder in Google Drive.
 
