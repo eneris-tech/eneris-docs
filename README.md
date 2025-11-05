@@ -68,14 +68,15 @@ To ensure the screenshots are consistent:
 - Default darkness for areas outside the spotlight box in Shottr: **3** (set by selecting the box created by the spotlight and pressing keys 1–9 to adjust. Only need to do this once and Shottr will save your selection.)
 - Default mobile screenshot dimensions in our product documentation is 250px.
 - All images and GIFs must include alt text.
-- Follow the existing naming convetion for the other images in product documentation.
+- Follow the existing naming convention for the other images in product documentation.
 
 ### Compressing Images
 
-All images used in product documentation must be stored in our [Google Drive](https://drive.google.com/drive/folders/1rRqEVpJUR3RIKZTu7BPR7ZM_0kk-7ma0). Find the equivalent directory of where you added the image in the product documentation and upload within the correct subfolder. **Each image should include both the original and a compressed version.**
+All images used in product documentation must be stored in Google Drive. Find the equivalent directory of where you added the image in the product documentation and upload within the correct subfolder. **Each image should include both the original and a compressed version.**
+- If you're unsure where the directory is please ask.
 
 #### Image compression steps
-1. Save the original image in the appropriate folder in Google Drive.
+1. Save the original image (including any edits in Shottr) in the appropriate folder in Google Drive.
     - Ensure you follow the standards and default settings instructions above.
 3. Use [Squoosh](https://squoosh.app/) to compress and convert the original image to `.webp` format.
 4. Save the compressed image in the relevant **Compressed** folder in Google Drive.
