@@ -35,11 +35,70 @@ Previews include a watermark and are short-lived. They are not meant to be share
 
 :::
 
+## Inspection summary vs. Inspection report
+
+When working with your inspections, you can generate two different types of documents:
+
+- **Inspection report**: A comprehensive PDF containing all inspection details, findings, media, and entered data.
+- **Inspection summary**: A condensed PDF that focuses on key summaries and highlights from your inspection. The summary document will be titled with your report title followed by "Summary" (e.g., "123 Main Street Summary").
+
+Both documents share the same title page and table of contents, but differ in their main content:
+
+| Feature | Inspection report | Inspection summary |
+|---------|------------------|-------------------|
+| Full inspection details | ✓ | - |
+| Actionable findings | ✓ | - |
+| Overview of summaries | - | ✓ |
+| Items by summary labels | - | ✓ |
+| Best for | Complete documentation and detailed records | Quick review and executive summaries |
+
+### When to use each type
+
+**Use the Inspection report when:**
+- Providing complete documentation to clients
+- Creating detailed records for legal or compliance purposes
+- Sharing all inspection findings and observations
+
+**Use the Inspection summary when:**
+- Clients need a quick overview of key findings
+- Sharing highlights before the full report is complete
+- Providing an executive summary for decision-makers
+
+### Previewing an Inspection summary
+
+When using the **Preview changes** feature, you can choose which document to preview:
+
+1. Select the **ellipsis** next to the `Preview changes` button
+2. Choose between:
+   - **Inspection report** - Preview the full detailed report
+   - **Inspection summary** - Preview the condensed summary
+
+`[PLACEHOLDER: Image showing preview selection with both "Inspection report" and "Inspection summary" options]`
+
+This allows you to review either document before publishing.
+
 ## Publishing a report
 
-**Publishing** the **Inspection Form** creates a point-in-time **report** for record-keeping and sharing. Once published, you’ll be able to share the report with clients and other contacts.
+**Publishing** the **Inspection Form** creates a point-in-time **report** for record-keeping and sharing. Once published, you'll be able to share the report with clients and other contacts.
 
 <img src={ImageReports3} style={{ maxWidth: '250px', width: '100%' }} alt="Publish report option." />
+
+### Selecting what to publish
+
+When publishing, you can choose which document type(s) to publish:
+- The [**Inspection report**](/docs/concepts/reports#inspection-summary-vs-inspection-report) only
+- The [**Inspection summary**](/docs/concepts/reports#inspection-summary-vs-inspection-report) only
+- Both the Inspection report and Inspection summary
+
+`[PLACEHOLDER: Image showing publish bottom sheet with checkboxes for both attachment types]`
+
+Select the document type(s) you want to publish, then proceed with publishing. All selected documents will be generated and saved as part of the same report version.
+
+:::tip[Best practice]
+
+Consider publishing both the Inspection report and Inspection summary together. This gives you flexibility when sharing - you can send the full report for detailed review and the summary for quick reference.
+
+:::
 
 **Publishing** achieves a few main things:
 
@@ -88,6 +147,24 @@ After publishing your report you will be able to share it with your client(s). H
 :::info
 
 When you successfully share a report with your client you will be CCed in the email.
+
+:::
+
+### Report attachments in the email
+
+When sharing via email, any published attachments will appear in the email form:
+
+- If you published the **Inspection report**, it will appear as an attachment you can preview
+- If you published the **Inspection summary**, it will appear separately as another attachment you can preview
+- If you published both, both will appear as separate attachments in the email
+
+`[PLACEHOLDER: Image showing email form with both "Inspection report" and "Inspection summary" sections]`
+
+Your recipients will receive links to access whichever documents you've published and included in the email.
+
+:::info
+
+Both the Inspection report and Inspection summary respect the same [public/private status](/docs/concepts/reports#public-vs-private-reports). If you set a report to private, all its attachments become inaccessible to recipients.
 
 :::
 
