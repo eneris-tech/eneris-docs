@@ -22,6 +22,12 @@ What we’ll be covering:
 ## Signing up for an Eneris account
 To use Eneris, you must first [sign up for an account](https://app.ener.is/sign-up).
 
+:::tip
+
+Your **username** and **forgot password email** are **case-sensitive**. Make sure to enter them exactly as registered when logging in.
+
+:::
+
 :::info
 
 Were you a user of Eneris Legacy (our original application)? This version of Eneris is a standalone application, which means you must **create a new account**.
