@@ -20,3 +20,8 @@
   opacity: 0.7;
   color: var(--ifm-color-typography-light);
 }
+
+.buttonDefault:active {
+  opacity: 0.5;
+  color: var(--ifm-color-typography-light);
+}

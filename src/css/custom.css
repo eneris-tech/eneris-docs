@@ -17,8 +17,8 @@
   --ifm-color-typography: #000000;
   --ifm-color-typography-light: #FFFFFF;
   --ifm-color-background: #FFFFFF;
-  --ifm-color-primary-dark: #be3a01b3;
-  --ifm-color-primary-darker: #192858;
+  --ifm-color-primary-dark: #BE3A01B3;
+  --ifm-color-primary-darker: #BE3A0180;
   --ifm-color-primary-darkest: #15244c;
   --ifm-color-primary-light: #263f82;
   --ifm-color-primary-lighter: #28448f;
@@ -49,8 +49,8 @@
   --ifm-color-typography: #FFFFFF;
   --ifm-color-typography-light: #FFFFFF;
   --ifm-color-background: #161B1C;
-  --ifm-color-primary-dark: #dd5114b3;
-  --ifm-color-primary-darker: #4c6ecd;
+  --ifm-color-primary-dark: #DD5114B3;
+  --ifm-color-primary-darker: #DD511480;
   --ifm-color-primary-darkest: #385ec7;
   --ifm-color-primary-light: #8ca2de;
   --ifm-color-primary-lighter: #a4b5e5;
