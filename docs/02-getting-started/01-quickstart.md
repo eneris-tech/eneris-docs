@@ -15,9 +15,9 @@ With Eneris, you can attach your findings (photos, video, and text) to every ins
 What we’ll be covering:
 
 1. Signing up for an Eneris account
-2. Downloading Eneris on your mobile device
-3. Accessing Eneris on web (desktop or laptop computer)
-4. [Optional] Migrate account from Eneris Legacy
+1. Downloading Eneris on your mobile device
+1. Accessing Eneris on web (desktop or laptop computer)
+1. [Optional] Migrate account from Eneris Legacy
 
 ## Signing up for an Eneris account
 
@@ -43,12 +43,11 @@ Eneris is available on Apple and Android devices (phones and tablets) so you can
 
 You can download Eneris directly from the App Store on your iPhone or iPad. Follow the instructions below or [click here](https://apps.apple.com/us/app/eneris-elevate/id6572289028) to download the app.
 
-1. To use Eneris, you must first [sign up for an account](https://app.ener.is/sign-up).
-2. Once you have created an account, open the **App Store** on your device.
-3. In the search bar, type `Eneris` and press search.
-4. Look for the Eneris logo and select the `Eneris - Elevate` app from the results.
-5. Select `Get`, or the cloud icon if you’ve downloaded the app previously, to install.
-6. After downloading, open the app and sign in to your Eneris account.
+1. Open the **App Store** on your device.
+1. In the search bar, type `Eneris` and press search.
+1. Look for the Eneris logo and select the `Eneris - Elevate` app from the results.
+1. Select `Get`, or the cloud icon if you’ve downloaded the app previously, to install.
+1. After downloading, open the app and sign up or sign in to your Eneris account.
 
 :::info
 
@@ -61,10 +60,10 @@ Once logged in, you’ll be able to create, edit, and sync reports just like on 
 Eneris is available on the Google Play Store for Android phones and tablets. Follow the instructions below or [click here](https://play.google.com/store/apps/details?id=is.ener.app) to download the app.
 
 1. Open the **Google Play Store** on your Android device.
-2. Search for **Eneris**.
-3. Select the `Eneris - Elevate` app from the list of results.
-4. Select **Install**.
-5. After downloading, open the app and sign up or sign in to your Eneris account.
+1. Search for **Eneris**.
+1. Select the `Eneris - Elevate` app from the list of results.
+1. Select **Install**.
+1. After downloading, open the app and sign up or sign in to your Eneris account.
 
 :::info
 
