@@ -9,7 +9,7 @@ pagination_prev: null
 <p>
 Apple (iOS and iPadOS) and Android (phones and tablet) devices are supported.
 
-Download Eneris for Apple iOS and iPadOS devices here. [link here]
+[Download Eneris for Apple iOS and iPadOS devices here.](https://apps.apple.com/us/app/eneris-elevate/id6572289028)
 
 [Download Eneris for Android devices here.](https://play.google.com/store/apps/details?id=is.ener.app)
 </p>
