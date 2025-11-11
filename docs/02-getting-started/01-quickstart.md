@@ -20,13 +20,10 @@ What we’ll be covering:
 4. [Optional] Migrate account from Eneris Legacy
 
 ## Signing up for an Eneris account
+
 To use Eneris, you must first [sign up for an account](https://app.ener.is/sign-up).
 
-:::tip
-
-Your **username** and **forgot password email** are **case-sensitive**. Make sure to enter them exactly as registered when logging in.
-
-:::
+- What you enter as your **username** and in the **forgot password email** are **case-sensitive**. Ensure you enter them exactly as registered when logging in.
 
 :::info
 
