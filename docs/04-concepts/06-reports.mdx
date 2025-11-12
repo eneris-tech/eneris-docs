@@ -8,6 +8,9 @@ import ImageReports7 from './img/reports-7.webp';
 import ImageReports8 from './img/reports-8.webp';
 import ImageReports9 from './img/reports-9.webp';
 import ImageReports10 from './img/reports-10.webp';
+import ImageReports11 from './img/reports-11.webp';
+import ImageReports12 from './img/reports-12.webp';
+import ImageReports13 from './img/reports-13.webp';
 
 # Reports
 
@@ -35,16 +38,17 @@ Previews include a watermark and are short-lived. They are not meant to be share
 
 :::
 
-## Inspection summary vs. Inspection report
+## Inspection Summary vs. Inspection Report
 
 When working with your inspections, you can generate two different types of documents:
 
-- **Inspection report**: A comprehensive PDF containing all inspection details, findings, media, and entered data.
-- **Inspection summary**: A condensed PDF that focuses on key summaries and highlights from your inspection. The summary document will be titled with your report title followed by "Summary" (e.g., "123 Main Street Summary").
+- **Inspection Report**: A comprehensive PDF containing all inspection details, findings, media, and entered data.
+- **Inspection Summary**: A condensed PDF that focuses on key summaries and highlights from your inspection. The summary document will be titled with your report title followed by "Summary" (e.g., "123 Main Street Summary").
+    - The inspection Summary is generated based on the selections you made in the **summary label field** within each component.
 
 Both documents share the same title page and table of contents, but differ in their main content:
 
-| Feature | Inspection report | Inspection summary |
+| Feature | Inspection Report | Inspection Summary |
 |---------|------------------|-------------------|
 | Full inspection details | ✓ | - |
 | Actionable findings | ✓ | - |
@@ -54,26 +58,26 @@ Both documents share the same title page and table of contents, but differ in th
 
 ### When to use each type
 
-**Use the Inspection report when:**
+**Use the Inspection Report when:**
 - Providing complete documentation to clients
 - Creating detailed records for legal or compliance purposes
 - Sharing all inspection findings and observations
 
-**Use the Inspection summary when:**
+**Use the Inspection Summary when:**
 - Clients need a quick overview of key findings
 - Sharing highlights before the full report is complete
 - Providing an executive summary for decision-makers
 
-### Previewing an Inspection summary
+### Previewing an Inspection Summary
 
 When using the **Preview changes** feature, you can choose which document to preview:
 
 1. Select the **ellipsis** next to the `Preview changes` button
 2. Choose between:
-   - **Inspection report** - Preview the full detailed report
-   - **Inspection summary** - Preview the condensed summary
+   - **Inspection Report** - Preview the full detailed report
+   - **Inspection Summary** - Preview the condensed summary
 
-`[PLACEHOLDER: Image showing preview selection with both "Inspection report" and "Inspection summary" options]`
+<img src={ImageReports11} style={{ maxWidth: '250px', width: '100%' }} alt="Preview selection with both Inspection Report and Inspection Summary options." />
 
 This allows you to review either document before publishing.
 
@@ -86,17 +90,17 @@ This allows you to review either document before publishing.
 ### Selecting what to publish
 
 When publishing, you can choose which document type(s) to publish:
-- The [**Inspection report**](/docs/concepts/reports#inspection-summary-vs-inspection-report) only
-- The [**Inspection summary**](/docs/concepts/reports#inspection-summary-vs-inspection-report) only
-- Both the Inspection report and Inspection summary
+- The [**Inspection Report**](/docs/concepts/reports#inspection-summary-vs-inspection-report) only
+- The [**Inspection Summary**](/docs/concepts/reports#inspection-summary-vs-inspection-report) only
+- Both the Inspection Report and Inspection Summary
 
-`[PLACEHOLDER: Image showing publish bottom sheet with checkboxes for both attachment types]`
+<img src={ImageReports12} style={{ maxWidth: '250px', width: '100%' }} alt="Publish report bottom sheet with checkboxes for both Inspection Report and Inspection Summary." />
 
 Select the document type(s) you want to publish, then proceed with publishing. All selected documents will be generated and saved as part of the same report version.
 
 :::tip[Best practice]
 
-Consider publishing both the Inspection report and Inspection summary together. This gives you flexibility when sharing - you can send the full report for detailed review and the summary for quick reference.
+Consider publishing both the Inspection Report and Inspection Summary together. This gives you flexibility when sharing - you can send the full report for detailed review and the summary for quick reference.
 
 :::
 
@@ -154,17 +158,17 @@ When you successfully share a report with your client you will be CCed in the em
 
 When sharing via email, any published attachments will appear in the email form:
 
-- If you published the **Inspection report**, it will appear as an attachment you can preview
-- If you published the **Inspection summary**, it will appear separately as another attachment you can preview
+- If you published the **Inspection Report**, it will appear as an attachment you can preview
+- If you published the **Inspection Summary**, it will appear separately as another attachment you can preview
 - If you published both, both will appear as separate attachments in the email
 
-`[PLACEHOLDER: Image showing email form with both "Inspection report" and "Inspection summary" sections]`
+<img src={ImageReports13} style={{ maxWidth: '250px', width: '100%' }} alt="Email form with both Inspection Report and Inspection Summary sections." />
 
 Your recipients will receive links to access whichever documents you've published and included in the email.
 
 :::info
 
-Both the Inspection report and Inspection summary respect the same [public/private status](/docs/concepts/reports#public-vs-private-reports). If you set a report to private, all its attachments become inaccessible to recipients.
+Both the Inspection Report and Inspection Summary respect the same [public/private status](/docs/concepts/reports#public-vs-private-reports). If you set a report to private, all its attachments become inaccessible to recipients.
 
 :::
 
@@ -211,9 +215,9 @@ Selecting the `To`, `Cc`, or `Bcc` field reveals options to select the contacts 
 
 - Manually type an email to include them as a recipient, as well.
 
-The **Inspection report** section at the bottom of the page allows you to do one final review of the PDF report prior to sending it to the recipients.
+The **Inspection Report** section at the bottom of the page allows you to do one final review of the PDF report prior to sending it to the recipients.
 
-<img src={ImageReports6} style={{ maxWidth: '250px', width: '100%' }} alt="Inspection report preview before sending." />
+<img src={ImageReports6} style={{ maxWidth: '250px', width: '100%' }} alt="Inspection Report preview before sending." />
 
 :::tip[Best practice]
 
