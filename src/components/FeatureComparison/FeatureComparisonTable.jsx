@@ -18,7 +18,7 @@ export default function FeatureTable() {
     ['Room-by-room template', 'Available', 'Unplanned', 'A dedicated room-by-room template is available to suit your inspection and reporting style.'],
     ['Multi-inspector', 'Available', 'Available', ''],
     ['Photo markups', 'Available', 'Available', ''],
-    ['PDF summary report', 'Planned', 'Available', ''],
+    ['PDF summary report', 'Available', 'Available', ''],
     ['Web report', 'Planned', 'Available', ''],
     ['Progress checklist', 'Planned', 'Available', ''],
     ['Service agreements', 'Planned', 'Available', ''],
