@@ -2,10 +2,7 @@
   "permissions": {
     "allow": [
       "Bash(gh api:*)",
-      "Bash(gh search code:*)",
-      "Bash(xargs:*)",
-      "Bash(yarn typecheck)",
-      "Bash(ls:*)"
+      "Bash(gh search code:*)"
     ],
     "deny": [],
     "ask": []

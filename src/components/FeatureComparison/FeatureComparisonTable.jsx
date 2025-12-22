@@ -9,7 +9,6 @@ export default function FeatureTable() {
     ['PDF report', 'Available', 'Available', 'Redesigned for readability and future customizations.'],
     ['Inspector profiles', 'Available', 'Available', 'Elevate will support multiple inspector profiles.'],
     ['Built-in templates', 'Available', 'Available', ''],
-    ['Standards of practice', 'Available', 'Available', ''],
     ['Report publishing', 'Available', 'Available', ''],
     ['Share report via email', 'Available', 'Available', ''],
     ['Photos & videos', 'Available', 'Available', 'Capture multiple images/videos at once or multi-select them from your media library.'],
@@ -26,6 +25,7 @@ export default function FeatureTable() {
     ['Invoicing and payment collection', 'Planned', 'Available', ''],
     ['Custom files', 'Planned', 'Available', ''],
     ['TREC + Wind Mitigation + 4 Point', 'Planned', 'Available', ''],
+    ['Standards of practice', 'Planned', 'Available', ''],
     ['Automations', 'Planned', 'Unplanned', ''],
     ['ISN integration support', 'Unplanned', 'Available', 'More scheduling and invoicing capabilities to come.']
   ];
