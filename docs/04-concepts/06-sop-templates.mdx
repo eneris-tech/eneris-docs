@@ -1,3 +1,10 @@
+import ImageSOPTemplates1 from './img/sop-templates-1.webp';
+import ImageSOPTemplates2 from './img/sop-templates-2.webp';
+import ImageSOPTemplates3 from './img/sop-templates-3.webp';
+import ImageSOPTemplates4 from './img/sop-templates-4.webp';
+import ImageSOPTemplates5 from './img/sop-templates-5.webp';
+import ImageSOPTemplates6 from './img/sop-templates-6.webp';
+
 # SOP Templates
 
 **SOP Templates** (Standards of Practice Templates) allow you to attach professional standards documentation to your inspection reports. By linking an SOP to your [**Form Templates**](/docs/concepts/form-templates), you can ensure every inspection report includes the relevant standards your work adheres to.
@@ -18,26 +25,31 @@ SOP Templates are reusable across multiple [**Form Templates**](/docs/concepts/f
 
 A **Standard of Practice (SOP)** is a document published by professional inspection associations that defines the minimum requirements for conducting inspections. These standards outline what inspectors should and should not inspect, limitations, and the scope of the inspection.
 
-Common examples include:
-
-- **ASHI** — American Society of Home Inspectors
-- **InterNACHI** — International Association of Certified Home Inspectors
-- **CAHPI** — Canadian Association of Home & Property Inspectors
-- **HIABC** — Home Inspectors Association BC
-
 Including the SOP in your reports helps clients understand what was covered and sets appropriate expectations for the inspection scope.
 
 ## Default SOP Templates
 
 Eneris includes the following built-in **SOP Templates** to help you get started:
 
+### InterNACHI Standards of Practice
+
+- [View InterNACHI Standards of Practice](https://www.nachi.org/sop.htm)
+
 ### ASHI Standards of Practice
 
 - [View ASHI Standards of Practice](https://www.homeinspector.org/resources/standard-of-practice)
 
-### InterNACHI Standards of Practice
+### CAHPI Standards of Practice
 
-- [View InterNACHI Standards of Practice](https://www.nachi.org/sop.htm)
+- [View CAHPI Standards of Practice](https://www.cahpi.ca/doclink/cahpi-national-standards-of-practice-7dec2024-pdf/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjYWhwaS1uYXRpb25hbC1zdGFuZGFyZHMtb2YtcHJhY3RpY2UtN2RlYzIwMjQtcGRmIiwiaWF0IjoxNzM4MTYzNjM0LCJleHAiOjE3MzgyNTAwMzR9.x9q9xmVCrVpMfiXAO0xVq3Oj4MC2ZfG-TwBz40j7bnQ)
+
+### HIABC Scope of Inspection
+
+- [View HIABC Scope of Inspection](https://hiabc.ca/wp-content/uploads/2018/08/HIABC-Scope-of-Inspection.pdf)
+
+### ASTTBC Standards of Inspection
+
+- [View ASTTBC Standards of Inspection](https://asttbc.org/wp-content/uploads/2022/09/ASTTBC-Certified-House-Inspector-Standards-of-Inspection-2022.pdf)
 
 :::tip
 
@@ -54,11 +66,11 @@ To view your existing **SOP Templates**:
 1. Select the hamburger menu in the upper left within the app on your mobile device.
 2. Select `SOP templates`.
 
-*[Screenshot: SOP Templates menu in sidebar]*
+<img src={ImageSOPTemplates1} style={{ maxWidth: '250px', width: '100%' }} alt="SOP Templates menu in sidebar." />
 
 You will see a list of all available SOP Templates, including the default templates and any custom templates you have created.
 
-*[Screenshot: List of SOP templates]*
+<img src={ImageSOPTemplates2} style={{ maxWidth: '250px', width: '100%' }} alt="List of SOP templates." />
 
 ### Create an SOP Template
 
@@ -70,10 +82,10 @@ To create a new **SOP Template**:
 4. Enter a **Name** for your template (this is for internal reference only).
 5. Enter a **Title** (this appears in your PDF reports, defaults to "Standards of Practice").
 6. Optionally, enter a **URL** linking to the full SOP document online.
-7. Optionally, enter the **Body** content — this supports markdown formatting for headers, lists, and emphasis.
+7. Optionally, enter the **Body** content.
 8. Select `Save`.
 
-*[Screenshot: Create new SOP template form]*
+<img src={ImageSOPTemplates3} style={{ maxWidth: '250px', width: '100%' }} alt="Create new SOP template form." />
 
 :::info
 
@@ -87,16 +99,16 @@ To modify an existing **SOP Template**:
 
 1. Navigate to `SOP templates` from the hamburger menu.
 2. Select the template you wish to edit.
-3. Update the **Name**, **Title**, **URL**, or **Body** fields as needed.
-4. Select `Save`.
-
-*[Screenshot: Edit SOP template showing title, URL, and body fields]*
+3. Update the **Name**, **Title**, **Link**, and **Body** fields as needed.
+4. Select `Save changes`.
 
 :::info
 
 Changes to an **SOP Template** only affect new [**Inspections**](/docs/concepts/inspections) created after the change. Existing inspections retain the SOP content that was embedded when they were created.
 
 :::
+
+<img src={ImageSOPTemplates4} style={{ maxWidth: '250px', width: '100%' }} alt="Edit SOP template showing title, URL, and body fields." />
 
 ### Delete an SOP Template
 
@@ -123,11 +135,11 @@ To associate an **SOP Template** with a [**Form Template**](/docs/concepts/form-
 4. Select the desired **SOP Template** from the dropdown.
 5. Save your changes.
 
-*[Screenshot: Linking SOP template to a Form Template]*
+<img src={ImageSOPTemplates5} style={{ maxWidth: '250px', width: '100%' }} alt="Linking SOP template to a Form Template." />
 
 :::info
 
-Once linked, the SOP is automatically embedded when creating new [**Inspections**](/docs/concepts/inspections) using that **Form Template**. The SOP content (title, URL, and body) is copied into the inspection, allowing for per-inspection modifications if needed.
+Once linked, the SOP is automatically embedded when creating new [**Inspections**](/docs/concepts/inspections) using that **Form Template**. The SOP content (title, link, and body) is copied into the inspection, allowing for per-inspection modifications if needed.
 
 :::
 
@@ -143,15 +155,15 @@ You can view and modify the embedded SOP content directly within the inspection 
 
 Changes made to the SOP within an **Inspection Form** only affect that specific inspection — they do not update the original **SOP Template**.
 
+<img src={ImageSOPTemplates6} style={{ maxWidth: '250px', width: '100%' }} alt="SOP section in PDF report." />
+
 ## SOP in Reports
 
 When you [publish a report](/docs/concepts/reports#publishing-a-report), the SOP content appears in your PDF output. The SOP section includes:
 
 - **Title** — The display title (e.g., "Standards of Practice")
-- **URL** — A link to the full SOP document (if provided)
+- **Link** — A link to the full SOP document (if provided)
 - **Body** — The SOP content with any markdown formatting rendered
-
-*[Screenshot: SOP section in PDF report]*
 
 :::tip
 
