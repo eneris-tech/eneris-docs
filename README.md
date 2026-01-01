@@ -47,6 +47,15 @@ As of November 4th, 2025 our product documentation only reflects mobile devices.
 
 After taking the screenshots (on a physical device or an emulator), we may need to edit them and/or compress the images.
 
+#### Recommended workflow for phone screenshots
+For the clearest screenshots:
+1. Take the screenshot on your physical iPhone device.
+2. AirDrop the screenshot to your computer.
+3. Edit in Shottr (see Editing steps below).
+4. Compress with Squoosh (see Compressing Images below).
+
+This workflow produces sharper images than screenshotting an emulator.
+
 ### Editing images
 We may need to add simple edits to the images to draw the readers' attention to a specific area of interest.
 
@@ -65,6 +74,8 @@ To ensure the screenshots are consistent:
 - Ensure your mobile device is not on power saving mode to prevent yellow battery icons.
 - Ensure "Battery percentage" is disabled.
 - Default spotlight box color in Shottr: `#F05539`
+- Set spotlight border thickness like the image below (set by selecting the box created by the spotlight).
+    - ![Spotlight thickness setting](/static/img/spotlight-thickness.png)
 - Default darkness for areas outside the spotlight box in Shottr: **3** (set by selecting the box created by the spotlight and pressing keys 1–9 to adjust. Only need to do this once and Shottr will save your selection.)
 - Default mobile screenshot dimensions in our product documentation is 250px.
 - All images and GIFs must include alt text.

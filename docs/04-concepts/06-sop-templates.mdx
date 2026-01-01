@@ -23,7 +23,7 @@ SOP Templates are reusable across multiple [**Form Templates**](/docs/concepts/f
 
 ## What is a Standard of Practice (SOP)?
 
-A **Standard of Practice (SOP)** is a document published by professional inspection associations that defines the minimum requirements for conducting inspections. These standards outline what inspectors should and should not inspect, limitations, and the scope of the inspection.
+A **Standard of Practice (SOP)** is a document that defines the minimum requirements for conducting inspections. These standards outline what inspectors should and should not inspect, limitations, and the scope of the inspection. SOPs are often published by professional inspection associations, but individual inspectors and multi-inspector organizations can also create their own.
 
 Including the SOP in your reports helps clients understand what was covered and sets appropriate expectations for the inspection scope.
 
@@ -78,12 +78,12 @@ To create a new **SOP Template**:
 
 1. Select the hamburger menu in the upper left within the app on your mobile device.
 2. Select `SOP templates`.
-3. Select `Create new`.
+3. Select `Create new SOP template`.
 4. Enter a **Name** for your template (this is for internal reference only).
-5. Enter a **Title** (this appears in your PDF reports, defaults to "Standards of Practice").
+5. Enter a **Title** (this appears in your PDF reports).
 6. Optionally, enter a **URL** linking to the full SOP document online.
 7. Optionally, enter the **Body** content.
-8. Select `Save`.
+8. Select `Save Changes` at the bottom of the page.
 
 <img src={ImageSOPTemplates3} style={{ maxWidth: '250px', width: '100%' }} alt="Create new SOP template form." />
 
@@ -116,7 +116,7 @@ To delete an **SOP Template**:
 
 1. Navigate to `SOP templates` from the hamburger menu.
 2. Select the template you wish to delete.
-3. Scroll to the bottom and select `Delete`.
+3. Scroll to the bottom and select `Delete SOP Template`.
 4. Confirm the deletion when prompted.
 
 :::warning
@@ -131,15 +131,15 @@ To associate an **SOP Template** with a [**Form Template**](/docs/concepts/form-
 
 1. Navigate to `Form templates` from the hamburger menu.
 2. Select the **Form Template** you wish to modify.
-3. Locate the **SOP Template** field.
-4. Select the desired **SOP Template** from the dropdown.
-5. Save your changes.
+3. Locate the **Standards of practice** field.
+4. Select the edit icon then select the desired **SOP template** from the menu.
+5. Navigate back a page then select `Save` in the upper right.
 
 <img src={ImageSOPTemplates5} style={{ maxWidth: '250px', width: '100%' }} alt="Linking SOP template to a Form Template." />
 
 :::info
 
-Once linked, the SOP is automatically embedded when creating new [**Inspections**](/docs/concepts/inspections) using that **Form Template**. The SOP content (title, link, and body) is copied into the inspection, allowing for per-inspection modifications if needed.
+Once linked, the SOP is automatically embedded when creating new [**Inspections**](/docs/concepts/inspections) using that **Form Template**. The SOP content (title, link, and body) is copied into the Inspection Form, allowing for per-inspection modifications if needed.
 
 :::
 
@@ -147,23 +147,23 @@ Once linked, the SOP is automatically embedded when creating new [**Inspections*
 
 When you create an [**Inspection**](/docs/concepts/inspections) using a **Form Template** that has an SOP linked, the SOP content is automatically embedded into the [**Inspection Form**](/docs/concepts/inspection-forms).
 
-You can view and modify the embedded SOP content directly within the inspection if you need to make ad-hoc changes for a specific job. This is useful when:
+You can view and modify the embedded SOP content directly within the Inspection if you need to make ad-hoc changes for a specific job. This is useful when:
 
 - A client requests additional scope clarifications
 - You need to add project-specific limitations
 - You want to reference a different version of the standards
 
-Changes made to the SOP within an **Inspection Form** only affect that specific inspection — they do not update the original **SOP Template**.
+Changes made to the SOP within an **Inspection Form** only affect that specific Inspection — they do not update the original **SOP Template**.
 
 <img src={ImageSOPTemplates6} style={{ maxWidth: '250px', width: '100%' }} alt="SOP section in PDF report." />
 
 ## SOP in Reports
 
-When you [publish a report](/docs/concepts/reports#publishing-a-report), the SOP content appears in your PDF output. The SOP section includes:
+When you [publish a report](/docs/concepts/reports#publishing-a-report), the SOP content appears in the PDF report. The SOP section includes:
 
 - **Title** — The display title (e.g., "Standards of Practice")
 - **Link** — A link to the full SOP document (if provided)
-- **Body** — The SOP content with any markdown formatting rendered
+- **Body** — The SOP content body text (if provided)
 
 :::tip
 

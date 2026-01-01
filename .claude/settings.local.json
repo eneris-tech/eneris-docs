@@ -6,7 +6,8 @@
       "Bash(xargs:*)",
       "Bash(yarn typecheck)",
       "Bash(ls:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(gh pr view:*)"
     ],
     "deny": [],
     "ask": []
