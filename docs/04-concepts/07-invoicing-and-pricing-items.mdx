@@ -1,0 +1,207 @@
+# Invoicing and Pricing Items
+
+**Invoicing** in Eneris allows you to create professional invoices for your inspection services directly from within an inspection. Combined with **Pricing Items**, you can build a reusable library of your common services and fees, making invoice creation fast and consistent.
+
+The invoicing workflow is simple:
+
+1. Set up your **Pricing Items** once (your service catalog)
+2. Create an **Invoice** from any inspection
+3. Add line items from your pricing library or create custom items
+4. Share the invoice via email or download as PDF
+5. Track payment status
+
+:::info
+
+Pricing Items are reusable across all your invoices. Set them up once and add them to any invoice with a single tap.
+
+:::
+
+## Pricing Items
+
+### What are Pricing Items?
+
+**Pricing Items** are reusable service entries that you can quickly add to invoices. Each pricing item includes:
+
+- **Name** — A description of the service (e.g., "Home Inspection - Standard")
+- **Unit Price** — The price per unit
+- **Tax Rate** — The applicable tax percentage
+
+By maintaining a library of pricing items, you ensure consistent pricing across all your invoices and save time during invoice creation.
+
+### View Pricing Items
+
+To view your existing **Pricing Items**:
+
+1. Select the hamburger menu in the upper left within the app.
+2. Select `Pricing items`.
+
+You will see a list of all your saved pricing items with their names and prices.
+
+{/* <!-- Screenshot: Pricing Items list --> */}
+
+### Create a Pricing Item
+
+To create a new **Pricing Item**:
+
+1. Navigate to `Pricing items` from the hamburger menu.
+2. Select `Create new pricing item`.
+3. Enter a **Name** for the item (e.g., "Radon Testing").
+4. Enter the **Unit Price**.
+5. Optionally, set a **Tax Rate** percentage.
+6. Select `Save`.
+
+{/* <!-- Screenshot: Create Pricing Item form --> */}
+
+:::tip
+
+Create pricing items for all your common services before you start invoicing. This makes creating invoices much faster.
+
+:::
+
+### Edit a Pricing Item
+
+To modify an existing **Pricing Item**:
+
+1. Navigate to `Pricing items` from the hamburger menu.
+2. Select the item you wish to edit.
+3. Update the **Name**, **Unit Price**, or **Tax Rate** as needed.
+4. Select `Save`.
+
+:::info
+
+Changes to a **Pricing Item** only affect new invoices. Existing invoices retain the pricing that was set when they were created.
+
+:::
+
+### Delete a Pricing Item
+
+To delete a **Pricing Item**:
+
+1. Navigate to `Pricing items` from the hamburger menu.
+2. Select the item you wish to delete.
+3. Scroll to the bottom and select `Delete pricing item`.
+4. Confirm the deletion when prompted.
+
+:::warning
+
+Deleting a Pricing Item cannot be undone. Existing invoices that used this item will retain their line item data.
+
+:::
+
+## Creating an Invoice
+
+### Create Invoice from Inspection
+
+Invoices are created from within an [**Inspection**](/docs/concepts/inspections). To create an invoice:
+
+1. Open the inspection you want to invoice.
+2. Navigate to the **Invoice** section.
+3. Select `Create Invoice`.
+4. Add line items (see below).
+5. Optionally, add a **Memo** for additional notes.
+6. Select `Save`.
+
+{/* <!-- Screenshot: Create Invoice from inspection --> */}
+
+The system automatically generates an invoice number in the format `INV-YYYY-NNNNN` (e.g., INV-2025-00001).
+
+### Adding Line Items
+
+You can add line items to your invoice in two ways:
+
+**From Pricing Library:**
+1. Select `Add from pricing items`.
+2. Choose one or more items from your pricing library.
+3. Adjust the quantity if needed.
+
+**Custom Item:**
+1. Select `Add custom item`.
+2. Enter the item **Name**.
+3. Enter the **Unit Price**.
+4. Set the **Quantity**.
+5. Optionally, set a **Tax Rate**.
+
+{/* <!-- Screenshot: Invoice form with line items --> */}
+
+### Automatic Calculations
+
+Eneris automatically calculates all invoice totals:
+
+- **Line Total** — Unit price × quantity for each item
+- **Line Tax** — Line total × tax rate for each item
+- **Subtotal** — Sum of all line totals
+- **Tax Total** — Sum of all line taxes
+- **Total** — Subtotal + tax total
+
+{/* <!-- Screenshot: Invoice totals --> */}
+
+:::info
+
+All calculations update in real-time as you add or modify line items.
+
+:::
+
+## Payment Tracking
+
+### Invoice Status
+
+Each invoice has a payment status:
+
+- **UNPAID** — Invoice has been created but payment has not been recorded
+- **PAID** — Payment has been recorded for this invoice
+
+The status is displayed as a badge on the invoice, making it easy to track outstanding payments.
+
+### Recording Payment
+
+To record a payment on an invoice:
+
+1. Open the invoice.
+2. Change the status to **PAID**.
+3. Select a **Payment Method**:
+   - Cash
+   - Check
+   - Debit Card
+   - Credit Card
+   - Bank Transfer
+   - Peer to Peer
+   - Other (with custom description)
+4. Set the **Paid Date**.
+5. Select `Save`.
+
+{/* <!-- Screenshot: Payment status section --> */}
+
+## Invoice Actions
+
+### Download PDF
+
+To download an invoice as a PDF:
+
+1. Open the invoice.
+2. Select the **Download PDF** option.
+3. The PDF will be generated and downloaded to your device.
+
+The PDF includes your business information, invoice details, line items with calculations, and any memo you added.
+
+{/* <!-- Screenshot: Invoice PDF --> */}
+
+### Share via Email
+
+To share an invoice with your client via email:
+
+1. Open the invoice.
+2. Select the **Share** option.
+3. The email recipients are auto-populated from the inspection contacts.
+4. Adjust the **To**, **Cc**, and **Bcc** fields as needed.
+5. Select `Send`.
+
+{/* <!-- Screenshot: Share invoice modal --> */}
+
+The email includes a link to view the invoice online, along with a PDF attachment.
+
+:::warning
+
+Anyone with access to the public invoice link will be able to view the invoice. Only share invoice links with intended recipients.
+
+:::
+
