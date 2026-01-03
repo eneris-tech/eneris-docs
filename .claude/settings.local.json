@@ -7,7 +7,9 @@
       "Bash(yarn typecheck)",
       "Bash(ls:*)",
       "Bash(find:*)",
-      "Bash(gh pr view:*)"
+      "Bash(gh pr view:*)",
+      "Bash(tree:*)",
+      "Bash(yarn build:*)"
     ],
     "deny": [],
     "ask": []
