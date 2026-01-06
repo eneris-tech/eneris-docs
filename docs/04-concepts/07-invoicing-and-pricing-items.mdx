@@ -1,6 +1,16 @@
+import ImageInvoicing1 from './img/invoicing-1.webp';
+import ImageInvoicing2 from './img/invoicing-2.webp';
+import ImageInvoicing3 from './img/invoicing-3.webp';
+import ImageInvoicing4 from './img/invoicing-4.webp';
+import ImageInvoicing5 from './img/invoicing-5.webp';
+import ImageInvoicing6 from './img/invoicing-6.webp';
+import ImageInvoicing7 from './img/invoicing-7.webp';
+import ImageInvoicing8 from './img/invoicing-8.webp';
+import ImageInvoicing9 from './img/invoicing-9.webp';
+
 # Invoicing and Pricing Items
 
-**Invoicing** in Eneris allows you to create professional invoices for your inspection services directly from within an inspection. Combined with **Pricing Items**, you can build a reusable library of your common services and fees, making invoice creation fast and consistent.
+**Invoicing** in Eneris allows you to create professional invoices for your inspection services directly from within an Inspection. Combined with **Pricing Items**, you can build a reusable library of your common services and fees, making invoice creation fast and consistent.
 
 The invoicing workflow is simple:
 
@@ -23,7 +33,7 @@ Pricing Items are reusable across all your invoices. Set them up once and add th
 **Pricing Items** are reusable service entries that you can quickly add to invoices. Each pricing item includes:
 
 - **Name** — A description of the service (e.g., "Home Inspection - Standard")
-- **Unit Price** — The price per unit
+- **Price per unit** — The price per unit
 - **Tax Rate** — The applicable tax percentage
 
 By maintaining a library of pricing items, you ensure consistent pricing across all your invoices and save time during invoice creation.
@@ -33,24 +43,24 @@ By maintaining a library of pricing items, you ensure consistent pricing across 
 To view your existing **Pricing Items**:
 
 1. Select the hamburger menu in the upper left within the app.
-2. Select `Pricing items`.
+2. Select `Invoicing`.
 
 You will see a list of all your saved pricing items with their names and prices.
 
-{/* <!-- Screenshot: Pricing Items list --> */}
+<img src={ImageInvoicing1} style={{ maxWidth: '250px', width: '100%' }} alt="View pricing items." />
 
 ### Create a Pricing Item
 
 To create a new **Pricing Item**:
 
-1. Navigate to `Pricing items` from the hamburger menu.
+1. Navigate to `Invoicing` from the hamburger menu.
 2. Select `Create new pricing item`.
 3. Enter a **Name** for the item (e.g., "Radon Testing").
-4. Enter the **Unit Price**.
-5. Optionally, set a **Tax Rate** percentage.
-6. Select `Save`.
+4. Enter the **Price per unit**.
+5. Optionally, set a **Tax rate** percentage.
+6. Select `Create`.
 
-{/* <!-- Screenshot: Create Pricing Item form --> */}
+<img src={ImageInvoicing2} style={{ maxWidth: '250px', width: '100%' }} alt="Create a pricing item." />
 
 :::tip
 
@@ -62,14 +72,14 @@ Create pricing items for all your common services before you start invoicing. Th
 
 To modify an existing **Pricing Item**:
 
-1. Navigate to `Pricing items` from the hamburger menu.
+1. Navigate to `Invoicing` from the hamburger menu.
 2. Select the item you wish to edit.
-3. Update the **Name**, **Unit Price**, or **Tax Rate** as needed.
-4. Select `Save`.
+3. Update the **Name**, ** per unit**, and/or **Tax rate** as needed.
+4. Select `Save changes`.
 
 :::info
 
-Changes to a **Pricing Item** only affect new invoices. Existing invoices retain the pricing that was set when they were created.
+Changes to a **Pricing Item** only affect **new invoices**. Existing invoices retain the pricing that was set when they were created.
 
 :::
 
@@ -77,14 +87,14 @@ Changes to a **Pricing Item** only affect new invoices. Existing invoices retain
 
 To delete a **Pricing Item**:
 
-1. Navigate to `Pricing items` from the hamburger menu.
+1. Navigate to `Invoicing` from the hamburger menu.
 2. Select the item you wish to delete.
 3. Scroll to the bottom and select `Delete pricing item`.
 4. Confirm the deletion when prompted.
 
 :::warning
 
-Deleting a Pricing Item cannot be undone. Existing invoices that used this item will retain their line item data.
+Deleting a **Pricing Item** cannot be undone. Existing invoices using this item will retain their line item data.
 
 :::
 
@@ -92,48 +102,62 @@ Deleting a Pricing Item cannot be undone. Existing invoices that used this item 
 
 ### Create Invoice from Inspection
 
-Invoices are created from within an [**Inspection**](/docs/concepts/inspections). To create an invoice:
+Invoices are created within an [**Inspection**](/docs/concepts/inspections). To create an invoice:
 
-1. Open the inspection you want to invoice.
+1. Open the Inspection you want to invoice.
 2. Navigate to the **Invoice** section.
-3. Select `Create Invoice`.
-4. Add line items (see below).
+3. Select the edit icon.
+4. [Add line items](/docs/concepts/invoicing-and-pricing-items#adding-line-items).
 5. Optionally, add a **Memo** for additional notes.
-6. Select `Save`.
+6. Select `Create invoice`.
 
-{/* <!-- Screenshot: Create Invoice from inspection --> */}
+<img src={ImageInvoicing3} style={{ maxWidth: '250px', width: '100%' }} alt="Creating an invoice within an Inspection." />
+
+:::info
 
 The system automatically generates an invoice number in the format `INV-YYYY-NNNNN` (e.g., INV-2025-00001).
+
+:::
 
 ### Adding Line Items
 
 You can add line items to your invoice in two ways:
 
 **From Pricing Library:**
-1. Select `Add from pricing items`.
+1. Select `+ Pricing item`.
 2. Choose one or more items from your pricing library.
-3. Adjust the quantity if needed.
+3. [Adjust the quantity](/docs/concepts/invoicing-and-pricing-items#adjusting-pricing-item-quantity) if needed.
 
 **Custom Item:**
-1. Select `Add custom item`.
+1. Select `+ Custom`.
 2. Enter the item **Name**.
-3. Enter the **Unit Price**.
+3. Enter the **Price per unit**.
 4. Set the **Quantity**.
-5. Optionally, set a **Tax Rate**.
+5. Optionally, set a **Tax rate**.
 
-{/* <!-- Screenshot: Invoice form with line items --> */}
+<img src={ImageInvoicing4} style={{ maxWidth: '250px', width: '100%' }} alt="Creating a Pricing Item within an inspection." />
+
+### Adjusting Pricing Item Quantity
+
+When creating an Inspection invoice you can update the quantity of a line item. To update the quanity:
+
+1. Select the pricing item you added.
+2. Update the `Quantity`.
+3. Select `Save changes`.
+
+<img src={ImageInvoicing5} style={{ maxWidth: '250px', width: '100%' }} alt="Adjusting Pricing Item quantity." />
 
 ### Automatic Calculations
 
 Eneris automatically calculates all invoice totals:
 
-- **Line Total** — Unit price × quantity for each item
+- **Line Total** — Price per unit × quantity for each item
 - **Line Tax** — Line total × tax rate for each item
 - **Subtotal** — Sum of all line totals
-- **Tax Total** — Sum of all line taxes
+- **Tax** — Sum of all line taxes
 - **Total** — Subtotal + tax total
 
-{/* <!-- Screenshot: Invoice totals --> */}
+<img src={ImageInvoicing6} style={{ maxWidth: '250px', width: '100%' }} alt="Invoice subtotals, tax totals, and overall total amounts." />
 
 :::info
 
@@ -147,8 +171,8 @@ All calculations update in real-time as you add or modify line items.
 
 Each invoice has a payment status:
 
-- **UNPAID** — Invoice has been created but payment has not been recorded
-- **PAID** — Payment has been recorded for this invoice
+- **Unpaid** — Invoice has been created but payment has not been recorded
+- **Paid** — Payment has been recorded for this invoice
 
 The status is displayed as a badge on the invoice, making it easy to track outstanding payments.
 
@@ -157,19 +181,19 @@ The status is displayed as a badge on the invoice, making it easy to track outst
 To record a payment on an invoice:
 
 1. Open the invoice.
-2. Change the status to **PAID**.
+2. Change the **Invoice Status** to **Paid**.
 3. Select a **Payment Method**:
    - Cash
    - Check
    - Debit Card
    - Credit Card
    - Bank Transfer
-   - Peer to Peer
-   - Other (with custom description)
+   - Peer-to-Peer
+   - Other (enter a custom description)
 4. Set the **Paid Date**.
-5. Select `Save`.
+5. Select `Save changes`.
 
-{/* <!-- Screenshot: Payment status section --> */}
+<img src={ImageInvoicing7} style={{ maxWidth: '250px', width: '100%' }} alt="Recording a payment on an Invoice." />
 
 ## Invoice Actions
 
@@ -177,25 +201,27 @@ To record a payment on an invoice:
 
 To download an invoice as a PDF:
 
-1. Open the invoice.
-2. Select the **Download PDF** option.
-3. The PDF will be generated and downloaded to your device.
+1. Navigate into the Inspection.
+2. Locate the Invoice section.
+3. Select the **Download PDF** icon.
+4. Download the PDF on your device.
 
 The PDF includes your business information, invoice details, line items with calculations, and any memo you added.
 
-{/* <!-- Screenshot: Invoice PDF --> */}
+<img src={ImageInvoicing8} style={{ maxWidth: '250px', width: '100%' }} alt="Generate and download the Invoice PDF." />
 
 ### Share via Email
 
 To share an invoice with your client via email:
 
-1. Open the invoice.
-2. Select the **Share** option.
-3. The email recipients are auto-populated from the inspection contacts.
+1. Navigate into the Inspection.
+2. Locate the Invoice section.
+3. Select the **Email** icon.
+3. The email recipients are auto-populated from the Inspection contacts.
 4. Adjust the **To**, **Cc**, and **Bcc** fields as needed.
 5. Select `Send`.
 
-{/* <!-- Screenshot: Share invoice modal --> */}
+<img src={ImageInvoicing9} style={{ maxWidth: '250px', width: '100%' }} alt="Share the invoice via email." />
 
 The email includes a link to view the invoice online, along with a PDF attachment.
 
@@ -204,4 +230,3 @@ The email includes a link to view the invoice online, along with a PDF attachmen
 Anyone with access to the public invoice link will be able to view the invoice. Only share invoice links with intended recipients.
 
 :::
-
