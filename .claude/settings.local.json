@@ -9,7 +9,8 @@
       "Bash(find:*)",
       "Bash(gh pr view:*)",
       "Bash(tree:*)",
-      "Bash(yarn build:*)"
+      "Bash(yarn build:*)",
+      "Bash(git mv:*)"
     ],
     "deny": [],
     "ask": []
