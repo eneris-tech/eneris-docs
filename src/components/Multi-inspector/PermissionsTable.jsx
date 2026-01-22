@@ -39,11 +39,42 @@ export default function PermissionsTable() {
     ['Create Contact', '✅', '✅', '✅'],
     ['Edit Contact', '✅', '✅', '✅'],
     ['Delete Contact', '✅', '✅', '🚫'],
+    // Pricing Items
+    ['List Pricing Items', '✅', '✅', '✅'],
+    ['View Pricing Item', '✅', '✅', '✅'],
+    ['Create Pricing Item', '✅', '✅', '🚫'],
+    ['Edit Pricing Item', '✅', '✅', '🚫'],
+    ['Delete Pricing Item', '✅', '✅', '🚫'],
+    // Invoices
+    ['List Invoices', '✅', '✅', '✅'],
+    ['View Invoice', '✅', '✅', '✅'],
+    ['Create Invoice', '✅', '✅', '✅'],
+    ['Edit Invoice', '✅', '✅', '✅'],
+    ['Delete Invoice', '✅', '✅', '✅'],
+    ['Share Invoice', '✅', '✅', '✅'],
+    // Agreement Templates
+    ['List Agreement Templates', '✅', '✅', '✅'],
+    ['View Agreement Template', '✅', '✅', '✅'],
+    ['Create Agreement Template', '✅', '✅', '🚫'],
+    ['Edit Agreement Template', '✅', '✅', '🚫'],
+    ['Delete Agreement Template', '✅', '✅', '🚫'],
+    // Service Agreements
+    ['List Service Agreements', '✅', '✅', '✅'],
+    ['View Service Agreement', '✅', '✅', '✅'],
+    ['Create Service Agreement', '✅', '✅', '✅'],
+    ['Edit Service Agreement', '✅', '✅', '✅'],
+    ['Delete Service Agreement', '✅', '✅', '🚫'],
+    ['Publish Service Agreement', '✅', '✅', '✅'],
+    ['Sign Service Agreement', '✅', '✅', '✅'],
+    ['Share Service Agreement', '✅', '✅', '✅'],
+    // Photos and videos
     ['Upload images and videos', '✅', '✅', '✅'],
+    // Team members
     ['List team members', '✅', '✅', '✅'],
     ['Create team member', '✅', '🚫', '🚫'],
     ['Edit team member', '✅', '🚫', '🚫'],
     ['Delete team member', '✅', '🚫', '🚫'],
+    // Subscription
     ['View subscription', '✅', '🚫', '🚫'],
     ['Modify subscription', '✅', '🚫', '🚫'], // CUSTOMER_SESSION_CREATE && BILLING_SESSION_CREATE
   ];
