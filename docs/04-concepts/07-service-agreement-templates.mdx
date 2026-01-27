@@ -4,6 +4,7 @@ import ImageServiceAgreements3 from './img/service-agreements-3.webp';
 import ImageServiceAgreements4 from './img/service-agreements-4.webp';
 import ImageServiceAgreements5 from './img/service-agreements-5.webp';
 import ImageServiceAgreements6 from './img/service-agreements-6.webp';
+import ImageServiceAgreementStates from './img/service-agreement-states.webp';
 
 # Service Agreement Templates
 
@@ -203,6 +204,8 @@ Serivce Agreements can be in one of three states: `Draft`, `Published`, or `Sign
 - `Published` — Service Agreement has been finalized and is ready for signature. Add additional signers and/or request missing signatures.
 - `Signed` — Service Agreement has been signed by all signers.
 
+<img src={ImageServiceAgreementStates} style={{ maxWidth: '700px', width: '100%' }} alt="Service Agreement states." />
+
 :::warning
 
 Changes to the Service Agreement are possible regardless of what state it is in. However, making changes when it is in the `Published` or `Signed` states will clear all existing signatures. Clients will need to re-sign the updated agreement.
@@ -333,7 +336,7 @@ When you [publish a report](/docs/concepts/reports#publishing-a-report), the Ser
 - **Body** — The full agreement text
 - **Signatures** — All collected signatures with printed names and date of signature
 
-<img src={ImageServiceAgreements6} style={{ maxWidth: '250px', width: '100%' }} alt="Service Agreement section in PDF report." />
+<img src={ImageServiceAgreements6} style={{ maxWidth: '400px', width: '100%' }} alt="Service Agreement section in PDF report." />
 
 :::info
 
