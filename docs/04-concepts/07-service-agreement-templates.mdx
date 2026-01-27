@@ -1,0 +1,366 @@
+import ImageServiceAgreements1 from './img/service-agreements-1.webp';
+import ImageServiceAgreements2 from './img/service-agreements-2.webp';
+import ImageServiceAgreements3 from './img/service-agreements-3.webp';
+import ImageServiceAgreements4 from './img/service-agreements-4.webp';
+import ImageServiceAgreements5 from './img/service-agreements-5.webp';
+import ImageServiceAgreements6 from './img/service-agreements-6.webp';
+
+# Service Agreement Templates
+
+**Service Agreements** allow you to create, customize, and enforce multi-party service agreements directly within Eneris. By requiring clients to sign agreements before inspections, you establish liability protection and ensure all parties understand the scope and terms of your services.
+
+Service Agreements are critical for:
+
+- **Liability protection** — Ensure agreements are signed before performing inspections.
+- **Multi-signature support** — Handle unmarried buyers, siblings, investors, and other multi-party scenarios.
+- **Workflow efficiency** — Eliminate the need for external tools e-signature tools or paper-based agreements.
+
+:::info
+
+Service Agreement Templates are reusable across multiple [**Form Templates**](/docs/concepts/form-templates). Set them up once and apply them to any template you create.
+
+:::
+
+## What is a Service Agreement?
+
+A **Service Agreement** is a legally binding document that defines the terms and conditions of your inspection services. It outlines what you will and will not inspect, your liability limitations, and other important terms that protect both you and your clients.
+
+Including a signed Service Agreement with your inspections helps:
+
+- Protect you from liability claims
+- Set clear expectations about the scope of the inspection
+- Provide documentation that clients acknowledged and agreed to your terms
+
+## Managing Service Agreement Templates
+
+### View Service Agreement Templates
+
+To view your existing **Service Agreement Templates**:
+
+1. Select the hamburger menu in the upper left within the app on your mobile device.
+2. Select `Agreement templates`.
+
+<img src={ImageServiceAgreements1} style={{ maxWidth: '250px', width: '100%' }} alt="Service Agreement Templates menu in sidebar." />
+
+You will see a list of all available Service Agreement Templates, including any templates you have created.
+
+<img src={ImageServiceAgreements2} style={{ maxWidth: '250px', width: '100%' }} alt="List of Service Agreement Templates." />
+
+### Create a Service Agreement Template
+
+To create a new **Service Agreement Template**:
+
+1. Select the hamburger menu in the upper left within the app on your mobile device.
+2. Select `Agreement templates`.
+3. Select `Create new agreement template`.
+4. Choose from one of the available templates or create a blank template to start from scratch.
+5. Update the `Agreement template name` as necessary and then select `Create new`.
+5. Enter a **Name** for your template (this is for internal reference only).
+6. Enter a **Title** (this appears in your PDF reports).
+7. Enter the agreement content in the **Body** field.
+8. Optionally, insert [**Dynamic Tags**](/docs/concepts/service-agreements#dynamic-tags) to dynamically populate inspection-specific information.
+9. Select `Save changes` at the bottom of the page.
+
+<img src={ImageServiceAgreements3} style={{ maxWidth: '250px', width: '100%' }} alt="Create new Service Agreement Template." />
+
+:::info
+
+The **Name** field is used to identify the template in your list. The **Title** field is what appears in your client-facing PDF reports.
+
+:::
+
+### Edit a Service Agreement Template
+
+To modify an existing **Service Agreement Template**:
+
+1. Select the hamburger menu in the upper left within the app on your mobile device.
+2. Select `Agreement templates`.
+3. Select the template you wish to edit.
+4. Update the **Name**, **Title**, and **Body** fields as needed.
+6. Select `Save changes`.
+
+:::info
+
+Changes to a **Service Agreement Template** only affect new [**Inspections**](/docs/concepts/inspections) created after the change. Existing inspections retain the Service Agreement content that was embedded when they were created.
+
+:::
+
+<img src={ImageServiceAgreements4} style={{ maxWidth: '250px', width: '100%' }} alt="Edit a Service Agreement Template." />
+
+### Delete a Service Agreement Template
+
+To delete a **Service Agreement Template**:
+
+1. Select the hamburger menu in the upper left within the app on your mobile device.
+2. Select `Agreement templates`.
+3. Select the template you wish to delete.
+4. Scroll to the bottom and select `Delete agreement template`.
+5. Confirm the deletion when prompted.
+
+:::warning
+
+Deleting a Service Agreement Template cannot be undone. Existing inspections that use this template will retain their embedded Service Agreement content.
+
+:::
+
+## Dynamic Tags
+
+**Dynamic Tags** allow you to dynamically insert inspection-specific information into your Service Agreement Templates. When a Service Agreement Template is applied to an [Inspection Form](/docs/concepts/inspection-forms), these tags are automatically replaced with the actual values.
+
+| Tag | Description |
+|-----|-------------|
+| `{{CLIENT}}` | Client's contact name |
+| `{{INSPECTOR}}` | Inspector's name |
+| `{{BUSINESS_NAME}}` | Your business name |
+| `{{ADDRESS}}` | Inspection address |
+| `{{DATE}}` | Inspection date |
+| `{{CLIENT_ADDRESS}}` | Client's current address |
+| `{{SUBTOTAL}}` | Invoice subtotal |
+
+:::info
+
+When a Service Agreement Template is applied to an Inpsection Form, Dynamic Tags are converted to actual text values. This conversion is one-way — the tags cannot be reverted once applied.
+
+You can preview how the Dynamic Tags will appear before publishing the Service Agreement for client signature(s).
+
+:::
+
+## Inspector Signature
+
+Your signature appears on all Service Agreements you send for signing. To set up your inspector signature:
+
+1. Navigate to your [**Inspector Profile**](/docs/concepts/inspector-profiles).
+2. Locate the **Inspector Signature** field.
+3. Sign or select `Generate signature from name`
+4. Select `Submit`
+5. Select `Save changes`
+
+Your signature will automatically appear on all Service Agreements associated with your inspections.
+
+:::info
+
+Your inspector signature is a one-time setup. Once configured, it applies to all Service Agreements across all inspections where you are the primary inspector.
+
+:::
+
+## Linking Service Agreements to Form Templates
+
+To associate a **Service Agreement Template** with a [**Form Template**](/docs/concepts/form-templates):
+
+1. Select the hamburger menu in the upper left within the app on your mobile device.
+2. Select `Form templates`.
+3. Select the **Form Template** you wish to modify.
+4. Locate the **Service agreement template** section.
+5. Select the edit icon then select the desired **Service Agreement template** from the menu.
+6. Navigate back a page then select `Save` in the upper right.
+
+<img src={ImageServiceAgreements5} style={{ maxWidth: '250px', width: '100%' }} alt="Linking a Service Agreement Template to a Form Template." />
+
+:::info
+
+Once linked, the Service Agreement is automatically embedded when creating new [**Inspections**](/docs/concepts/inspections) using that **Form Template**. The agreement content is copied into the Inspection Form, allowing for per-inspection modifications, if needed.
+
+:::
+
+## Service Agreements in Inspection Forms
+
+When you create an [**Inspection**](/docs/concepts/inspections) using a **Form Template** that has a Service Agreement linked, the agreement content is automatically embedded into the [**Inspection Form**](/docs/concepts/inspection-forms).
+
+### Applying a Service Agreement
+
+You have several options when working with Service Agreements in an Inspection Form:
+
+- **Apply a template** — Select from your existing Service Agreement Templates
+- **Write from scratch** — Create a one-off agreement for this specific inspection
+- **Select a different template** — Switch to a different template if needed
+
+:::info
+
+Each [Inspection Form](/docs/concepts/inspection-forms) can have a maximum of one Service Agreement.
+
+:::
+
+### Making Ad-Hoc Changes
+
+You can modify the Service Agreement content directly within an Inspection Form to make inspection-specific changes. This is useful when:
+
+- A client requests additional scope clarifications
+- You need to add project-specific limitations
+- You want to customize terms for a particular situation
+
+Changes made to the Service Agreement within an **Inspection Form** only affect that specific Inspection Form — they do not update the original **Service Agreement Template**.
+
+:::warning
+
+Making changes to a Service Agreement after it has been signed will clear all existing signatures. Clients will need to re-sign the updated agreement.
+
+:::
+
+### Service Agreement States
+Serivce Agreements can be in one of three states: `Draft`, `Published`, or `Signed`.
+
+- `Draft` — Service Agreement can still be configured. Either the content is being edited or signers are being added.
+- `Published` — Service Agreement has been finalized and is ready for signature. Add additional signers and/or request missing signatures.
+- `Signed` — Service Agreement has been signed by all signers.
+
+:::warning
+
+Changes to the Service Agreement are possible regardless of what state it is in. However, making changes when it is in the `Published` or `Signed` states will clear all existing signatures. Clients will need to re-sign the updated agreement.
+
+:::
+
+### Publishing a Service Agreement
+Publishing the Service Agreement means the agreement is finalized and ready for signature.
+
+Publishing the Service Agreement can be done through the context menu.
+
+1. Open the Inspection Form containing your Service Agreement.
+2. Navigate to the Service Agreement section.
+3. Select the ellipses next to the section header. This is the context menu.
+4. Select `Publish`
+5. The Service Agreement is now in the `Published` state and ready for signatures.
+
+:::info
+
+Once all signers have signed the Service Agreement it will automatically convert to the [`Signed`](/docs/concepts/service-agreement-templates#service-agreement-states) state. All signers will receive an email confirmation.
+
+:::
+
+### Viewing Signature Status
+
+The Service Agreement section displays the current signature status, which shows how many parties have signed (e.g., "2/3 signatures completed"). This allows you to quickly see if any signatures are still pending.
+
+## Multi-Signature Support
+
+Eneris supports up to **10 signatures** on a single Service Agreement, accommodating complex scenarios such as:
+
+- Unmarried couples purchasing together
+- Siblings or family members as co-buyers
+- Investors or business partners
+- Any combination of multiple parties
+
+### Configuring Signers
+
+When requesting signatures, you select which [contacts](/docs/concepts/inspections#contacts) from the Inspection need to sign. Only contacts associated with the inspection can be added as signers.
+
+Signatures are arranged in two columns in the final document to save space, with the inspector's signature appearing last.
+
+:::info
+
+At this time, only the primary inspector's signature will appear in the Service Agreement.
+
+:::
+
+### In-Person Signing
+
+For in-person signing:
+
+1. Ensure the Service Agreement is in the [`Published`](/docs/concepts/service-agreement-templates#service-agreement-states) state.
+2. Select the signer from the signer list.
+3. Select `Sign agreement`.
+4. Hand the device to the signer.
+5. The Service Agreement will appear with a name and signature box at the bottom of the page.
+6. The signer types their name and signs/generates their signature.
+7. Select `Submit`.
+
+### Off-Site Signing
+
+To send a Service Agreement for signature:
+
+1. Ensure the Service Agreement is in the [`Published`](/docs/concepts/service-agreement-templates#service-agreement-states) state.
+2. Select the ellipses next to the section header. This is the context menu.
+3. Select `Request signatures`.
+4. This sends a signature request email to signers who have not yet signed the Service Agreement.
+
+:::tip
+
+Selecting an individual signer opens a menu where you can request their signature, as well.
+
+:::
+
+### Managing Signatures
+
+If a signature needs to be corrected:
+
+1. Navigate to the Service Agreement section in the Inspection Form.
+2. Select the signer that needs to correct their signature.
+3. Select `Delete signature`
+4. Select the signer again and select `Request signature`.
+
+:::info
+
+Signatures are tied to the Service Agreement. If the agreement is deleted, all associated signatures are also removed.
+
+:::
+
+## Electronic Signing Interface
+
+The signing interface works across all platforms:
+
+**Web:**
+- Sign using your mouse or trackpad
+- Full signature pad interface
+
+**Mobile:**
+- Sign using your finger
+- Optimized for touch screens
+
+**Features:**
+- **Cursive pre-filled option** — Generate a cursive signature based on the signer's name
+- **Free-form drawing** — Draw a signature manually
+- **Delete and re-do** — Clear and restart if you make a mistake
+
+## Signature Notifications
+
+### For Signers
+
+After successfully signing a Service Agreement, signers receive an email confirmation acknowledging their signature has been recorded.
+
+### For Inspectors
+
+When all required parties have signed the Service Agreement, you receive an email notification confirming the agreement is fully completed.
+
+## Service Agreement in Reports
+
+When you [publish a report](/docs/concepts/reports#publishing-a-report), the Service Agreement appears in the PDF report.
+
+**Placement:**
+- Second-to-last section (before Standards of Practice)
+- Added to the Table of Contents
+
+**Content includes:**
+- **Title** — The Service Agreement title you specified
+- **Body** — The full agreement text
+- **Signatures** — All collected signatures with printed names and date of signature
+
+<img src={ImageServiceAgreements6} style={{ maxWidth: '250px', width: '100%' }} alt="Service Agreement section in PDF report." />
+
+:::info
+
+If additional signatures are collected after the report is published, you must manually re-publish the report to include the new signatures.
+
+:::
+
+## Standalone PDF
+
+You can generate and share a fully signed Service Agreement as a standalone PDF document, separate from the inspection report.
+
+### Generating a standalone Service Agreement PDF
+To generate a standalone PDF:
+
+1. Open the Inspection Form containing your Service Agreement.
+2. Navigate to the Service Agreement section.
+3. Select the ellipses next to the section header. This is the context menu.
+4. Select `View agreement PDF`.
+
+This helps further verify the signatures have been completed.
+
+### Sharing a standalone Service Agreement PDF
+To share a standalone PDF:
+
+1. Open the Inspection Form containing your Service Agreement.
+2. Navigate to the Service Agreement section.
+3. Select the ellipses next to the section header. This is the context menu.
+4. Select `Share agreement PDF`.
+
+This is useful when clients request a copy of just the signed agreement without the full inspection report.
