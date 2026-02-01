@@ -4,13 +4,21 @@ import ImageSyncing1 from './img/syncing-1.webp';
 
 Syncing ensures that your inspection data is uploaded to the cloud, so it’s backed up and accessible across all your devices.
 
-Syncing sends the latest version of your [**Inspection**](/docs/concepts/inspections) from your local device to the Eneris cloud. This keeps your data safe, allows for collaboration, and enables seamless access to your **Inspection** from other devices.
+Syncing sends the latest version of your [**Inspection Forms**](/docs/concepts/inspection-forms) from your local device to the Eneris cloud. This keeps your data safe, allows for collaboration, and enables seamless access to your **Inspection Forms** from other devices.
+
+:::warning Important
+
+If an **Inspection Form** has not been synced for more than 30 days, any unsynced changes will be lost. To avoid losing your work, sync your forms regularly.
+
+:::
 
 ## Auto-syncing
 
-**Auto-sync** occurs when you **publish or preview a report**.
+Any **out-of-sync** offline forms will automatically sync in the background at a regular interval if the app is open and you are connected to the internet.
 
-You can also **manually sync** by selecting the **Sync** option in the form properties.
+The app will also download any inspection forms that are within the last 30 days or newer to your device if they are not already on your device.
+
+You can also **manually sync** each form by selecting the **Sync** option in the form properties.
 
 <img src={ImageSyncing1} style={{ maxWidth: '250px', width: '100%' }} alt="Manual sync button." />
 
@@ -21,7 +29,7 @@ While saving stores your work locally on your mobile device, **syncing** uploads
 | Action | Where it’s stored | When it happens |
 | --- | --- | --- |
 | Saving | On your local mobile device | Every 30 seconds or manually |
-| Syncing | In the Eneris cloud | When you publish or share a report. You may also manually sync the report. |
+| Syncing | In the Eneris cloud | Automatically in the background while the app is active. You may also manually sync. |
 
 :::info
 
