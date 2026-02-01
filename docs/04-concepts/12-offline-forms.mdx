@@ -13,15 +13,16 @@ Eneris is built for inspectors whether they have internet access or not. With **
 
 :::info
 
-Synced **Offline Forms** will be automatically removed from your device if it has been more than 30 days since the inspection date **and** the last synced time is more than 30 days.
+**Offline Forms** will be automatically removed from your device if the last synced time is more than 30 days.
 
 - This automation is in place to help ensure your mobile device storage remains free.
+- This also keeps your offline data synchronized with our servers, where outdated data is automatically cleaned up to maintain optimal performance.
 
 :::
 
-## Offline Forms
+## What is an Offline Form?
 
-An **Offline Form** is the locally saved offline data of an [**Inspection Form**](/docs/concepts/inspection-forms). i.e., It is the **Inspection Form** data that is saved to your mobile device.
+An **Offline Form** is a local copy of an [**Inspection Form**](/docs/concepts/inspection-forms) saved to your mobile device.
 
 <img src={ImageOfflineForms1} style={{ maxWidth: '250px', width: '100%' }} alt="Offline Form list." />
 
@@ -34,8 +35,10 @@ Saving the [**Inspection Form**](/docs/concepts/inspection-forms) data to your m
 - This means certain actions will be unavailable when conducting inspections without internet. Specifically, the following actions are unavailable:
     - [Publishing your report](/docs/concepts/reports#publishing-a-report)
     - [Sharing your report](/docs/concepts/reports#sharing-a-report)
+    - [Creating and sharing service agreements](/docs/concepts/service-agreement-templates#service-agreements-in-inspection-forms)
     - Any actions from the **Inspection** menu
         - Adding or updating contacts
+        - Adding or updating the [**Invoice**](/docs/concepts/invoicing-and-pricing-items#creating-an-invoice)
         - Adding or updating property details
         - Updating the [**Inspector Profile**](/docs/concepts/inspector-profiles)
         - Adding or updating general notes and the internal memo
@@ -48,7 +51,7 @@ Once you’ve completed the physical inspection of the property and filled out t
 
 An **Offline Form** is automatically created when you create an [**Inspection**](/docs/concepts/inspections) on your device.
 
-- **Offline Forms** are linked to [**Inspection Forms**](/docs/concepts/inspection-forms). [Since each **Inspection** can have multiple **Inspection Forms**](/docs/concepts/inspection-forms#many-inspection-forms-to-one-inspection) it also means each **Inspection** can have multiple **Offline Forms** (i.e., one **Offline Form** per type of inspection you are performing at the property).
+- **Offline Forms** are linked to [**Inspection Forms**](/docs/concepts/inspection-forms). Since each **Inspection** can have [multiple **Inspection Forms**](/docs/concepts/inspection-forms#many-inspection-forms-to-one-inspection), each **Inspection** can also have multiple **Offline Forms**—one per inspection type at the property.
 - Anytime you navigate into an **Inspection Form** from the mobile app, if the form does not exist on the device, we will download all the necessary files to your device, so it may take longer to load the form when you open it the first time.
 
 In the **Offline Forms** page, when you select the [sync](/docs/concepts/syncing) button:
@@ -60,9 +63,6 @@ In the **Offline Forms** page, when you select the [sync](/docs/concepts/syncing
 There can be four types of symbols next to each **Offline Form**. They represent the state of the form.
 
 - Green checkmark - All changes in the **Offline Form** are synced.
-    - This **does not** mean the **Offline Form** is pulling the latest changes from the cloud. It is only pushing the **Offline Form** changes to the cloud.
-        - To pull the latest changes from the cloud onto your mobile device, you would need to go into the particular **Inspection Form** and manually select the sync button.
-            - This is only required when you want the latest working version of the **Inspection Form** on your mobile device.
 - Grey circular dot - Pending changes that are saved offline need to be synced.
 - Warning triangle - Syncing has failed and an error message should be displayed along with it.
 - Spinner - Sync is in progress.
@@ -79,11 +79,11 @@ To help manage your device’s limited storage, Eneris handles **Offline Forms**
 
 ### Automatic delete
 
-Synced **Offline Forms** will be automatically removed from your device if it has been more than 30 days since the inspection date **and** the last synced time is more than 30 days.
+Synced **Offline Forms** will be automatically removed from your device if the last synced time is more than 30 days.
 
-### Automatic re-download
+### Form re-download
 
-If you make new changes to an [**Inspection**](/docs/concepts/inspections) older than 30 days, the **Offline Form** will be re-saved to your device for another 30 days.
+If you need to access an [**Inspection Form**](/docs/concepts/inspection-forms) that is older than 30 days, navigating to the form from the [**Inspection**](/docs/concepts/inspections) will re-save the **Offline Form** to your device.
 
 ### Manual delete
 
@@ -91,7 +91,7 @@ You can manually remove offline forms if you need to free up space.
 
 :::info
 
-Deleting **Offline Forms** from you mobile device **does not** delete the inspection data from Eneris’ cloud servers. You will always be able to access past inspections as **we do not delete your data to free up space**.
+Deleting **Offline Forms** from your mobile device **does not** delete the inspection data from Eneris’ cloud servers. You will always be able to access past inspections as **we do not delete your data to free up space**.
 
 These rules help ensure Eneris runs smoothly while respecting your device’s storage limits.
 
@@ -105,7 +105,7 @@ Once the **Offline Form** is saved onto your mobile device you can access it wit
 
 Reminder that **Offline Forms** are local saves of **Inspection Forms** only and not the entire **Inspection**.
 
-- This means certain actions will be unavailable when conducting inspections without internet. See the [info callout here](/docs/concepts/offline-forms#offline-forms-1) for more info.
+- This means certain actions will be unavailable when conducting inspections without internet. See the [info callout here](/docs/concepts/offline-forms#what-is-an-offline-form) for more info.
 
 :::
 
