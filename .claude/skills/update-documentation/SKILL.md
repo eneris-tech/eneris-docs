@@ -78,142 +78,15 @@ Draft a structured plan including:
 
 ## Phase 3: Capture Screenshots
 
-Reference `references/screenshot-capture-guide.md` for detailed capture and processing instructions.
+Follow the complete capture workflow in `references/screenshot-capture-guide.md`.
 
-### 3.1 Prerequisites Check
-
-Verify MCP tool availability before proceeding:
-
-**Web (Chrome DevTools MCP):**
-```
-mcp__chrome-devtools__take_snapshot
-```
-If unavailable, instruct user to ensure the Chrome DevTools MCP server is running.
-
-**Mobile (Maestro MCP):**
-```
-mcp__maestro__list_devices
-```
-If unavailable, instruct user to start iOS Simulator and/or Android Emulator.
+Before starting, verify MCP tool availability (see the Prerequisites section in the capture guide) and inform the user if any prerequisites are missing.
 
 **User Gate**: If any prerequisite is missing, stop and inform the user what needs to be started.
 
-### 3.2 Raw Screenshot Preservation
-
-**After every screenshot capture, immediately copy the raw file to `/tmp/raw-<descriptive-name>.png` before any processing.** This ensures you can re-run cropping, spotlight, or other processing steps without recapturing. Never process the raw file in-place — always use the raw copy as input to the processing pipeline.
-
-### 3.3 Web Screenshots
-
-1. Navigate to the target page via `mcp__chrome-devtools__navigate_page`
-2. Set viewport via `mcp__chrome-devtools__resize_page` — **default to 1280×800 desktop viewport** unless the user specifies otherwise (use 390×844 for mobile-web)
-3. Interact with the page to reach the desired state (use `mcp__chrome-devtools__click`, `mcp__chrome-devtools__fill_form`, etc.)
-4. Capture via `mcp__chrome-devtools__take_screenshot`
-5. Save to a temporary location for processing
-
-### 3.4 iOS Screenshots
-
-1. Verify device availability: `mcp__maestro__list_devices`
-2. Launch the app: `mcp__maestro__launch_app`
-3. Navigate to the target screen using `mcp__maestro__tap_on` and other interaction tools
-4. Inspect the view hierarchy if needed: `mcp__maestro__inspect_view_hierarchy`
-5. Capture: `mcp__maestro__take_screenshot`
-
-**Known limitation**: Bottom sheets (FullWindowOverlay) cannot be interacted with in Maestro. If the target UI is in a bottom sheet, capture via web with mobile viewport instead.
-
-### 3.5 Android Screenshots
-
-Same workflow as iOS using Maestro MCP tools. Ensure an Android emulator is running and the app is installed.
-
 ## Phase 4: Process Screenshots
 
-Use the screenshot processing scripts in the `scripts/` directory of this skill.
-
-**IMPORTANT**: All `bun run` commands must be executed from the `eneris-docs` project root so that sharp resolves correctly from `node_modules/`.
-
-**IMPORTANT**: Always use the raw copy (`/tmp/raw-<name>.png`) as input to the pipeline — never process the original capture in-place. If processing needs to be re-done, start again from the raw copy.
-
-```bash
-SCRIPTS=".claude/skills/update-documentation/scripts"
-```
-
-### 4.1 Standard Mobile Pipeline
-
-```bash
-# 1. Get image info
-bun run $SCRIPTS/info.ts -i <captured-screenshot>
-
-# 2. Strip status/nav bars (manual crop)
-bun run $SCRIPTS/crop.ts -i <captured-screenshot> -o /tmp/stripped.png --left 0 --top <status-bar-height> --width <img-width> --height <content-height>
-
-# 3. Apply spotlight (if highlighting a specific area — supports multiple regions)
-bun run $SCRIPTS/spotlight.ts -i /tmp/stripped.png -o /tmp/spotlight.png --region "left,top,width,height"
-# For multiple highlights: --region "left,top,w,h" --region "left,top,w,h"
-
-# 4. Resize (750px width for retina → renders at ~250px in docs with maxWidth)
-bun run $SCRIPTS/resize.ts -i /tmp/spotlight.png -o /tmp/resized.png --width 750
-
-# 5. Convert to WebP
-bun run $SCRIPTS/to-webp.ts -i /tmp/resized.png -o <final-output-path>.webp --quality 80
-```
-
-### 4.2 Standard Web Pipeline
-
-**Crop vs. Spotlight**: Do NOT crop unless absolutely necessary — only use crop to remove unhelpful chrome (headers, sidebars, navigation bars), never to isolate a specific UI element. To draw attention to a specific element (e.g., a card, button, or form field), use spotlight on a wider screenshot instead of cropping tightly to just that element. This preserves surrounding context and helps users orient themselves in the UI.
-
-**Spotlight verification**: Before applying spotlight, use `verify-spotlight.ts` to extract each region as a standalone cropped sub-image with padding. Read each extract to confirm it contains the intended UI element. This is more reliable than post-spotlight visual inspection because it shifts verification from pixel-coordinate judgment to content recognition. If an extract doesn't show the right element, adjust coordinates and re-verify before running spotlight.
-
-```bash
-# 1. Crop to remove irrelevant chrome (ONLY if absolutely necessary — do NOT crop to isolate an element)
-bun run $SCRIPTS/crop.ts -i <captured-screenshot> -o /tmp/cropped.png --left 0 --top 0 --width 1200 --height 800
-
-# 2a. Verify spotlight coordinates before applying
-bun run $SCRIPTS/verify-spotlight.ts -i /tmp/cropped.png --region "left,top,width,height"
-# ⚠️ Read each /tmp/verify-region-*.png — confirm it shows the intended UI element
-#    If NO → adjust coordinates, re-verify
-#    If YES → proceed to spotlight
-
-# 2b. Apply spotlight with verified coordinates
-bun run $SCRIPTS/spotlight.ts -i /tmp/cropped.png -o /tmp/spotlight.png --region "left,top,width,height"
-# For multiple highlights: --region "left,top,w,h" --region "left,top,w,h"
-
-# 3. Resize
-bun run $SCRIPTS/resize.ts -i /tmp/spotlight.png -o /tmp/resized.png --width 800
-
-# 4. Convert to WebP
-bun run $SCRIPTS/to-webp.ts -i /tmp/resized.png -o <final-output-path>.webp --quality 80
-```
-
-### 4.3 Spotlight Tool
-
-The spotlight script (`scripts/spotlight.ts`) highlights one or more rectangular regions and dims everything else:
-
-```bash
-# Single region
-bun run spotlight.ts -i <input> -o <output> --region "left,top,width,height" [--border-color '#F05539'] [--border-width 4] [--darkness 3]
-
-# Multiple regions
-bun run spotlight.ts -i <input> -o <output> --region "left,top,w,h" --region "left,top,w,h" [--border-color '#F05539'] [--border-width 4] [--darkness 3]
-```
-
-Defaults match Shottr standards: border color `#F05539`, darkness level 3/9, border width 4px. The `--region` flag can be repeated to highlight multiple areas in a single pass.
-
-**Prefer spotlight over tight cropping**: When the goal is to show a specific UI element (e.g., a card, button, form field), spotlight it within a wider screenshot rather than cropping the image down to just that element. Keeping surrounding context helps users understand where the element lives in the UI.
-
-**Verification with `verify-spotlight.ts`**: Before applying spotlight, verify that your coordinates target the correct UI element by extracting each region as a standalone sub-image:
-
-```bash
-# Extract regions for verification (adds 20px padding by default)
-bun run $SCRIPTS/verify-spotlight.ts -i <input> --region "left,top,width,height" [--region ...] [--padding 20]
-# → Region 1: /tmp/verify-region-1.png
-# → Region 2: /tmp/verify-region-2.png
-```
-
-Read each `/tmp/verify-region-*.png` and confirm it contains the intended UI element. If the extract doesn't show the right content, adjust coordinates and re-verify. Only proceed to `spotlight.ts` once all regions are confirmed correct.
-
-To determine spotlight coordinates:
-- Use `bun run info.ts` to get image dimensions
-- Inspect element bounds via MCP tools (Chrome DevTools snapshot or Maestro view hierarchy)
-- Estimate coordinates based on the UI element position relative to image dimensions
+Follow the processing pipeline in `references/screenshot-capture-guide.md`.
 
 ## Phase 5: Write Documentation
 

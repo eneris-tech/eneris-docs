@@ -2,44 +2,61 @@
 
 ## Table of Contents
 1. [Overview](#overview)
-2. [Web Screenshots (Chrome DevTools MCP)](#web-screenshots-chrome-devtools-mcp)
-3. [iOS Screenshots (Maestro MCP)](#ios-screenshots-maestro-mcp)
-4. [Android Screenshots (Maestro MCP)](#android-screenshots-maestro-mcp)
-5. [Processing Pipeline](#processing-pipeline)
-6. [Spotlight Tool](#spotlight-tool)
+2. [Prerequisites](#prerequisites)
+3. [Web Screenshots (Playwright MCP)](#web-screenshots-playwright-mcp)
+4. [iOS Screenshots (Maestro MCP)](#ios-screenshots-maestro-mcp)
+5. [Android Screenshots (Maestro MCP)](#android-screenshots-maestro-mcp)
+6. [Processing Pipeline](#processing-pipeline)
+7. [Spotlight Tool](#spotlight-tool)
 
 ## Overview
 
 Documentation screenshots must be captured for all three platforms:
-- **Web** — via Chrome DevTools MCP
+- **Web** — via Playwright MCP
 - **iOS** — via Maestro MCP (iOS Simulator)
 - **Android** — via Maestro MCP (Android Emulator)
 
 All screenshots go through a processing pipeline: capture → crop bars (mobile) → spotlight (optional) → convert to WebP.
 
-## Web Screenshots (Chrome DevTools MCP)
+## Prerequisites
 
-### Prerequisites
+Verify MCP tool availability before starting any capture work.
+
+**Web (Playwright MCP):**
+```
+mcp__playwright__browser_take_screenshot
+```
+If unavailable, instruct the user to ensure the Playwright MCP server is running.
+
+**Mobile (Maestro MCP):**
+```
+mcp__maestro__list_devices
+```
+If unavailable, instruct the user to start iOS Simulator and/or Android Emulator.
+
+**User Gate**: If any prerequisite is missing, stop and inform the user what needs to be started.
+
+### Additional Prerequisites
 - Documentation dev server running: `yarn start` (from eneris-docs)
 - OR app dev server running: `cd packages/website && pdk start` (from main codebase)
+
+## Web Screenshots (Playwright MCP)
 
 ### Capture Workflow
 1. Navigate to the target page:
    ```
    mcp__playwright__browser_navigate → URL
    ```
-2. Take a snapshot to verify the page state:
+2. Set viewport via `mcp__playwright__browser_resize` — **default to 1280×800 desktop viewport** unless the user specifies otherwise (use 390×844 for mobile-web)
+3. Take a snapshot to verify the page state:
    ```
    mcp__playwright__browser_snapshot
    ```
-3. Interact with the page to reach the desired state (click, fill forms, etc.)
-4. Capture screenshot:
+4. Interact with the page to reach the desired state (click, fill forms, etc.)
+5. Capture screenshot:
    ```
    mcp__playwright__browser_take_screenshot
    ```
-
-### Web-Specific Notes
-- **Default to 1280×800 desktop viewport** unless the user specifies otherwise — set with `mcp__playwright__browser_resize`
 
 ## iOS Screenshots (Maestro MCP)
 
@@ -100,6 +117,10 @@ All scripts are in the docs codebase at:
 .claude/skills/update-documentation/scripts/
 ```
 
+**IMPORTANT**: All `bun run` commands must be executed from the `eneris-docs` project root so that sharp resolves correctly from `node_modules/`.
+
+**IMPORTANT**: Always use the raw copy (`/tmp/raw-<name>.png`) as input to the pipeline — never process the original capture in-place. If processing needs to be re-done, start again from the raw copy.
+
 ### Standard Mobile Screenshot Pipeline
 ```bash
 SCRIPTS=".claude/skills/update-documentation/scripts"
@@ -124,10 +145,15 @@ bun run $SCRIPTS/to-webp.ts -i /tmp/spotlight.png -o docs/04-concepts/img/featur
 ```
 
 ### Standard Web Screenshot Pipeline
+
+**Crop vs. Spotlight**: Do NOT crop unless absolutely necessary — only use crop to remove unhelpful chrome (headers, sidebars, navigation bars), never to isolate a specific UI element. To draw attention to a specific element (e.g., a card, button, or form field), use spotlight on a wider screenshot instead of cropping tightly to just that element. This preserves surrounding context and helps users orient themselves in the UI.
+
+**Spotlight verification**: Before applying spotlight, use `verify-spotlight.ts` to extract each region as a standalone cropped sub-image with padding. Read each extract to confirm it contains the intended UI element. This is more reliable than post-spotlight visual inspection because it shifts verification from pixel-coordinate judgment to content recognition. If an extract doesn't show the right element, adjust coordinates and re-verify before running spotlight.
+
 ```bash
 SCRIPTS=".claude/skills/update-documentation/scripts"
 
-# 1. Crop to relevant area (optional)
+# 1. Crop to relevant area (optional — only to remove chrome, not to isolate elements)
 bun run $SCRIPTS/crop.ts -i screenshot.png -o /tmp/cropped.png --left 0 --top 0 --width 1200 --height 800
 
 # 2a. Verify spotlight coordinates before applying (optional — only if using spotlight)
