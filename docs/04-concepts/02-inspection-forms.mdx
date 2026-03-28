@@ -5,14 +5,16 @@ import ImageInspectionForms4 from './img/inspection-forms-4.webp';
 import ImageInspectionForms5 from './img/inspection-forms-5.webp';
 import ImageInspectionForms6 from './img/inspection-forms-6.webp';
 import ImageInspectionForms7 from './img/inspection-forms-7.webp';
-import ImageInspectionForms8 from './img/inspection-forms-8.gif';
-import ImageInspectionForms9 from './img/inspection-forms-9.gif';
+import ImageInspectionForms8 from './img/inspection-forms-8.webp';
+import ImageInspectionForms9 from './img/inspection-forms-9.webp';
 import ImageInspectionForms10 from './img/inspection-forms-10.webp';
-import ImageInspectionForms11 from './img/inspection-forms-11.webp';
 import ImageInspectionForms12 from './img/inspection-forms-12.webp';
 import ImageInspectionForms13 from './img/inspection-forms-13.webp';
 import ImageInspectionForms14 from './img/inspection-forms-14.webp';
 import ImageInspectionForms15 from './img/inspection-forms-15.webp';
+import ImageInspectionForms16 from './img/inspection-forms-16.webp';
+import ImageInspectionForms17 from './img/inspection-forms-17.webp';
+import ImageInspectionForms18 from './img/inspection-forms-18.webp';
 import ImageInspectionFormFramework from './img/inspection-form-framework.webp';
 
 # Inspection Forms
@@ -33,11 +35,11 @@ Whether you’re performing a home inspection, mold inspection, asbestos inspect
 
 [**Form Templates**](/docs/concepts/form-templates) allow for the customization of inspection lists, and the pre-filling of report fields. Once saved, they are available for selection when creating a new [**Inspection**](/docs/concepts/inspections),
 
-<img src={ImageInspectionForms1} style={{ maxWidth: '250px', width: '100%' }} alt="Selecting a Form Template when creating a new inspection.." />
+<img src={ImageInspectionForms1} style={{ maxWidth: '800px', width: '100%' }} alt="Selecting a Form Template when creating a new inspection.." />
 
 and when adding a new **Inspection Form** to an existing **Inspection**.
 
-<img src={ImageInspectionForms2} style={{ maxWidth: '250px', width: '100%' }} alt="Adding a Form Template to an existing Inspection." />
+<img src={ImageInspectionForms2} style={{ maxWidth: '800px', width: '100%' }} alt="Adding a Form Template to an existing Inspection." />
 
 :::tip
 
@@ -54,7 +56,7 @@ Each **Inspection** can have one or more [**Inspection Forms**](/docs/concepts/i
 
 - e.g., If you are certified to perform multiple types of inspections (e.g. home inspection, asbestos inspection, radon inspection, etc.) on a property then you can pre-setup various [**Form Templates**](/docs/concepts/form-templates) and load them into the same **Inspection**.
 
-    <img src={ImageInspectionForms3} style={{ maxWidth: '250px', width: '100%' }} alt="Multiple inspection Forms example." />
+    <img src={ImageInspectionForms3} style={{ maxWidth: '800px', width: '100%' }} alt="Multiple inspection Forms example." />
 
 
 Each **Inspection Form** allows you to generate a distinct PDF report pertaining specifically to the inspection performed.
@@ -96,21 +98,13 @@ Set the title that appears on the report’s cover page
 
 and in the **Inspection Forms** section.
 
-<img src={ImageInspectionForms5} style={{ maxWidth: '250px', width: '100%' }} alt="Report title in Inspection Forms section." />
+<img src={ImageInspectionForms5} style={{ maxWidth: '800px', width: '100%' }} alt="Report title in Inspection Forms section." />
 
 :::info
 
 You must [**Sync**](/docs/concepts/syncing) the **Inspection Form** in order for the Report Title to update at both locations.
 
 :::
-
-### Primary photo
-
-This is the main image shown on the report’s cover page.
-
-- A wide exterior photo of the property is commonly used.
-
-<img src={ImageInspectionForms6} style={{ maxWidth: '250px', width: '100%' }} alt="Primary photo section." />
 
 ### Inspection Categories
 
@@ -120,11 +114,11 @@ The categories of inspection items.
 
 Edit **Inspection Categories** by selecting the pencil icon.
 
-<img src={ImageInspectionForms7} style={{ maxWidth: '250px', width: '100%' }} alt="Editing Inspection Categories." />
+<img src={ImageInspectionForms7} style={{ maxWidth: '800px', width: '100%' }} alt="Editing Inspection Categories." />
 
-Press and hold a category to reorder.
+Select `Reorder`, then drag and drop categories to rearrange them.
 
-<img src={ImageInspectionForms8} style={{ maxWidth: '250px', width: '100%' }} alt="Reordering Inspection Categories." />
+<img src={ImageInspectionForms8} style={{ maxWidth: '800px', width: '100%' }} alt="Reordering Inspection Categories." />
 
 Select the pencil icon next to a category to:
 
@@ -134,16 +128,68 @@ Select the pencil icon next to a category to:
 
 #### Add new Inspection Categories
 
-1. Select the pencil icon next to the main **Inspection Categories** section.
-2. Scroll to the bottom and locate the **Add new category** section.
+1. Select the `Edit` button next to the **Inspection Categories** heading.
+2. In the **Add new category** section, choose `Create blank category` or `Create from existing category`.
 3. Enter a category name and select an icon.
 4. Select `Create new category`.
 
-<img src={ImageInspectionForms9} style={{ maxWidth: '250px', width: '100%' }} alt="Adding new Inspection Categories." />
+<img src={ImageInspectionForms9} style={{ maxWidth: '800px', width: '100%' }} alt="Adding new Inspection Categories." />
+
+### Form Tab Bar
+
+The **Form Tab Bar** is a floating pill that provides quick access to three tools:
+
+- **Progress** — Opens the Progress Checklist
+- **Search** — Opens the Search Tool
+- **Preview** — Opens a preview of your report
+
+<img src={ImageInspectionForms16} style={{ maxWidth: '800px', width: '100%' }} alt="Form Tab Bar." />
+
+On mobile, the tab bar appears as a bottom navigation bar.
+
+### Progress Checklist
+
+The **Progress Checklist** shows the overall completion percentage and count for your **Inspection Form**.
+
+- Each category is listed with its completion count (e.g. 23/23).
+- Expand a category to see the status of individual components (**Required**, **Empty**, or **Complete**).
+- Use the **Expand all** / **Collapse all** toggle to quickly review all categories.
+
+<img src={ImageInspectionForms17} style={{ maxWidth: '800px', width: '100%' }} alt="Progress Checklist." />
+
+:::tip
+
+Use the **Progress Checklist** before publishing to ensure all required components are complete.
+
+:::
+
+### Search Tool
+
+The **Search Tool** lets you find components and fields across the entire **Inspection Form**.
+
+- Type at least 2 characters to begin searching.
+- Results are grouped by category with highlighted matches.
+- Select a result to navigate directly to that component.
+
+<img src={ImageInspectionForms18} style={{ maxWidth: '800px', width: '100%' }} alt="Search Tool with results." />
+
+:::tip
+
+The search uses fuzzy matching — you don't need an exact match to find what you're looking for.
+
+:::
 
 ### Inspection overview
 
-This section enables you to add **General limitations** and **Shared Fields**.
+This section enables you to set the **Primary photo**, add **General limitations**, and manage **Shared Fields**.
+
+#### Primary photo
+
+This is the main image shown on the report's cover page.
+
+- A wide exterior photo of the property is commonly used.
+
+<img src={ImageInspectionForms6} style={{ maxWidth: '800px', width: '100%' }} alt="Primary photo section." />
 
 #### General limitations
 
@@ -155,11 +201,7 @@ Allows you to note any non-category specific limitation associated with your **I
 
 Here’s what the **General limitations** page looks like when it is filled out:
 
-<img src={ImageInspectionForms10} style={{ maxWidth: '250px', width: '100%' }} alt="General limitations page example." />
-
-Here’s how it will show up in the PDF report:
-
-<img src={ImageInspectionForms11} style={{ maxWidth: '400px', width: '100%' }} alt="General limitations in PDF report." />
+<img src={ImageInspectionForms10} style={{ maxWidth: '800px', width: '100%' }} alt="General limitations page example." />
 
 :::info
 
@@ -211,7 +253,7 @@ For more information on **Syncing** [click here](/docs/concepts/syncing). For mo
 
 There’s also a `Sync` button on the right side.
 
-<img src={ImageInspectionForms12} style={{ maxWidth: '250px', width: '100%' }} alt="Snyc button in Inspection Form." />
+<img src={ImageInspectionForms12} style={{ maxWidth: '800px', width: '100%' }} alt="Snyc button in Inspection Form." />
 
 :::info
 
@@ -224,7 +266,7 @@ If you run into an error for a particular **Inspection Form** our support team m
 
 - The error report can be submitted quickly and only requires a press of a button (plus any additional information you would like to provide).
 
-<img src={ImageInspectionForms13} style={{ maxWidth: '250px', width: '100%' }} alt="Submit error report button." />
+<img src={ImageInspectionForms13} style={{ maxWidth: '800px', width: '100%' }} alt="Submit error report button." />
 
 ### Reports
 
@@ -246,7 +288,7 @@ Inside, you will see options to:
 - Copy the report URL.
 - `Delete report`, which deletes the specific [published report](/docs/concepts/reports#publishing-a-report) you are currently reviewing.
 
-<img src={ImageInspectionForms14} style={{ maxWidth: '250px', width: '100%' }} alt="Open latest published PDF report menu." />
+<img src={ImageInspectionForms14} style={{ maxWidth: '800px', width: '100%' }} alt="Open latest published PDF report menu." />
 
 #### Share
 
@@ -256,7 +298,7 @@ Allows you to [email the completed PDF report](/docs/concepts/reports#sharing-a-
 
 Shows the history of published reports.
 
-<img src={ImageInspectionForms15} style={{ maxWidth: '250px', width: '100%' }} alt="View all published reports." />
+<img src={ImageInspectionForms15} style={{ maxWidth: '800px', width: '100%' }} alt="View all published reports." />
 
 ### Publish
 
