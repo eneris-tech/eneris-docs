@@ -15,6 +15,7 @@ import ImageInspectionForms15 from './img/inspection-forms-15.webp';
 import ImageInspectionForms16 from './img/inspection-forms-16.webp';
 import ImageInspectionForms17 from './img/inspection-forms-17.webp';
 import ImageInspectionForms18 from './img/inspection-forms-18.webp';
+import ImageInspectionForms19 from './img/inspection-forms-19.webp';
 import ImageInspectionFormFramework from './img/inspection-form-framework.webp';
 
 # Inspection Forms
@@ -81,7 +82,7 @@ This structure helps keep your reports organized and easy to navigate.
 
 Every part of the framework is customizable. Here are some example use cases:
 
-- If a **category** is unavailable by default, [you can create it](/docs/concepts/customizing-inspection-forms#creating-categories).
+- If a **category** is unavailable by default, [you can create it](/docs/concepts/customizing-form-templates#creating-categories).
 - If you’re a roofing contractor and never inspect HVAC systems, you can delete the HVAC category.
 - If the **component** you are inspecting has different areas (living room flooring vs. kitchen flooring) in different conditions then you can create multiple **insights**.
 - If you’re an Eneris admin at your company and need to edit the **field options** to use company approved terminology, you can do so quickly and without needing to interact with the Eneris team (but we’re always happy to help).
@@ -223,7 +224,80 @@ This helps you save time and keeps your workflow and data entry consistent.
 
 You can delete a **Shared Field** from a component if it’s not required. However, note that you will not be able to re-add it at this time.
 
-The `Status` field, `Recommended Action` field, and `Summary Label` fields cannot be deleted. [They can only be hidden](/docs/concepts/customizing-inspection-forms#field-visibility).
+The `Status` field, `Recommended Action` field, and `Summary Label` fields cannot be deleted. [They can only be hidden](/docs/concepts/customizing-form-templates#field-visibility).
+
+:::
+
+### Photos and videos
+
+Attach visual documentation to your **Inspection Forms** using media fields. Photos and videos help illustrate your findings and provide clear evidence for your clients.
+
+You can add them from your media library or capture new ones directly in the Eneris app.
+
+#### Supported file types
+
+The media field supports the following file formats:
+
+- **Images** – JPEG (.jpeg, .jpg), PNG (.png), HEIC (.heic), HEIF (.heif)
+- **Videos** – MP4 (.mp4), MOV (.mov)
+
+These formats ensure your media displays correctly in the final report.
+
+#### Photo markup
+
+Add visual annotations directly to your inspection photos to highlight specific areas of concern or provide additional context for your clients.
+
+The photo markup feature helps you:
+
+- **Draw attention to defects** – Circle cracks, highlight water damage, or point out specific issues.
+- **Add clarity** – Use arrows, shapes, and drawing to make your findings unmistakable.
+- **Professional presentation** – Marked-up photos appear in your final PDF report with annotations intact.
+
+:::tip
+
+Photo markup helps your clients quickly understand exactly what you're pointing out in each photo — reducing confusion and follow-up questions.
+
+:::
+
+##### Accessing photo markup
+
+To add annotations to a photo:
+
+1. Navigate to the component where you want to add an annotated photo.
+2. Locate the media field.
+3. Take a new photo or select an existing photo from your device.
+4. Once the photo appears, select it to open the photo markup interface.
+5. Use the annotation tools to mark up the photo.
+6. Select `Save` to apply your annotations.
+
+:::info
+
+Photo markup replaces the original photo with the annotated version. Make sure your annotations are accurate before saving, as the original unmarked photo will not be preserved.
+
+:::
+
+##### Available annotation tools
+
+The photo markup interface provides several tools to help you annotate photos effectively:
+
+- **Pen tool** – Draw freehand lines to circle areas, underline text, or sketch annotations.
+- **Shapes** – Add pre-defined shapes to highlight specific areas:
+  - Arrow – Point to specific defects or areas of concern.
+  - Circle – Highlight round areas or encircle multiple items.
+  - Rectangle – Box in rectangular areas or sections.
+  - Oval – Highlight oval-shaped areas.
+  - Star – Mark priority items or call attention to critical findings.
+- **Color picker** – Choose from multiple colors to differentiate between different types of issues or to ensure annotations are visible against the photo background.
+- **Line width** – Adjust the thickness of your pen strokes and shape outlines for better visibility.
+- **Photo rotation** – Rotate photos to correct their orientation, ensuring images appear upright and properly aligned in your final report.
+- **Undo** – Revert your last annotation action, allowing you to correct mistakes one step at a time.
+- **Clear** – Remove all annotations from the photo at once, letting you start fresh if needed.
+
+<img src={ImageInspectionForms19} style={{ maxWidth: '800px', width: '100%' }} alt="Using photo markup tools to annotate inspection photos." />
+
+:::tip
+
+Use contrasting colors for your annotations to ensure they stand out clearly against the photo background.
 
 :::
 
