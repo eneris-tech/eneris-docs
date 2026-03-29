@@ -2,12 +2,13 @@
 
 ## Table of Contents
 1. [Overview](#overview)
-2. [Prerequisites](#prerequisites)
-3. [Web Screenshots (Playwright MCP)](#web-screenshots-playwright-mcp)
-4. [iOS Screenshots (Maestro MCP)](#ios-screenshots-maestro-mcp)
-5. [Android Screenshots (Maestro MCP)](#android-screenshots-maestro-mcp)
-6. [Processing Pipeline](#processing-pipeline)
-7. [Spotlight Tool](#spotlight-tool)
+2. [When to Use Spotlight](#when-to-use-spotlight)
+3. [Prerequisites](#prerequisites)
+4. [Web Screenshots (Playwright MCP)](#web-screenshots-playwright-mcp)
+5. [iOS Screenshots (Maestro MCP)](#ios-screenshots-maestro-mcp)
+6. [Android Screenshots (Maestro MCP)](#android-screenshots-maestro-mcp)
+7. [Processing Pipeline](#processing-pipeline)
+8. [Spotlight Tool](#spotlight-tool)
 
 ## Overview
 
@@ -16,7 +17,21 @@ Documentation screenshots must be captured for all three platforms:
 - **iOS** — via Maestro MCP (iOS Simulator)
 - **Android** — via Maestro MCP (Android Emulator)
 
-All screenshots go through a processing pipeline: capture → crop bars (mobile) → spotlight (optional) → convert to WebP.
+All screenshots go through a processing pipeline: capture → crop bars (mobile) → spotlight (recommended) → convert to WebP.
+
+## When to Use Spotlight
+
+Spotlight should be the **default** for documentation screenshots, not an optional extra. It highlights the specific UI element being discussed and dims everything else, making screenshots far more effective at guiding the reader.
+
+**Use spotlight when:**
+- A screenshot accompanies a step-by-step instruction — highlight the specific UI element being referenced in that step
+- A screenshot shows a full page but only a specific area is relevant to the surrounding text
+- You need to draw the reader's eye to a button, field, toggle, menu item, or any interactive element mentioned in the docs
+
+**Skip spotlight only when:**
+- The entire screenshot is equally relevant (e.g., showing a full form that the user needs to fill out completely, or an overview of a page layout)
+
+When in doubt, use spotlight. A screenshot with spotlight is almost always more helpful than one without.
 
 ## Prerequisites
 
@@ -132,7 +147,7 @@ bun run $SCRIPTS/info.ts -i screenshot.png
 #   Android: --top 72  --height $((IMG_HEIGHT - 72 - 126))
 bun run $SCRIPTS/crop.ts -i screenshot.png -o /tmp/cropped.png --top 132 --height <computed>
 
-# 2a. Verify spotlight coordinates before applying (optional — only if using spotlight)
+# 2a. Verify spotlight coordinates before applying (recommended)
 bun run $SCRIPTS/verify-spotlight.ts -i /tmp/cropped.png --region "left,top,width,height"
 # ⚠️ Read each /tmp/verify-region-*.png — confirm it shows the intended UI element
 
@@ -156,7 +171,7 @@ SCRIPTS=".claude/skills/update-documentation/scripts"
 # 1. Crop to relevant area (optional — only to remove chrome, not to isolate elements)
 bun run $SCRIPTS/crop.ts -i screenshot.png -o /tmp/cropped.png --left 0 --top 0 --width 1200 --height 800
 
-# 2a. Verify spotlight coordinates before applying (optional — only if using spotlight)
+# 2a. Verify spotlight coordinates before applying (recommended)
 bun run $SCRIPTS/verify-spotlight.ts -i /tmp/cropped.png --region "left,top,width,height"
 # ⚠️ Read each /tmp/verify-region-*.png — confirm it shows the intended UI element
 
