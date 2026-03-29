@@ -1,0 +1,340 @@
+import ImageCustomizingFormTemplates1 from './img/customizing-form-templates-1.webp';
+import ImageCustomizingFormTemplates2 from './img/customizing-form-templates-2.webp';
+import ImageCustomizingFormTemplates3 from './img/customizing-form-templates-3.webp';
+import ImageCustomizingFormTemplates4 from './img/customizing-form-templates-4.webp';
+import ImageCustomizingFormTemplates5 from './img/customizing-form-templates-5.webp';
+import ImageCustomizingFormTemplates6 from './img/customizing-form-templates-6.webp';
+import ImageCustomizingFormTemplates7 from './img/customizing-form-templates-7.webp';
+import ImageCustomizingFormTemplates8 from './img/customizing-form-templates-8.webp';
+import ImageCustomizingFormTemplates9 from './img/customizing-form-templates-9.webp';
+import ImageCustomizingFormTemplates10 from './img/customizing-form-templates-10.webp';
+import ImageCustomizingFormTemplates11 from './img/customizing-form-templates-11.webp';
+import ImageCustomizingFormTemplates12 from './img/customizing-form-templates-12.webp';
+import ImageCustomizingFormTemplates13 from './img/customizing-form-templates-13.webp';
+import ImageCustomizingFormTemplates14 from './img/customizing-form-templates-14.webp';
+import ImageCustomizingFormTemplates15 from './img/customizing-form-templates-15.webp';
+import ImageCustomizingFormTemplates16 from './img/customizing-form-templates-16.webp';
+import ImageCustomizingFormTemplates17 from './img/customizing-form-templates-17.webp';
+
+# Customizing Form Templates
+
+You can customize [**Form Templates**](/docs/concepts/form-templates) to include the exact categories, components, fields, and field options you need for any type of inspection. Once saved, your customized **Form Templates** are available for reuse across multiple inspections, saving time and improving report consistency.
+
+:::info
+
+See the [**Inspection Form** framework](/docs/concepts/inspection-forms#inspection-form-framework) documentation for a detailed explanation on categories, components, fields, and field options.
+
+:::
+
+## Types of customizations
+
+Customizations include:
+
+- **Custom categories** – Group components however you want.
+- **Custom components** – Add new inspection items or rename existing ones.
+- **Custom fields** – Create new fields.
+- **Custom field options** – Add or edit the field options.
+- **Required/Optional fields** – Choose which fields must be filled out.
+- **Visibility** – Hide fields from the final report.
+- **Edit field names** – Rename fields to suit your wording.
+- **Edit field options** – Change placeholder or default text for clarity.
+- **Edit disclaimers and limitations** – Change placeholder or default text for clarity.
+
+You have full control over how your **Form Templates** look and behave — without needing to code.
+
+## Creating, editing, and deleting categories
+
+The sections below cover creating, editing, and deleting **categories**.
+
+### Creating categories
+
+To create new categories:
+
+1. Open the **Form Template** you would like to edit.
+2. Select the edit icon in the `Categories` section.
+3. In the **Add new category** section, enter a `category name`.
+4. Select a `category icon`.
+5. Choose `Create blank category` or `Create from existing category`.
+6. Select `Create new category`.
+
+<img src={ImageCustomizingFormTemplates1} style={{ maxWidth: '800px', width: '100%' }} alt="Creating new categories in a Form Template." />
+
+:::tip
+
+- `Create blank category` means there are no components within the new category.
+- `Create from existing category` means you can select an existing category and duplicate all of the components, fields, and field options within as a starting point. You can then further customize this duplicated category to suit your needs.
+
+:::
+
+### Editing categories
+
+To edit existing categories:
+
+1. Select the edit icon in the `Categories` section.
+2. Select the edit icon next to the category you would like to edit.
+3. Edit the `category name` and `category icon` as desired.
+4. Select `Save`.
+
+<img src={ImageCustomizingFormTemplates2} style={{ maxWidth: '800px', width: '100%' }} alt="Editing categories in a Form Template." />
+
+### Deleting categories
+
+To delete existing categories:
+
+1. Select the edit icon in the `Categories` section.
+2. Select the edit icon next to the category you would like to delete.
+3. Select the `Delete` button.
+
+<img src={ImageCustomizingFormTemplates3} style={{ maxWidth: '800px', width: '100%' }} alt="Deleting categories in a Form Template." />
+
+## Creating, editing, and deleting components
+
+The sections below cover creating, editing, and deleting **components**.
+
+### Creating components
+
+To create new components:
+
+1. Enter the category in which the new component should be created.
+2. Select the edit icon near the top of the component list.
+3. Enter the new component name.
+4. Choose `Create blank component` or `Create from existing component`.
+5. Select `Create`.
+6. The new component has been successfully created and can be located at the bottom of the component list.
+
+<img src={ImageCustomizingFormTemplates4} style={{ maxWidth: '800px', width: '100%' }} alt="Creating new components in a Form Template." />
+
+:::tip
+
+- `Create blank component` means there are no fields within the new component.
+- `Create from existing component` means you can select an existing component and duplicate all of the fields and field options within as a starting point. You can then further customize this duplicated component to suit your needs.
+
+:::
+
+### Editing components
+
+To edit existing components:
+
+1. Enter the category containing the component you would like to edit.
+2. Select `Edit components`.
+3. Select the pencil icon next to the component you would like to edit.
+4. Update the `Component name` at the top of the page.
+
+<img src={ImageCustomizingFormTemplates5} style={{ maxWidth: '800px', width: '100%' }} alt="Editing components in a Form Template." />
+
+### Deleting components
+
+To delete existing components:
+
+1. Enter the category in which the component should be deleted.
+2. Select the edit icon near the top of the component list.
+3. Locate the component you would like to delete and select the trash icon next to it.
+
+<img src={ImageCustomizingFormTemplates6} style={{ maxWidth: '800px', width: '100%' }} alt="Deleting components in a Form Template." />
+
+## Creating, editing, and deleting fields
+
+The sections below cover creating, editing, and deleting **fields**.
+
+### Creating fields
+
+To create new fields:
+
+1. Enter the category containing the component where the new field should be created.
+2. Select `Edit components`.
+3. Select the pencil icon next to the component where the new field should be created.
+4. In the **Add new field** section, enter a `field name`.
+5. Select the [`field type`](/docs/concepts/customizing-form-templates#field-types).
+6. Select `Create new field`.
+7. The new field has been successfully created and can be located at the bottom of the field list.
+
+<img src={ImageCustomizingFormTemplates7} style={{ maxWidth: '800px', width: '100%' }} alt="Creating new fields in a Form Template." />
+
+### Field types
+
+You can use different types of fields in your **Form Templates**:
+
+- **Checkbox** – Creates checkboxes for you to select one or more options.
+- **Choice** – Creates radio buttons for you to select a single option.
+- **Text** – For short text descriptions (50 characters max).
+- **Multi-line Text** – For longer text descriptions (1,000 characters max).
+
+Each field type lets you capture different types of data for better clarity in your reports.
+
+:::info
+
+You can create many fields of the same field type in an individual component.
+
+:::
+
+### Editing fields
+
+To edit existing fields:
+
+1. Enter the component where the field should be edited.
+2. Select the edit icon next to the field that should be edited.
+3. Edit the `field name`, `field requirement`, `field visibility`, `favorite options` and `option library`, as desired.
+
+<img src={ImageCustomizingFormTemplates8} style={{ maxWidth: '800px', width: '100%' }} alt="Editing fields in a Form Template." />
+
+:::info
+
+See [additional field settings](/docs/concepts/customizing-form-templates#additional-field-settings) for more details.
+
+:::
+
+### Deleting fields
+
+To delete existing fields:
+
+1. Enter the category containing the component where the field should be deleted.
+2. Select `Edit components`.
+3. Select the pencil icon next to the component containing the field to be deleted.
+4. Locate the field you would like to delete and select the trash icon next to it.
+
+<img src={ImageCustomizingFormTemplates9} style={{ maxWidth: '800px', width: '100%' }} alt="Deleting fields in a Form Template." />
+
+:::info
+
+You can delete a **Shared Field** from a component if it's not required. However, note that you will not be able to re-add it at this time.
+
+The `Status`, `Condition`, `Recommended Action`, and `Summary Label` fields cannot be deleted. They can only be [hidden](/docs/concepts/customizing-form-templates#field-visibility) in the [report](/docs/concepts/reports).
+
+:::
+
+## Creating, editing, and deleting field options
+
+The sections below cover creating, editing, and deleting **field options**.
+
+### Creating field options
+
+To create new field options:
+
+1. Enter the component where you would like to create new field options.
+2. All fields will have an `Add New`, `Add new choice`, `Add new text`, or `Add new checkbox` option. Selecting them will allow you to add a new field option.
+    - Alternatively, you could select the edit icon next to the field and in that menu you will also be able to create new field options.
+
+<img src={ImageCustomizingFormTemplates10} style={{ maxWidth: '800px', width: '100%' }} alt="Creating new field options in a Form Template." />
+
+### Editing field options
+
+To edit existing field options:
+
+1. Enter the component where you would like to edit field options.
+2. Select the edit icon next to the field which contains the field options that should be edited.
+3. Review and edit the field options.
+
+<img src={ImageCustomizingFormTemplates11} style={{ maxWidth: '800px', width: '100%' }} alt="Editing field options in a Form Template." />
+
+### Deleting field options
+
+The method to deleting existing field options is determined by the [field type](/docs/concepts/customizing-form-templates#field-types).
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="Checkbox" label="Checkbox" default>
+    1. Enter the component where you would like to delete checkbox options.
+    2. Select the edit icon next to the field which contains the checkbox options that should be deleted.
+    3. Locate the list of checkbox options.
+    4. Select the trash icon next to the checkbox option that should be deleted.
+
+    <img src={ImageCustomizingFormTemplates12} style={{ maxWidth: '800px', width: '100%' }} alt="Deleting checkbox options in a Form Template." />
+
+  </TabItem>
+
+  <TabItem value="Choice" label="Choice">
+    1. Enter the component where you would like to delete choice options.
+    2. Select the edit icon next to the field which contains the choice options that should be deleted.
+    3. Locate the list of choice options.
+    4. Select the trash icon next to the choice option that should be deleted.
+
+    <img src={ImageCustomizingFormTemplates13} style={{ maxWidth: '800px', width: '100%' }} alt="Deleting choice options in a Form Template." />
+
+  </TabItem>
+
+  <TabItem value="Text" label="Text">
+    1. Enter the component where you would like to delete field options.
+    2. Select the edit icon next to the field which contains the field options that should be deleted.
+    3. Locate the option library.
+    4. Select the trash icon next to the option that should be deleted.
+
+    <img src={ImageCustomizingFormTemplates14} style={{ maxWidth: '800px', width: '100%' }} alt="Deleting text field options in a Form Template." />
+
+  </TabItem>
+
+  <TabItem value="Multi-line text" label="Multi-line text">
+    1. Enter the component where you would like to delete field options.
+    2. Select the edit icon next to the field which contains the field options that should be deleted.
+    3. Locate the option library.
+    4. Select the edit icon next to the field option that should be deleted.
+    5. Select `Delete option`.
+
+    <img src={ImageCustomizingFormTemplates15} style={{ maxWidth: '800px', width: '100%' }} alt="Deleting multi-line text field options in a Form Template." />
+
+  </TabItem>
+
+</Tabs>
+
+## Additional field settings
+
+In addition to the field name and field type there are a number of settings to help you customize your **Form Template**.
+
+### Field requirement
+
+A field can be toggled as `required` or `optional`.
+
+- **Required** — When selected, the component list page will provide a visual indicator stating `Missing required fields`. This helps you quickly assess whether any component inspection was missed.
+    - When all required fields within a component are completed the visual indicator will automatically update to `Completed fields`.
+- **Optional** — When selected, the field is optional in your inspection.
+    - By default, all fields are set as optional.
+
+The field requirement toggle helps ensure required components and their fields are completed in a consistent manner.
+
+:::info
+
+In templates created by Eneris, the fields that are required are based on the relevant association's Standards of Practice.
+
+:::
+
+### Field visibility
+
+A field can be toggled as `show` or `hide`.
+
+- **Show** — When selected, the field **will** appear in the final report.
+    - By default, all fields are set as show.
+- **Hide** — When selected, the field **will not** appear in the final report. The entries into this field are **only visible within the [Inspection](/docs/concepts/inspections)**.
+    - This is helpful for internal notes, personal reminders, or communication between team members when inspecting a specific component.
+    - e.g., Your **Form Template** includes two hidden fields in the Garage Doors component. The first is a checklist field to confirm whether the garage door is closed after inspection. The second is a media field for you to take photo proof the garage door is closed. **Neither of these fields will appear in the final report as they are hidden**.
+
+### Favorite options
+
+Both **text** and **multi-line text** field types allow you to select up to 10 favorite field options from the [option library](/docs/concepts/customizing-form-templates#option-library).
+
+- **Text fields** — When a field option is selected as a favorite, it will appear next to the `Add New` button for easy selection when inspecting the component.
+    - Add favorites by selecting the `+` icon next to the field option in the option library.
+- **Multi-line text fields** — When a field option is selected as a favorite, it will appear below the text box when you select `Add new text` in the field entry.
+    - Add favorites by selecting the `+ Add` icon next to the field option in the option library.
+
+### Option library
+
+A list of all saved responses for the field.
+
+## Category limitations
+
+In addition to [general limitations](/docs/concepts/inspection-forms#general-limitations), you may also add **category limitations**.
+
+- After entering a category, the top menu bar will have an option for `Limitations`. Enter any category-specific inspection limitations here.
+    - e.g., If you are inspecting a roof and part of it is covered in solar panels you may wish to enter that limitation here.
+
+<img src={ImageCustomizingFormTemplates16} style={{ maxWidth: '800px', width: '100%' }} alt="Category limitations tab in a Form Template." />
+
+## Category disclaimer
+
+Inform your client(s) about category-specific disclaimers from your inspection.
+
+- After entering a category, the top menu bar will have an option for `Disclaimer`. Enter any category-specific inspection disclaimer here.
+    - e.g., The Standards of Practice you created, or follow, may have specific disclaimers you should provide to your client(s).
+
+<img src={ImageCustomizingFormTemplates17} style={{ maxWidth: '800px', width: '100%' }} alt="Category disclaimer tab in a Form Template." />

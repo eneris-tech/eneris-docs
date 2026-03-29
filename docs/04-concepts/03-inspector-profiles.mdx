@@ -1,0 +1,73 @@
+import ImageInspectionProfiles1 from './img/inspection-profiles-1.webp';
+import ImageInspectionProfiles2 from './img/inspection-profiles-2.webp';
+import ImageInspectionProfiles3 from './img/inspection-profiles-3.webp';
+import ImageInspectionProfiles4 from './img/inspection-profiles-4.webp';
+
+# Inspector Profiles
+
+**Inspector Profiles** let you associate specific business or certification information with an inspection. They’re useful if:
+
+- You own **multiple businesses** and want to brand each inspection accordingly.
+- You hold **multiple types of certifications or licenses** and need to display the correct details on the report.
+
+You can create as many profiles needed and then choose the one that best fits each inspection.
+
+## Creating an Inspector Profile
+
+To create a new **Inspector Profile**:
+
+1. Navigate to the home page
+2. Select `Inspector profiles`
+
+    <img src={ImageInspectionProfiles1} style={{ maxWidth: '250px', width: '100%' }} alt="Inspector Profiles button on the home page." />
+
+3. Select `Create new profile`
+4. Enter the relevant details:
+    - Profile name (*required*)
+        - For you to identify what profile this is. Does not show up on reports.
+    - Primary inspector (*required*)
+        - Auto-populated based on your Eneris account details.
+    - Business name
+    - Website
+    - Phone number
+    - Business address
+    - Business logo
+    - Inspector portrait
+        - An image of yourself.
+    - Professional associations
+        - If you belong to any professional associations you may enter them here. Include your member/certification number, as desired.
+5. Select `Create Profile` at the bottom of the page
+
+Your **Inspector Profile** is now available to assign to inspections.
+
+## Selecting an Inspector Profile
+
+To apply an **Inspector Profile** to an inspection:
+
+1. Begin [creating an **Inspection**](/docs/concepts/inspections#create-an-inspection)
+2. Navigate to the `Configuration` section
+3. Select the Inspector `Profile` dropdown menu and choose the desired profile
+
+### Updating the Inspector Profile for existing Inspections
+
+You may also update the **Inspector Profile** for existing **Inspections**:
+
+1. Select the relevant **Inspection**
+2. Navigate to the `Inspector Profile` section
+3. Select the edit icon
+
+    <img src={ImageInspectionProfiles2} style={{ maxWidth: '250px', width: '100%' }} alt="Updating the Inspector Profile for existing Inspections." />
+
+4. Choose the desired profile
+
+    <img src={ImageInspectionProfiles3} style={{ maxWidth: '250px', width: '100%' }} alt="Selecting desired Inspector Profile." />
+
+:::info
+
+To show the latest **Inspector Profile** changes in your reports, you must [republish the report](/docs/concepts/reports#publishing-a-report).
+
+:::
+
+The selected profile’s information will appear on the PDF report’s cover page — ensuring it reflects the correct credentials or business branding.
+
+<img src={ImageInspectionProfiles4} style={{ maxWidth: '400px', width: '100%' }} alt="Inspector Profile details on PDF report cover page." />
