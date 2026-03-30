@@ -180,6 +180,8 @@ The build is configured to throw on broken links, so any link issues will surfac
 ### scripts/
 - **spotlight.ts** — Sharp-based image spotlight tool that highlights one or more rectangular regions with colored borders and dims everything else. Supports multiple `--region` flags for highlighting several areas in a single pass. Replicates Shottr's spotlight feature programmatically. Run with `bun run`.
 - **verify-spotlight.ts** — Pre-spotlight verification tool that extracts each region as a standalone cropped sub-image with padding. Used to confirm spotlight coordinates target the correct UI element before applying the spotlight effect. Run with `bun run`.
+- **blur.ts** — Sharp-based image blur tool that applies Gaussian blur to one or more rectangular regions. Supports multiple `--region` flags and configurable `--sigma` for blur intensity. Used for redacting PII (emails, names, etc.) in screenshots. Run with `bun run`.
+- **verify-blur.ts** — Pre-blur verification tool that extracts each region as a standalone cropped sub-image with padding. Used to confirm blur coordinates target the correct sensitive content before applying the blur effect. Run with `bun run`.
 
 ### references/
 - **writing-style-guide.md** — Complete writing style guide covering tone, formatting, image standards, MDX patterns, and content structure conventions.
