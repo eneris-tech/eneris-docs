@@ -5,19 +5,20 @@
 2. [When to Use Spotlight](#when-to-use-spotlight)
 3. [Prerequisites](#prerequisites)
 4. [Web Screenshots (Playwright MCP)](#web-screenshots-playwright-mcp)
-5. [iOS Screenshots (Maestro MCP)](#ios-screenshots-maestro-mcp)
-6. [Android Screenshots (Maestro MCP)](#android-screenshots-maestro-mcp)
+5. [iOS Screenshots (Maestro MCP + xcrun simctl)](#ios-screenshots-maestro-mcp--xcrun-simctl)
+6. [Android Screenshots (Maestro MCP + adb)](#android-screenshots-maestro-mcp--adb)
 7. [Processing Pipeline](#processing-pipeline)
 8. [Spotlight Tool](#spotlight-tool)
+9. [Blur Tool](#blur-tool)
 
 ## Overview
 
 Documentation screenshots must be captured for all three platforms:
 - **Web** — via Playwright MCP
-- **iOS** — via Maestro MCP (iOS Simulator)
-- **Android** — via Maestro MCP (Android Emulator)
+- **iOS** — via Maestro MCP (navigation/interaction) + `xcrun simctl` (file-based capture)
+- **Android** — via Maestro MCP (navigation/interaction) + `adb` (file-based capture)
 
-All screenshots go through a processing pipeline: capture → crop bars (mobile) → spotlight (recommended) → convert to WebP.
+All screenshots go through a processing pipeline: capture → crop bars (mobile) → spotlight (recommended) → blur PII (if needed) → convert to WebP.
 
 ## When to Use Spotlight
 
@@ -73,7 +74,7 @@ If unavailable, instruct the user to start iOS Simulator and/or Android Emulator
    mcp__playwright__browser_take_screenshot
    ```
 
-## iOS Screenshots (Maestro MCP)
+## iOS Screenshots (Maestro MCP + xcrun simctl)
 
 ### Prerequisites
 - iOS Simulator running
@@ -92,24 +93,36 @@ If unavailable, instruct the user to start iOS Simulator and/or Android Emulator
    ```
    mcp__maestro__tap_on → element text or ID
    ```
-4. Capture screenshot:
+4. Visually verify you're on the correct screen:
    ```
    mcp__maestro__take_screenshot
    ```
+   > **Note:** Maestro's `take_screenshot` returns image data inline (embedded in the response). This is useful for visual verification but does **not** save a file, so it cannot be used as input to the processing pipeline.
+5. Capture the file-based screenshot for processing:
+   ```bash
+   xcrun simctl io booted screenshot /tmp/screenshot.png
+   ```
+   This saves directly to a file path, which is required for cropping, spotlight, blur, and WebP conversion.
 
 ### iOS-Specific Notes
-- Status bar height: 132px (44pt × 3x scale)
+- **Notch/Dynamic Island crop**: 165px from top — crops out the notch/dynamic island while preserving the navigation bar. Use this instead of the full status bar crop.
+- Full status bar height: 132px (44pt × 3x scale) — do NOT use this; it leaves a visible sliver of the dynamic island on newer iPhones.
 - Home indicator/nav bar height: 102px (34pt × 3x scale)
 - **FullWindowOverlay limitation**: Bottom sheets cannot be interacted with in Maestro. If the target UI is in a bottom sheet, capture via web instead.
 
-## Android Screenshots (Maestro MCP)
+## Android Screenshots (Maestro MCP + adb)
 
 ### Prerequisites
 - Android Emulator running
 - App installed and available
 
 ### Capture Workflow
-Same as iOS workflow using Maestro MCP tools.
+Same as iOS workflow using Maestro MCP tools for navigation and interaction. For file-based capture:
+
+> **Note:** Like iOS, Maestro's `take_screenshot` returns inline data and cannot be piped into the processing scripts. Use it for visual verification, then capture the file with adb:
+> ```bash
+> adb exec-out screencap -p > /tmp/screenshot.png
+> ```
 
 ### Android-Specific Notes
 - Status bar height: 72px (24dp × 3x scale)
@@ -117,13 +130,22 @@ Same as iOS workflow using Maestro MCP tools.
 
 ## Raw Screenshot Preservation
 
-**After every screenshot capture, immediately copy the raw file to `/tmp/raw-<descriptive-name>.png` before any processing.** This ensures you can re-run cropping, spotlight, or other processing steps without recapturing. Never process the raw file in-place — always use the raw copy as input to the processing pipeline.
+**After every screenshot capture, immediately rename or copy the raw file to `/tmp/raw-<descriptive-name>.png` before any processing.** This ensures you can re-run cropping, spotlight, or other processing steps without recapturing. Never process the raw file in-place — always use the raw copy as input to the processing pipeline.
+
+Since `xcrun simctl` and `adb` save directly to a named file path, you can capture straight to the raw path:
 
 ```bash
-# Example: after capturing a web screenshot saved to /tmp/screenshot.png
+# iOS — capture directly to the raw path
+xcrun simctl io booted screenshot /tmp/raw-feature-settings-ios.png
+
+# Android — capture directly to the raw path
+adb exec-out screencap -p > /tmp/raw-feature-settings-android.png
+
+# Web — Playwright saves to /tmp/screenshot.png, so copy it
 cp /tmp/screenshot.png /tmp/raw-feature-settings-web.png
-# Now use /tmp/raw-feature-settings-web.png as input to the pipeline
 ```
+
+Now use the `/tmp/raw-<name>.png` file as input to the pipeline.
 
 ## Processing Pipeline
 
@@ -140,12 +162,12 @@ All scripts are in the docs codebase at:
 ```bash
 SCRIPTS=".claude/skills/update-documentation/scripts"
 
-# 1. Get image dimensions, then crop out status/nav bars
+# 1. Get image dimensions, then crop out notch/dynamic island and nav bar
 bun run $SCRIPTS/info.ts -i screenshot.png
 # Use the reported height to compute crop bounds:
-#   iOS:     --top 132 --height $((IMG_HEIGHT - 132 - 102))
+#   iOS:     --top 165 --height $((IMG_HEIGHT - 165 - 102))  (hides notch/dynamic island)
 #   Android: --top 72  --height $((IMG_HEIGHT - 72 - 126))
-bun run $SCRIPTS/crop.ts -i screenshot.png -o /tmp/cropped.png --top 132 --height <computed>
+bun run $SCRIPTS/crop.ts -i screenshot.png -o /tmp/cropped.png --top 165 --height <computed>
 
 # 2a. Verify spotlight coordinates before applying (recommended)
 bun run $SCRIPTS/verify-spotlight.ts -i /tmp/cropped.png --region "left,top,width,height"
@@ -155,8 +177,14 @@ bun run $SCRIPTS/verify-spotlight.ts -i /tmp/cropped.png --region "left,top,widt
 bun run $SCRIPTS/spotlight.ts -i /tmp/cropped.png -o /tmp/spotlight.png --region "left,top,width,height"
 # For multiple highlights: --region "left,top,w,h" --region "left,top,w,h"
 
-# 3. Convert to WebP
-bun run $SCRIPTS/to-webp.ts -i /tmp/spotlight.png -o docs/04-concepts/img/feature-name.webp --quality 80
+# 3. (Optional) Blur PII — if screenshot contains sensitive info (emails, names, etc.)
+bun run $SCRIPTS/verify-blur.ts -i /tmp/spotlight.png --region "left,top,width,height"
+# ⚠️ Read each /tmp/verify-blur-region-*.png — confirm it shows the PII to redact
+bun run $SCRIPTS/blur.ts -i /tmp/spotlight.png -o /tmp/blurred.png --region "left,top,width,height"
+
+# 4. Convert to WebP
+bun run $SCRIPTS/to-webp.ts -i /tmp/blurred.png -o docs/04-concepts/img/feature-name.webp --quality 80
+# If no blur was needed, use /tmp/spotlight.png as input instead
 ```
 
 ### Standard Web Screenshot Pipeline
@@ -179,8 +207,14 @@ bun run $SCRIPTS/verify-spotlight.ts -i /tmp/cropped.png --region "left,top,widt
 bun run $SCRIPTS/spotlight.ts -i /tmp/cropped.png -o /tmp/spotlight.png --region "left,top,width,height"
 # For multiple highlights: --region "left,top,w,h" --region "left,top,w,h"
 
-# 3. Convert to WebP
-bun run $SCRIPTS/to-webp.ts -i /tmp/spotlight.png -o docs/04-concepts/img/feature-name-web.webp --quality 80
+# 3. (Optional) Blur PII — if screenshot contains sensitive info (emails, names, etc.)
+bun run $SCRIPTS/verify-blur.ts -i /tmp/spotlight.png --region "left,top,width,height"
+# ⚠️ Read each /tmp/verify-blur-region-*.png — confirm it shows the PII to redact
+bun run $SCRIPTS/blur.ts -i /tmp/spotlight.png -o /tmp/blurred.png --region "left,top,width,height"
+
+# 4. Convert to WebP
+bun run $SCRIPTS/to-webp.ts -i /tmp/blurred.png -o docs/04-concepts/img/feature-name-web.webp --quality 80
+# If no blur was needed, use /tmp/spotlight.png as input instead
 ```
 
 ## Spotlight Tool
@@ -224,3 +258,43 @@ bun run $SCRIPTS/verify-spotlight.ts -i <input> --region "left,top,width,height"
 ```
 
 Read each `/tmp/verify-region-*.png` and confirm it contains the intended UI element. If the extract doesn't show the right content, adjust coordinates and re-verify. Only proceed to `spotlight.ts` once all regions are confirmed correct. This is more reliable than post-spotlight visual inspection because it shifts verification from pixel-coordinate judgment to content recognition.
+
+## Blur Tool
+
+The blur tool (`scripts/blur.ts`) applies Gaussian blur to one or more rectangular regions of an image, making text or other sensitive content unreadable. Use this to redact PII (emails, names, phone numbers, etc.) in documentation screenshots.
+
+### When to Use Blur
+
+**Use blur when:**
+- A screenshot contains email addresses, phone numbers, or other PII that should not be published
+- User names or account details visible in the UI need to be obscured
+- Any sensitive information appears in the screenshot that isn't part of the documentation's instructional content
+
+**Blur vs. Spotlight:** These tools serve different purposes and can be used together. Spotlight draws attention to a UI element; blur hides sensitive content. A screenshot can have both spotlight highlights and blurred regions.
+
+### Usage
+```bash
+# Single region
+bun run blur.ts -i <input> -o <output> --region "left,top,width,height" [options]
+
+# Multiple regions (repeat --region)
+bun run blur.ts -i <input> -o <output> --region "left,top,w,h" --region "left,top,w,h" [options]
+```
+
+### Options
+| Flag | Default | Description |
+|------|---------|-------------|
+| `--sigma` | `10` | Gaussian blur intensity (0.3–1000). Higher = more blurred. 10 is sufficient for most text at standard screenshot DPI. |
+
+### Verification with `verify-blur.ts`
+Before applying blur, verify that your coordinates target the correct sensitive content by extracting each region as a standalone sub-image:
+
+```bash
+SCRIPTS=".claude/skills/update-documentation/scripts"
+
+# Extract regions for verification (adds 20px padding by default)
+bun run $SCRIPTS/verify-blur.ts -i <input> --region "left,top,width,height" [--region ...] [--padding 20]
+# → Region 1: /tmp/verify-blur-region-1.png
+```
+
+Read each `/tmp/verify-blur-region-*.png` and confirm it contains the PII that should be blurred. If the extract doesn't show the right content, adjust coordinates and re-verify. Only proceed to `blur.ts` once all regions are confirmed correct.
