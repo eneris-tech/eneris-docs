@@ -8,8 +8,9 @@
 5. [iOS Screenshots (Maestro MCP + xcrun simctl)](#ios-screenshots-maestro-mcp--xcrun-simctl)
 6. [Android Screenshots (Maestro MCP + adb)](#android-screenshots-maestro-mcp--adb)
 7. [Processing Pipeline](#processing-pipeline)
-8. [Spotlight Tool](#spotlight-tool)
-9. [Blur Tool](#blur-tool)
+8. [Image Tag Format in MDX](#image-tag-format-in-mdx)
+9. [Spotlight Tool](#spotlight-tool)
+10. [Blur Tool](#blur-tool)
 
 ## Overview
 
@@ -216,6 +217,39 @@ bun run $SCRIPTS/blur.ts -i /tmp/spotlight.png -o /tmp/blurred.png --region "lef
 bun run $SCRIPTS/to-webp.ts -i /tmp/blurred.png -o docs/04-concepts/img/feature-name-web.webp --quality 80
 # If no blur was needed, use /tmp/spotlight.png as input instead
 ```
+
+## Image Tag Format in MDX
+
+Every `<img>` tag in the docs **must** include `width` and `height` attributes with the actual pixel dimensions of the image. This prevents layout shift when navigating to anchor links — without explicit dimensions, the browser can't reserve space before images load, causing the scroll position to jump past the target heading.
+
+### Getting Dimensions
+
+After converting to WebP (the final pipeline step), get the pixel dimensions:
+
+```bash
+sips -g pixelWidth -g pixelHeight docs/04-concepts/img/feature-name.webp
+```
+
+### Two maxWidth Patterns
+
+| Screenshot type | `maxWidth` | When to use |
+|----------------|-----------|-------------|
+| Desktop / web | `'800px'` | Screenshots captured from Playwright at desktop viewport |
+| Mobile / portrait | `'400px'` | Screenshots captured from iOS Simulator or Android Emulator |
+
+### Full Examples
+
+**Web screenshot:**
+```mdx
+<img src={require('./img/feature-name-web.webp').default} alt="Description of the screenshot" style={{maxWidth: '800px'}} width={1280} height={800} />
+```
+
+**Mobile screenshot:**
+```mdx
+<img src={require('./img/feature-name-ios.webp').default} alt="Description of the screenshot" style={{maxWidth: '400px'}} width={1170} height={2145} />
+```
+
+> **Note:** Use the actual dimensions reported by `sips`, not the examples above. The `width` and `height` values will vary based on the capture viewport and any cropping applied.
 
 ## Spotlight Tool
 

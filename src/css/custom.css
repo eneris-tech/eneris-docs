@@ -138,6 +138,11 @@
   --ifm-alert-border-color: var(--ifm-color-error);
 }
 
+/* Prevent layout shift from images loading after anchor navigation */
+article img {
+  height: auto;
+}
+
 .badge--secondary {
   background-color: var(--ifm-surface-secondary);
   border-color: var(--ifm-surface-secondary);
