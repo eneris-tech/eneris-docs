@@ -68,7 +68,8 @@
       "mcp__maestro__run_flow",
       "mcp__maestro__take_screenshot",
       "mcp__maestro__tap_on",
-      "Bash(xcrun simctl:*)"
+      "Bash(xcrun simctl:*)",
+      "Bash(sips:*)"
     ],
     "deny": [],
     "ask": []
