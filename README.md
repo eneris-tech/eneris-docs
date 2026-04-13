@@ -101,7 +101,7 @@ We use [Screen Studio](https://screen.studio/) to capture GIFs for product docum
 **Steps:**
 1. Download and use our [default Screen Studio preset](https://drive.google.com/drive/folders/1ctXpLvZmFrh24iHZpgE2gJvPvVrJDpAn).
     - This preset configures background options, gradients, colors, and padding amongst other things for a consistent look.
-2. Keep GIFs as short as possible. We haven’t found a reliable compression method that maintains quality, so use Screen Studio’s playback speed settings to optimize duration.
+2. Keep GIFs as short as possible. We haven't found a reliable compression method that maintains quality, so use Screen Studio's playback speed settings to optimize duration.
 3. Upload the `.screenstudio` project file (not the exported GIF) to the relevant Google Drive folder. [Here is an example](https://drive.google.com/drive/folders/1pTori1Yofx5kmejWLpGqOgkCfpOLatRz).
     - The `.screenstudio` file will appear as a folder in Drive and will revert to a usable file when downloaded locally.
 

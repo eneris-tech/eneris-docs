@@ -2,7 +2,7 @@
 
 Welcome to Eneris, your ideal property inspection platform.
 
-This is your guide to getting started with Eneris. If you’re new to using software for your inspection workflow, this is the guide you should start with.
+This is your guide to getting started with Eneris. If you're new to using software for your inspection workflow, this is the guide you should start with.
 
 ## What is Eneris?
 
@@ -10,9 +10,9 @@ Eneris is a property inspection platform that helps you generate professional an
 
 With Eneris, you can attach your findings (photos, video, and text) to every inspection item and present that information in a report for your client, or your team.
 
-### Let’s get started
+### Let's get started
 
-What we’ll be covering:
+What we'll be covering:
 
 1. Signing up for an Eneris account
 1. Downloading Eneris on your mobile device
@@ -46,12 +46,12 @@ You can download Eneris directly from the App Store on your iPhone or iPad. Foll
 1. Open the **App Store** on your device.
 1. In the search bar, type `Eneris` and press search.
 1. Look for the Eneris logo and select the `Eneris - Elevate` app from the results.
-1. Select `Get`, or the cloud icon if you’ve downloaded the app previously, to install.
+1. Select `Get`, or the cloud icon if you've downloaded the app previously, to install.
 1. After downloading, open the app and sign up or sign in to your Eneris account.
 
 :::info
 
-Once logged in, you’ll be able to create, edit, and sync reports just like on desktop — plus work entirely offline when needed. To learn how the app works offline, see our documentation on [**Offline Forms**](/docs/concepts/offline-forms).
+Once logged in, you'll be able to create, edit, and sync reports just like on desktop — plus work entirely offline when needed. To learn how the app works offline, see our documentation on [**Offline Forms**](/docs/concepts/offline-forms).
 
 :::
 
@@ -67,7 +67,7 @@ Eneris is available on the Google Play Store for Android phones and tablets. Fol
 
 :::info
 
-Once logged in, you’ll be able to create, edit, and sync reports just like on desktop — plus work entirely offline when needed. To learn how the app works offline, see our documentation on [**Offline Forms**](/docs/concepts/offline-forms).
+Once logged in, you'll be able to create, edit, and sync reports just like on desktop — plus work entirely offline when needed. To learn how the app works offline, see our documentation on [**Offline Forms**](/docs/concepts/offline-forms).
 
 :::
 

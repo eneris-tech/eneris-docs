@@ -42,7 +42,7 @@ A few key benefits include:
 
 ## Eneris vs. Eneris Legacy
 
-If you’ve been using, or following, Eneris for a while you’ll notice that the latest version of Eneris looks quite different! This is because we relaunched Eneris in October 2025.
+If you've been using, or following, Eneris for a while you'll notice that the latest version of Eneris looks quite different! This is because we relaunched Eneris in October 2025.
 
 - The original version of Eneris is now referred to as **Eneris Legacy**. The current version of Eneris is referred to as **Eneris Elevate**.
 
