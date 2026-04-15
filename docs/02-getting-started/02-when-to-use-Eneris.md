@@ -4,7 +4,7 @@ This guide will explain when you should consider using Eneris and when it's not 
 
 ## When should you use Eneris?
 
-Eneris is built for property inspectors who want fast, modern, and field-ready reporting. You'll benefit most if:
+Eneris is built for inspectors who want fast, modern, and field-ready reporting. You'll benefit most if:
 
 - You're a **solo inspector or part of a small team** and want a straightforward tool that doesn't require training.
 - You're a **large organization** and value being able to customize your reporting platform without needing to reach out to a support team at every turn.

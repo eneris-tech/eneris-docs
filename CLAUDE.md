@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is the Eneris documentation website built with Docusaurus v3. It provides user guides and documentation for the Eneris property inspection software platform.
+This is the Eneris documentation website built with Docusaurus v3. It provides user guides and documentation for the Eneris home inspection software platform.
 
 ## Development Commands
 

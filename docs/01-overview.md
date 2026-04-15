@@ -2,7 +2,7 @@
 
 ## What is Eneris?
 
-[Eneris](https://www.eneris.ca/) is a cloud-based property inspection software designed to streamline report writing for property inspections.
+[Eneris](https://www.eneris.ca/) is a cloud-based home inspection software designed to streamline report writing.
 
 ## Why Eneris?
 
@@ -10,7 +10,7 @@ Our goal is to create the most efficient, customizable, and innovative inspectio
 
 ## Use cases
 
-Eneris is suitable for self-employed inspectors, small to midsize businesses, and large enterprises involved in all forms of property inspection. Our software is used by:
+Eneris is suitable for self-employed inspectors, small to midsize businesses, and large enterprises involved in all forms of inspection. Our software is used by:
 
 - Home inspectors
 - Restoration professionals
@@ -21,7 +21,7 @@ Eneris is suitable for self-employed inspectors, small to midsize businesses, an
 - Pest control professionals
 - Inspectors conducting other specialized assessments
 
-Eneris is a valuable asset for property inspection professionals who want to ensure their clients have the best experience possible.
+Eneris is a valuable asset for home inspection professionals who want to ensure their clients have the best experience possible.
 
 ## Key benefits
 

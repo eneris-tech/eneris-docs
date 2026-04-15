@@ -25,18 +25,18 @@ const FeatureList: FeatureItem[] = [
     Svg: require('/img/devices.svg').default,
     description: (
       <>
-        Deliver a full property inspection report with photos and videos included
+        Deliver a full inspection report with photos and videos included
         before leaving the property.
       </>
     ),
   },
   {
-    title: 'Fit for all property inspectors',
+    title: 'Fit for all inspectors',
     Svg: require('/img/people.svg').default,
     description: (
       <>
         Suitable for self-employed inspectors, small to midsize businesses, and
-        large enterprises involved in property inspections.
+        large enterprises involved in home inspections.
       </>
     ),
   },

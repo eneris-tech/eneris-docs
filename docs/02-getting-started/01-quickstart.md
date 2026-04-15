@@ -1,12 +1,12 @@
 # Quickstart
 
-Welcome to Eneris, your ideal property inspection platform.
+Welcome to Eneris, your ideal home inspection platform.
 
 This is your guide to getting started with Eneris. If you're new to using software for your inspection workflow, this is the guide you should start with.
 
 ## What is Eneris?
 
-Eneris is a property inspection platform that helps you generate professional and interactive inspection reports with ease.
+Eneris is a home inspection platform that helps you generate professional and interactive inspection reports with ease.
 
 With Eneris, you can attach your findings (photos, video, and text) to every inspection item and present that information in a report for your client, or your team.
 
