@@ -326,12 +326,12 @@ In addition to the field name and field type there are a number of settings to h
 
 A field can be toggled as `required` or `optional`.
 
-- **Required** — When selected, the component list page will provide a visual indicator stating `Missing required fields`. This helps you quickly assess whether any component inspection was missed.
-    - When all required fields within a component are completed the visual indicator will automatically update to `Completed fields`.
+- **Required** — When selected, the component list page will provide a visual indicator. This helps you quickly assess whether any component inspection was missed.
+    - When all required fields within a component are completed, the visual indicator will automatically update to a green checkmark.
 - **Optional** — When selected, the field is optional in your inspection.
     - By default, all fields are set as optional.
 
-The field requirement toggle helps ensure required components and their fields are completed in a consistent manner.
+The field requirement toggle helps ensure required components and their fields are completed in a consistent manner. This is used to track your overall completion of the inspection in the [Progress checklist](/docs/concepts/inspection-forms#progress-checklist).
 
 :::info
 
@@ -341,13 +341,17 @@ In templates created by Eneris, the fields that are required are based on the re
 
 ### Field visibility
 
-A field can be toggled as `show` or `hide`.
+A field's visibility controls whether it appears inside the inspection form, on the final report, or both. There are up to four settings depending on whether you're editing a field at the [shared field](/docs/concepts/inspection-forms#shared-fields) level or inside a specific component:
 
-- **Show** — When selected, the field **will** appear in the final report.
-    - By default, all fields are set as show.
-- **Hide** — When selected, the field **will not** appear in the final report. The entries into this field are **only visible within the [Inspection](/docs/concepts/inspections)**.
-    - This is helpful for internal notes, personal reminders, or communication between team members when inspecting a specific component.
-    - e.g., Your **Form Template** includes two hidden fields in the Garage Doors component. The first is a checklist field to confirm whether the garage door is closed after inspection. The second is a media field for you to take photo proof the garage door is closed. **Neither of these fields will appear in the final report as they are hidden**.
+- **Show** — The field appears in the inspection form and in the final report.
+    - By default, all fields are set to **Show**.
+- **Hide** — The field still appears inside the inspection form, but is excluded from the final report. Entries remain visible to you and your team within the [Inspection](/docs/concepts/inspections).
+    - Useful for internal notes, personal reminders, or photo proof that you don't want to share with clients.
+    - e.g., Your **Form Template** includes two hidden fields in the Garage Doors component: a checklist to confirm the garage door is closed after inspection, and a media field for photo proof. Both are captured during inspection but never appear in the client report.
+- **Disabled** — The field is hidden in **both** the inspection form and the final report.
+    - Use this to turn a field off entirely without deleting it. This is the only way to remove the five fields that cannot be deleted (`Status`, `Photos & Videos`, `Condition`, `Recommended Action`, `Summary Label`) from your workflow.
+    - e.g., You don't use the `Recommended Action` field in your process. Setting it to **Disabled** at the template level removes it from every component in the form and from the report.
+- **Default** — Only available when editing a shared field from inside a specific component. The field uses the visibility setting defined in the shared field.
 
 ### Favorite options
 
