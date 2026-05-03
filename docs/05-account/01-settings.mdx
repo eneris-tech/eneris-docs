@@ -1,4 +1,6 @@
 import ImageSettings1 from './img/settings-1.webp';
+import ImageEditTeamLink from './img/delete-account-edit-team-link.webp';
+import ImageDangerZone from './img/delete-account-danger-zone.webp';
 
 
 # Settings
@@ -51,7 +53,30 @@ Signs you out of your current Eneris account.
 
 ## Delete my account
 
-Allows you to permanently delete your Eneris account. This action will delete all data associated with your account, including inspections, reports, templates, team data, uploaded media, and billing information. This action cannot be undone.
+Allows you to permanently delete your Eneris account. This action will delete all data associated with your account, including inspections, reports, templates, team data, uploaded media, and billing information.
+
+This action cannot be undone.
+
+To delete your account:
+
+1. From the Settings page, under **Team & access**, select **Manage accounts and roles**.
+2. On the **My team** page, select **Edit team settings** in the top-right.
+
+<img src={ImageEditTeamLink} style={{ maxWidth: '800px', width: '100%' }} alt="My team page with the Edit team settings link highlighted in the top-right." />
+
+3. Scroll to the **Danger zone** section at the bottom of the page and select **Delete team**.
+
+<img src={ImageDangerZone} style={{ maxWidth: '800px', width: '100%' }} alt="Edit team page with the Danger zone section and Delete team button highlighted." />
+
+4. Review the warning in the confirmation dialog, then select **Delete** to confirm.
+
+After confirming, you will be signed out automatically and a notification will let you know that the deletion request was submitted.
+
+:::warning
+
+Deleting the team also deletes the accounts of all other team members. Only users with the **Admin** role can delete the team. For more on team roles, see [Multi-inspector](/docs/concepts/multi-inspector).
+
+:::
 
 :::info
 
