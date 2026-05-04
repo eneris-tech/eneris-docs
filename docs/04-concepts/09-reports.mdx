@@ -10,10 +10,18 @@ import ImageReports9 from './img/reports-9.webp';
 import ImageReports11 from './img/reports-11.webp';
 import ImageReports12 from './img/reports-12.webp';
 import ImageReports13 from './img/reports-13.webp';
+import ImageReports14 from './img/reports-14.webp';
+import ImageReports15 from './img/reports-15.webp';
+import ImageReports16 from './img/reports-16.webp';
+import ImageReports17 from './img/reports-17.webp';
+import ImageReports18 from './img/reports-18.webp';
+import ImageReports19 from './img/reports-19.webp';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Reports
 
-A report is the final product generated from your [**Inspection**](/docs/concepts/inspections). Once your inspection is complete, all entered data is compiled into a professional PDF report that can be reviewed, published, and shared with clients.
+A report is the final product generated from your [**Inspection**](/docs/concepts/inspections). Once your inspection is complete, all entered data is compiled into one or more deliverables (an interactive **Web report**, an **Inspection report (PDF)**, an **Inspection summary (PDF)**, or any combination) that you can review, publish, and share with clients.
 
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/4KAGA5HrrjI" title="Publishing & Sharing Reports" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -25,62 +33,82 @@ Use the **Preview changes** feature to quickly check how your report looks befor
 - Media and formatting appear as expected.
 - No key information is missing.
 
-To see a preview of the PDF report, you must first [**save**](/docs/concepts/saving) your report and then select the `Preview changes` button.
+To see a preview, you must first [**save**](/docs/concepts/saving) your report and then select the `Preview changes` button. By default, this opens the [**Web report**](/docs/concepts/reports#report-formats) preview, which works offline.
 
 <img src={ImageReports1} style={{ maxWidth: '800px', width: '100%' }} width={1031} height={800} alt="Preview changes button." />
 
-The resulting PDF allows you to review the output of your work so far.
+The preview lets you review the output of your work so far.
 
-<img src={ImageReports2} style={{ maxWidth: '400px', width: '100%' }} width={1092} height={1410} alt="Preview of generated PDF report." />
+<img src={ImageReports2} style={{ maxWidth: '400px', width: '100%' }} width={1092} height={1410} alt="Preview of the generated report." />
 
 :::info
 
-Previews include a watermark and are short-lived. They are not meant to be shared. To generate a shareable report, see [publishing a report](/docs/concepts/reports#publishing-a-report).
+Previews are short-lived and are not meant to be shared. To generate a shareable report, see [publishing a report](/docs/concepts/reports#publishing-a-report).
 
 :::
 
-## Inspection Summary vs. Inspection Report
+## Report formats
 
-When working with your inspections, you can generate two different types of documents:
+When you publish, you can generate up to three different deliverables from the same inspection:
 
-- **Inspection Report**: A comprehensive PDF containing all inspection details, findings, media, and entered data.
-- **Inspection Summary**: A condensed PDF that focuses on key summaries and highlights from your inspection. The summary document will be titled with your report title followed by "Summary" (e.g., "123 Main Street Summary").
-    - The inspection Summary is generated based on the selections you made in the **summary label field** within each component.
+- **Web report**: an interactive online report that opens in a browser. Recipients can search the report, jump between sections via sticky category tabs, expand the list of actionable findings, browse summary tables, enlarge images, and download the PDFs (if also published) from inside the page.
+- **Inspection report (PDF)**: a comprehensive PDF containing all inspection details, findings, media, and entered data. Best for offline access, printing, and archival.
+- **Inspection summary (PDF)**: a condensed PDF that focuses on key summaries and highlights from your inspection. The summary document is titled with your report title followed by "Summary" (e.g., "123 Main Street Summary"). The summary is generated based on the selections you made in the **summary label field** within each component.
 
-Both documents share the same title page and table of contents, but differ in their main content:
+| Feature | Web report | Inspection report (PDF) | Inspection summary (PDF) |
+|---|---|---|---|
+| Format | Interactive web page | Static PDF | Static PDF |
+| Full inspection details | ✓ | ✓ | – |
+| Actionable findings | ✓ | ✓ | – |
+| Overview of summaries | ✓ | – | ✓ |
+| In-page search | ✓ | – | – |
+| Enlarged images | ✓ | – | – |
+| Light/dark theme | ✓ | – | – |
+| Preview offline | ✓ | – | – |
+| Viewable offline (recipient) | – | ✓ (after download) | ✓ (after download) |
+| Shareable link | ✓ | ✓ | ✓ |
 
-| Feature | Inspection Report | Inspection Summary |
-|---------|------------------|-------------------|
-| Full inspection details | ✓ | - |
-| Actionable findings | ✓ | - |
-| Overview of summaries | - | ✓ |
-| Items by summary labels | - | ✓ |
-| Best for | Complete documentation and detailed records | Quick review and executive summaries |
+### When to use each format
 
-### When to use each type
+**Use the Web report when:**
+- Clients want to read the report on a phone, tablet, or laptop without dealing with a PDF.
+- Recipients benefit from in-page search, enlarged images, and direct links to specific findings.
+- You want a single link that always points to the latest published version.
 
-**Use the Inspection Report when:**
-- Providing complete documentation to clients
-- Creating detailed records for legal or compliance purposes
-- Sharing all inspection findings and observations
+**Use the Inspection report (PDF) when:**
+- Clients, lenders, or legal/compliance processes require a static archival document.
+- The recipient needs to read or print the report offline.
+- You're providing a complete record of every detail and observation.
 
-**Use the Inspection Summary when:**
-- Clients need a quick overview of key findings
-- Sharing highlights before the full report is complete
-- Providing an executive summary for decision-makers
+**Use the Inspection summary (PDF) when:**
+- Clients need a quick overview of key findings before the full report is reviewed.
+- Decision-makers want an executive summary they can forward easily.
 
-### Previewing an Inspection Summary
+:::tip[Best practice]
 
-When using the **Preview changes** feature, you can choose which document to preview:
+Publishing the Web report alongside both PDFs gives you maximum flexibility. Recipients can read interactively online, and you still have static PDFs to send to lenders, contractors, or anyone who prefers a downloadable document.
 
-1. Select the **ellipsis** next to the `Preview changes` button
+:::
+
+### Previewing other formats
+
+When using the **Preview changes** feature, you can choose which format to preview:
+
+1. Select the **ellipsis** next to the `Preview changes` button.
 2. Choose between:
-   - **Inspection Report** - Preview the full detailed report
-   - **Inspection Summary** - Preview the condensed summary
+   - **Web report**: preview the interactive Web report (works offline).
+   - **Inspection report (PDF)**: preview the full detailed PDF.
+   - **Inspection summary (PDF)**: preview the condensed summary PDF.
 
-<img src={ImageReports11} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Preview selection with both Inspection Report and Inspection Summary options." />
+<img src={ImageReports11} style={{ maxWidth: '800px', width: '100%' }} width={2560} height={1510} alt="Preview chooser with Web report, Inspection report (PDF), and Inspection summary (PDF) options." />
 
-This allows you to review either document before publishing.
+This allows you to review any format before publishing.
+
+:::info
+
+The PDF previews require an internet connection to generate. The Web report preview is rendered locally on your device and works offline.
+
+:::
 
 ## Publishing a report
 
@@ -90,32 +118,69 @@ This allows you to review either document before publishing.
 
 ### Selecting what to publish
 
-When publishing, you can choose which document type(s) to publish:
-- The [**Inspection Report**](/docs/concepts/reports#inspection-summary-vs-inspection-report) only
-- The [**Inspection Summary**](/docs/concepts/reports#inspection-summary-vs-inspection-report) only
-- Both the Inspection Report and Inspection Summary
+When publishing, you can choose which formats to publish:
 
-<img src={ImageReports12} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Publish report bottom sheet with checkboxes for both Inspection Report and Inspection Summary." />
+- The [**Web report**](/docs/concepts/reports#report-formats), the [**Inspection report**](/docs/concepts/reports#report-formats), the [**Inspection summary**](/docs/concepts/reports#report-formats), or any combination.
+- The Web report is selected by default. You can uncheck it if you'd prefer to publish only PDFs.
+- At least one format must remain selected for the **Publish** button to be enabled.
 
-Select the document type(s) you want to publish, then proceed with publishing. All selected documents will be generated and saved as part of the same report version.
+<img src={ImageReports12} style={{ maxWidth: '800px', width: '100%' }} width={2560} height={1510} alt="Publish bottom sheet with Web report, Inspection report, and Inspection summary checkboxes." />
+
+All selected formats are generated and saved as part of the same report version.
 
 :::tip[Best practice]
 
-Consider publishing both the Inspection Report and Inspection Summary together. This gives you flexibility when sharing - you can send the full report for detailed review and the summary for quick reference.
+Consider publishing all three formats together. The Web report gives clients an interactive, mobile-friendly experience, while the PDFs cover offline, archival, and quick-summary use cases.
 
 :::
 
 **Publishing** achieves a few main things:
 
 1. It [**saves**](/docs/concepts/saving) and [**syncs**](/docs/concepts/syncing) your report.
-2. It generates a PDF report at the time of **publishing**, which includes all inspection insights and other information about the inspection job.
+2. It generates the selected formats at the time of **publishing**, capturing all inspection insights and other information about the inspection job.
 3. Each published version is saved as a historical snapshot you can refer back to.
 4. Enables you to share a previously published report (even if newer versions of the report are available).
 5. Enables you to easily perform follow-up inspections on a property.
 
+### Viewing a published Web report
+
+When a Web report is published, the recipient (and you) can open it directly in a browser at the report's link. The page is mobile-, tablet-, and desktop-friendly and includes:
+
+- An **Overview** with the primary photo, address, inspection date, property details, and the inspector profile.
+- A **Findings** section showing the full list of actionable findings, grouped by recommended action (e.g., "Repair or Replace", "Monitor"), with each row linking directly to the corresponding item.
+- A **Summary** table that lists each impacted item by category and component.
+- **Sticky category tabs** (e.g., Exterior, Roofing, Electrical, Interior) that scroll-to-section and stay visible as you read.
+- **Items** with photos, videos, notes, and a color-coded left border indicating the recommended action.
+- **Enlarge Image**: tap or click any photo for a full-screen viewer.
+- **PDF download buttons**: if you also published the Inspection report or Inspection summary, recipients can download the PDFs directly from inside the Web report.
+- **Display mode**: the Web report supports both light and dark modes, with light mode set as the default.
+
+Browse each view below:
+
+<Tabs>
+  <TabItem value="overview" label="Overview" default>
+    <img src={ImageReports14} style={{ maxWidth: '800px', width: '100%' }} width={2560} height={1510} alt="Web report property summary header with sticky category tabs." />
+  </TabItem>
+  <TabItem value="findings" label="Findings">
+    <img src={ImageReports15} style={{ maxWidth: '800px', width: '100%' }} width={2560} height={1510} alt="Web report Findings tab with the list of actionable findings grouped by recommended action." />
+  </TabItem>
+  <TabItem value="summary" label="Summary">
+    <img src={ImageReports19} style={{ maxWidth: '800px', width: '100%' }} width={2560} height={1510} alt="Web report Summary tab with the Overview of Summaries and the Major Issues group expanded." />
+  </TabItem>
+  <TabItem value="items" label="Items">
+    <img src={ImageReports16} style={{ maxWidth: '800px', width: '100%' }} width={2560} height={1510} alt="Web report category section with two-column item cards and a color-coded left border indicating the recommended action." />
+  </TabItem>
+  <TabItem value="images" label="Images">
+    <img src={ImageReports18} style={{ maxWidth: '800px', width: '100%' }} width={2560} height={1510} alt="Web report enlarged image viewer." />
+  </TabItem>
+  <TabItem value="mobile" label="Mobile">
+    <img src={ImageReports17} style={{ maxWidth: '250px', width: '100%' }} width={1000} height={1510} alt="Web report rendered on a mobile-width viewport." />
+  </TabItem>
+</Tabs>
+
 ### Making changes to an Inspection Form after publishing a report
 
-You can always make changes to an [**Inspection Form**](/docs/concepts/inspection-forms) after publishing your report. Simply publish the **report** a second time after your changes to see your updates in the PDF report.
+You can always make changes to an [**Inspection Form**](/docs/concepts/inspection-forms) after publishing your report. Simply publish the **report** a second time after your changes to see your updates.
 
 - **Reports** can be published as many times as needed.
 
@@ -126,7 +191,7 @@ Here's an example:
 - **6:00pm**: You fix the typos, publish a new version of the report (which [**saves**](/docs/concepts/saving) and [**syncs**](/docs/concepts/syncing) your updates), and share the updated report with your client(s).
 - Depending on how you [shared the report](/docs/concepts/reports#sharing-a-report) your client(s) will either [automatically have access to the latest version](/docs/concepts/reports#sharing-the-latest-version-of-a-report) or you can choose to [manually share the latest version](/docs/concepts/reports#sharing-a-specific-version-of-a-report), as well.
 
-This versioning system of published reports ensures a clear audit trail — helpful for revisits, legal compliance, or customer questions.
+This versioning system of published reports ensures a clear audit trail, which is helpful for revisits, legal compliance, or customer questions.
 
 :::info
 
@@ -155,21 +220,21 @@ When you successfully share a report with your client you will be CCed in the em
 
 :::
 
-### Report attachments in the email
+### Report formats in the email
 
-When sharing via email, any published attachments will appear in the email form:
+When sharing via email, your published formats appear as buttons in the message:
 
-- If you published the **Inspection Report**, it will appear as an attachment you can preview
-- If you published the **Inspection Summary**, it will appear separately as another attachment you can preview
-- If you published both, both will appear as separate attachments in the email
+- If you published the **Web report**, the email leads with a button that opens the Web report online.
+- If you also published the **Inspection report** and/or the **Inspection summary**, each appears as a secondary button below for direct PDF download.
+- If you only published PDFs, the first PDF becomes the primary button and any additional PDF appears as a secondary button.
 
-<img src={ImageReports13} style={{ maxWidth: '800px', width: '100%' }} width={1031} height={1250} alt="Email form with both Inspection Report and Inspection Summary sections." />
+<img src={ImageReports13} style={{ maxWidth: '800px', width: '100%' }} width={1031} height={1250} alt="Email form showing the report links section before sending." />
 
-Your recipients will receive links to access whichever documents you've published and included in the email.
+Your recipients will receive a single email with links to whichever formats you've published.
 
 :::info
 
-Both the Inspection Report and Inspection Summary respect the same [public/private status](/docs/concepts/reports#public-vs-private-reports). If you set a report to private, all its attachments become inaccessible to recipients.
+The Web report and the PDFs all respect the same [public/private status](/docs/concepts/reports#public-vs-private-reports). Setting a report private makes the Web report URL and every PDF attachment URL inaccessible to recipients.
 
 :::
 
@@ -186,7 +251,7 @@ Selecting `Latest version (recommended)` will include a link that **always shows
 :::info
 
 - No additional notification is sent to your client regarding a newly published version of the report.
-- If an older version of the report is shared and includes a summary, but the latest version does not, clicking the summary button in the email will default to opening the first (and only) attachment, which is the main report.
+- If an older version of the report is shared and includes a summary, but the latest version does not, clicking the summary button in the email will default to opening the first available format on the latest version.
 
 :::
 
@@ -217,9 +282,9 @@ Selecting the `To`, `Cc`, or `Bcc` field reveals options to select the contacts 
 
 - Manually type an email to include them as a recipient, as well.
 
-The **Inspection Report** section at the bottom of the page allows you to do one final review of the PDF report prior to sending it to the recipients.
+The **Inspection report** section at the bottom of the page allows you to do one final review of the PDF report prior to sending it to the recipients.
 
-<img src={ImageReports6} style={{ maxWidth: '800px', width: '100%' }} width={1031} height={800} alt="Inspection Report preview before sending." />
+<img src={ImageReports6} style={{ maxWidth: '800px', width: '100%' }} width={1031} height={800} alt="Inspection report preview before sending." />
 
 :::tip[Best practice]
 
@@ -229,7 +294,7 @@ Adding someone as a contact for the inspection does not mean they should receive
 
 ## Public vs. Private reports
 
-When viewing your list of [published reports](/docs/concepts/reports#publishing-a-report) you will find they each have a **Report Status** setting, which you can toggle between `public` or `private`.
+When viewing your list of [published reports](/docs/concepts/reports#publishing-a-report) you will find they each have a **Report Status** setting, which you can toggle between `public` or `private`. The status applies uniformly to every format you published: the Web report URL and every PDF link share the same public/private state.
 
 <img src={ImageReports7} style={{ maxWidth: '800px', width: '100%' }} width={1031} height={800} alt="Report status setting public or private." />
 
@@ -274,7 +339,7 @@ To check and/or edit the **Report Status** of **Published Reports**:
 
 :::info
 
-Setting a report as `private` removes the **online access** to the report URL.
+Setting a report as `private` removes the **online access** to the report: both the Web report URL and every PDF attachment URL.
 
 - If a report for that **Inspection** was ever shared via the `Latest version (recommended)` report version, then Eneris would look at the **Report Status** of the latest published report. If that latest published report is `public`, you will also have to set its **Report Status** to `private` to ensure your client(s) are unable to access it.
 
