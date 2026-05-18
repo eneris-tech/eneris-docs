@@ -26,6 +26,29 @@ Access the main codebase at `../eneris/` to verify how the feature actually work
 3. Check the API layer in `packages/api/` if the feature involves backend calls
 4. Review any relevant types or models in `packages/commons/`
 
+### 0.2a Check Hand-Maintained Sync Tables
+
+Two React tables in this repo are hand-maintained mirrors of state in the main `../eneris/` codebase. They silently drift when features ship or permissions change, so verify them whenever the doc update is in their scope.
+
+**When to run this check:**
+
+- The doc change touches **permissions, roles, ADMIN / SCHEDULER / INSPECTOR capabilities, multi-inspector, or team-member access** → check `src/components/Multi-inspector/PermissionsTable.jsx`.
+- The doc change touches **feature availability or comparison between Eneris Elevate and Eneris Legacy** → check `src/components/FeatureComparison/FeatureComparisonTable.jsx`.
+- For unrelated doc updates (typo fixes, narrative edits on pages outside these topics), skip this step.
+
+**How to check `PermissionsTable.jsx`:**
+
+1. Read `src/components/Multi-inspector/PermissionsTable.jsx` and `../eneris/packages/commons/src/consts/auth/permissions.ts`.
+2. Verify every row in the JSX maps to a permission defined for the role in `permissions.ts`, and that no permissions present in the source are missing from the JSX.
+3. Treat the inline comment near `Edit Service Agreement` (contact / signature modification) and the commented-out AI Insights block (feature not yet live) as intentional editorial decisions, not drift.
+
+**How to check `FeatureComparisonTable.jsx`:**
+
+1. Read `src/components/FeatureComparison/FeatureComparisonTable.jsx`.
+2. For any rows in the area touched by the doc change, verify the `Available` / `Planned` / `Unplanned` status against current product behavior in the main codebase.
+
+**On drift:** surface the discrepancies in the Phase 0.3 User Gate summary, propose updates to the JSX, and include those JSX edits in the Phase 2.1 plan alongside the regular doc files.
+
 ### 0.3 User Gate — Confirm Understanding
 
 **STOP and confirm with the user before proceeding.** Present:
