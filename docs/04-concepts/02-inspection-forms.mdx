@@ -20,11 +20,11 @@ import ImageInspectionFormFramework from './img/inspection-form-framework.webp';
 
 # Inspection Forms
 
-An **Inspection Form** is where the **bulk of your inspection data is entered and organized**. It contains all the categories, components, fields, and field options used to document your insights during an inspection.
+An **Inspection Form** is where the **bulk of your inspection data is entered and organized**. It contains all the categories, components, fields, and field options used to document your entries during an inspection.
 
 Each form acts as a structured workspace, allowing you to:
 
-- Record detailed insights (e.g. roof is in good condition, mold on interior wall, water heater needs replacement, etc.)
+- Record detailed entries (e.g. roof is in good condition, mold on interior wall, water heater needs replacement, etc.)
 - Attach media (photos, videos)
 - Select field options or enter free-form notes
 - Add general limitations to your inspection
@@ -70,9 +70,9 @@ This is the data structure of your Inspection Form:
 
 - **Category** — A high-level system (e.g. Interior, Roofing)
 - **Component** — A specific element within a system (e.g. Flooring, Gutters)
-- **Insight** — A specific observation (e.g. Water damage)
-    - Each insight is a separate item in the report, which means you can have multiple entries of the same component.
-        - e.g., During your inspection you may be inspecting multiple exterior doors. If both the front door and the back door are damaged in *different* ways you could create separate insights for the exterior door component.
+- **Entry** — A specific observation (e.g. Water damage)
+    - Each entry is a separate item in the report, so you can record multiple entries for the same component.
+        - e.g., During your inspection you may be inspecting multiple exterior doors. If both the front door and the back door are damaged in *different* ways you could create separate entries for the exterior door component.
 - **Field** — A specific input area (e.g. Description, Condition, Risk, Location, Recommended Action)
 - **Field Option** — Predefined choices within a field (e.g. “Minor”, “Major”, “Not Present”)
 
@@ -86,7 +86,7 @@ Every part of the framework is customizable. Here are some example use cases:
 
 - If a **category** is unavailable by default, [you can create it](/docs/concepts/customizing-form-templates#creating-categories).
 - If you're a roofing contractor and never inspect HVAC systems, you can delete the HVAC category.
-- If the **component** you are inspecting has different areas (living room flooring vs. kitchen flooring) in different conditions then you can create multiple **insights**.
+- If the **component** you are inspecting has different areas (living room flooring vs. kitchen flooring) in different conditions then you can create multiple **entries**.
 - If you're an Eneris admin at your company and need to edit the **field options** to use company approved terminology, you can do so quickly and without needing to interact with the Eneris team (but we're always happy to help).
 
 :::
