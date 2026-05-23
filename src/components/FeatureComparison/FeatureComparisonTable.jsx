@@ -24,7 +24,7 @@ export default function FeatureTable() {
     ['PDF summary report', 'Available', 'Available', ''],
     ['Progress checklist', 'Available', 'Available', ''],
     ['Web report', 'Available', 'Available', ''],
-    ['Online scheduling', 'Planned', 'Available', ''],
+    ['Online scheduling', 'Available', 'Available', ''],
     ['Payment collection', 'Planned', 'Available', ''],
     ['Custom files', 'Planned', 'Available', ''],
     ['TREC + Wind Mitigation + 4 Point', 'Planned', 'Available', ''],
