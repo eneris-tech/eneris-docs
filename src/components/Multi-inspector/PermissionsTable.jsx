@@ -103,6 +103,28 @@ export default function PermissionsTable() {
       ],
     },
     {
+      heading: 'Booking Pages',
+      rows: [
+        ['List Booking Pages', '✅', '✅', '✅'],
+        ['View Booking Page', '✅', '✅', '✅'],
+        ['Create Booking Page', '✅', '✅', '🚫'],
+        ['Edit Booking Page', '✅', '✅', '🚫'],
+        ['Delete Booking Page', '✅', '✅', '🚫'],
+      ],
+    },
+    {
+      heading: 'Booking Requests',
+      // INSPECTOR can list/view/accept/reject only the booking requests routed
+      // to their assigned Inspector Profile. ADMIN and SCHEDULER can act on any.
+      rows: [
+        ['List Booking Requests', '✅', '✅', '✅'],
+        ['View Booking Request', '✅', '✅', '✅'],
+        ['Accept Booking Request', '✅', '✅', '✅'],
+        ['Reject Booking Request', '✅', '✅', '✅'],
+        ['Delete Booking Request', '✅', '✅', '🚫'],
+      ],
+    },
+    {
       heading: 'Agreement Templates',
       rows: [
         ['List Agreement Templates', '✅', '✅', '✅'],
