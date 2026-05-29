@@ -4,6 +4,15 @@ import ImageFormTemplates3 from './img/form-templates-3.webp';
 import ImageFormTemplates4 from './img/form-templates-4.webp';
 import ImageFormTemplates5 from './img/form-templates-5.webp';
 import ImageFormTemplates6 from './img/form-templates-6.webp';
+import ImageSupplementary1 from './img/supplementary-forms-1.webp';
+import ImageSupplementary2 from './img/supplementary-forms-2.webp';
+import ImageSupplementary3 from './img/supplementary-forms-3.webp';
+import ImageSupplementary4 from './img/supplementary-forms-4.webp';
+import ImageSupplementary5 from './img/supplementary-forms-5.webp';
+import ImageSupplementary6 from './img/supplementary-forms-6.webp';
+import ImageSupplementary7 from './img/supplementary-forms-7.webp';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Form Templates
 
@@ -163,3 +172,85 @@ Reminder: Each [**Inspection**](/docs/concepts/inspections) can have one or more
 At this time, any changes made directly in an [**Inspection Form**](/docs/concepts/inspection-forms) are not automatically saved into your **Form Template**.
 
 - We are building a robust solution for this in the near future. Stay tuned!
+
+## Supplementary Forms
+
+**Supplementary forms** are specialized insurance forms that you complete alongside your main inspection and deliver as a separate, compliant PDF. Eneris includes two ready-to-use supplementary form templates for the Florida market:
+
+- **4-Point Inspection**: the Florida 4-Point inspection form (Insp4pt 03 25), covering the four systems insurers care about most: roof, electrical, HVAC, and plumbing.
+- **Uniform Mitigation Verification Inspection**: the Florida wind mitigation form (2026 OIR-B1-1802), documenting the features that protect a home against wind damage.
+
+Both are kept up to date with the latest official forms, and each generates a filled, flattened, insurer-ready PDF when you publish.
+
+:::info
+
+Supplementary forms are designed for Florida insurance inspections and follow the official Florida OIR forms. They produce a PDF only (no web or summary report). The form fields, sections, and layout are fixed to stay compliant, so these templates are used as-is rather than customized like a standard **Form Template**.
+
+:::
+
+<img src={ImageSupplementary1} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="The Create from list showing the 4-Point Inspection and Uniform Mitigation Verification Inspection options." />
+
+### Adding a supplementary form
+
+You add a supplementary form the same way you add any other template, by first creating it from the built-in template and then adding it to an inspection:
+
+1. Select `Form templates` from the sidebar.
+2. Select `Create new form template`.
+3. With `Create new` selected, scroll the `Create from` list and choose **4-Point Inspection** or **Uniform Mitigation Verification Inspection**.
+4. Enter a `Name` for the template and select `Create new`.
+5. Add the template to an inspection, either when [creating a new **Inspection**](/docs/concepts/inspections#create-an-inspection) or by adding it to an existing one (see [**Selecting a Form Template**](#selecting-a-form-template) above).
+
+:::tip
+
+Inspectors typically complete the main home inspection first, then create the 4-Point or wind mitigation form for the same property. Adding the supplementary form to the **same Inspection** lets Eneris carry over the property and client details for you.
+
+:::
+
+### Auto-populated details
+
+When you add a supplementary form to an inspection, Eneris pre-fills the form from the inspection so you don't have to re-type information you already captured. Depending on the form, this includes:
+
+- Owner / client name
+- Property address, city, and ZIP code
+- Phone number and email
+- Year built and number of stories
+- Inspection date
+
+Every pre-filled value remains editable, so you can review and adjust anything before publishing. The form is split into the same sections as the official document, for example **Inspection Details**, **Electrical**, **HVAC**, **Plumbing**, and **Roof** on the 4-Point form.
+
+<Tabs>
+  <TabItem value="four-point" label="4-Point Inspection" default>
+    <img src={ImageSupplementary2} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="A 4-Point Inspection form with the applicant name, address, and date auto-populated from the inspection." />
+  </TabItem>
+  <TabItem value="wind-mitigation" label="Wind Mitigation">
+    <img src={ImageSupplementary5} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="A Uniform Mitigation Verification Inspection form with the owner name, property address, city, and ZIP auto-populated from the inspection." />
+  </TabItem>
+</Tabs>
+
+### Photos and signature
+
+Photos you attach to a supplementary form are automatically organized **by section** (for example, Electrical, HVAC, Plumbing, and Roof) and laid out on dedicated photo pages in the generated PDF, each with a caption. Your [**inspector profile**](/docs/concepts/inspector-profiles) signature is embedded on the form automatically, so the published PDF is ready to send.
+
+### Publishing and sharing
+
+Publish a supplementary form just like any other [**report**](/docs/concepts/reports). On publish, Eneris fills the official form, merges in any photo pages, and produces a single compliant PDF.
+
+<Tabs>
+  <TabItem value="four-point" label="4-Point Inspection" default>
+    <img src={ImageSupplementary3} style={{ maxWidth: '700px', width: '100%' }} width={1275} height={1650} alt="The generated 4-Point Inspection Form PDF, filled with the auto-populated applicant name, address, and inspection date." />
+  </TabItem>
+  <TabItem value="wind-mitigation" label="Wind Mitigation">
+    <img src={ImageSupplementary6} style={{ maxWidth: '700px', width: '100%' }} width={1275} height={1650} alt="The generated Uniform Mitigation Verification Inspection Form PDF (OIR-B1-1802), filled with the auto-populated owner name, address, and inspection date." />
+  </TabItem>
+</Tabs>
+
+The PDF appears as **4-Point Inspection (PDF)** or **Uniform Mitigation Verification Inspection (PDF)**, ready to [view or share](/docs/concepts/reports#sharing-a-report) by email alongside your main inspection report.
+
+<Tabs>
+  <TabItem value="four-point" label="4-Point Inspection" default>
+    <img src={ImageSupplementary4} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="The Email report screen listing the 4-Point Inspection (PDF) under Report links." />
+  </TabItem>
+  <TabItem value="wind-mitigation" label="Wind Mitigation">
+    <img src={ImageSupplementary7} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="The Email report screen listing the Uniform Mitigation Verification Inspection (PDF) under Report links." />
+  </TabItem>
+</Tabs>
