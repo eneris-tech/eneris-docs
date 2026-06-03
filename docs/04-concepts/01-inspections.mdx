@@ -14,6 +14,7 @@ import ImageInspections13 from './img/inspections-13.webp';
 import ImageInspections14 from './img/inspections-14.webp';
 import ImageInspections15 from './img/inspections-15.webp';
 import ImageInspections16 from './img/inspections-16.webp';
+import ImageInspections17 from './img/inspections-17.webp';
 
 # Inspections
 
@@ -230,6 +231,27 @@ Example use cases:
 - If you are part of a multi-inspector team, the back office admin may choose to leave you a note regarding this inspection job that is for your reference only.
 
     <img src={ImageInspections15} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={755} alt="Where to find internal memo." />
+
+### Manage Access
+
+If you're part of a multi-inspector team, **Manage Access** controls which team members can view and edit this inspection. Share it with specific people so they can collaborate on its forms, contacts, and reports. Learn more about working as a team in [Multi-inspector](/docs/concepts/multi-inspector).
+
+The **Shared with** field shows who the inspection is currently shared with, or `Not shared` if it hasn't been shared with anyone yet.
+
+To update access:
+
+1. Select the **Manage Access** card to open the access list.
+2. Check the team members you want to share the inspection with, or use **Select All** to share with everyone.
+3. Select **Save**.
+
+<img src={ImageInspections17} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Manage access dialog showing the team members an inspection can be shared with." />
+
+:::info
+Team members with the **Admin** or **Scheduler** role, along with the inspection's **primary inspector**, can always access the inspection, so you don't need to add them here.
+
+The **Manage Access** card only appears when your team has more than one member, and requires the "Edit Inspection" permission.
+
+:::
 
 ### Delete Inspection
 
