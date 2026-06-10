@@ -100,6 +100,16 @@ export default function PermissionsTable() {
         ['Edit Invoice', '✅', '✅', '✅'],
         ['Delete Invoice', '✅', '✅', '✅'],
         ['Share Invoice', '✅', '✅', '✅'],
+        ['Take Payment', '✅', '✅', '✅'], // INVOICE_CHECKOUT
+      ],
+    },
+    {
+      heading: 'Payments',
+      // Set Up Payment Account covers PAYMENT_ACCOUNT_CREATE && PAYMENT_ONBOARDING_LINK_CREATE
+      rows: [
+        ['Set Up Payment Account', '✅', '🚫', '🚫'],
+        ['View Payment Account', '✅', '✅', '✅'],
+        ['Delete Payment Account', '✅', '🚫', '🚫'],
       ],
     },
     {

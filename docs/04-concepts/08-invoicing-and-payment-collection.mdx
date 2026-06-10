@@ -1,0 +1,380 @@
+import ImageInvoicing1 from './img/invoicing-1.webp';
+import ImageInvoicing2 from './img/invoicing-2.webp';
+import ImageInvoicing3 from './img/invoicing-3.webp';
+import ImageInvoicing4 from './img/invoicing-4.webp';
+import ImageInvoicing5 from './img/invoicing-5.webp';
+import ImageInvoicing6 from './img/invoicing-6.webp';
+import ImageInvoicing7 from './img/invoicing-7.webp';
+import ImageInvoicing8 from './img/invoicing-8.webp';
+import ImageInvoicing9 from './img/invoicing-9.webp';
+import ImageInvoicing10 from './img/invoicing-10.webp';
+import ImageInvoicing11 from './img/invoicing-11.webp';
+import ImageInvoicing12 from './img/invoicing-12.webp';
+import ImageInvoicing13 from './img/invoicing-13.webp';
+import ImageInvoicing14 from './img/invoicing-14.webp';
+import ImageInvoicing15 from './img/invoicing-15.webp';
+import ImageInvoicing16 from './img/invoicing-16.webp';
+import ImageInvoicing17 from './img/invoicing-17.webp';
+import ImageInvoicing18 from './img/invoicing-18.webp';
+import ImageInvoicing19 from './img/invoicing-19.webp';
+import ImageInvoicing20 from './img/invoicing-20.webp';
+
+# Invoicing and Payment Collection
+
+**Invoicing** in Eneris allows you to create professional invoices for your inspection services directly from within an Inspection. Combined with **Pricing Items**, you can build a reusable library of your common services and fees, making invoice creation fast and consistent. With **Payment Collection**, you can also get paid without leaving Eneris: take a card payment on the spot or email your client a payable invoice.
+
+The invoicing workflow is simple:
+
+1. Set up your **Pricing Items** once (your service catalog)
+2. Create an **Invoice** from any inspection
+3. Add line items from your pricing library or create custom items
+4. Share the invoice via email or download as PDF
+5. Collect payment online, or record a payment you received another way
+
+:::info
+
+Pricing Items are reusable across all your invoices. Set them up once and add them to any invoice with a single click.
+
+:::
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/ZiLsTXCcPhE" title="Invoicing & Pricing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Pricing Items
+
+### What are Pricing Items?
+
+**Pricing Items** are reusable service entries that you can quickly add to invoices. Each pricing item includes:
+
+- **Name** — A description of the service (e.g., "Home Inspection - Standard")
+- **Price per unit** — The price per unit
+- **Tax Rate** — The applicable tax percentage
+
+By maintaining a library of pricing items, you ensure consistent pricing across all your invoices and save time during invoice creation.
+
+### View Pricing Items
+
+To view your existing **Pricing Items**:
+
+1. Select `Invoicing` from the navigation menu.
+
+You will see a list of all your saved pricing items with their names and prices.
+
+<img src={ImageInvoicing1} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="View pricing items." />
+
+### Create a Pricing Item
+
+To create a new **Pricing Item**:
+
+1. Select `Invoicing` from the navigation menu.
+2. Select `Create new pricing item`.
+3. Enter a **Name** for the item (e.g., "Radon Testing").
+4. Enter the **Price per unit**.
+5. Optionally, set a **Tax rate** percentage.
+6. Select `Create`.
+
+<img src={ImageInvoicing2} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Create a pricing item." />
+
+:::tip
+
+Create pricing items for all your common services before you start invoicing. This makes creating invoices much faster.
+
+:::
+
+### Edit a Pricing Item
+
+To modify an existing **Pricing Item**:
+
+1. Select `Invoicing` from the navigation menu.
+2. Select the item you wish to edit.
+3. Update the **Name**, **Price per unit**, and/or **Tax rate** as needed.
+4. Select `Save changes`.
+
+:::info
+
+Changes to a **Pricing Item** only affect **new invoices**. Existing invoices retain the pricing that was set when they were created.
+
+:::
+
+### Delete a Pricing Item
+
+To delete a **Pricing Item**:
+
+1. Select `Invoicing` from the navigation menu.
+2. Select the item you wish to delete.
+3. Scroll to the bottom and select `Delete pricing item`.
+4. Confirm the deletion when prompted.
+
+:::warning
+
+Deleting a **Pricing Item** cannot be undone. Existing invoices using this item will retain their line item data.
+
+:::
+
+## Creating an Invoice
+
+### Create Invoice from Inspection
+
+Invoices are created within an [**Inspection**](/docs/concepts/inspections). To create an invoice:
+
+1. Open the Inspection you want to invoice.
+2. Select the **Invoice** section.
+3. [Add line items](/docs/concepts/invoicing-and-payment-collection#adding-line-items).
+4. Optionally, add a **Memo** for additional notes.
+5. Select `Create invoice`.
+
+<img src={ImageInvoicing3} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Creating an invoice within an Inspection." />
+
+:::info
+
+The system automatically generates an invoice number in the format `INV-YYYY-NNNNN` (e.g., INV-2026-00001).
+
+:::
+
+### Adding Line Items
+
+You can add line items to your invoice in two ways:
+
+**From Pricing Library:**
+1. Select `+ Pricing item`.
+2. Choose one or more items from your pricing library.
+3. [Adjust the quantity](/docs/concepts/invoicing-and-payment-collection#adjusting-pricing-item-quantity) if needed.
+
+**Custom Item:**
+1. Select `+ Custom`.
+2. Enter the item **Name**.
+3. Enter the **Price per unit**.
+4. Set the **Quantity**.
+5. Optionally, set a **Tax rate**.
+
+<img src={ImageInvoicing4} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Creating a Pricing Item within an inspection." />
+
+### Adjusting Pricing Item Quantity
+
+When creating an Inspection invoice you can update the quantity of a line item. To update the quantity:
+
+1. Select the pricing item you added.
+2. Update the `Quantity`.
+3. Select `Save changes`.
+
+<img src={ImageInvoicing5} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Adjusting Pricing Item quantity." />
+
+### Automatic Calculations
+
+Eneris automatically calculates all invoice totals:
+
+- **Line Total** — Price per unit × quantity for each item
+- **Line Tax** — Line total × tax rate for each item
+- **Subtotal** — Sum of all line totals
+- **Tax** — Sum of all line taxes
+- **Total** — Subtotal + tax total
+
+<img src={ImageInvoicing6} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Invoice subtotals, tax totals, and overall total amounts." />
+
+:::info
+
+All calculations update in real-time as you add or modify line items.
+
+:::
+
+## Payment Tracking
+
+### Invoice Status
+
+Each invoice has a payment status:
+
+- **Unpaid** — Invoice has been created but payment has not been recorded
+- **Paid** — Payment has been recorded for this invoice
+
+The status is displayed as a badge on the invoice, making it easy to track outstanding payments.
+
+:::info
+
+When a client pays online through [**Payment Collection**](/docs/concepts/invoicing-and-payment-collection#payment-collection), the invoice is marked **Paid** automatically. You only need to record a payment manually when it was received outside Eneris (e.g., cash or check).
+
+:::
+
+### Recording Payment
+
+To manually record a payment on an invoice:
+
+1. Open the invoice.
+2. Change the **Invoice Status** to **Paid**.
+3. Select a **Payment Method**:
+   - Cash
+   - Check
+   - Debit Card
+   - Credit Card
+   - Bank Transfer
+   - Peer-to-Peer
+   - Other (enter a custom description)
+4. Set the **Paid Date**.
+5. Select `Save changes`.
+
+<img src={ImageInvoicing7} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Recording a payment on an Invoice." />
+
+## Payment Collection
+
+**Payment Collection** lets you collect invoice payments directly through Eneris, powered by Stripe. Once your payment account is set up, you can take a card payment on the spot or email your client a payable invoice, and Eneris updates the invoice automatically when the payment comes through.
+
+### Set Up Your Payment Account
+
+Before you can collect payments, you must first set up a payment account:
+
+1. Select `Invoicing` from the navigation menu.
+2. Select the **Payments** tab.
+3. Select `Set up payments`.
+
+<img src={ImageInvoicing10} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Set up payments from the Payments tab on the Invoicing page." />
+
+4. Select your **Business country** (Canada or United States) and select `Continue`.
+
+<img src={ImageInvoicing11} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Choosing the business country when setting up payments." />
+
+5. You will be redirected to Stripe to complete onboarding. Start by entering the email address associated with your business.
+
+<img src={ImageInvoicing12} style={{ maxWidth: '700px', width: '100%' }} width={864} height={255} alt="Enter the email address associated with your business to get started with Stripe." />
+
+6. Continue adding the required information as it relates to your business. It is important to have any applicable business tax IDs and banking information for payouts ready to ensure a successful setup.
+
+<img src={ImageInvoicing13} style={{ maxWidth: '700px', width: '100%' }} width={861} height={461} alt="Enter your business address and type in Stripe." />
+
+7. Customize the statement descriptor your clients will see on their credit card statements, along with a support phone number. This should be your business phone number.
+
+<img src={ImageInvoicing14} style={{ maxWidth: '700px', width: '100%' }} width={864} height={456} alt="Enter the statement descriptor and customer support details in Stripe." />
+
+8. Review your details and make any last-minute changes. Stripe will provide warnings for fields that were missed or require more information.
+
+<img src={ImageInvoicing15} style={{ maxWidth: '700px', width: '100%' }} width={864} height={659} alt="Review all submission details before submitting your Stripe onboarding." />
+
+Once onboarding is complete, your account shows as **Active** and you can start collecting payments. If you leave onboarding partway through, return to the **Payments** tab and select `Continue onboarding` to pick up where you left off.
+
+<img src={ImageInvoicing16} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="The Payments tab showing an active payment account." />
+
+From the **Payments** tab you can also:
+
+- **Open dashboard**: view payouts, transactions, and account details in Stripe. From there you can also customize the branding shown on your payable invoices under **Settings → Business → Branding**.
+- **Delete payment account**: permanently unlink your team's payment account.
+
+:::info
+
+Only team members with the **Admin** role can set up or delete the payment account. See [**Multi-Inspector permissions**](/docs/concepts/multi-inspector) for details.
+
+:::
+
+:::warning
+
+Your business country (and its currency) is set once during setup and cannot be changed afterwards. Deleting a payment account cannot be undone; you will need to complete setup again before collecting payments.
+
+:::
+
+### Take Payment Now
+
+To take a card payment on the spot:
+
+1. Open the Inspection's invoice.
+2. Select `Collect payment` in the **Payment details** section.
+
+<img src={ImageInvoicing17} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="The Collect payment button in the Payment details section of an invoice." />
+
+3. Select `Take payment now`.
+
+<img src={ImageInvoicing18} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="The Collect payment options: Take payment now or Email invoice." />
+
+4. Have your client complete the card payment in the secure Stripe checkout. The checkout shows your invoice line items and total, and accepts cards as well as wallets like Apple Pay.
+
+<img src={ImageInvoicing20} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="The Stripe checkout page showing the invoice line items and card payment form." />
+
+Once the payment is processed, the invoice is automatically marked as **Paid**.
+
+### Email a Payable Invoice
+
+To collect payment by email:
+
+1. Open the Inspection's invoice.
+2. Select `Collect payment` in the **Payment details** section.
+3. Select `Email invoice`.
+4. Enter your client's email address.
+5. Select `Send payable invoice`.
+
+<img src={ImageInvoicing19} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Emailing a payable invoice to a client from the Collect payment sheet." />
+
+Your client receives a Stripe-hosted invoice they can pay online, with payment due in 7 days. The invoice's payment status changes to **Sent**, and the invoice is marked **Paid** automatically once your client pays.
+
+:::tip
+
+To email the invoice as a PDF without collecting payment online, use [Share via Email](/docs/concepts/invoicing-and-payment-collection#share-via-email) instead.
+
+:::
+
+### Payment Statuses
+
+Invoices collected through Payment Collection show a payment status badge alongside the invoice status:
+
+- **Sent**: a payable invoice has been emailed to your client.
+- **Paid**: the payment was completed.
+- **Refunded**: the payment was refunded.
+- **Voided**: the payable invoice was voided.
+- **Failed**: the payment attempt failed.
+
+These statuses are updated automatically from Stripe. The manual **Invoice Status** ([Payment Tracking](/docs/concepts/invoicing-and-payment-collection#payment-tracking)) remains available for payments received outside Eneris.
+
+### Payment Collection Fees
+
+**Eneris** does not charge any payment collection fees.
+
+**Stripe** charges a payment collection fee of 2.9% + $0.30 per card transaction. Additionally, Stripe charges a separate 0.4% invoicing fee when you send a payable invoice.
+
+- e.g., On a $500 payment collected via a payable invoice, Stripe will charge (($500 × 2.9% + $0.30) + ($500 × 0.4%)) = $16.80.
+- [Learn more about Stripe's fees on their website](https://stripe.com/en-ca/pricing).
+
+### Payment Deposit Times
+
+The first deposit may take 8-10 days for funds to clear due to Stripe's automated fraud detection systems. After that, 2-3 days can be expected for most transactions (depending on your banking institution or whether it is a weekend or holiday).
+
+:::info
+
+Eneris never has access to your clients' credit card information. Card processing is handled entirely by Stripe, a Payment Card Industry (PCI) compliant transaction processor with enhanced security and fraud detection. If you need a more advanced accounting workflow, Stripe offers [third-party integrations](https://marketplace.stripe.com/categories/accounting) with various accounting software.
+
+:::
+
+## Invoice Actions
+
+### Download PDF
+
+To download an invoice as a PDF:
+
+1. Navigate into the Inspection.
+2. Locate the Invoice section.
+3. Select the **Download PDF** icon.
+4. Download the PDF on your device.
+
+The PDF includes your business information, invoice details, line items with calculations, and any memo you added.
+
+<img src={ImageInvoicing8} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Generate and download the Invoice PDF." />
+
+### Share via Email
+
+To share an invoice with your client via email:
+
+1. Navigate into the Inspection.
+2. Locate the Invoice section.
+3. Select the **Email** icon.
+4. The email recipients are auto-populated from the Inspection contacts.
+5. Optionally, select `Cc/Bcc` to add additional recipients.
+6. Select `Send`.
+
+<img src={ImageInvoicing9} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Share the invoice via email." />
+
+The email includes a link to view the invoice online, along with a PDF attachment.
+
+:::tip
+
+To collect payment by email instead of just sharing the invoice, send a payable invoice. See [Email a Payable Invoice](/docs/concepts/invoicing-and-payment-collection#email-a-payable-invoice).
+
+:::
+
+:::warning
+
+Anyone with access to the public invoice link will be able to view the invoice. Only share invoice links with intended recipients.
+
+:::
