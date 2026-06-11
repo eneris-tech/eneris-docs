@@ -9,10 +9,12 @@ import ImageInvoicing8 from './img/invoicing-8.webp';
 import ImageInvoicing9 from './img/invoicing-9.webp';
 import ImageInvoicing10 from './img/invoicing-10.webp';
 import ImageInvoicing11 from './img/invoicing-11.webp';
-import ImageInvoicing12 from './img/invoicing-12.webp';
-import ImageInvoicing13 from './img/invoicing-13.webp';
-import ImageInvoicing14 from './img/invoicing-14.webp';
-import ImageInvoicing15 from './img/invoicing-15.webp';
+import ImagePaymentOnboarding1 from './img/payment-onboarding-1.webp';
+import ImagePaymentOnboarding2 from './img/payment-onboarding-2.webp';
+import ImagePaymentOnboarding3 from './img/payment-onboarding-3.webp';
+import ImagePaymentOnboarding4 from './img/payment-onboarding-4.webp';
+import ImagePaymentOnboarding5 from './img/payment-onboarding-5.webp';
+import ImagePaymentOnboarding6 from './img/payment-onboarding-6.webp';
 import ImageInvoicing16 from './img/invoicing-16.webp';
 import ImageInvoicing17 from './img/invoicing-17.webp';
 import ImageInvoicing18 from './img/invoicing-18.webp';
@@ -226,25 +228,39 @@ Before you can collect payments, you must first set up a payment account:
 
 <img src={ImageInvoicing10} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Set up payments from the Payments tab on the Invoicing page." />
 
-4. Select your **Business country** (Canada or United States) and select `Continue`.
+4. Select your **Business country** (Canada or United States) and select `Connect with Stripe`.
 
 <img src={ImageInvoicing11} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Choosing the business country when setting up payments." />
 
-5. You will be redirected to Stripe to complete onboarding. Start by entering the email address associated with your business.
+5. You will be redirected to Stripe to complete onboarding. Start by entering the email address associated with your business. It is important to have any applicable business tax IDs and banking information for payouts ready to ensure a successful setup.
 
-<img src={ImageInvoicing12} style={{ maxWidth: '700px', width: '100%' }} width={864} height={255} alt="Enter the email address associated with your business to get started with Stripe." />
+<img src={ImagePaymentOnboarding1} style={{ maxWidth: '700px', width: '100%' }} width={1081} height={542} alt="Enter the email address associated with your business to get started with Stripe." />
 
-6. Continue adding the required information as it relates to your business. It is important to have any applicable business tax IDs and banking information for payouts ready to ensure a successful setup.
+6. Verify your personal details: your legal name, email, job title, date of birth, and home address.
 
-<img src={ImageInvoicing13} style={{ maxWidth: '700px', width: '100%' }} width={861} height={461} alt="Enter your business address and type in Stripe." />
+<img src={ImagePaymentOnboarding2} style={{ maxWidth: '700px', width: '100%' }} width={1047} height={854} alt="Verify your personal details in Stripe." />
 
-7. Customize the statement descriptor your clients will see on their credit card statements, along with a support phone number. This should be your business phone number.
+7. Tell Stripe about your business: select your industry, then add your website and a short description of your services.
 
-<img src={ImageInvoicing14} style={{ maxWidth: '700px', width: '100%' }} width={864} height={456} alt="Enter the statement descriptor and customer support details in Stripe." />
+<img src={ImagePaymentOnboarding3} style={{ maxWidth: '700px', width: '100%' }} width={1067} height={805} alt="Enter your business details in Stripe." />
 
-8. Review your details and make any last-minute changes. Stripe will provide warnings for fields that were missed or require more information.
+8. Add the public details your customers will see: the statement descriptor shown on their credit card statements and your business support phone number.
 
-<img src={ImageInvoicing15} style={{ maxWidth: '700px', width: '100%' }} width={864} height={659} alt="Review all submission details before submitting your Stripe onboarding." />
+<img src={ImagePaymentOnboarding4} style={{ maxWidth: '700px', width: '100%' }} width={1055} height={807} alt="Enter the statement descriptor and customer support details in Stripe." />
+
+9. Choose whether to opt in to **Stripe Tax**. Stripe Tax monitors your tax registration thresholds and can automatically calculate and collect tax on your payments. Stripe charges an additional fee for this once tax is calculated on your transactions.
+
+<img src={ImagePaymentOnboarding5} style={{ maxWidth: '700px', width: '100%' }} width={1061} height={841} alt="Optionally opt in to Stripe Tax during onboarding." />
+
+:::warning
+
+If you opt in to **Stripe Tax**, set the tax rate on all of your [Pricing Items](/docs/concepts/invoicing-and-payment-collection#pricing-items) to 0. Eneris already adds the tax from your pricing items to the payment total, so leaving both enabled would collect tax twice.
+
+:::
+
+10. Review your details and make any last-minute changes, then select `Agree and submit`. Stripe will provide warnings for fields that were missed or require more information.
+
+<img src={ImagePaymentOnboarding6} style={{ maxWidth: '700px', width: '100%' }} width={1048} height={1004} alt="Review all submission details before submitting your Stripe onboarding." />
 
 Once onboarding is complete, your account shows as **Active** and you can start collecting payments. If you leave onboarding partway through, return to the **Payments** tab and select `Continue onboarding` to pick up where you left off.
 
@@ -252,7 +268,7 @@ Once onboarding is complete, your account shows as **Active** and you can start 
 
 From the **Payments** tab you can also:
 
-- **Open dashboard**: view payouts, transactions, and account details in Stripe. From there you can also customize the branding shown on your payable invoices under **Settings → Business → Branding**.
+- **Open Stripe dashboard**: view payouts, transactions, and account details in Stripe. From there you can also customize the branding shown on your payable invoices under **Settings → Business → Branding**.
 - **Delete payment account**: permanently unlink your team's payment account.
 
 :::info
@@ -298,7 +314,7 @@ To collect payment by email:
 
 <img src={ImageInvoicing19} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Emailing a payable invoice to a client from the Collect payment sheet." />
 
-Your client receives a Stripe-hosted invoice they can pay online, with payment due in 7 days. The invoice's payment status changes to **Sent**, and the invoice is marked **Paid** automatically once your client pays.
+Your client receives a Stripe-hosted invoice they can pay online, with payment due in 1 day. The invoice's payment status changes to **Sent**, and the invoice is marked **Paid** automatically once your client pays.
 
 :::tip
 
@@ -322,7 +338,7 @@ These statuses are updated automatically from Stripe. The manual **Invoice Statu
 
 **Eneris** does not charge any payment collection fees.
 
-**Stripe** charges a payment collection fee of 2.9% + $0.30 per card transaction.
+**Stripe** charges a payment collection fee of 2.9% + $0.30 per card transaction. If you opted in to **Stripe Tax** during setup, Stripe charges an additional fee once tax is calculated on your transactions.
 
 - e.g., On a $500 payment, Stripe will charge ($500 × 2.9%) + $0.30 = $14.80.
 - [Learn more about Stripe's fees on their website](https://stripe.com/en-ca/pricing).
