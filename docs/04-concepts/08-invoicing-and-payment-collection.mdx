@@ -316,7 +316,7 @@ To collect payment by email:
 
 <img src={ImageInvoicing19} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Emailing a payable invoice to a client from the Collect payment sheet." />
 
-Your client receives a Stripe-hosted invoice they can pay online, with payment due in 1 day. The invoice's payment status changes to **Sent**, and the invoice is marked **Paid** automatically once your client pays.
+Your client receives a Stripe-hosted invoice they can pay online, with payment due in 1 day. The invoice's payment status changes to **Payment sent**, and the invoice is marked **Paid** automatically once your client pays.
 
 :::tip
 
@@ -328,11 +328,12 @@ To email the invoice as a PDF without collecting payment online, use [Share via 
 
 Invoices collected through Payment Collection show a payment status badge alongside the invoice status:
 
-- **Sent**: a payable invoice has been emailed to your client.
-- **Paid**: the payment was completed.
-- **Refunded**: the payment was refunded.
-- **Voided**: the payable invoice was voided.
-- **Failed**: the payment attempt failed.
+- **Payment sent**: a payable invoice has been emailed to your client.
+- **Payment refunded**: the payment was refunded.
+- **Payment voided**: the payable invoice was voided.
+- **Payment failed**: the payment attempt failed.
+
+When the payment is completed, the payment badge is replaced by the invoice status changing to **Paid**.
 
 These statuses are updated automatically from Stripe. The manual **Invoice Status** ([Payment Tracking](/docs/concepts/invoicing-and-payment-collection#payment-tracking)) remains available for payments received outside Eneris.
 
@@ -363,7 +364,7 @@ To download an invoice as a PDF:
 
 1. Navigate into the Inspection.
 2. Locate the Invoice section.
-3. Select the **Download PDF** icon.
+3. Select the **Download PDF** button.
 4. Download the PDF on your device.
 
 The PDF includes your business information, invoice details, line items with calculations, and any memo you added.
@@ -376,7 +377,7 @@ To share an invoice with your client via email:
 
 1. Navigate into the Inspection.
 2. Locate the Invoice section.
-3. Select the **Email** icon.
+3. Select the **Email invoice** button.
 4. The email recipients are auto-populated from the Inspection contacts.
 5. Optionally, select `Cc/Bcc` to add additional recipients.
 6. Select `Send`.

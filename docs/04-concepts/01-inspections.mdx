@@ -85,6 +85,7 @@ Every **Inspection** is comprised of the sections below:
 - Contacts
 - Inspector Profile
 - Invoice
+- Service Agreements
 - Property Details
 - General Remarks
 - Internal Memo
@@ -135,29 +136,30 @@ We'll go into more detail on how **Inspection Forms** work [here](/docs/concepts
 
 **Contacts** allow you to enter the details of associated individuals, or entities, to the **Inspection**.
 
-A contact must have a role assigned to them. There are currently seven roles:
+A contact must have a role assigned to them. There are currently eight roles:
 
 1. Buyer
 2. Buyer agent
 3. Seller
-4. Seller agent
-5. Property manager
-6. Builder representative
-7. Other
+4. Property owner
+5. Seller agent
+6. Property manager
+7. Builder representative
+8. Other
 
-To create a new contact, select `Add new`.
+To add a contact, select `Add new` in the **Contacts** section, then choose the contact's role.
 
-<img src={ImageInspections10} style={{ maxWidth: '800px', width: '100%' }} width={2560} height={1510} alt="Adding a new contact." />
+<img src={ImageInspections10} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Choosing a contact role when adding a contact." />
 
-You will then be prompted to select one of the roles above and then to either:
+On the **Add contact** page, you can then either:
 
-- Input the name, email, phone number, and address of the new contact.
+- Search the **Existing contacts** list and select a contact to add them to the inspection.
 
-    <img src={ImageInspections11} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Add new contact details." />
+    <img src={ImageInspections12} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Selecting an existing contact." />
 
-- Search and select from a list of existing contacts.
+- Select `New contact` to create one. In the **Create new contact** sheet, enter the name, email, phone number, and address, then select `Create new contact`.
 
-    <img src={ImageInspections12} style={{ maxWidth: '800px', width: '100%' }} width={2560} height={1510} alt="Add pre-existing contact details." />
+    <img src={ImageInspections11} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Creating a new contact." />
 
 #### Calling, Texting, and Emailing Contacts
 
@@ -192,6 +194,12 @@ If you're part of a multi-inspector organization as an admin or scheduler then t
 
 The **Invoice** section allows you to create and manage an invoice associated with the inspection. This section streamlines the billing process by keeping invoice details directly within the inspection record.
 
+### Service Agreements
+
+The **Service agreements** section allows you to create and manage the [**Service Agreements**](/docs/concepts/service-agreement-templates) for the inspection. Each agreement appears as a card showing the form it belongs to, its current state, and the list of signers.
+
+From here you can add an agreement to a form, publish it, collect signatures in person, request signatures by email, and view or share the signed agreement PDF. See [**Service Agreements in Inspections**](/docs/concepts/service-agreement-templates#service-agreements-in-inspections) for the full workflow.
+
 ### Property Details
 
 Capture key facts about the property in **Property Details**. Property features are displayed as tags (e.g., "Attic", "Garage") above the detail fields. Enter fields such as:
@@ -217,7 +225,7 @@ There are five sub-fields:
 - **Property orientation** — The direction the front of the property faces, used as a reference for describing observations.
 - **Purpose of inspection** — The reason for the inspection, such as pre-purchase, pre-listing, or warranty.
 - **Attendees** — Anyone present during the inspection, such as the buyer, seller, or their agents.
-- **Additional notes** — Any other context or observations that apply to the inspection as a whole.
+- **Overall observations** — Any other context or observations that apply to the inspection as a whole.
 
 <img src={ImageInspections14} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Where to find general remarks." />
 

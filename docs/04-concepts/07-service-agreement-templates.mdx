@@ -4,6 +4,9 @@ import ImageServiceAgreements3 from './img/service-agreements-3.webp';
 import ImageServiceAgreements4 from './img/service-agreements-4.webp';
 import ImageServiceAgreements5 from './img/service-agreements-5.webp';
 import ImageServiceAgreements6 from './img/service-agreements-6.webp';
+import ImageServiceAgreements7 from './img/service-agreements-7.webp';
+import ImageServiceAgreements8 from './img/service-agreements-8.webp';
+import ImageServiceAgreements9 from './img/service-agreements-9.webp';
 import ImageServiceAgreementStates from './img/service-agreement-states.webp';
 
 # Service Agreement Templates
@@ -171,21 +174,40 @@ To associate a **Service Agreement Template** with a [**Form Template**](/docs/c
 
 :::info
 
-Once linked, the Service Agreement is automatically embedded when creating new [**Inspections**](/docs/concepts/inspections) using that **Form Template**. The agreement content is copied into the Inspection Form, allowing for per-inspection modifications, if needed.
+Once linked, the Service Agreement is automatically created when creating new [**Inspections**](/docs/concepts/inspections) using that **Form Template**. The agreement content is copied into the inspection, allowing for per-inspection modifications, if needed.
 
 :::
 
-## Service Agreements in Inspection Forms
+## Service Agreements in Inspections
 
-When you create an [**Inspection**](/docs/concepts/inspections) using a **Form Template** that has a Service Agreement linked, the agreement content is automatically embedded into the [**Inspection Form**](/docs/concepts/inspection-forms).
+Service Agreements are managed from the **Service agreements** section on the [**Inspection**](/docs/concepts/inspections) page. Each agreement appears as a card showing the form it belongs to, the agreement title, its current state, and the list of signers.
 
-### Applying a Service Agreement
+When you create an [**Inspection**](/docs/concepts/inspections) using a **Form Template** that has a Service Agreement linked, the agreement is automatically created and appears in this section.
 
-You have several options when working with Service Agreements in an Inspection Form:
+<img src={ImageServiceAgreements7} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Service agreements section on the Inspection page showing an agreement card per form." />
 
-- **Apply a template** — Select from your existing Service Agreement Templates
-- **Edit the service agreement** — Make one-off edits to the service agreement for this specific inspection
-- **Select a different template** — Switch to a different template if needed
+:::info
+
+Looking for Service Agreements on the [**Inspection Form**](/docs/concepts/inspection-forms) page? They have moved. The form page now shows a **Service agreement** card with a `View service agreement` button that takes you to the **Service agreements** section on the Inspection page.
+
+<img src={ImageServiceAgreements9} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Service agreement pointer card on the Inspection Form page." />
+
+:::
+
+### Adding a Service Agreement
+
+To add a Service Agreement to an inspection:
+
+1. Navigate to the **Inspection** page.
+2. Locate the **Service agreements** section.
+3. Select `Add`.
+4. In the **New service agreement** sheet, select the **Inspection form** the agreement is for. The first form without an agreement is preselected, and forms that already have one are marked `(Already has an agreement)`.
+5. Select the **Agreement template** to use.
+6. Select `Create agreement`.
+
+<img src={ImageServiceAgreements8} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="New service agreement sheet with the inspection form and agreement template selections." />
+
+The new agreement is created in the `Draft` state, so you can edit the agreement and signers before publishing.
 
 :::info
 
@@ -195,13 +217,13 @@ Each [Inspection Form](/docs/concepts/inspection-forms) can have a maximum of on
 
 ### Making Ad-Hoc Changes
 
-You can modify the Service Agreement content directly within an Inspection Form to make inspection-specific changes. This is useful when:
+You can modify the Service Agreement content for a specific inspection by selecting the ellipsis on the agreement card and choosing `Edit agreement`. This is useful when:
 
 - A client requests additional scope clarifications
 - You need to add project-specific limitations
 - You want to customize terms for a particular situation
 
-Changes made to the Service Agreement within an **Inspection Form** only affect that specific Inspection Form — they do not update the original **Service Agreement Template**.
+Changes made to an inspection's Service Agreement only affect that specific inspection. They do not update the original **Service Agreement Template**.
 
 :::warning
 
@@ -227,13 +249,16 @@ Changes to the Service Agreement are possible regardless of what state it is in.
 ### Publishing a Service Agreement
 Publishing the Service Agreement means the agreement is finalized and ready for signature.
 
-Publishing the Service Agreement can be done through the context menu.
+1. Navigate to the **Inspection** page.
+2. Locate the agreement's card in the **Service agreements** section.
+3. Select `Publish agreement`.
+4. The Service Agreement is now in the `Published` state and ready for signatures.
 
-1. Open the Inspection Form containing your Service Agreement.
-2. Navigate to the Service Agreement section.
-3. Select the ellipses next to the section header. This is the context menu.
-4. Select `Publish`
-5. The Service Agreement is now in the `Published` state and ready for signatures.
+:::info
+
+The `Publish agreement` button is only enabled once the agreement has at least one signer. Add signers with the `Add signer` button on the agreement card.
+
+:::
 
 :::info
 
@@ -243,7 +268,7 @@ Once all signers have signed the Service Agreement it will automatically convert
 
 ### Viewing Signature Status
 
-The Service Agreement section displays the current signature status, which shows how many parties have signed (e.g., "2/3 signatures completed"). This allows you to quickly see if any signatures are still pending.
+The **Signers** list on the agreement card displays the current signature status, which shows how many parties have signed (e.g., "2/3 signed"), with a `Signed` badge next to each signer who has completed their signature. This allows you to quickly see if any signatures are still pending.
 
 ## Multi-Signature Support
 
@@ -256,7 +281,7 @@ Eneris supports up to **10 signatures** on a single Service Agreement, accommoda
 
 ### Configuring Signers
 
-When requesting signatures, you select which [contacts](/docs/concepts/inspections#contacts) from the Inspection need to sign. Only contacts associated with the inspection can be added as signers.
+Signers are managed in the **Signers** list on the agreement card. Select `Add signer` and choose which [contacts](/docs/concepts/inspections#contacts) from the Inspection need to sign. Only contacts associated with the inspection can be added as signers.
 
 Signatures are arranged in two columns in the final document to save space, with the inspector's signature appearing last.
 
@@ -271,8 +296,8 @@ At this time, only the primary inspector's signature will appear in the Service 
 For in-person signing:
 
 1. Ensure the Service Agreement is in the [`Published`](/docs/concepts/service-agreement-templates#service-agreement-states) state.
-2. Select the signer from the signer list.
-3. Select `Sign agreement`.
+2. Locate the signer in the **Signers** list on the agreement card.
+3. Select the `Sign` pill next to their name.
 4. Hand the device to the signer.
 5. The Service Agreement will appear with a name and signature box at the bottom of the page.
 6. The signer types their name and signs/generates their signature.
@@ -280,16 +305,24 @@ For in-person signing:
 
 ### Off-Site Signing
 
-To send a Service Agreement for signature:
+To send a Service Agreement to all pending signers at once:
 
 1. Ensure the Service Agreement is in the [`Published`](/docs/concepts/service-agreement-templates#service-agreement-states) state.
-2. Select the ellipses next to the section header. This is the context menu.
-3. Select `Request signatures`.
-4. This sends a signature request email to signers who have not yet signed the Service Agreement.
+2. Select `Request signatures` on the agreement card.
+3. Optionally, add a personal **Message** for the recipients.
+4. Select `Send request`. This sends a signature request email to every signer who has not yet signed the Service Agreement.
+
+The signature request email includes the inspection address, along with the inspection date and time shown in the signer's time zone.
 
 :::tip
 
-Selecting an individual signer opens a menu where you can request their signature, as well.
+To request a single signature instead, select the `Request` pill next to an individual signer's name.
+
+:::
+
+:::info
+
+Signers without an email address on their contact are skipped when sending requests. Add an email to their contact first, using the ellipsis menu next to their name and selecting `Edit contact`.
 
 :::
 
@@ -297,10 +330,10 @@ Selecting an individual signer opens a menu where you can request their signatur
 
 If a signature needs to be corrected:
 
-1. Navigate to the Service Agreement section in the Inspection Form.
-2. Select the signer that needs to correct their signature.
-3. Select `Delete signature`
-4. Select the signer again and select `Request signature`.
+1. Locate the signer in the **Signers** list on the agreement card.
+2. Select the ellipsis menu next to their name.
+3. Select `Delete signature`.
+4. Select the `Sign` or `Request` pill next to their name to collect a new signature.
 
 :::info
 
@@ -363,19 +396,24 @@ You can generate and share a fully signed Service Agreement as a standalone PDF 
 ### Generating a standalone Service Agreement PDF
 To generate a standalone PDF:
 
-1. Open the Inspection Form containing your Service Agreement.
-2. Navigate to the Service Agreement section.
-3. Select the ellipses next to the section header. This is the context menu.
-4. Select `View agreement PDF`.
+1. Navigate to the **Inspection** page.
+2. Locate the agreement's card in the **Service agreements** section.
+3. Select `View PDF`.
 
 This helps further verify the signatures have been completed.
 
 ### Sharing a standalone Service Agreement PDF
 To share a standalone PDF:
 
-1. Open the Inspection Form containing your Service Agreement.
-2. Navigate to the Service Agreement section.
-3. Select the ellipses next to the section header. This is the context menu.
+1. Navigate to the **Inspection** page.
+2. Locate the agreement's card in the **Service agreements** section.
+3. Select the ellipsis on the card. This is the actions menu.
 4. Select `Share agreement PDF`.
+
+:::info
+
+`Share agreement PDF` is available once the agreement is in the `Published` or `Signed` state.
+
+:::
 
 This is useful when clients request a copy of just the signed agreement without the full inspection report.

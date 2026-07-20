@@ -23,7 +23,7 @@ What we'll be covering:
 
 To use Eneris, you must first [sign up for an account](https://app.ener.is/sign-up).
 
-- What you enter as your **username** and in the **forgot password email** are **case-sensitive**. Ensure you enter them exactly as registered when logging in.
+- The **email address** you sign up with and the code you receive in the **forgot password email** are **case-sensitive**. Ensure you enter them exactly as registered when logging in.
 
 :::info
 

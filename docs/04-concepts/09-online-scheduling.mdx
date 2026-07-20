@@ -58,7 +58,7 @@ The form is grouped into five sections.
 - **Form Template** (required). The template used when an accepted request becomes an Inspection.
 - **Success Message**. The text the client sees on the confirmation screen after submitting.
 - **Theme**. Choose **System**, **Light**, or **Dark** for the public page.
-- **Member Notifications**. The team members who get emailed when a request arrives. The assigned inspector is always emailed, even if they are not selected here.
+- **Notify additional team members**. The team members who get emailed when a request arrives. The assigned inspector is always emailed, even if they are not selected here.
 
 <img src={BookingPages3} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Create booking page form showing the General section." />
 
@@ -76,10 +76,10 @@ Quote line items are a frozen snapshot taken when the booking page is saved. Lat
 
 ### Availability
 
-- **Timezone**. Used to compute available slots and shown to the client on the public page.
+- **Time zone**. Used to compute available slots and shown to the client on the public page.
 - **Weekly time windows**. For each day of the week, set the start and end times of the window during which clients can request appointments.
-- **Lead time**. Minimum advance notice for a booking. Defaults to 24 hours.
-- **Max days ahead**. How far in the future bookings are allowed (1 to 180 days).
+- **Minimum notice (hours)**. Minimum advance notice for a booking. Defaults to 8 hours.
+- **How far in advance clients can book (days)**. How far in the future bookings are allowed (1 to 180 days).
 - **Time slot interval (minutes)**. Granularity of the time grid the client picks from. Defaults to 60 minutes.
 - **Buffer time between bookings (minutes)**. A gap padded between existing inspections and pending booking requests when blocking conflicts. Defaults to 0.
 - **Block off times that conflict with other inspections**. When enabled (the default), slots that overlap existing inspections or pending booking requests are hidden from the client.
@@ -182,7 +182,7 @@ Booking lifecycle events trigger email notifications only.
 - **New request submitted** (public page submission):
   - The **client** receives a *We got your booking request* confirmation.
   - The **assigned inspector** receives a *New booking request for [service name]* email.
-  - Anyone listed under **Member Notifications** on the booking page is also emailed.
+  - Anyone listed under **Notify additional team members** on the booking page is also emailed.
 - **Accepted**: the **client** is emailed *Your booking request is confirmed*, with the assigned inspector CC'd.
 - **Rejected**: the **client** is emailed *Update on your booking request*, with the assigned inspector CC'd.
 

@@ -50,6 +50,12 @@ Customizations include:
 
 You have full control over how your **Form Templates** look and behave — without needing to code.
 
+:::tip
+
+You can reorder categories, components, and fields to match your inspection workflow. On mobile, press and hold an item and drag it. On the web app, select `Reorder`, drag the items into the order you want, then select `Done`.
+
+:::
+
 ## Creating, editing, and deleting categories
 
 The sections below cover creating, editing, and deleting **categories**.
@@ -59,10 +65,10 @@ The sections below cover creating, editing, and deleting **categories**.
 To create new categories:
 
 1. Open the **Form Template** you would like to edit.
-2. Select the edit icon in the `Categories` section.
-3. In the **Add new category** section, enter a `category name`.
-4. Select a `category icon`.
-5. Choose `Create blank category` or `Create from existing category`.
+2. Select `Edit` in the **Inspection categories** section to open the **Edit inspection categories** page.
+3. Select `New category` to open the **Add new category** sheet.
+4. Choose `Create blank category` or `Create from existing category`.
+5. Enter a `category name` and select a `category icon`.
 6. Select `Create new category`.
 
 <img src={ImageCustomizingFormTemplates1} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Creating new categories in a Form Template." />
@@ -79,7 +85,7 @@ To create new categories:
 To edit existing categories:
 
 1. Open the **Form Template** you would like to edit.
-2. Select the edit icon in the `Categories` section.
+2. Select `Edit` in the **Inspection categories** section.
 
 <img src={ImageCustomizingFormTemplates2} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Edit icon in the Categories section of a Form Template." />
 
@@ -93,7 +99,7 @@ To edit existing categories:
 
 To delete existing categories:
 
-1. Select the edit icon in the `Categories` section.
+1. Select `Edit` in the **Inspection categories** section.
 2. Select the edit icon next to the category you would like to delete.
 3. Select the `Delete` button.
 
@@ -112,10 +118,11 @@ To create new components:
 
 <img src={ImageCustomizingFormTemplates5} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Edit components button in the category details page." />
 
-3. In the **Add new component** section, enter the new component name.
+3. Select `New component` to open the **Add new component** sheet.
 4. Choose `Create blank component` or `Create from existing component`.
-5. Select `Create new component`.
-6. The new component has been successfully created and can be located at the bottom of the component list.
+5. Enter the new component name.
+6. Select `Create new component`.
+7. The new component has been successfully created and can be located at the bottom of the component list.
 
 <img src={ImageCustomizingFormTemplates7} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Creating new components in a Form Template." />
 
@@ -147,6 +154,7 @@ To delete existing components:
 1. Enter the category in which the component should be deleted.
 2. Select `Edit components`.
 3. Locate the component you would like to delete and select the trash icon next to it.
+4. Confirm the deletion when prompted.
 
 <img src={ImageCustomizingFormTemplates9} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Trash icon next to a component in the edit components page." />
 
@@ -161,12 +169,20 @@ To create new fields:
 1. Enter the category containing the component where the new field should be created.
 2. Select `Edit components`.
 3. Select the pencil icon next to the component where the new field should be created.
-4. In the **Add new field** section, enter a `field name`.
-5. Select the [`field type`](/docs/concepts/customizing-form-templates#field-types).
-6. Select `Create new field`.
-7. The new field has been successfully created and can be located at the bottom of the field list.
+4. Select `New field` to open the **Add new field** sheet.
+5. Choose `Create blank field` or `Create from existing field`.
+6. Enter a `field name` and select the [`field type`](/docs/concepts/customizing-form-templates#field-types).
+7. Select `Create new field`.
+8. The new field has been successfully created and can be located at the bottom of the field list.
 
 <img src={ImageCustomizingFormTemplates10} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Creating new fields in a Form Template." />
+
+:::tip
+
+- `Create blank field` starts a new field from scratch using the `field type` you select.
+- `Create from existing field` lets you duplicate a field (and its options) from another category and component as a starting point. The field type is inherited from the source field.
+
+:::
 
 ### Field types
 
@@ -174,8 +190,8 @@ You can use different types of fields in your **Form Templates**:
 
 - **Checkbox** – Creates checkboxes for you to select one or more options.
 - **Choice** – Creates radio buttons for you to select a single option.
-- **Text** – For short text descriptions (50 characters max).
-- **Multi-line Text** – For longer text descriptions (1,000 characters max).
+- **Text** – For short text descriptions (80 characters max per option).
+- **Multi-line text** – For longer text descriptions (1,000 characters max per option).
 - **Media** – For capturing photos and videos with saved captions.
 
 Each field type lets you capture different types of data for better clarity in your reports.
@@ -220,6 +236,7 @@ To delete existing fields:
 <img src={ImageCustomizingFormTemplates6} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Pencil icon next to a component in the edit components page." />
 
 4. Locate the field you would like to delete and select the trash icon next to it.
+5. Confirm the deletion when prompted.
 
 <img src={ImageCustomizingFormTemplates13} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Trash icons next to fields in the edit component fields page." />
 
@@ -278,8 +295,8 @@ import TabItem from '@theme/TabItem';
   <TabItem value="Choice" label="Choice">
     1. Enter the component where you would like to delete choice options.
     2. Select the edit icon next to the field which contains the choice options that should be deleted.
-    3. Locate the choice option you would like to delete.
-    4. Select `Delete choice option` below the choice option that should be deleted.
+    3. Select the choice option you would like to delete to expand its settings.
+    4. Select `Delete choice option`. On mobile, swipe left on the option to reveal the `Delete` button.
 
     <img src={ImageCustomizingFormTemplates18} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Deleting choice options in a Form Template." />
 
