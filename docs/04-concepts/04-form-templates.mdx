@@ -4,6 +4,11 @@ import ImageFormTemplates3 from './img/form-templates-3.webp';
 import ImageFormTemplates4 from './img/form-templates-4.webp';
 import ImageFormTemplates5 from './img/form-templates-5.webp';
 import ImageFormTemplates6 from './img/form-templates-6.webp';
+import ImageRefineTemplate1 from './img/refine-template-1.webp';
+import ImageRefineTemplate2 from './img/refine-template-2.webp';
+import ImageRefineTemplate3 from './img/refine-template-3.webp';
+import ImageRefineTemplate4 from './img/refine-template-4.webp';
+import ImageRefineTemplate5 from './img/refine-template-5.webp';
 import ImageSupplementary1 from './img/supplementary-forms-1.webp';
 import ImageSupplementary2 from './img/supplementary-forms-2.webp';
 import ImageSupplementary3 from './img/supplementary-forms-3.webp';
@@ -169,9 +174,74 @@ Reminder: Each [**Inspection**](/docs/concepts/inspections) can have one or more
 
 ## Applying Inspection Form changes to the Form Template
 
-At this time, any changes made directly in an [**Inspection Form**](/docs/concepts/inspection-forms) are not automatically saved into your **Form Template**.
+Changes made directly in an [**Inspection Form**](/docs/concepts/inspection-forms) are not automatically saved into your **Form Template**. Instead, the **Refine form template** feature lets you review every change you made in the field and choose exactly which ones to merge back into the template. Improvements you make during one inspection, such as a new component or a renamed field, can become a permanent part of the template for all future inspections.
 
-- We are building a robust solution for this in the near future. Stay tuned!
+The review detects changes across the entire form, including:
+
+- Added, removed, or renamed categories, components, fields, and field options.
+- Changes to field settings, such as [field requirement](/docs/concepts/customizing-form-templates#field-requirement) and [field visibility](/docs/concepts/customizing-form-templates#field-visibility).
+- Changes to [favorite options](/docs/concepts/customizing-form-templates#favorite-options).
+- Reordered categories, components, fields, and field options.
+
+:::info
+
+Refining a **Form Template** requires permission to edit **Form Templates**, which the ADMIN and SCHEDULER [roles](/docs/concepts/multi-inspector#roles-and-permissions) have. The built-in demo template cannot be refined.
+
+:::
+
+### Starting a review from an Inspection Form
+
+1. Open the **Inspection Form** containing the changes you would like to review.
+2. Locate the **Refine form template** section. It shows the name of the **Form Template** this form was created from.
+3. Select `Review changes`.
+
+<img src={ImageRefineTemplate1} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Review changes button in the Refine form template section of an Inspection Form." />
+
+:::tip
+
+After publishing a report, the confirmation message also offers a `Refine template` shortcut that takes you straight to the same review.
+
+:::
+
+### Starting a review from a Form Template
+
+1. Open the **Form Template** you would like to refine.
+2. Locate the **Refine from inspection form** section. It lists the **Inspection Forms** created from this template, for inspections in the last 14 days.
+3. Select the form containing the changes you would like to review.
+
+<img src={ImageRefineTemplate2} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Refine from inspection form section of a Form Template, listing a recent Inspection Form." />
+
+### Reviewing changes
+
+The **Refine Template** page lists every difference between the **Inspection Form** and its **Form Template**, grouped by category. Each change is labeled `New`, `Removed`, or `Modified`, and selecting a change shows its details. For example, a renamed component displays the old and new names side by side.
+
+For each change, select `Accept` to keep it or `Reject` to skip it. You can also accept or reject all changes in a category at once. The filter chips at the top of the page (`All`, `Accepted`, `Pending`, `New`, `Removed`, `Modified`) help you work through longer lists, and the progress bar at the bottom tracks how many changes you have decided on.
+
+<img src={ImageRefineTemplate3} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Refine Template page with Accept and Reject buttons for a modified component." />
+
+:::info
+
+Reviewing is completely safe: nothing is saved to your **Form Template** until you apply your accepted changes. If the form and template already match, the page shows **No differences found** instead.
+
+:::
+
+### Applying changes
+
+1. Select the `Apply changes` button in the top-right corner. Its label shows the number of changes you have accepted, e.g., `Apply 1 change`.
+2. A confirmation summarizes your accepted, rejected, and pending decisions. Only accepted changes are saved to the template. Rejected and pending changes leave the template unchanged, and you can review them again next time.
+3. Confirm to apply the accepted changes to your **Form Template**.
+
+<img src={ImageRefineTemplate4} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Confirmation dialog summarizing accepted, rejected, and pending changes before applying." />
+
+Once applied, a confirmation screen summarizes what was saved. Select `Review again` if you would like to revisit the remaining changes.
+
+<img src={ImageRefineTemplate5} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Changes applied confirmation screen with counts of applied and rejected changes." />
+
+:::warning
+
+Applying changes cannot be undone. Review your accepted changes carefully, especially removals: accepting a removal deletes that item, and everything inside it, from the **Form Template**.
+
+:::
 
 ## Supplementary Forms
 
