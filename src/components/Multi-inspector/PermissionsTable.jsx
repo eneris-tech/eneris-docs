@@ -62,6 +62,16 @@ export default function PermissionsTable() {
       ],
     },
     {
+      heading: 'Reference Files',
+      rows: [
+        ['List Reference Files', '✅', '✅', '✅'],
+        ['View Reference File', '✅', '✅', '✅'],
+        ['Create Reference File', '✅', '✅', '🚫'],
+        ['Edit Reference File', '✅', '✅', '🚫'],
+        ['Delete Reference File', '✅', '✅', '🚫'],
+      ],
+    },
+    {
       heading: 'Inspector Profiles',
       rows: [
         ['List Inspector Profiles', '✅', '✅', '✅'],

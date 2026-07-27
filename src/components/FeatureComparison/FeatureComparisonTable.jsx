@@ -27,7 +27,7 @@ export default function FeatureTable() {
     ['Web report', 'Available', 'Available', ''],
     ['Online scheduling', 'Available', 'Available', ''],
     ['Wind Mitigation + 4 Point', 'Available', 'Available', 'Florida OIR 2026-compliant supplementary forms.'],
-    ['Custom files', 'Planned', 'Available', ''],
+    ['Custom files', 'Available', 'Available', 'See Reference Files.'],
     ['TREC form', 'Planned', 'Available', ''],
     ['Automations', 'Planned', 'Unplanned', ''],
     ['ISN integration support', 'Unplanned', 'Available', 'More scheduling and invoicing capabilities to come.']

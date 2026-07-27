@@ -1,0 +1,91 @@
+import ImageReferenceFiles1 from './img/reference-files-1.webp';
+import ImageReferenceFiles2 from './img/reference-files-2.webp';
+import ImageReferenceFiles3 from './img/reference-files-3.webp';
+
+# Reference Files
+
+**Reference Files** are a shared library of supporting documents for your team. Upload a document once, and anyone on your team can attach it to an [**Inspection Form**](/docs/concepts/inspection-forms), where it becomes a lettered [**appendix**](/docs/concepts/inspection-forms#appendices) at the end of the published report.
+
+Reference Files are useful for the documents you reach for again and again:
+
+- **Diagrams and illustrations**: drawings that explain a property feature, such as a roof layout, a foundation type, or how a drainage system is meant to work.
+- **Code excerpts**: the sections of a building code you cite most often.
+- **Homeowner resources**: maintenance checklists, seasonal guides, and anything else worth handing your client alongside the report.
+
+:::info
+
+Reference Files are shared across your whole team. A file uploaded by one team member is immediately available to everyone else.
+
+:::
+
+## Viewing your library
+
+Select **Reference files** from the sidebar to see everything in your team library. Each file shows its name, format, and size.
+
+<img src={ImageReferenceFiles1} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Reference files library listing three documents." />
+
+Select a file's name to open it in a new tab, or the pencil icon to edit it.
+
+## Supported files
+
+Reference Files can be **PDF**, **PNG**, or **JPG** documents.
+
+A team library can hold up to **100 files**.
+
+## Adding a reference file
+
+1. Select **Reference files** from the sidebar.
+2. Select **Create reference file**.
+3. Select **Choose a file** and pick the document from your device.
+4. Enter a **Name**. This is the name that appears in the report, so use something your clients will understand.
+5. Select **Add to library**.
+
+<img src={ImageReferenceFiles2} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="New reference file sheet with a chosen PDF and a name entered." />
+
+:::tip
+
+The **Name** field is prefilled from the filename, but filenames are rarely client-friendly. Replacing `AHRI-Certificate-Carrier` with `AHRI Certificate - Carrier 24ACC6` makes the appendix far easier to follow in the finished report.
+
+:::
+
+Names must be between 3 and 128 characters.
+
+## Editing or replacing a reference file
+
+Select the pencil icon next to any file to rename it, or select **Replace** to swap in a new version of the document while keeping the same name and every existing attachment.
+
+<img src={ImageReferenceFiles3} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Edit reference file sheet showing the Replace option and name field." />
+
+:::info
+
+Changes flow into reports published **after** the change. Reports you have already published keep their own frozen copy of the file, so updating your library never alters a report a client has already received.
+
+:::
+
+This makes replacement the right tool for annual updates. When a new edition of a code excerpt is released, replace the file once and every future report picks it up automatically.
+
+## Deleting a reference file
+
+Open the file with the pencil icon and select **Delete reference file**.
+
+:::warning
+
+If an **Inspection Form** still lists a deleted file as an appendix, that form cannot be published until the appendix is removed from it. Check that no in-progress forms depend on a file before deleting it.
+
+:::
+
+## Who can manage Reference Files
+
+| Role | View and attach | Create, edit, and delete |
+| --- | --- | --- |
+| **Admin** | Yes | Yes |
+| **Scheduler** | Yes | Yes |
+| **Inspector** | Yes | No |
+
+**Inspectors** can browse the library and attach any file to their own **Inspection Forms**, but cannot add, rename, or remove library files. See [**Multi-inspector**](/docs/concepts/multi-inspector#roles-and-permissions) for the full permissions breakdown.
+
+## Related
+
+- [**Appendices**](/docs/concepts/inspection-forms#appendices): attaching reference files to an individual **Inspection Form**.
+- [**SOP Templates**](/docs/concepts/sop-templates): attaching standards of practice documentation to a **Form Template**.
+- [**Reports**](/docs/concepts/reports): how published reports are generated and shared.
