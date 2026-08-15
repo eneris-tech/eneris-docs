@@ -20,6 +20,16 @@ import ImageInvoicing17 from './img/invoicing-17.webp';
 import ImageInvoicing18 from './img/invoicing-18.webp';
 import ImageInvoicing19 from './img/invoicing-19.webp';
 import ImageInvoicing20 from './img/invoicing-20.webp';
+import ImageInvoicesList from './img/invoices-list.webp';
+import ImageInvoicesTotals from './img/invoices-totals.webp';
+import ImageInvoicesFilters from './img/invoices-filters.webp';
+import ImageInvoicesDateFilter from './img/invoices-date-filter.webp';
+import ImageInvoicesMemberFilter from './img/invoices-member-filter.webp';
+import ImageInvoicesRowActions from './img/invoices-row-actions.webp';
+import ImageInvoicesMarkPaid from './img/invoices-mark-paid.webp';
+import ImageInvoicesCardEmpty from './img/invoices-card-empty.webp';
+import ImageInvoicesInspectionCard from './img/invoices-inspection-card.webp';
+import ImageInvoicesInspectionCardPaid from './img/invoices-inspection-card-paid.webp';
 
 # Invoicing and Payment Collection
 
@@ -32,6 +42,7 @@ The invoicing workflow is simple:
 3. Add line items from your pricing library or create custom items
 4. Share the invoice via email or download as PDF
 5. Collect payment online, or record a payment you received another way
+6. Track what is still outstanding on the **Invoices** tab
 
 :::info
 
@@ -41,85 +52,17 @@ Pricing Items are reusable across all your invoices. Set them up once and add th
 
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/ZiLsTXCcPhE" title="Invoicing & Pricing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## Pricing Items
-
-### What are Pricing Items?
-
-**Pricing Items** are reusable service entries that you can quickly add to invoices. Each pricing item includes:
-
-- **Name** — A description of the service (e.g., "Home Inspection - Standard")
-- **Price per unit** — The price per unit
-- **Tax Rate** — The applicable tax percentage
-
-By maintaining a library of pricing items, you ensure consistent pricing across all your invoices and save time during invoice creation.
-
-### View Pricing Items
-
-To view your existing **Pricing Items**:
-
-1. Select `Invoicing` from the navigation menu.
-
-You will see a list of all your saved pricing items with their names and prices.
-
-<img src={ImageInvoicing1} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="View pricing items." />
-
-### Create a Pricing Item
-
-To create a new **Pricing Item**:
-
-1. Select `Invoicing` from the navigation menu.
-2. Select `Create new pricing item`.
-3. Enter a **Name** for the item (e.g., "Radon Testing").
-4. Enter the **Price per unit**.
-5. Optionally, set a **Tax rate** percentage.
-6. Select `Create`.
-
-<img src={ImageInvoicing2} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Create a pricing item." />
-
-:::tip
-
-Create pricing items for all your common services before you start invoicing. This makes creating invoices much faster.
-
-:::
-
-### Edit a Pricing Item
-
-To modify an existing **Pricing Item**:
-
-1. Select `Invoicing` from the navigation menu.
-2. Select the item you wish to edit.
-3. Update the **Name**, **Price per unit**, and/or **Tax rate** as needed.
-4. Select `Save changes`.
-
-:::info
-
-Changes to a **Pricing Item** only affect **new invoices**. Existing invoices retain the pricing that was set when they were created.
-
-:::
-
-### Delete a Pricing Item
-
-To delete a **Pricing Item**:
-
-1. Select `Invoicing` from the navigation menu.
-2. Select the item you wish to delete.
-3. Scroll to the bottom and select `Delete pricing item`.
-4. Confirm the deletion when prompted.
-
-:::warning
-
-Deleting a **Pricing Item** cannot be undone. Existing invoices using this item will retain their line item data.
-
-:::
-
 ## Creating an Invoice
 
 ### Create Invoice from Inspection
 
-Invoices are created within an [**Inspection**](/docs/concepts/inspections). To create an invoice:
+Invoices are created within an [**Inspection**](/docs/concepts/inspections). Each inspection holds a single invoice, shown on its **Invoice** card. To create one:
 
 1. Open the Inspection you want to invoice.
-2. Select the **Invoice** section.
+2. On the **Invoice** card, select `Add`.
+
+<img src={ImageInvoicesCardEmpty} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="The Invoice card on an inspection before an invoice exists, with the Add button." />
+
 3. [Add line items](/docs/concepts/invoicing-and-payment-collection#adding-line-items).
 4. Optionally, add a **Memo** for additional notes.
 5. Select `Create invoice`.
@@ -164,11 +107,11 @@ When creating an Inspection invoice you can update the quantity of a line item. 
 
 Eneris automatically calculates all invoice totals:
 
-- **Line Total** — Price per unit × quantity for each item
-- **Line Tax** — Line total × tax rate for each item
-- **Subtotal** — Sum of all line totals
-- **Tax** — Sum of all line taxes
-- **Total** — Subtotal + tax total
+- **Line Total**: price per unit × quantity for each item
+- **Line Tax**: line total × tax rate for each item
+- **Subtotal**: sum of all line totals
+- **Tax**: sum of all line taxes
+- **Total**: subtotal + tax total
 
 <img src={ImageInvoicing6} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Invoice subtotals, tax totals, and overall total amounts." />
 
@@ -178,14 +121,128 @@ All calculations update in real-time as you add or modify line items.
 
 :::
 
+### The Invoice Card
+
+Once an invoice exists, the inspection's **Invoice** card becomes your working view of it. It shows the invoice status, the total, and the issue date, and it puts every action you need on the card itself. Select `Edit` at any time to open the invoice and change its line items, memo, or payment details.
+
+While the invoice is **unpaid**, the card leads with the two ways to close it out. `Collect payment` takes the money through Stripe, and `Mark paid` records money that reached you another way. **Email invoice** and **Download PDF** sit below as quieter actions.
+
+<img src={ImageInvoicesInspectionCard} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="The Invoice card on an unpaid invoice, showing Collect payment and Mark paid with Email invoice and Download PDF below." />
+
+Once it is **paid**, the card shows the date it was paid and keeps only **Email invoice** and **Download PDF**.
+
+<img src={ImageInvoicesInspectionCardPaid} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="The Invoice card on a paid invoice, showing the paid date with Email invoice and Download PDF." />
+
+:::info
+
+`Collect payment` only appears on teams that have [**Payment Collection**](/docs/concepts/invoicing-and-payment-collection#payment-collection) set up. With it off, `Mark paid` takes the lead position on its own.
+
+:::
+
+## Invoices
+
+The **Invoices** tab is what you land on when you select `Invoicing` from the navigation menu. It lists every invoice you have access to, so you can see what is still outstanding without opening your inspections one at a time.
+
+<img src={ImageInvoicesList} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="The Invoices tab listing every invoice with its status, amount, and issue date." />
+
+### Totals at a Glance
+
+Three totals sit above the list:
+
+- **Outstanding**: the combined total of every unpaid invoice in the list
+- **Paid**: the combined total of every paid invoice in the list
+- **Invoices**: how many invoices are in the list
+
+<img src={ImageInvoicesTotals} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="The Outstanding, Paid, and Invoices totals above the invoice list." />
+
+:::info
+
+The totals always describe the invoices currently shown, so they update as you filter. **Outstanding** and **Paid** are rounded to the nearest dollar, while each row keeps its exact amount.
+
+:::
+
+### Filtering the List
+
+Use the **All** / **Unpaid** / **Paid** control to filter by status, then narrow further with the filters beside it.
+
+<img src={ImageInvoicesFilters} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="The status filter, Members and Dates filters, and Export CSV button." />
+
+**Filter by invoice date:**
+
+1. Select `Dates`.
+2. Choose a start date, then an end date. Selecting a single day filters to that day.
+3. Select `Apply`.
+
+Select `Clear` to remove the filter.
+
+<img src={ImageInvoicesDateFilter} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={1000} alt="The Filter by invoice date sheet with a calendar, Clear, and Apply." />
+
+**Filter by team member:**
+
+1. Select `Members`.
+2. Choose one or more team members, or use `Select all`.
+3. Select `Apply`.
+
+<img src={ImageInvoicesMemberFilter} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={1000} alt="The Filter by member sheet listing team members with their roles." />
+
+:::info
+
+The **Members** filter is only available to team members with the **Admin** or **Scheduler** role, since an Inspector already only sees their own invoices. See [Who Sees Which Invoices](/docs/concepts/invoicing-and-payment-collection#who-sees-which-invoices).
+
+:::
+
+### Row Actions
+
+Every row leads with its invoice number and carries one labeled action:
+
+- **Unpaid** invoices show `Mark paid`. See [Mark an Invoice Paid](/docs/concepts/invoicing-and-payment-collection#mark-an-invoice-paid).
+- **Paid** invoices show `Share`, which emails the invoice.
+
+Select `•••` on any row for the full set of actions:
+
+- **Collect payment**: take a card payment or email a payable invoice (unpaid invoices, on teams with [Payment Collection](/docs/concepts/invoicing-and-payment-collection#payment-collection) set up)
+- **Email invoice**: send the invoice to your client
+- **Download PDF**: download the invoice as a PDF
+- **View inspection**: open the inspection the invoice belongs to
+- **Edit invoice**: open the invoice to change its line items or details
+
+<img src={ImageInvoicesRowActions} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="The row actions sheet showing Collect payment, Email invoice, Download PDF, View inspection, and Edit invoice." />
+
+:::tip
+
+Selecting the row itself opens the invoice directly, without going through its inspection.
+
+:::
+
+### Export to CSV
+
+Select `Export CSV` to download the invoices you are currently viewing as a spreadsheet. Whatever status, date, and member filters are active also apply to the export.
+
+The file contains ten columns: **Invoice number**, **Invoice date**, **Status**, **Payment status**, **Subtotal**, **Tax**, **Total**, **Payment method**, **Paid date**, and **Memo**.
+
+:::info
+
+The export is generated when you select `Export CSV`, so it reflects your invoices at that moment. If a teammate changed an invoice since you opened the page, the file will include their change.
+
+:::
+
+### Who Sees Which Invoices
+
+What appears on the **Invoices** tab depends on your role:
+
+- **Admin** and **Scheduler** see every invoice on the team.
+- **Inspector** sees invoices for the inspections they are the primary inspector on, plus any inspection that has been shared with them.
+
+See [**Multi-Inspector**](/docs/concepts/multi-inspector) for more about roles, and [**Manage Access**](/docs/concepts/inspections#manage-access) for sharing an individual inspection.
+
 ## Payment Tracking
 
 ### Invoice Status
 
 Each invoice has a payment status:
 
-- **Unpaid** — Invoice has been created but payment has not been recorded
-- **Paid** — Payment has been recorded for this invoice
+- **Unpaid**: invoice has been created but payment has not been recorded
+- **Paid**: payment has been recorded for this invoice
 
 The status is displayed as a badge on the invoice, making it easy to track outstanding payments.
 
@@ -195,9 +252,20 @@ When a client pays online through [**Payment Collection**](/docs/concepts/invoic
 
 :::
 
-### Recording Payment
+### Mark an Invoice Paid
 
-To manually record a payment on an invoice:
+`Mark paid` is the quickest way to record a payment you received outside Eneris. It is available on any unpaid invoice, both on a row in the **Invoices** tab and on the **Invoice** card of an inspection.
+
+1. Select `Mark paid`.
+2. Choose a **Payment method**. Choosing **Other** requires a short description of how you were paid.
+3. Set the **Paid date**, which defaults to today.
+4. Select `Mark as paid`.
+
+<img src={ImageInvoicesMarkPaid} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={1100} alt="The Mark invoice paid sheet with payment method options and a paid date calendar." />
+
+### Recording Payment on the Invoice
+
+You can also record a payment while editing the invoice itself, which is useful when you are already changing its line items:
 
 1. Open the invoice.
 2. Change the **Invoice Status** to **Paid**.
@@ -304,6 +372,12 @@ To take a card payment on the spot:
 
 Once the payment is processed, the invoice is automatically marked as **Paid**.
 
+:::tip
+
+You can also start this flow without opening the invoice: select `Collect payment` on the inspection's **Invoice** card, or `•••` then **Collect payment** on a row in the **Invoices** tab.
+
+:::
+
 ### Email a Payable Invoice
 
 To collect payment by email:
@@ -356,6 +430,81 @@ Eneris never has access to your clients' credit card information. Card processin
 
 :::
 
+## Pricing Items
+
+### What are Pricing Items?
+
+**Pricing Items** are reusable service entries that you can quickly add to invoices. Each pricing item includes:
+
+- **Name**: a description of the service (e.g., "Home Inspection - Standard")
+- **Price per unit**: the price per unit
+- **Tax Rate**: the applicable tax percentage
+
+By maintaining a library of pricing items, you ensure consistent pricing across all your invoices and save time during invoice creation.
+
+### View Pricing Items
+
+To view your existing **Pricing Items**:
+
+1. Select `Invoicing` from the navigation menu.
+2. Select the **Pricing items** tab.
+
+You will see a list of all your saved pricing items with their names and prices.
+
+<img src={ImageInvoicing1} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="View pricing items." />
+
+### Create a Pricing Item
+
+To create a new **Pricing Item**:
+
+1. Select `Invoicing` from the navigation menu.
+2. Select the **Pricing items** tab.
+3. Select `Create new pricing item`.
+4. Enter a **Name** for the item (e.g., "Radon Testing").
+5. Enter the **Price per unit**.
+6. Optionally, set a **Tax rate** percentage.
+7. Select `Create`.
+
+<img src={ImageInvoicing2} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Create a pricing item." />
+
+:::tip
+
+Create pricing items for all your common services before you start invoicing. This makes creating invoices much faster.
+
+:::
+
+### Edit a Pricing Item
+
+To modify an existing **Pricing Item**:
+
+1. Select `Invoicing` from the navigation menu.
+2. Select the **Pricing items** tab.
+3. Select the item you wish to edit.
+4. Update the **Name**, **Price per unit**, and/or **Tax rate** as needed.
+5. Select `Save changes`.
+
+:::info
+
+Changes to a **Pricing Item** only affect **new invoices**. Existing invoices retain the pricing that was set when they were created.
+
+:::
+
+### Delete a Pricing Item
+
+To delete a **Pricing Item**:
+
+1. Select `Invoicing` from the navigation menu.
+2. Select the **Pricing items** tab.
+3. Select the item you wish to delete.
+4. Scroll to the bottom and select `Delete pricing item`.
+5. Confirm the deletion when prompted.
+
+:::warning
+
+Deleting a **Pricing Item** cannot be undone. Existing invoices using this item will retain their line item data.
+
+:::
+
 ## Invoice Actions
 
 ### Download PDF
@@ -363,9 +512,8 @@ Eneris never has access to your clients' credit card information. Card processin
 To download an invoice as a PDF:
 
 1. Navigate into the Inspection.
-2. Locate the Invoice section.
-3. Select the **Download PDF** button.
-4. Download the PDF on your device.
+2. On the **Invoice** card, select `Download PDF`.
+3. Download the PDF on your device.
 
 The PDF includes your business information, invoice details, line items with calculations, and any memo you added.
 
@@ -376,19 +524,21 @@ The PDF includes your business information, invoice details, line items with cal
 To share an invoice with your client via email:
 
 1. Navigate into the Inspection.
-2. Locate the Invoice section.
-3. Select the **Email invoice** button.
-4. The email recipients are auto-populated from the Inspection contacts.
-5. Optionally, select `Cc/Bcc` to add additional recipients.
-6. Select `Send`.
+2. On the **Invoice** card, select `Email invoice`.
+3. Add recipients in the **To** field. Your Inspection contacts are offered as suggestions below it, so you can add one with a single select.
+4. Optionally, select `Cc/Bcc` to add additional recipients.
+5. Review the **Subject**, which is prefilled from the inspection.
+6. Add a **Message** for the recipient.
+7. Review the **Signature block**, which is prefilled from your profile and business details.
+8. Select `Send`.
 
-<img src={ImageInvoicing9} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Share the invoice via email." />
+<img src={ImageInvoicing9} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={1180} alt="Share the invoice via email, with recipients, subject, message, and signature block." />
 
 The email includes a link to view the invoice online, along with a PDF attachment.
 
 :::tip
 
-To collect payment by email instead of just sharing the invoice, send a payable invoice. See [Email a Payable Invoice](/docs/concepts/invoicing-and-payment-collection#email-a-payable-invoice).
+You can also download or email an invoice from the **Invoices** tab using the `•••` menu on any row. See [Row Actions](/docs/concepts/invoicing-and-payment-collection#row-actions).
 
 :::
 
