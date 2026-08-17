@@ -155,6 +155,16 @@ export default function PermissionsTable() {
       ],
     },
     {
+      heading: 'Email Templates',
+      rows: [
+        ['List Email Templates', '✅', '✅', '✅'],
+        ['View Email Template', '✅', '✅', '✅'],
+        ['Create Email Template', '✅', '✅', '🚫'],
+        ['Edit Email Template', '✅', '✅', '🚫'],
+        ['Delete Email Template', '✅', '✅', '🚫'],
+      ],
+    },
+    {
       heading: 'Service Agreements',
       // Note: Edit Service Agreement includes contact and signature modification
       // (apply/remove contacts, request/delete signatures)

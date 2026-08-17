@@ -1,0 +1,270 @@
+import ImageEmailTemplatesSidebar from './img/email-templates-sidebar.webp';
+import ImageEmailTemplatesList from './img/email-templates-list.webp';
+import ImageEmailTemplatesStartFrom from './img/email-templates-start-from.webp';
+import ImageEmailTemplatesEditor from './img/email-templates-editor.webp';
+import ImageEmailTemplatesTags from './img/email-templates-tags.webp';
+import ImageEmailTemplatesSignatureDefaults from './img/email-templates-signature-defaults.webp';
+import ImageEmailTemplatesPreview from './img/email-templates-preview.webp';
+import ImageEmailTemplatesDuplicate from './img/email-templates-duplicate.webp';
+import ImageEmailTemplatesPicker from './img/email-templates-picker.webp';
+import ImageEmailTemplatesSendEmail from './img/email-templates-send-email.webp';
+
+# Email Templates
+
+**Email Templates** let you save the messages you send to clients over and over, so you write them once instead of retyping them for every job. Templates use **Dynamic Tags** that fill in the client's name, the property address, the service date, and your business details automatically, and they are shared across your whole team.
+
+Email Templates are useful for:
+
+- **Time saved** — Every report, invoice, and agreement email opens already written, with the details filled in.
+- **Consistency** — Your whole team sends the same professional message, in the same voice.
+- **Fewer mistakes** — Details like the address and the service date come from the [**Inspection**](/docs/concepts/inspections) itself, so they are never wrong or out of date.
+
+:::info
+
+Email Templates are shared across your entire team. A template one team member creates is immediately available to everyone.
+
+:::
+
+## What is an Email Template?
+
+An **Email Template** is a saved subject line, message body, and closing signature. It has four parts:
+
+- **Template name** — An internal label so you can find the template in your list. Clients never see it.
+- **Subject** — The email's subject line.
+- **Body** — The message itself.
+- **Signature block** — How the email closes. New templates start with your standard Eneris sign-off.
+
+Templates are not locked to one purpose. Any template can be used for any email you send. What you *can* do is nominate a template as the automatic choice for a particular kind of email, which is covered in [**Setting a Default Template**](/docs/concepts/email-templates#setting-a-default-template).
+
+## Managing Email Templates
+
+### View Email Templates
+
+To view your existing **Email Templates**:
+
+1. Select **Email templates** from the sidebar.
+
+<img src={ImageEmailTemplatesSidebar} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Email templates menu in sidebar." />
+
+You will see every template your team has created. A template that has been set as the automatic choice for an email type shows a badge naming that type.
+
+<img src={ImageEmailTemplatesList} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="List of email templates with default badges." />
+
+### Create an Email Template
+
+To create a new **Email Template**:
+
+1. Select **Email templates** from the sidebar.
+2. Select `Create new email template`.
+3. Leave the segmented control on `Create new`.
+4. Choose a starter from the **Start from** menu, or leave it on `Blank template` to write your own.
+5. Enter a **Template name**.
+6. Write the **Subject** and **Body**, using the tag buttons beneath each field to insert [**Dynamic Tags**](/docs/concepts/email-templates#dynamic-tags).
+7. Adjust the **Signature block** if you want this template to close differently.
+8. Optionally, select one or more email types under **Use this template automatically for**.
+9. Select `Create new`.
+
+<img src={ImageEmailTemplatesStartFrom} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Start from menu showing the blank template and six starter templates." />
+
+Choosing a starter fills in the name, subject, and body, and pre-selects a suggested email type. Everything stays editable.
+
+<img src={ImageEmailTemplatesEditor} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Email template editor filled in from the Report delivery starter." />
+
+:::tip
+
+The **Template name** is only ever shown to you and your team, so name it for how you will recognise it in the list, not for how it reads to a client.
+
+:::
+
+#### Duplicate an existing template
+
+If you want a variation on a template you already have, select `Duplicate existing` at the top of the create screen, choose the template to copy, and give the copy a name. Eneris suggests `[Duplicate] ` followed by the original name, which you can change.
+
+<img src={ImageEmailTemplatesDuplicate} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Duplicate existing mode with a source template selected and the name prefilled." />
+
+:::info
+
+A duplicate copies the subject, body, and signature, but it does **not** take over any of the original's default email types. The original keeps them.
+
+:::
+
+### Edit an Email Template
+
+To modify an existing **Email Template**:
+
+1. Select **Email templates** from the sidebar.
+2. Select the template you wish to edit.
+3. Update the **Template name**, **Subject**, **Body**, **Signature block**, or the email types it is used for.
+4. Select `Save changes`.
+
+:::info
+
+Editing a template changes it for everyone on your team, and it changes the next email sent with it. Emails you have already sent are unaffected.
+
+:::
+
+### Delete an Email Template
+
+To delete an **Email Template**:
+
+1. Select **Email templates** from the sidebar.
+2. Select the template you wish to delete.
+3. Scroll to the bottom and select `Delete email template`.
+4. Confirm the deletion when prompted.
+
+You can also swipe left on a template in the list to reveal a delete button.
+
+:::warning
+
+Deleting an Email Template cannot be undone. Any email type this template was the automatic choice for goes back to Eneris' standard wording.
+
+:::
+
+## Starter Templates
+
+When you create a template, the **Start from** menu offers six ready-written starters. Each one prefills the name, subject, and body, and suggests the email type it suits.
+
+| Starter | What it is for | Suggested email type |
+| --- | --- | --- |
+| **Booking confirmation** | Confirm a booking taken over the phone, with the date, time, and address | Send email |
+| **Report delivery** | Deliver the finished inspection report | Share report |
+| **Invoice** | Send the invoice with the amount due | Share invoice |
+| **Signature request** | Ask the client to sign the service agreement | Request signature |
+| **Service agreement** | Send the agreement for the client to review | Share service agreement |
+| **Review request** | Ask the client for a review once the report is delivered | None |
+
+:::tip
+
+The **Review request** starter is a follow-up you send by hand after the report goes out, so it does not claim an email type. It includes a line where you can paste your own review link.
+
+:::
+
+## Dynamic Tags
+
+**Dynamic Tags** are placeholders you drop into a subject or body. When the email is sent, Eneris replaces each one with the real value for that job. You insert them using the buttons beneath the **Subject** and **Body** fields, which are grouped into **This inspection** and **Your business**.
+
+<img src={ImageEmailTemplatesTags} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Dynamic tag buttons grouped under This inspection and Your business." />
+
+| Button | Tag | Description |
+| --- | --- | --- |
+| Client name | `{{CLIENT}}` | The name of the inspection's primary contact |
+| Client address | `{{CLIENT_ADDRESS}}` | The primary contact's own address |
+| Inspection address | `{{ADDRESS}}` | The address of the property being inspected |
+| Service date | `{{DATE}}` | The scheduled inspection date |
+| Service time | `{{TIME}}` | The scheduled inspection time |
+| Invoice subtotal | `{{SUBTOTAL}}` | The invoice subtotal for the inspection |
+| Inspector name | `{{INSPECTOR}}` | The inspector's name from their [**Inspector Profile**](/docs/concepts/inspector-profiles) |
+| Inspector email | `{{INSPECTOR_EMAIL}}` | The inspector's email address |
+| Business name | `{{BUSINESS_NAME}}` | Your business name |
+| Business phone | `{{BUSINESS_PHONE}}` | Your business phone number |
+| Business website | `{{BUSINESS_WEBSITE}}` | Your business website |
+| Business address | `{{BUSINESS_ADDRESS}}` | Your business address |
+
+:::info
+
+Tags are only ever visible here, in the template editor. When you go to send an email, Eneris has already swapped every tag for its real value, so the message you see is exactly the message your client receives.
+
+:::
+
+:::warning
+
+If a tag has nothing to fill in, for example `{{SUBTOTAL}}` on an inspection with no invoice, it is replaced with a blank line of underscores rather than being left as `{{SUBTOTAL}}`. Read the message over before sending if you have used a tag that might not apply.
+
+:::
+
+## Signature Block
+
+The **Signature block** is how the email closes. It has its own set of tags covering your business details, plus two under **Images** that insert your **Business logo** and **Inspector portrait**.
+
+<img src={ImageEmailTemplatesSignatureDefaults} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Signature block with its tag buttons and the email type selector below." />
+
+New templates start with the standard Eneris sign-off, which prints the inspector's name, your business name, the inspector's email, your business phone, and your logo. Any line whose tag has no value is dropped rather than left blank, so the closing always reads cleanly.
+
+:::info
+
+The two image tags belong to the signature only. They are not offered for the subject or body, where they could not be displayed as pictures.
+
+:::
+
+## Previewing a Template
+
+Select `Preview` while creating a template, or `Preview email template` while editing one, to see how the message reads with sample data in place of the tags.
+
+<img src={ImageEmailTemplatesPreview} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Template preview showing the message with sample data replacing the dynamic tags." />
+
+The preview always uses the same made-up client, inspector, and business, so it is a way to check your wording and tag placement, not a preview of a specific job.
+
+## Setting a Default Template
+
+Under **Use this template automatically for**, select the kinds of email this template should be used for. Whenever you open one of those, the template is applied for you.
+
+| Email type | Where it applies |
+| --- | --- |
+| **Share report** | Emailing a published [**Report**](/docs/concepts/reports#sharing-a-report) to your client |
+| **Share invoice** | Emailing an [**Invoice**](/docs/concepts/invoicing-and-payment-collection#share-via-email) |
+| **Request signature** | Asking signers to sign a [**Service Agreement**](/docs/concepts/service-agreement-templates#off-site-signing) |
+| **Share service agreement** | Sending the agreement PDF to signers |
+| **Send email** | The general-purpose email you can send from an Inspection |
+
+:::info
+
+Each email type can have only one automatic template at a time. If you pick a type another template already holds, it moves across to this one. A single template can cover several types at once.
+
+:::
+
+Clearing every selection leaves the template available to pick by hand, and returns those emails to Eneris' standard wording.
+
+## Using a Template When Sending
+
+Every email composer in Eneris now has an **Email template** menu. When you open the composer, the automatic template for that kind of email is applied straight away, with all its tags already filled in.
+
+<img src={ImageEmailTemplatesPicker} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Email template menu listing the saved templates and the None standard copy option." />
+
+- Pick a different template at any point to replace the subject and message.
+- Pick `None (standard copy)` to go back to Eneris' standard wording.
+- Edit the subject or message freely afterwards. Your changes apply to that one email and never alter the saved template.
+
+:::tip
+
+Because the template is applied the moment the composer opens, the common case takes no extra taps at all: open, glance over the message, and send.
+
+:::
+
+## Sending a One-Off Email
+
+Alongside the report, invoice, and agreement emails, you can send a general-purpose email about an [**Inspection**](/docs/concepts/inspections). This is useful for booking confirmations, arrival reminders, or a follow-up note.
+
+To send one:
+
+1. Open the **Inspection**.
+2. Select the client's email address in the contact header, or select a contact's email from the **Contacts** card.
+3. Choose the recipients under **To**, and add **Cc** or **Bcc** recipients if needed.
+4. Pick an **Email template**, or write the message yourself.
+5. Review the **Subject**, **Message**, and **Signature block**.
+6. Select `Send`.
+
+<img src={ImageEmailTemplatesSendEmail} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Send email composer on an inspection with a template applied and its tags filled in." />
+
+The inspection's contacts are offered as suggestions under the **To** field, so you can add them without typing their addresses.
+
+:::info
+
+Unlike the other composers, this one has no standard wording of its own. Choosing `None (standard copy)` here leaves the subject and message blank for you to write from scratch.
+
+:::
+
+:::warning
+
+This is for transactional email only: messages to the people involved in the inspection. Do not use it for marketing or promotional email.
+
+:::
+
+## Permissions
+
+Every member of your team can see and use Email Templates when sending, but creating, editing, and deleting them is limited by role.
+
+:::info
+
+**Admins** and **Schedulers** can create, edit, and delete Email Templates. **Inspectors** can view templates and apply them when sending an email, but cannot change or delete them. See [**Multi-Inspector**](/docs/concepts/multi-inspector) for the full permissions breakdown.
+
+:::
