@@ -207,6 +207,19 @@ export default function PermissionsTable() {
         ['Migrate from Eneris Legacy', '✅', '🚫', '🚫'],
       ],
     },
+    {
+      heading: 'ISN Integration',
+      // Note: Edit ISN Integration covers both the inspector mapping and the
+      // access key list, which share ISN_INTEGRATION_MODIFY
+      rows: [
+        ['View ISN Integration', '✅', '✅', '✅'],
+        ['Connect ISN', '✅', '✅', '🚫'],
+        ['Edit ISN Integration', '✅', '✅', '🚫'],
+        ['Disconnect ISN', '✅', '✅', '🚫'],
+        ['List ISN Users', '✅', '✅', '🚫'],
+        ['Sync ISN', '✅', '✅', '✅'],
+      ],
+    },
   ];
 
   return (

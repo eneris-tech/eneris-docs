@@ -30,7 +30,7 @@ export default function FeatureTable() {
     ['Custom files', 'Available', 'Available', 'See Reference Files.'],
     ['TREC form', 'Planned', 'Available', ''],
     ['Automations', 'Planned', 'Unplanned', ''],
-    ['ISN integration support', 'Unplanned', 'Available', 'More scheduling and invoicing capabilities to come.']
+    ['ISN integration support', 'Available', 'Available', 'Elevate imports ISN orders as Inspections and sends published report links back to the ISN order. Legacy only pushes reports to ISN.']
   ];
 
   const getColor = (status) => {
