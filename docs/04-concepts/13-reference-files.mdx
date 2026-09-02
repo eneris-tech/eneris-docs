@@ -1,4 +1,5 @@
 import ImageReferenceFiles1 from './img/reference-files-1.webp';
+import ImageReferenceFileCaption from './img/reference-file-caption.webp';
 import ImageReferenceFiles2 from './img/reference-files-2.webp';
 import ImageReferenceFiles3 from './img/reference-files-3.webp';
 
@@ -11,12 +12,6 @@ Reference Files are useful for the documents you reach for again and again:
 - **Diagrams and illustrations**: drawings that explain a property feature, such as a roof layout, a foundation type, or how a drainage system is meant to work.
 - **Code excerpts**: the sections of a building code you cite most often.
 - **Homeowner resources**: maintenance checklists, seasonal guides, and anything else worth handing your client alongside the report.
-
-:::info
-
-Reference Files are shared across your whole team. A file uploaded by one team member is immediately available to everyone else.
-
-:::
 
 ## Viewing your library
 
@@ -38,7 +33,8 @@ A team library can hold up to **100 files**.
 2. Select **Create reference file**.
 3. Select **Choose a file** and pick the document from your device.
 4. Enter a **Name**. This is the name that appears in the report, so use something your clients will understand.
-5. Select **Add to library**.
+5. For an image, optionally enter a **Caption**. This travels with the picture whenever it is attached to a [**Reference images** field](/docs/concepts/customizing-form-templates#reference-images-fields), so you write the explanation once instead of retyping it on every form.
+6. Select **Add to library**.
 
 <img src={ImageReferenceFiles2} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="New reference file sheet with a chosen PDF and a name entered." />
 
@@ -49,6 +45,16 @@ The **Name** field is prefilled from the filename, but filenames are rarely clie
 :::
 
 Names must be between 3 and 128 characters.
+
+:::info
+
+The **Caption** field is offered for **PNG** and **JPG** files only. PDFs are attached to reports as appendices rather than shown inline, so there is nothing for a caption to sit beneath.
+
+A caption saved here is a starting point, not a fixed label. Whoever attaches the image to a form can edit its caption for that particular job without affecting the library copy.
+
+:::
+
+<img src={ImageReferenceFileCaption} style={{ maxWidth: '800px', width: '100%' }} alt="The New reference file sheet for an image, with the Caption field highlighted beneath the Name field." />
 
 ## Editing or replacing a reference file
 

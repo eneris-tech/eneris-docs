@@ -16,6 +16,8 @@ import ImageReports16 from './img/reports-16.webp';
 import ImageReports17 from './img/reports-17.webp';
 import ImageReports18 from './img/reports-18.webp';
 import ImageReports19 from './img/reports-19.webp';
+import ImageWebReportListView from './img/web-report-list-view.webp';
+import ImageWebReportGridView from './img/web-report-grid-view.webp';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -55,18 +57,49 @@ When you publish, you can generate up to three different deliverables from the s
 - **Inspection report (PDF)**: a comprehensive PDF containing all inspection details, findings, media, and entered data. Best for offline access, printing, and archival.
 - **Inspection summary (PDF)**: a condensed PDF that focuses on key summaries and highlights from your inspection. The summary document is titled with your report title followed by "Summary" (e.g., "123 Main Street Summary"). The summary is generated based on the selections you made in the **summary label field** within each component.
 
+These are the capabilities of each format itself, and are not configurable:
+
 | Feature | Web report | Inspection report (PDF) | Inspection summary (PDF) |
 |---|---|---|---|
 | Format | Interactive web page | Static PDF | Static PDF |
-| Full inspection details | ✓ | ✓ | – |
-| Actionable findings | ✓ | ✓ | – |
-| Overview of summaries | ✓ | – | ✓ |
 | In-page search | ✓ | – | – |
 | Enlarged images | ✓ | – | – |
+| List and Grid views | ✓ | – | – |
 | Light/dark theme | ✓ | – | – |
 | Preview offline | ✓ | – | – |
 | Viewable offline (recipient) | – | ✓ (after download) | ✓ (after download) |
 | Shareable link | ✓ | ✓ | ✓ |
+
+### What each format can contain
+
+What actually goes into each document is not fixed. Your team chooses it under [**Report Preferences**](/docs/account/preferences#report-preferences), along with the order the sections appear in and the colors they are branded with.
+
+The table below shows which sections each format supports, and whether each one is on or off before anyone changes anything.
+
+| Section | Web report | Inspection report (PDF) | Inspection summary (PDF) |
+|---|---|---|---|
+| Title page | – | Always on | Always on |
+| Cover letter | – | On | Off |
+| Table of contents | – | On | On |
+| Invoice | – | On | Off |
+| Actionable findings | On | On | Off |
+| Overview of summaries | On | Off | On |
+| Summary sections | Off | Off | On |
+| General information | On | On | Off |
+| Detailed findings | On | On | Off |
+| Service agreement | – | On | Off |
+| Standards of practice | On | On | Off |
+| Appendices | On | On | Off |
+
+**On** and **Off** are starting points you can change. A dash means the section is not available in that format at all.
+
+:::info
+
+The two PDFs draw on the same set of twelve sections, so anything one can show, the other can too. What separates them out of the box is only which sections start switched on: the **Inspection report** starts as a full record, and the **Inspection summary** starts as a short digest. Switch **Detailed findings** on in the summary and it stops being a summary, which is usually not what you want, but nothing prevents it.
+
+The **Web report** is the exception. It has no title page, cover letter, table of contents, invoice, or service agreement, because those are either fixed parts of the page or belong to a printed document.
+
+:::
 
 ### When to use each format
 
@@ -92,7 +125,7 @@ Publishing the Web report alongside both PDFs gives you maximum flexibility. Rec
 
 :::info
 
-Any [**appendices**](/docs/concepts/inspection-forms#appendices) attached to the **Inspection Form** are included at the end of the **Web report** and the **Inspection report (PDF)**. The **Inspection summary (PDF)** does not include them.
+Any [**appendices**](/docs/concepts/inspection-forms#appendices) attached to the **Inspection Form** are included at the end of the **Web report** and the **Inspection report (PDF)**. The **Inspection summary (PDF)** leaves them out, though you can switch the **Appendices** section on for it under [**Report Preferences**](/docs/account/preferences#sections).
 
 :::
 
@@ -140,6 +173,40 @@ Consider publishing all three formats together. The Web report gives clients an 
 
 :::
 
+### Customizing a single report
+
+Your team's [**Report Preferences**](/docs/account/preferences#report-preferences) decide how every report is built, but the odd job needs something different. A commercial client may want the invoice left out, or a particular report may read better with the summary sections switched on.
+
+Rather than changing your team settings and remembering to change them back, select `Customize this report` in the **Publish** sheet. The panel that opens carries the same controls as the Report Preferences screen:
+
+- **Branding**: the brand and accent colors
+- **Contacts**: how many contacts are listed, and whether their addresses appear
+- **Title page** and **sections**: per document, exactly as on the preferences screen
+
+Everything starts from your team's saved preferences, so you are adjusting the settings you already use rather than starting from scratch. Only the documents you ticked to publish appear as tabs.
+
+:::info
+
+Customizations here apply to **this publish only**. Your team's saved **Report Preferences** are not touched, and nothing carries over to the next report. Close the sheet without publishing and your changes are discarded.
+
+Publishing again later starts from your team's preferences once more, so a report you customized will revert unless you customize it the same way again.
+
+:::
+
+:::tip
+
+If you find yourself making the same customization on every job, it belongs in [**Report Preferences**](/docs/account/preferences#report-preferences) instead. Set it once and every report picks it up.
+
+:::
+
+The same `Customize this report` control appears in the **Preview changes** sheet, where all three formats are available as tabs. Use it to see how a change looks before committing to it in a publish.
+
+:::warning
+
+If your report preferences cannot be loaded, the panel explains that the report will use your account defaults and its controls are unavailable. Publishing still works.
+
+:::
+
 **Publishing** achieves a few main things:
 
 1. It [**saves**](/docs/concepts/saving) and [**syncs**](/docs/concepts/syncing) your report.
@@ -158,11 +225,13 @@ If the inspection was imported from ISN, publishing also sends the report's link
 
 When a Web report is published, the recipient (and you) can open it directly in a browser at the report's link. The page is mobile-, tablet-, and desktop-friendly and includes:
 
-- An **Overview** with the primary photo, address, inspection date, property details, and the inspector profile.
+- An **Overview** with the primary photo, address, inspection date, property details, and the inspector profile. If the profile has a [**Cover letter**](/docs/concepts/inspector-profiles#cover-letter), it appears here alongside the inspector's details.
 - A **Findings** section showing the full list of actionable findings, grouped by recommended action (e.g., "Repair or Replace", "Monitor"), with each row linking directly to the corresponding item.
 - A **Summary** table that lists each impacted item by category and component.
 - **Sticky category tabs** (e.g., Exterior, Roofing, Electrical, Interior) that scroll-to-section and stay visible as you read.
+- **Search**: select the magnifying glass in the sticky navigation to search the whole report, and jump straight to a matching item.
 - **Items** with photos, videos, notes, and a color-coded left border indicating the recommended action.
+- **List and Grid views**: the **Findings** and **Summary** blocks each carry a `List` / `Grid` toggle in their header. List is the default; Grid lays the same content out as media tiles. See [Switching between List and Grid](#switching-between-list-and-grid).
 - **Enlarge Image**: tap or click any photo for a full-screen viewer.
 - **PDF download buttons**: if you also published the Inspection report or Inspection summary, recipients can download the PDFs directly from inside the Web report.
 - **Display mode**: the Web report supports both light and dark modes. It opens in the mode matching the device theme of whoever is viewing it, and can be switched at any time.
@@ -189,6 +258,32 @@ Browse each view below:
     <img src={ImageReports17} style={{ maxWidth: '250px', width: '100%' }} width={1000} height={1510} alt="Web report rendered on a mobile-width viewport." />
   </TabItem>
 </Tabs>
+
+#### Switching between List and Grid
+
+The **Findings** and **Summary** blocks can each be read two ways, and a `List` / `Grid` toggle in the block header switches between them:
+
+- **List** is the default. Each finding is a full-width row, which keeps long notes readable and makes it easy to scan straight down the recommended actions.
+- **Grid** lays the same findings out as media tiles, which suits a report where the photos carry more of the story than the write-ups.
+
+<Tabs>
+  <TabItem value="list" label="List" default>
+    <img src={ImageWebReportListView} style={{ maxWidth: '800px', width: '100%' }} alt="The web report findings block in List view, with the List and Grid toggle highlighted in the block header." />
+  </TabItem>
+  <TabItem value="grid" label="Grid">
+    <img src={ImageWebReportGridView} style={{ maxWidth: '800px', width: '100%' }} alt="The same findings block in Grid view, laid out as two columns of media tiles each with a thumbnail strip." />
+  </TabItem>
+</Tabs>
+
+The two blocks are set independently, so you can read findings as a list while viewing summaries as a grid. Your choice is remembered on that device for future reports, so you only have to set it once.
+
+:::info
+
+This is a viewing preference, not a property of the report. It changes nothing about what was published, and each recipient sets it for themselves. Your choice does not follow the report to whoever you share it with.
+
+:::
+
+When an item has more than one photo or video, a strip of thumbnails appears beneath it. Selecting a thumbnail swaps which media is shown at full size; it does not open the zoom viewer, so you can move through an item's photos without leaving the page. Items with a single photo show no strip.
 
 ### Making changes to an Inspection Form after publishing a report
 

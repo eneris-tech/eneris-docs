@@ -124,15 +124,36 @@ Deleting a Service Agreement Template cannot be undone. Existing inspections tha
 
 **Dynamic Tags** allow you to dynamically insert inspection-specific information into your Service Agreement Templates. When a service agreement is [`Published`](/docs/concepts/service-agreement-templates#service-agreement-states), these tags are automatically replaced with the actual values.
 
+Insert them using the tag buttons beneath the body field, which are grouped into **Contacts**, **This inspection**, and **Your business**.
+
+**Contacts**
+
 | Tag | Description |
 |-----|-------------|
-| `{{CLIENT}}` | Client's contact name |
-| `{{INSPECTOR}}` | Inspector's name |
+| `{{CLIENT}}` | The name of the inspection's primary contact |
+| `{{SECONDARY_CLIENT}}` | The name of a second contact sharing the primary contact's role, such as a co-buyer |
+| `{{CLIENT_ADDRESS}}` | The primary contact's own address |
+
+**This inspection**
+
+| Tag | Description |
+|-----|-------------|
+| `{{ADDRESS}}` | The address of the property being inspected |
+| `{{DATE}}` | The scheduled inspection date |
+| `{{TIME}}` | The scheduled inspection time |
+| `{{SUBTOTAL}}` | The invoice subtotal for the inspection |
+| `{{TOTAL}}` | The invoice total for the inspection |
+
+**Your business**
+
+| Tag | Description |
+|-----|-------------|
+| `{{INSPECTOR}}` | The inspector's name from their [**Inspector Profile**](/docs/concepts/inspector-profiles) |
+| `{{INSPECTOR_EMAIL}}` | The inspector's email address |
 | `{{BUSINESS_NAME}}` | Your business name |
-| `{{ADDRESS}}` | Inspection address |
-| `{{DATE}}` | Inspection date |
-| `{{CLIENT_ADDRESS}}` | Client's current address |
-| `{{SUBTOTAL}}` | Invoice subtotal |
+| `{{BUSINESS_PHONE}}` | Your business phone number |
+| `{{BUSINESS_WEBSITE}}` | Your business website |
+| `{{BUSINESS_ADDRESS}}` | Your business address |
 
 :::info
 
@@ -159,6 +180,8 @@ Your signature will automatically appear on all Service Agreements associated wi
 Your inspector signature is a one-time setup. Once configured, it applies to all Service Agreements across all inspections where you are the primary inspector.
 
 :::
+
+Once a signature is on file, an **Include signature in** checklist appears beneath the signature pad, letting you choose which documents it is stamped on: service agreements, report cover letters, and invoices. Service agreements are selected by default, so no action is needed to keep signing them as before. See [Inspector signature placement](/docs/concepts/inspector-profiles#inspector-signature-placement) if you want to change it.
 
 ## Linking Service Agreements to Form Templates
 

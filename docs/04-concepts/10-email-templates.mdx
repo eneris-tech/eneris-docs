@@ -141,24 +141,46 @@ The **Review request** starter is a follow-up you send by hand after the report 
 
 ## Dynamic Tags
 
-**Dynamic Tags** are placeholders you drop into a subject or body. When the email is sent, Eneris replaces each one with the real value for that job. You insert them using the buttons beneath the **Subject** and **Body** fields, which are grouped into **This inspection** and **Your business**.
+**Dynamic Tags** are placeholders you drop into a subject or body. When the email is sent, Eneris replaces each one with the real value for that job. You insert them using the buttons beneath the **Subject** and **Body** fields, which are grouped into **Contacts**, **This inspection**, and **Your business**.
 
-<img src={ImageEmailTemplatesTags} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Dynamic tag buttons grouped under This inspection and Your business." />
+<img src={ImageEmailTemplatesTags} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Dynamic tag buttons grouped under Contacts, This inspection, and Your business." />
+
+**Contacts**
 
 | Button | Tag | Description |
 | --- | --- | --- |
-| Client name | `{{CLIENT}}` | The name of the inspection's primary contact |
-| Client address | `{{CLIENT_ADDRESS}}` | The primary contact's own address |
+| Primary contact name | `{{CLIENT}}` | The name of the inspection's primary contact |
+| Secondary contact name | `{{SECONDARY_CLIENT}}` | The name of a second contact sharing the primary contact's role, such as a co-buyer |
+| Buyer agent name | `{{BUYER_AGENT}}` | The name of the inspection's buyer agent |
+| Seller agent name | `{{SELLER_AGENT}}` | The name of the inspection's seller agent |
+| Primary contact address | `{{CLIENT_ADDRESS}}` | The primary contact's own address |
+
+**This inspection**
+
+| Button | Tag | Description |
+| --- | --- | --- |
 | Inspection address | `{{ADDRESS}}` | The address of the property being inspected |
 | Service date | `{{DATE}}` | The scheduled inspection date |
 | Service time | `{{TIME}}` | The scheduled inspection time |
 | Invoice subtotal | `{{SUBTOTAL}}` | The invoice subtotal for the inspection |
+| Invoice total | `{{TOTAL}}` | The invoice total for the inspection |
+
+**Your business**
+
+| Button | Tag | Description |
+| --- | --- | --- |
 | Inspector name | `{{INSPECTOR}}` | The inspector's name from their [**Inspector Profile**](/docs/concepts/inspector-profiles) |
 | Inspector email | `{{INSPECTOR_EMAIL}}` | The inspector's email address |
 | Business name | `{{BUSINESS_NAME}}` | Your business name |
 | Business phone | `{{BUSINESS_PHONE}}` | Your business phone number |
 | Business website | `{{BUSINESS_WEBSITE}}` | Your business website |
 | Business address | `{{BUSINESS_ADDRESS}}` | Your business address |
+
+:::info
+
+The two agent tags are offered in email templates only. Service Agreement Templates share most of this vocabulary but do not include `{{BUYER_AGENT}}` or `{{SELLER_AGENT}}`. See [Dynamic Tags in Service Agreement Templates](/docs/concepts/service-agreement-templates#dynamic-tags).
+
+:::
 
 :::info
 

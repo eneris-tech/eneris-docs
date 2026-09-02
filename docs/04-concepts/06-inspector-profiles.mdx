@@ -3,6 +3,9 @@ import ImageInspectionProfiles2 from './img/inspection-profiles-2.webp';
 import ImageInspectionProfiles3 from './img/inspection-profiles-3.webp';
 import ImageInspectionProfiles4 from './img/inspection-profiles-4.webp';
 import ImageInspectionProfiles5 from './img/inspection-profiles-5.webp';
+import ImageProfileCoverLetter from './img/profile-cover-letter.webp';
+import ImageProfileTaxId from './img/profile-business-tax-id.webp';
+import ImageProfileSignaturePlacement from './img/profile-signature-placement.webp';
 
 # Inspector Profiles
 
@@ -35,13 +38,17 @@ To create a new **Inspector Profile**:
     - Phone number
     - Business address
         - Toggle to `Enabled` to enter a business address.
+    - Tax ID
+        - Toggle to `Enabled` to print a tax registration on your invoices. See [Business tax ID](#business-tax-id).
     - Business logo
     - Inspector portrait
         - An image of yourself.
     - Professional associations
         - If you belong to any professional associations you may enter them here. Include your member/certification number, as desired.
+    - Cover letter
+        - A short letter that opens your PDF and web reports. See [Cover letter](#cover-letter).
     - Inspector signature
-        - A digital signature captured via the built-in signature pad.
+        - A digital signature captured via the built-in signature pad. Once captured, choose which documents it appears on. See [Inspector signature placement](#inspector-signature-placement).
 5. Select `Create profile` at the bottom of the page
 
 Your **Inspector Profile** is now available to assign to inspections.
@@ -62,7 +69,87 @@ If you are setting up similar profiles (e.g., the same business details for mult
 
     <img src={ImageInspectionProfiles5} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Duplicate existing mode on the New Profile page with a source profile selected." />
 
-The business details (name, address, website, phone, logo, portrait, and associations) and the inspector signature are copied from the source profile. Only the **Profile name** and **Primary inspector** are set manually.
+The business details (name, address, tax ID, website, phone, logo, portrait, and associations), the cover letter, and the inspector signature along with its placement settings are all copied from the source profile. Only the **Profile name** and **Primary inspector** are set manually.
+
+## Cover letter
+
+A **Cover letter** is a short, personal note that opens your report. It's a good place to thank the client for their business, point them to the parts of the report that matter most, and tell them how to reach you with questions.
+
+The letter belongs to the profile, not to an individual inspection, so it is written once and then appears on every report that uses that profile. This means a profile for a second business, or for a different inspector on your team, can carry its own wording and contact details.
+
+To add a cover letter:
+
+1. Navigate to the home page
+2. Select `Inspector profiles`
+3. Select the profile you want to edit
+4. Scroll to the **Cover letter** section
+5. Write your letter in the **Letter body** field
+6. Select `Save`
+
+
+<img src={ImageProfileCoverLetter} style={{ maxWidth: '800px', width: '100%' }} alt="The Cover letter card on an inspector profile with a letter written in the Letter body field." />
+
+If you'd rather start from something than from a blank field, select `Insert sample body`. Eneris fills the field with a short template already populated with your business name, email, and phone number, which you can then edit freely. The button is only available while the field is empty, so it can never overwrite a letter you've already written.
+
+:::info
+
+The letter body is limited to 2,000 characters.
+
+:::
+
+The cover letter appears on both the PDF report and the [**Web report**](/docs/concepts/reports#viewing-a-published-web-report). If you leave the field empty, no cover letter section is generated at all.
+
+:::tip
+
+To show the latest cover letter in an existing report, [republish the report](/docs/concepts/reports#publishing-a-report).
+
+:::
+
+## Business tax ID
+
+If you're required to show a tax registration number on your invoices, add it to the profile and Eneris prints it on every invoice PDF generated with that profile, directly under your business address.
+
+To add a tax ID:
+
+1. Open the profile you want to edit
+2. Scroll to the **Business address & tax ID** section
+3. Set **Tax ID** to `Enabled`
+4. Choose a **Tax ID type**:
+    - **GST/HST number (Canada)** — prints as `GST/HST No. <number>`
+    - **EIN (US)** — prints as `EIN <number>`
+    - **Other** — prints the label you provide, followed by the number
+5. If you chose **Other**, enter a **Tax ID label** (for example, `Business Number`)
+6. Enter your **Tax ID number**
+7. Select `Save`
+
+<img src={ImageProfileTaxId} style={{ maxWidth: '800px', width: '100%' }} alt="The Business address and tax ID card with Tax ID enabled, showing the Tax ID type and Tax ID number fields." />
+
+:::info
+
+The tax ID prints on invoices only. It does not appear on reports or service agreements. Leave **Tax ID** set to `Disabled` if you don't need one, and nothing is printed.
+
+:::
+
+## Inspector signature placement
+
+Your **Inspector signature** can be stamped on several different documents, and you control which ones. This matters because the signature that belongs on a service agreement is not always one you want reproduced on an invoice.
+
+Once you've captured a signature, an **Include signature in** checklist appears beneath the signature pad with three options:
+
+- **Service agreements** — includes the inspector signature on every service agreement
+- **Cover letters** — includes the inspector signature on the cover letter of the PDF report
+- **Invoices** — includes the inspector signature on the invoice generated from Eneris
+
+
+<img src={ImageProfileSignaturePlacement} style={{ maxWidth: '800px', width: '100%' }} alt="The Include signature in checklist with Service agreements and Cover letters selected and Invoices cleared." />
+
+New and existing profiles start with **Service agreements** and **Cover letters** selected, and **Invoices** cleared. These defaults match how Eneris behaved before the setting existed, so your current documents keep signing exactly as they did.
+
+:::info
+
+The checklist only appears after a signature has been captured. If a profile has no signature on file, there is nothing to place, and the options stay hidden.
+
+:::
 
 ## Selecting an Inspector Profile
 

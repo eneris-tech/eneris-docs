@@ -1,4 +1,7 @@
 import ImageCustomizingFormTemplates1 from './img/customizing-form-templates-1.webp';
+import ImageFieldTypeReferenceImages from './img/field-type-reference-images.webp';
+import ImageReferenceImagesSources from './img/reference-images-sources.webp';
+import ImageReferenceImagesField from './img/reference-images-field.webp';
 import ImageCustomizingFormTemplates2 from './img/customizing-form-templates-2.webp';
 import ImageCustomizingFormTemplates3 from './img/customizing-form-templates-3.webp';
 import ImageCustomizingFormTemplates4 from './img/customizing-form-templates-4.webp';
@@ -199,6 +202,10 @@ You can use different types of fields in your **Form Templates**:
 - **Text** – For short text descriptions (80 characters max per option).
 - **Multi-line text** – For longer text descriptions (1,000 characters max per option).
 - **Media** – For capturing photos and videos with saved captions.
+- **Reference images** – For attaching illustrative images from your team's [**Reference Files**](/docs/concepts/reference-files) library or from your device. See [Reference images fields](#reference-images-fields).
+
+
+<img src={ImageFieldTypeReferenceImages} style={{ maxWidth: '800px', width: '100%' }} alt="The Field type list showing Checkbox, Choice, Text, Multi-line text, Media, and Reference images, with Reference images highlighted." />
 
 Each field type lets you capture different types of data for better clarity in your reports.
 
@@ -207,6 +214,38 @@ Each field type lets you capture different types of data for better clarity in y
 You can create many fields of the same field type in an individual component.
 
 :::
+
+#### Reference images fields
+
+A **Reference images** field holds illustrative pictures rather than pictures you take on site. It's the right field for a diagram of correct flashing detail, a manufacturer's data plate chart, or a photo of what a properly installed component should look like, the kind of image that helps a client understand a finding but is the same on every job.
+
+It differs from a **Media** field in where the pictures come from. A **Media** field is filled with photos and videos you capture during the inspection. A **Reference images** field is filled from two sources:
+
+- **Reference file library** — insert diagrams and illustrations from your [**Reference Files**](/docs/concepts/reference-files) library, so everyone on the team uses the same image
+- **Upload directly** — insert a one-off image from your device that isn't in the library
+<img src={ImageReferenceImagesSources} style={{ maxWidth: '800px', width: '100%' }} alt="The Add reference image menu offering Reference file library and Upload directly." />
+
+
+
+<img src={ImageReferenceImagesField} style={{ maxWidth: '800px', width: '100%' }} alt="A Reference images field holding one attached diagram with its caption, alongside an Add image tile." />
+
+Attached images appear as a tile grid with a short caption beneath each. Selecting a tile opens it larger, where you can write or edit its caption and remove it from the field.
+
+:::info
+
+A **Reference images** field holds up to **5** images, and each caption can be up to **500** characters.
+
+Captions here are free text you write per image, unlike a **Media** field, where captions are chosen from a saved list of options.
+
+:::
+
+:::info
+
+Picking from the team library requires a connection, because the library lives in the cloud. Uploading from your device works offline and syncs later, like any other photo.
+
+:::
+
+When you attach an image from the library, Eneris takes a copy of the picture and its caption at that moment. Changing the original in the library afterwards does not alter forms that already use it, so a template you built last season keeps rendering the image it was built with.
 
 ### Editing fields
 

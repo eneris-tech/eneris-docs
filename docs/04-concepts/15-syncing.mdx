@@ -24,6 +24,35 @@ You can also **manually sync** each form by selecting the **Sync** option in the
 
 <img src={ImageSyncing1} style={{ maxWidth: '250px', width: '100%' }} width={1206} height={2355} alt="Form properties section showing Synced status and manual Sync button." />
 
+## Sync status
+
+A badge beside the **Sync** button tells you where the form stands:
+
+| Status | What it means |
+| --- | --- |
+| **Synced** | Everything on this device has reached the cloud. |
+| **Syncing** | A sync is running right now. |
+| **Out of sync** | You have local changes that have not been uploaded yet. |
+| **Error** | The last sync did not finish. Sync again, and see [Common Issues](/docs/support/common-issues) if it keeps failing. |
+
+## Stopping a sync in progress
+
+Syncing a form with a lot of photos and videos can take a while, which is inconvenient if you started it on a weak connection or need to move on to another job.
+
+While a sync is running on your mobile device, the `Sync` button becomes `Stop`. Selecting it ends the sync in an orderly way rather than killing it outright, so the button reads `Stopping...` for a moment while the current upload finishes.
+
+:::info
+
+Stopping a sync never loses work. Anything already uploaded stays uploaded, anything that had not gone yet stays safely on your device, and the form simply returns to **Out of sync** until you sync again.
+
+:::
+
+:::info
+
+The `Stop` option is available on the mobile app only. Syncs on the web app run differently and do not offer it.
+
+:::
+
 ## Syncing vs. Saving
 
 While saving stores your work locally on your mobile device, **syncing** uploads the report to the cloud for backup and access across devices.
