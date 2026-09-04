@@ -16,6 +16,7 @@ import ImageInspectionForms16 from './img/inspection-forms-16.webp';
 import ImageInspectionForms17 from './img/inspection-forms-17.webp';
 import ImageInspectionForms18 from './img/inspection-forms-18.webp';
 import ImageInspectionForms19 from './img/inspection-forms-19.webp';
+import ImageInspectionForms20 from './img/inspection-forms-20.webp';
 import ImageInspectionFormFramework from './img/inspection-form-framework.webp';
 import ImageAppendices1 from './img/appendices-1.webp';
 import ImageAppendices2 from './img/appendices-2.webp';
@@ -146,15 +147,16 @@ Select the pencil icon next to a category to:
 
 ### Form Tab Bar
 
-The **Form Tab Bar** is a floating pill that provides quick access to three tools:
+The **Form Tab Bar** is a floating pill that provides quick access to four tools:
 
-- **Progress** — Opens the Progress Checklist
-- **Search** — Opens the Search Tool
-- **Preview** — Opens a preview of your report
+- **Progress**: Opens the Progress Checklist
+- **Search**: Opens the Search Tool
+- **Media**: Opens the [Media folder panel](#media-folder-panel) (desktop web only)
+- **Preview**: Opens a preview of your report
 
 <img src={ImageInspectionForms16} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Form Tab Bar." />
 
-On mobile, the tab bar appears as a bottom navigation bar.
+On mobile, the tab bar appears as a bottom navigation bar with **Progress**, **Search**, and **Preview**. The **Media** tool is only available on desktop web.
 
 ### Progress Checklist
 
@@ -188,6 +190,92 @@ The search uses fuzzy matching — you don't need an exact match to find what yo
 
 :::
 
+### Media folder panel
+
+The **Media folder panel** lets you browse a folder on your computer from inside the **Inspection Form** and drag its photos, videos, and PDFs straight into the report. If you shoot on a camera or phone and offload everything to a folder afterwards, this is the fastest way to get those files into the right place.
+
+The panel is **read-only**. Eneris never changes, moves, or deletes anything in your folder.
+
+:::info
+
+The **Media folder panel** is available on **desktop web only**, when the browser window is wide enough to show the form and the panel side by side. It is not shown on mobile web, iOS, or Android.
+
+:::
+
+#### Opening the panel
+
+Select **Media** in the [**Form Tab Bar**](#form-tab-bar). The panel docks to the right of the form and the form narrows to make room. The **Media** icon and label turn orange while the panel is open.
+
+<img src={ImageInspectionForms20} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Media folder panel open beside an Inspection Form, listing the photos, videos, and PDF in a chosen folder." />
+
+- Select **Media** again, or the **X** in the panel header, to close it.
+- The panel remembers the folder you chose for the rest of your session, even if you close and reopen it.
+- Nothing is saved between sessions. The next time you open the form, choose the folder again.
+
+#### Choosing a folder
+
+1. Select `Choose folder` and pick the folder in your browser's folder picker. You can also drop a folder from your desktop anywhere on the panel.
+2. The panel reads the folder, then shows its name and the number of usable files at the top.
+
+- Subfolders are included, so you can point the panel at a whole inspection's worth of photos at once.
+- The panel lists the same photo and video formats as [media fields](#supported-file-types), plus PDFs. Hidden files and any other file types are skipped.
+- If the folder has nothing the report can use, the panel shows **No photos found** with a `Choose another folder` button.
+
+:::tip
+
+HEIC photos show a file-type placeholder instead of a thumbnail, because browsers can't display them. They drag into the report like any other photo and are converted as they are added.
+
+:::
+
+#### Browsing the listing
+
+- **All** shows every file in the folder. **Unattached** shows only the files that haven't been placed in this report yet, with a live count.
+- The **Time** view (the default) lists files in the order you shot them, with a chip on each tile showing which subfolder it came from. Select **Time** again to flip between oldest first and newest first. Dates appear on tiles when the folder spans more than one day.
+- The **Folders** view groups files under their subfolder, with a count on each group. Files at the top level of the folder are grouped last under **Top level**. Select **Folders** again to flip between A-Z and Z-A.
+- Videos show a play icon and PDFs show a document icon with an **Appendices only** chip.
+- Hover over a tile to reveal the magnifier, then select it to open a full-size preview. Use the arrow keys to step through the listing in the order it appears on screen.
+
+#### Dragging files into the report
+
+Press and hold a tile, then drag it into the form. Every place that can take the file is outlined as soon as the drag starts, and the one under your pointer fills in. Release to add the file.
+
+Where each type of file can go:
+
+- **Photos**: Component **Photos & videos** fields, **Reference images** fields, the **Primary photo**, and **Appendices**.
+- **Videos**: Component **Photos & videos** fields only.
+- **PDFs**: **Appendices** only.
+
+Dropped files go through the same upload path as any other media, including compression, HEIC conversion, and the [5-minute video limit](#camera-controls).
+
+:::info
+
+A file dropped somewhere it can't go is refused with a message, such as **PDFs can only be added to Appendices.** or **Videos can't be added here.** Other files in the same drop are still added.
+
+If a file was moved or deleted after you chose the folder, the drop shows **File unavailable** and the tile is marked **No longer available. Refresh to update.** Select **Refresh** to pick the folder again.
+
+:::
+
+#### Tracking what's been used
+
+- Once a file has been placed in the report, its tile dims and shows a green check, and it disappears from the **Unattached** tab.
+- Used tiles can still be dragged, so the same photo can appear in more than one place.
+- If you remove the media from the form, the tile returns to **Unattached**.
+- When every file has been placed, the **Unattached** tab shows **Every photo is in the report**.
+- Used status is stored with the uploaded media, so it comes back after a reload, or in a later session, when you choose the same folder again.
+
+:::info
+
+Photos attached before the **Media folder panel** existed can't be matched to files in your folder. They stay listed as unattached even if they are already in the report.
+
+:::
+
+#### Refreshing, removing, and resizing
+
+- **Refresh** opens the folder picker again. Choose the same folder to pick up files added since you last read it.
+- Dropping a different folder onto the panel replaces the current listing.
+- **Remove** clears the listing and returns the panel to its starting state. Media already placed in the report stays where it is.
+- Drag the panel's left edge to resize it. The width is remembered on this device.
+
 ### Inspection overview
 
 This section enables you to set the **Primary photo**, add **General limitations**, and manage **Shared Fields**.
@@ -197,6 +285,7 @@ This section enables you to set the **Primary photo**, add **General limitations
 This is the main image shown on the report's cover page.
 
 - A wide exterior photo of the property is commonly used.
+- On desktop web, you can also drag a photo in from the [**Media folder panel**](#media-folder-panel).
 
 <img src={ImageInspectionForms6} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Primary photo section." />
 
@@ -240,7 +329,7 @@ The `Status`, `Photos & Videos`, `Condition`, `Recommended Action`, and `Summary
 
 Attach visual documentation to your **Inspection Forms** using media fields. Photos and videos help illustrate your findings and provide clear evidence for your clients.
 
-You can add them from your media library or capture new ones directly in the Eneris app.
+You can add them from your media library or capture new ones directly in the Eneris app. On desktop web, you can also drag them in from a folder on your computer using the [**Media folder panel**](#media-folder-panel).
 
 #### Supported file types
 
@@ -401,6 +490,8 @@ Select **Add new** (or the pencil icon if files are already attached) to open th
 <img src={ImageAppendices4} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Upload file panel for attaching a document to this form only." />
 
 Files attached from the library are marked with a **Reference file** tag so you can tell the two apart at a glance. Select the **✕** next to any file to remove it from the form.
+
+On desktop web, you can also drag a PDF or image from the [**Media folder panel**](#media-folder-panel) onto the **Appendices** section.
 
 :::info
 
