@@ -23,6 +23,10 @@ import ImageAppendices2 from './img/appendices-2.webp';
 import ImageAppendices3 from './img/appendices-3.webp';
 import ImageAppendices4 from './img/appendices-4.webp';
 import ImageAppendices5 from './img/appendices-5.webp';
+import ImageFormTabsOverview from './img/form-tabs-overview.webp';
+import ImageFormTabsPropertyDetails from './img/form-tabs-property-details.webp';
+import ImageFormTabsInternalMemo from './img/form-tabs-internal-memo.webp';
+import ImageFormTabsSharedFields from './img/form-tabs-shared-fields.webp';
 
 # Inspection Forms
 
@@ -99,6 +103,12 @@ Every part of the framework is customizable. Here are some example use cases:
 
 ## Inspection Form Sections
 
+### Form header
+
+The top of every **Inspection Form** carries the inspection's address and appointment time, with the [**Report title**](#report-title) underneath.
+
+Select the address to go back to the [**Inspection**](/docs/concepts/inspections) this form belongs to.
+
 ### Report title
 
 Set the title that appears on the report's cover page
@@ -114,6 +124,79 @@ and in the **Inspection Forms** section.
 You must [**Sync**](/docs/concepts/syncing) the **Inspection Form** in order for the Report Title to update at both locations.
 
 :::
+
+### Sync status
+
+This section shows whether your work has reached Eneris, and carries the details our support team may ask you for.
+
+#### Form ID
+
+The unique identifier of the particular **Inspection Form** you are currently reviewing.
+
+#### Status
+
+Status is comprised of three timestamps which detail when the **Inspection Form** was:
+
+1. Most recently synced.
+2. Most recently saved.
+3. Created.
+
+:::info
+
+For more information on **Syncing** [click here](/docs/concepts/syncing). For more information on **Saving** [click here](/docs/concepts/saving).
+
+:::
+
+#### Sync
+
+There's also a `Sync` button on the right side.
+
+<img src={ImageInspectionForms12} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Sync button in Inspection Form." />
+
+:::info
+
+For more information on **Syncing** [click here](/docs/concepts/syncing). For more information on **Saving** [click here](/docs/concepts/saving).
+
+:::
+
+#### Submit error report
+If you run into an error for a particular **Inspection Form** our support team may request that you submit an error report. The error report allows our support team to further investigate and assist you.
+
+- The error report can be submitted quickly and only requires a press of a button (plus any additional information you would like to provide).
+
+<img src={ImageInspectionForms13} style={{ maxWidth: '800px', width: '100%' }} width={2560} height={1510} alt="Submit error report button." />
+
+### Reports
+
+This section allows you to preview PDF changes, manage published reports, and share the final PDF report with your client(s).
+
+#### Preview changes
+
+Allows you to quickly check how your report looks before [publishing](/docs/concepts/reports#publishing-a-report).
+
+#### Open latest published PDF report
+
+Opens a menu for the most recently synced PDF report.
+
+Inside, you will see options to:
+
+- Open the finalized PDF report your client(s) would receive.
+- Toggle the report to [public or private](/docs/concepts/reports#public-vs-private-reports).
+- `Share` the report.
+- Copy the report URL.
+- `Delete report`, which deletes the specific [published report](/docs/concepts/reports#publishing-a-report) you are currently reviewing.
+
+<img src={ImageInspectionForms14} style={{ maxWidth: '800px', width: '100%' }} width={2560} height={1510} alt="Open latest published PDF report menu." />
+
+#### Share
+
+Allows you to [email the completed PDF report](/docs/concepts/reports#sharing-a-report).
+
+#### View all published reports
+
+Shows the history of published reports.
+
+<img src={ImageInspectionForms15} style={{ maxWidth: '800px', width: '100%' }} width={2560} height={1510} alt="View all published reports." />
 
 ### Inspection Categories
 
@@ -208,18 +291,12 @@ Select **Media** in the [**Form Tab Bar**](#form-tab-bar). The panel docks to th
 
 <img src={ImageInspectionForms20} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Media folder panel open beside an Inspection Form, listing the photos, videos, and PDF in a chosen folder." />
 
-- Select **Media** again, or the **X** in the panel header, to close it.
-- The panel remembers the folder you chose for the rest of your session, even if you close and reopen it.
-- Nothing is saved between sessions. The next time you open the form, choose the folder again.
-
 #### Choosing a folder
 
-1. Select `Choose folder` and pick the folder in your browser's folder picker. You can also drop a folder from your desktop anywhere on the panel.
-2. The panel reads the folder, then shows its name and the number of usable files at the top.
+Select `Choose folder` and pick the folder in your browser's folder picker. You can also drop a folder from your desktop anywhere on the panel.
 
 - Subfolders are included, so you can point the panel at a whole inspection's worth of photos at once.
-- The panel lists the same photo and video formats as [media fields](#supported-file-types), plus PDFs. Hidden files and any other file types are skipped.
-- If the folder has nothing the report can use, the panel shows **No photos found** with a `Choose another folder` button.
+- The panel will only show files that are supported. Hidden files and any other file types are skipped.
 
 :::tip
 
@@ -227,58 +304,44 @@ HEIC photos show a file-type placeholder instead of a thumbnail, because browser
 
 :::
 
-#### Browsing the listing
-
-- **All** shows every file in the folder. **Unattached** shows only the files that haven't been placed in this report yet, with a live count.
-- The **Time** view (the default) lists files in the order you shot them, with a chip on each tile showing which subfolder it came from. Select **Time** again to flip between oldest first and newest first. Dates appear on tiles when the folder spans more than one day.
-- The **Folders** view groups files under their subfolder, with a count on each group. Files at the top level of the folder are grouped last under **Top level**. Select **Folders** again to flip between A-Z and Z-A.
-- Videos show a play icon and PDFs show a document icon with an **Appendices only** chip.
-- Hover over a tile to reveal the magnifier, then select it to open a full-size preview. Use the arrow keys to step through the listing in the order it appears on screen.
-
 #### Dragging files into the report
 
-Press and hold a tile, then drag it into the form. Every place that can take the file is outlined as soon as the drag starts, and the one under your pointer fills in. Release to add the file.
+Press and hold to drag a file into the form. Release to add the file.
 
-Where each type of file can go:
+Dropped files are uploaded the same way as if you had selected them from your device. If a file is rejected, a message explains why.
 
-- **Photos**: Component **Photos & videos** fields, **Reference images** fields, the **Primary photo**, and **Appendices**.
-- **Videos**: Component **Photos & videos** fields only.
-- **PDFs**: **Appendices** only.
+### Form detail tabs
 
-Dropped files go through the same upload path as any other media, including compression, HEIC conversion, and the [5-minute video limit](#camera-controls).
+Below the inspection categories, everything else about the form is organised into tabs. Select a tab to change the panel beneath it.
 
-:::info
+<img src={ImageFormTabsOverview} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={1150} alt="Inspection Form page showing the form header, Sync status, Reports, Inspection categories, and the row of form detail tabs with Overview selected." />
 
-A file dropped somewhere it can't go is refused with a message, such as **PDFs can only be added to Appendices.** or **Videos can't be added here.** Other files in the same drop are still added.
-
-If a file was moved or deleted after you chose the folder, the drop shows **File unavailable** and the tile is marked **No longer available. Refresh to update.** Select **Refresh** to pick the folder again.
-
-:::
-
-#### Tracking what's been used
-
-- Once a file has been placed in the report, its tile dims and shows a green check, and it disappears from the **Unattached** tab.
-- Used tiles can still be dragged, so the same photo can appear in more than one place.
-- If you remove the media from the form, the tile returns to **Unattached**.
-- When every file has been placed, the **Unattached** tab shows **Every photo is in the report**.
-- Used status is stored with the uploaded media, so it comes back after a reload, or in a later session, when you choose the same folder again.
+| Tab | What it holds |
+| --- | --- |
+| **Overview** | The [primary photo](#primary-photo), [general limitations](#general-limitations), and [general remarks](#general-remarks) |
+| **Property details** | [Facts about the property](#property-details) being inspected |
+| **Internal memo** | [Private notes](#internal-memo) for you and your team |
+| **Appendices** | [Supporting documents](#appendices) attached to the report |
+| **Standards of practice** | [The SOP](#standards-of-practice) included with the report |
+| **Shared fields** | [The fields](#shared-fields) that appear in every component |
+| **Refine template** | [Fold this form's changes](#refine-template) back into its Form Template |
+| **Form settings** | [Delete this form](#form-settings) |
 
 :::info
 
-Photos attached before the **Media folder panel** existed can't be matched to files in your folder. They stay listed as unattached even if they are already in the report.
+**Refine template** is only shown when you are online and your role can edit templates. Team members with the **Inspector** role do not see it. See [**Roles and permissions**](/docs/concepts/multi-inspector#roles-and-permissions).
 
 :::
 
-#### Refreshing, removing, and resizing
+:::tip
 
-- **Refresh** opens the folder picker again. Choose the same folder to pick up files added since you last read it.
-- Dropping a different folder onto the panel replaces the current listing.
-- **Remove** clears the listing and returns the panel to its starting state. Media already placed in the report stays where it is.
-- Drag the panel's left edge to resize it. The width is remembered on this device.
+Don't confuse these with the [**Form Tab Bar**](#form-tab-bar), the floating pill that follows you through the whole form. The detail tabs only change the panel on the form's main page.
+
+:::
 
 ### Inspection overview
 
-This section enables you to set the **Primary photo**, add **General limitations**, and manage **Shared Fields**.
+The **Overview** tab holds the three things that describe the inspection as a whole: the **Primary photo** shown on the report cover, the **General limitations** that apply beyond any one category, and the **General remarks** shared with your client.
 
 #### Primary photo
 
@@ -309,9 +372,127 @@ You may also enter **category-specific** **limitations**.
 
 :::
 
-#### Shared Fields
+#### General remarks
 
-**Shared Fields** automatically appear in every component of your [**Form Template**](/docs/concepts/form-templates). Use them for any common inputs in your inspection workflow.
+**General remarks** is a structured set of notes that apply to the overall inspection and are **shared with your client(s)**. They appear in the report under the **General Information** section.
+
+There are five sub-fields:
+
+- **Weather conditions** — Weather and ground conditions observed at the time of the inspection.
+- **Property orientation** — The direction the front of the property faces, used as a reference for describing observations.
+- **Purpose of inspection** — The reason for the inspection, such as pre-purchase, pre-listing, or warranty.
+- **Attendees** — Anyone present during the inspection, such as the buyer, seller, or their agents.
+- **Overall observations** — Any other context or observations that apply to the inspection as a whole.
+
+Each field offers suggestions as you type, and you can enter your own text instead.
+
+:::tip
+
+If your team writes the same remarks on most jobs, set them once as a [**General remarks default**](/docs/concepts/form-templates#general-remarks-default) on the **Form Template**. Every new form starts from those values, and you only adjust what changes.
+
+:::
+
+### Property details
+
+Capture key facts about the property on the **Property details** tab. Property features are shown as selectable tags (for example "Attic" or "Garage") above the detail fields.
+
+<img src={ImageFormTabsPropertyDetails} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={1150} alt="Property details tab on an Inspection Form with the property type, feature tags, and size fields filled in." />
+
+The fields are:
+
+- Property type (selecting "other" allows you to enter custom text)
+- Property features (you can add custom options in addition to the standard selections available)
+- Estimated year built
+- Number of floors
+- Number of bedrooms
+- Number of bathrooms
+- Building size
+- Lot size
+
+These details appear under the **General Information** section of the report and give your client context for everything that follows.
+
+:::info
+
+**Property details** are never pre-filled from a [**Form Template**](/docs/concepts/form-templates), because they describe one specific property. Each new form starts with them blank, including a second form added to an inspection that already has them filled in elsewhere.
+
+:::
+
+### Internal memo
+
+**Internal memo** is an open text field for anything you want to note about this form and **keep private to you and your team**. Notes entered here **will not** be shared with your client(s) and will not show up in any report.
+
+<img src={ImageFormTabsInternalMemo} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={960} alt="Internal memo tab on an Inspection Form holding a private note about a gate code." />
+
+Example use cases:
+
+- You want to note something down for yourself regarding this inspection such as a gate code, buzzer code, scheduling notes, or other discussions with the client.
+- If you are part of a multi-inspector team, the back office admin may choose to leave you a note regarding this inspection job that is for your reference only.
+
+:::tip
+
+For a note that belongs on every job rather than this one, set an [**Internal memo default**](/docs/concepts/form-templates#internal-memo-default) on the **Form Template**.
+
+:::
+
+### Appendices
+
+**Appendices** are supporting documents attached to an **Inspection Form**. Each one becomes a lettered appendix (A, B, C, and so on) at the end of the published report.
+
+Use them for the evidence that belongs with a report but doesn't fit inside a category: an equipment certificate, a code excerpt backing up a deficiency, or a lab result for the property.
+
+<img src={ImageAppendices1} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Appendices section on an Inspection Form listing three attached documents." />
+
+A form can hold up to **5 appendices**.
+
+#### Two ways to attach a file
+
+Select **Add new** (or the pencil icon if files are already attached) to open the **Appendices** panel. From there you have two options.
+
+<img src={ImageAppendices2} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Appendices panel showing three attached files and the two ways to add more." />
+
+**Add reference file** attaches a document from your team's [**Reference Files**](/docs/concepts/reference-files) library. Search for the file, select it, and select **Done**. You can select several at once.
+
+<img src={ImageAppendices3} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Attach from Reference Files picker with two documents selected." />
+
+**Upload file** attaches a document to this form only. It is not added to the team library, which makes it the right choice for anything specific to a single property.
+
+<img src={ImageAppendices4} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Upload file panel for attaching a document to this form only." />
+
+Files attached from the library are marked with a **Reference file** tag so you can tell the two apart at a glance. Select the **✕** next to any file to remove it from the form.
+
+On desktop web, you can also drag a PDF or image from the [**Media folder panel**](#media-folder-panel) onto the **Appendices** section.
+
+:::info
+
+Removing an appendix from a form never deletes the underlying document from your [**Reference Files**](/docs/concepts/reference-files) library.
+
+:::
+
+#### Appendices in the report
+
+Appendices appear at the very end of the report, after every inspection category, in the order they are listed on the form.
+
+In the **PDF report**, a final **Appendices** page lists each document as `Appendix A - <name>`, and the documents themselves follow as full pages.
+
+In the **web report**, appendices get their own section and navigation tab, with each document lettered and linked.
+
+<img src={ImageAppendices5} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Appendices section of a web report with documents lettered A, B, and C." />
+
+:::info
+
+Appendices are included in the main PDF report only. [**Supplementary forms**](/docs/concepts/form-templates#supplementary-forms) such as 4-Point and Wind Mitigation are published as their own documents and do not carry appendices.
+
+:::
+
+### Standards of practice
+
+The **Standards of practice** tab holds the SOP document published with this form's report. It is filled in from the [**SOP Template**](/docs/concepts/sop-templates) attached to the **Form Template** the form was created from, and you can edit it for this form alone.
+
+See [**SOP in Inspection Forms**](/docs/concepts/sop-templates#sop-in-inspection-forms) for the full workflow.
+
+### Shared Fields
+
+The **Shared fields** tab lists the fields that automatically appear in every component of your [**Form Template**](/docs/concepts/form-templates). Use them for any common inputs in your inspection workflow.
 
 - e.g. You may want a `Risk` or `Location` field available in every component. Creating it as a **Shared Field** means you only need to create them once and they will be available in every component.
 
@@ -322,6 +503,30 @@ This helps you save time and keeps your workflow and data entry consistent.
 You can delete a **Shared Field** from a component if it's not required. However, note that you will not be able to re-add it at this time.
 
 The `Status`, `Photos & Videos`, `Condition`, `Recommended Action`, and `Summary Label` fields cannot be deleted. [They can only be hidden](/docs/concepts/customizing-form-templates#field-visibility).
+
+:::
+
+<img src={ImageFormTabsSharedFields} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={1150} alt="Shared fields tab on an Inspection Form listing Status, Photos & Videos, Description, and Condition." />
+
+### Refine template
+
+The **Refine template** tab compares this **Inspection Form** against the [**Form Template**](/docs/concepts/form-templates) it was created from, and lets you fold the changes you made in the field back into the template so the next job starts from them.
+
+See [**Applying Inspection Form changes to the Form Template**](/docs/concepts/form-templates#applying-inspection-form-changes-to-the-form-template) for the full workflow.
+
+### Form settings
+
+The **Form settings** tab holds the actions that affect the whole form.
+
+#### Delete form
+
+Deletes the **Inspection Form** you are currently in.
+
+- You can always add new **Inspection Forms** in the **Inspection** page.
+
+:::warning
+
+Deleting an **Inspection Form** also deletes its associated [**Service Agreement**](/docs/concepts/service-agreement-templates#service-agreements-in-inspections), including any collected signatures, as well as any [published reports](/docs/concepts/reports#publishing-a-report) for that form. This action cannot be undone.
 
 :::
 
@@ -424,145 +629,6 @@ Use contrasting colors for your annotations to ensure they stand out clearly aga
 
 :::
 
-### Form properties
-
-This section contains important information about your **Inspection Form**.
-
-#### Form ID
-
-The unique identifier of the particular **Inspection Form** you are currently reviewing.
-
-#### Status
-
-Status is comprised of three timestamps which detail when the **Inspection Form** was:
-
-1. Most recently synced.
-2. Most recently saved.
-3. Created.
-
-:::info
-
-For more information on **Syncing** [click here](/docs/concepts/syncing). For more information on **Saving** [click here](/docs/concepts/saving).
-
-:::
-
-#### Sync
-
-There's also a `Sync` button on the right side.
-
-<img src={ImageInspectionForms12} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Sync button in Inspection Form." />
-
-:::info
-
-For more information on **Syncing** [click here](/docs/concepts/syncing). For more information on **Saving** [click here](/docs/concepts/saving).
-
-:::
-
-#### Submit error report
-If you run into an error for a particular **Inspection Form** our support team may request that you submit an error report. The error report allows our support team to further investigate and assist you.
-
-- The error report can be submitted quickly and only requires a press of a button (plus any additional information you would like to provide).
-
-<img src={ImageInspectionForms13} style={{ maxWidth: '800px', width: '100%' }} width={2560} height={1510} alt="Submit error report button." />
-
-### Appendices
-
-**Appendices** are supporting documents attached to an **Inspection Form**. Each one becomes a lettered appendix (A, B, C, and so on) at the end of the published report.
-
-Use them for the evidence that belongs with a report but doesn't fit inside a category: an equipment certificate, a code excerpt backing up a deficiency, or a lab result for the property.
-
-<img src={ImageAppendices1} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Appendices section on an Inspection Form listing three attached documents." />
-
-A form can hold up to **5 appendices**.
-
-#### Two ways to attach a file
-
-Select **Add new** (or the pencil icon if files are already attached) to open the **Appendices** panel. From there you have two options.
-
-<img src={ImageAppendices2} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Appendices panel showing three attached files and the two ways to add more." />
-
-**Add reference file** attaches a document from your team's [**Reference Files**](/docs/concepts/reference-files) library. Search for the file, select it, and select **Done**. You can select several at once.
-
-<img src={ImageAppendices3} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Attach from Reference Files picker with two documents selected." />
-
-**Upload file** attaches a document to this form only. It is not added to the team library, which makes it the right choice for anything specific to a single property.
-
-<img src={ImageAppendices4} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Upload file panel for attaching a document to this form only." />
-
-Files attached from the library are marked with a **Reference file** tag so you can tell the two apart at a glance. Select the **✕** next to any file to remove it from the form.
-
-On desktop web, you can also drag a PDF or image from the [**Media folder panel**](#media-folder-panel) onto the **Appendices** section.
-
-:::info
-
-Removing an appendix from a form never deletes the underlying document from your [**Reference Files**](/docs/concepts/reference-files) library.
-
-:::
-
-#### Appendices in the report
-
-Appendices appear at the very end of the report, after every inspection category, in the order they are listed on the form.
-
-In the **PDF report**, a final **Appendices** page lists each document as `Appendix A - <name>`, and the documents themselves follow as full pages.
-
-In the **web report**, appendices get their own section and navigation tab, with each document lettered and linked.
-
-<img src={ImageAppendices5} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Appendices section of a web report with documents lettered A, B, and C." />
-
-:::info
-
-Appendices are included in the main PDF report only. [**Supplementary forms**](/docs/concepts/form-templates#supplementary-forms) such as 4-Point and Wind Mitigation are published as their own documents and do not carry appendices.
-
-:::
-
-### Reports
-
-This section allows you to preview PDF changes, manage published reports, and share the final PDF report with your client(s).
-
-#### Preview changes
-
-Allows you to quickly check how your report looks before [publishing](/docs/concepts/reports#publishing-a-report).
-
-#### Open latest published PDF report
-
-Opens a menu for the most recently synced PDF report.
-
-Inside, you will see options to:
-
-- Open the finalized PDF report your client(s) would receive.
-- Toggle the report to [public or private](/docs/concepts/reports#public-vs-private-reports).
-- `Share` the report.
-- Copy the report URL.
-- `Delete report`, which deletes the specific [published report](/docs/concepts/reports#publishing-a-report) you are currently reviewing.
-
-<img src={ImageInspectionForms14} style={{ maxWidth: '800px', width: '100%' }} width={2560} height={1510} alt="Open latest published PDF report menu." />
-
-#### Share
-
-Allows you to [email the completed PDF report](/docs/concepts/reports#sharing-a-report).
-
-#### View all published reports
-
-Shows the history of published reports.
-
-<img src={ImageInspectionForms15} style={{ maxWidth: '800px', width: '100%' }} width={2560} height={1510} alt="View all published reports." />
-
 ### Publish
 
 The `Publish` button [publishes your report](/docs/concepts/reports#publishing-a-report).
-
-### Return to inspection
-
-Navigates you back to the main **Inspection** page.
-
-### Delete form
-
-Deletes the **Inspection Form** you are currently in.
-
-- You can always add new **Inspection Forms** in the **Inspection** page.
-
-:::warning
-
-Deleting an **Inspection Form** also deletes its associated [**Service Agreement**](/docs/concepts/service-agreement-templates#service-agreements-in-inspections), including any collected signatures, as well as any [published reports](/docs/concepts/reports#publishing-a-report) for that form. This action cannot be undone.
-
-:::

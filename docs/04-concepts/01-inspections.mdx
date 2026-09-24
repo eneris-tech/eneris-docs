@@ -11,8 +11,6 @@ import ImageInspections10 from './img/inspections-10.webp';
 import ImageInspections11 from './img/inspections-11.webp';
 import ImageInspections12 from './img/inspections-12.webp';
 import ImageInspections13 from './img/inspections-13.webp';
-import ImageInspections14 from './img/inspections-14.webp';
-import ImageInspections15 from './img/inspections-15.webp';
 import ImageInspections16 from './img/inspections-16.webp';
 import ImageInspections17 from './img/inspections-17.webp';
 
@@ -86,9 +84,6 @@ Every **Inspection** is comprised of the sections below:
 - Inspector Profile
 - Invoice
 - Service Agreements
-- Property Details
-- General Remarks
-- Internal Memo
 - Delete Inspection
 
 ### Inspection Address
@@ -201,48 +196,6 @@ The **Invoice** section allows you to create and manage an invoice associated wi
 The **Service agreements** section allows you to create and manage the [**Service Agreements**](/docs/concepts/service-agreement-templates) for the inspection. Each agreement appears as a card showing the form it belongs to, its current state, and the list of signers.
 
 From here you can add an agreement to a form, publish it, collect signatures in person, request signatures by email, and view or share the signed agreement PDF. See [**Service Agreements in Inspections**](/docs/concepts/service-agreement-templates#service-agreements-in-inspections) for the full workflow.
-
-### Property Details
-
-Capture key facts about the property in **Property Details**. Property features are displayed as tags (e.g., "Attic", "Garage") above the detail fields. Enter fields such as:
-
-- Property type (selecting "other" allows you to enter custom text)
-- Property features (you can add custom options in addition to the standard selections available)
-- Year built
-- Number of floors
-- Number of bedrooms
-- Number of bathrooms
-- Building size
-- Lot size
-
-These property details help contextualize your report.
-
-### General Remarks
-
-**General Remarks** is a structured set of notes that apply to the overall inspection and are **shared with your client(s)**. They appear in the PDF report under the **General Information** section.
-
-There are five sub-fields:
-
-- **Weather conditions** — Weather and ground conditions observed at the time of the inspection.
-- **Property orientation** — The direction the front of the property faces, used as a reference for describing observations.
-- **Purpose of inspection** — The reason for the inspection, such as pre-purchase, pre-listing, or warranty.
-- **Attendees** — Anyone present during the inspection, such as the buyer, seller, or their agents.
-- **Overall observations** — Any other context or observations that apply to the inspection as a whole.
-
-<img src={ImageInspections14} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Where to find general remarks." />
-
-### Internal Memo
-
-**Internal Memo** is an open text field for you to enter anything you would like to note about the inspection and **have it kept private for you (and your team)**. Notes entered here **will not** be shared with your client(s), which means it will not show up in the PDF report.
-
-Example use cases:
-
-- You want to note something down for yourself regarding this inspection such as a gate code, buzzer code, scheduling notes, or other discussions with the client.
-- If you are part of a multi-inspector team, the back office admin may choose to leave you a note regarding this inspection job that is for your reference only.
-
-    <img src={ImageInspections15} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={755} alt="Where to find internal memo." />
-
-If your team uses the [ISN integration](/docs/integrations/isn), access details from the ISN order (access type, gate code, lockbox code, alarm code, CBS code, and ISN's access, appointment, and property notes) are imported into the **Internal Memo** automatically.
 
 ### Manage Access
 

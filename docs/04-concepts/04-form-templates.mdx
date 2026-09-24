@@ -16,6 +16,8 @@ import ImageSupplementary4 from './img/supplementary-forms-4.webp';
 import ImageSupplementary5 from './img/supplementary-forms-5.webp';
 import ImageSupplementary6 from './img/supplementary-forms-6.webp';
 import ImageSupplementary7 from './img/supplementary-forms-7.webp';
+import ImageTemplateTabsOverview from './img/template-tabs-overview.webp';
+import ImageTemplateTabsInternalMemo from './img/template-tabs-internal-memo.webp';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -137,6 +139,53 @@ You can always edit the **Form Template** at any time.
 - Changes to a **Form Template** are only reflected on any **new** inspection that is created after the template change.
 
 :::
+
+## Form Template sections
+
+A **Form Template** is laid out like the [**Inspection Forms**](/docs/concepts/inspection-forms) made from it. The top of the page carries the **Template name** and **Report title**, followed by **Refine from inspection form** and the **Inspection categories**. Everything else sits in tabs below them.
+
+<img src={ImageTemplateTabsOverview} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={1150} alt="Form Template page showing the Inspection categories and the row of template detail tabs with Overview selected, alongside the General limitations and General remarks panels." />
+
+| Tab | What it holds |
+| --- | --- |
+| **Overview** | Default **General limitations** and [**General remarks**](#general-remarks-default) |
+| **Internal memo** | A default [**Internal memo**](#internal-memo-default) |
+| **Shared fields** | The [shared fields](/docs/concepts/inspection-forms#shared-fields) that appear in every component |
+| **Service agreement** | The [**Service Agreement Template**](/docs/concepts/service-agreement-templates) attached to this template |
+| **Standards of practice** | The [**SOP Template**](/docs/concepts/sop-templates) attached to this template |
+| **Template settings** | Delete this template |
+
+:::info
+
+Deleting a **Form Template** does not touch the **Inspection Forms** already created from it.
+
+:::
+
+### Context defaults
+
+Two of the form's context fields can be pre-filled on the template, so every new **Inspection Form** starts from them instead of an empty field.
+
+Both work the same way: the values are copied onto the form at the moment it is created, and the form keeps its own copy from then on. **Editing a template never changes a form that already exists.**
+
+:::info
+
+**Property details** cannot be set on a template. They describe one specific property, so every **Inspection Form** starts with them blank. See [**Property details**](/docs/concepts/inspection-forms#property-details).
+
+:::
+
+#### General remarks default
+
+Set the [**General remarks**](/docs/concepts/inspection-forms#general-remarks) that most of your jobs share, such as a standard purpose of inspection. Leave any field blank to fill it in per inspection.
+
+These remarks are shared with your client and appear in the report under **General Information**.
+
+#### Internal memo default
+
+Set an [**Internal memo**](/docs/concepts/inspection-forms#internal-memo) for every new form created from this template, such as a reminder your inspectors should see on every job.
+
+The memo stays private to you and your team. It is never shared with clients and never appears in a report.
+
+<img src={ImageTemplateTabsInternalMemo} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={960} alt="Internal memo tab on a Form Template holding a default reminder for every new inspection form." />
 
 ## Selecting a Form Template
 

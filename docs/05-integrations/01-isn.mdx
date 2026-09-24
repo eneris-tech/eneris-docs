@@ -15,7 +15,7 @@ The **ISN** integration connects Eneris to your [Inspection Support Network](htt
 
 It works in both directions:
 
-- **Orders come in.** Inspections scheduled in ISN import into Eneris automatically as [**Inspections**](/docs/concepts/inspections), with the address, appointment time, client, agents, property details, and access codes already filled in. An [**Inspection Form**](/docs/concepts/inspection-forms) is created and ready for the inspector.
+- **Orders come in.** Inspections scheduled in ISN import into Eneris automatically as [**Inspections**](/docs/concepts/inspections), with the address, appointment time, client, and agents already filled in. An [**Inspection Form**](/docs/concepts/inspection-forms) is created and ready for the inspector.
 - **Reports go back.** When your inspector publishes a report, Eneris registers the report link on the matching ISN order, so your clients and agents reach it through ISN exactly as they always have.
 
 This is for teams that already run their office in ISN. If you do not use ISN, you do not need this page.
@@ -168,9 +168,6 @@ Your own work is safe too. ISN only overwrites the fields it actually has a valu
 | Client | A [**Contact**](/docs/concepts/contacts) with the **Buyer** role |
 | Buyer's agent | A Contact with the **Buyer agent** role |
 | Seller's agent | A Contact with the **Seller agent** role |
-| Year built | Property details |
-| Square feet | Property details, as building size |
-| Access type, gate code, lockbox code, alarm code, CBS code, access notes, appointment notes, property notes | The Inspection's **Internal Memo** |
 | Assigned inspector | The Inspector Profile from your inspector mapping |
 
 Contacts are reused across orders. A repeat client or a regularly referring agent becomes one Contact, not a new one on every job. The exception is a person who appears in two different roles: an agent who represents the buyer on one job and the seller on the next becomes two Contacts, one for each role, so every Inspection shows the role that person actually played.
