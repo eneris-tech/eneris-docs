@@ -2,10 +2,11 @@ import ImageReportPrefsOverview from './img/report-preferences-overview.webp';
 import ImageReportPrefsBranding from './img/report-preferences-branding.webp';
 import ImageReportPrefsTitlePage from './img/report-preferences-title-page.webp';
 import ImageReportPrefsSections from './img/report-preferences-sections.webp';
+import ImageDevicePrefs from './img/device-preferences-ios.webp';
 
 # Preferences
 
-The **Preferences** page is where you control how Eneris looks and how your reports are put together. Select **Preferences** in the sidebar to open it.
+The **Preferences** page is where you control how Eneris looks and behaves, and how your reports are put together. Select **Preferences** in the sidebar, or the **Preferences** card under **Quick access** on the home screen, to open it.
 
 It holds two groups of settings, and the difference between them matters:
 
@@ -180,3 +181,31 @@ Sets the display theme of the Eneris application: `System`, `Light`, or `Dark`.
 For the best experience, leave this on `System`. Eneris then follows your device's own display setting, switching to dark in the evening if your device does.
 
 :::
+
+The mobile app adds three more device preferences, covering background syncing and where your photos end up.
+
+:::info
+
+The three preferences below appear in the mobile app only.
+
+:::
+
+<img src={ImageDevicePrefs} style={{ maxWidth: '250px', width: '100%' }} width={1206} height={2355} alt="Device preferences on the mobile app with the automatic sync, cellular data, and save media to device settings highlighted." />
+
+### Automatically sync offline forms
+
+When `Enabled`, Eneris [syncs your forms and media](/docs/concepts/syncing#auto-syncing) in the background while the app is open. This is the default.
+
+Set it to `Disabled` if you would rather decide when syncing happens. Background syncing then stops entirely, including the automatic download of recent forms to your device. The `Sync` button on each form and on the [**Offline Forms**](/docs/concepts/offline-forms) page works either way, so you can still sync whenever you choose.
+
+### Automatically sync on cellular data
+
+This setting appears only while **Automatically sync offline forms** is enabled.
+
+When `Disabled`, which is the default, background syncing waits until the device is on Wi-Fi. Set it to `Enabled` to let background syncing run over cellular data too. Syncing you start yourself with the `Sync` button is not affected by this setting.
+
+### Save media to device
+
+When `Enabled`, every photo and video you take with the Eneris camera is also saved to your device's photo library. This is the default.
+
+Set it to `Disabled` to keep inspection photos and videos inside Eneris only. They are still added to your **Inspection Form** as normal.
