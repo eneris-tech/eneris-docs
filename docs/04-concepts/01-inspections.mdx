@@ -13,6 +13,7 @@ import ImageInspections12 from './img/inspections-12.webp';
 import ImageInspections13 from './img/inspections-13.webp';
 import ImageInspections16 from './img/inspections-16.webp';
 import ImageInspections17 from './img/inspections-17.webp';
+import ImageInspectionsFormMenu from './img/inspections-form-menu.webp';
 
 # Inspections
 
@@ -79,7 +80,7 @@ Every **Inspection** is comprised of the sections below:
 
 - Inspection Address
 - Inspection Time
-- Inspection Forms
+- Reports & forms
 - Contacts
 - Inspector Profile
 - Invoice
@@ -111,19 +112,37 @@ Set the **Inspection Time** by selecting the appropriate date and time when crea
 
 Setting an inspection time helps with scheduling, lets clients know when to expect you, and appears on all report documentation (such as service agreements, invoices, etc.).
 
-### Inspection Forms
+### Reports & forms
 
 Each **Inspection** can have one or more [**Inspection Forms**](/docs/concepts/inspection-forms) associated with it. **Inspection Forms** allow you to associate different types of inspections with a single inspection site visit.
 
+Select a form in the **Reports & forms** section to open it. The **Inspection Form** is where you record your findings and preview, publish, and share its report.
+
 - e.g., If you are certified to perform multiple types of inspections (e.g. home inspection, asbestos inspection, radon inspection, etc.) on a property then you can pre-setup various [**Form Templates**](/docs/concepts/form-templates) and load them into the same **Inspection**.
 
-    <img src={ImageInspections9} style={{ maxWidth: '800px', width: '100%' }} width={2560} height={1510} alt="Add multiple Inspection Forms to an Inspection." />
+    <img src={ImageInspections9} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Reports & forms section of the Inspection page, with an Add button and a row for each Inspection Form." />
 
 Each **Inspection Form** allows you to generate a distinct [report](/docs/concepts/reports#report-formats) (Web report and/or PDF) pertaining specifically to the inspection performed.
 
 :::info
 
 We'll go into more detail on how **Inspection Forms** work [here](/docs/concepts/inspection-forms).
+
+:::
+
+#### Form actions
+
+Select the ellipsis menu on a form's row to act on it without leaving the **Inspection** page:
+
+- `Open inspection form` opens the **Inspection Form**, the same as selecting its row.
+- `View inspection report` opens the latest [published report](/docs/concepts/reports#publishing-a-report) for that form. It stays disabled until a report has been published.
+- `Delete inspection form` asks you to confirm, then [deletes the form](/docs/concepts/inspection-forms#delete-inspection-form). It is not shown to team members with the **Inspector** role.
+
+<img src={ImageInspectionsFormMenu} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Form actions menu with Open inspection form, View inspection report, and Delete inspection form." />
+
+:::warning
+
+Deleting an **Inspection Form** also deletes its published reports and any [**Service Agreement**](/docs/concepts/service-agreement-templates#service-agreements-in-inspections) created on it, including collected signatures. This action cannot be undone.
 
 :::
 

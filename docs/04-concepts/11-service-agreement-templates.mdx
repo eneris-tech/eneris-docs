@@ -356,9 +356,9 @@ Signers without an email address on their contact are skipped when sending reque
 
 :::info
 
-Each signature request emails the signer a **new signing link**, and the links in any earlier request emails stop working. If you send a request more than once, ask the signer to use the **most recent email**. Opening an older email shows a "Signing failed: Invalid signing token" error when they select `Submit`.
+Signing links expire **7 days** after the request is sent. Sending the request again before then emails the signer the **same link** and restarts its 7 days, so links in earlier emails keep working. Once a link has expired, sending the request again emails a new one.
 
-Signing links also expire **7 days** after the request is sent. To give a signer a fresh link, send the request again.
+If you change a signer's email address and send the request again, the new address gets a **new link** and the link sent to the old address stops working. A signer who opens a link that has expired or been replaced is asked to use the most recent email or to ask you for a new link.
 
 :::
 

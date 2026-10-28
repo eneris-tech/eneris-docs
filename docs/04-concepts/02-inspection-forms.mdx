@@ -24,6 +24,7 @@ import ImageAppendices3 from './img/appendices-3.webp';
 import ImageAppendices4 from './img/appendices-4.webp';
 import ImageAppendices5 from './img/appendices-5.webp';
 import ImageFormTabsOverview from './img/form-tabs-overview.webp';
+import ImageDeleteInspectionForm from './img/inspection-forms-delete-form.webp';
 import ImageFormTabsPropertyDetails from './img/form-tabs-property-details.webp';
 import ImageFormTabsInternalMemo from './img/form-tabs-internal-memo.webp';
 import ImageFormTabsSharedFields from './img/form-tabs-shared-fields.webp';
@@ -113,11 +114,11 @@ Select the address to go back to the [**Inspection**](/docs/concepts/inspections
 
 Set the title that appears on the report's cover page
 
-<img src={ImageInspectionForms4} style={{ maxWidth: '400px', width: '100%' }} width={1115} height={1583} alt="Report title cover page example." />
+<img src={ImageInspectionForms4} style={{ maxWidth: '400px', width: '100%' }} width={1275} height={1650} alt="Report title on the PDF report's title page." />
 
-and in the **Inspection Forms** section.
+and in the **Reports & forms** section of the [**Inspection**](/docs/concepts/inspections#reports--forms) page.
 
-<img src={ImageInspectionForms5} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Report title in Inspection Forms section." />
+<img src={ImageInspectionForms5} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Report title in the Reports & forms section of the Inspection page." />
 
 :::info
 
@@ -325,7 +326,6 @@ Below the inspection categories, everything else about the form is organised int
 | **Standards of practice** | [The SOP](#standards-of-practice) included with the report |
 | **Shared fields** | [The fields](#shared-fields) that appear in every component |
 | **Refine template** | [Fold this form's changes](#refine-template) back into its Form Template |
-| **Form settings** | [Delete this form](#form-settings) |
 
 :::info
 
@@ -514,15 +514,15 @@ The **Refine template** tab compares this **Inspection Form** against the [**For
 
 See [**Applying Inspection Form changes to the Form Template**](/docs/concepts/form-templates#applying-inspection-form-changes-to-the-form-template) for the full workflow.
 
-### Form settings
+### Delete inspection form
 
-The **Form settings** tab holds the actions that affect the whole form.
+The `Delete inspection form` button sits below the [form detail tabs](#form-detail-tabs), whichever tab is open. Select it, then confirm to delete the **Inspection Form** you are currently in.
 
-#### Delete form
+<img src={ImageDeleteInspectionForm} style={{ maxWidth: '800px', width: '100%' }} width={1280} height={800} alt="Delete inspection form button below the form detail tabs." />
 
-Deletes the **Inspection Form** you are currently in.
-
-- You can always add new **Inspection Forms** in the **Inspection** page.
+- You can also delete a form without opening it, from its ellipsis menu in the [**Reports & forms**](/docs/concepts/inspections#form-actions) section of the **Inspection** page.
+- You can always add new **Inspection Forms** from the **Inspection** page.
+- Team members with the **Inspector** role cannot delete **Inspection Forms**. See [**Roles and permissions**](/docs/concepts/multi-inspector#roles-and-permissions).
 
 :::warning
 
