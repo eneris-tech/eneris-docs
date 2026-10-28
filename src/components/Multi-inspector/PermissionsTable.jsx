@@ -32,13 +32,21 @@ export default function PermissionsTable() {
         ['Edit Report', '✅', '✅', '✅'],
         ['Delete Report', '✅', '✅', '🚫'],
         ['Share Report', '✅', '✅', '✅'],
-
-        // AI Insights (feature not yet live)
-        // ['List AI Insights', '✅', '✅', '✅'],
-        // ['Create AI Insight', '✅', '✅', '✅'],
-        // ['Edit AI Insight', '✅', '✅', '✅'],
-        // ['Modify AI Insight Suggestion', '✅', '✅', '✅'],
-        // ['Apply AI Insight Suggestion', '✅', '✅', '✅'],
+      ],
+    },
+    {
+      heading: 'Eneris AI',
+      rows: [
+        ['List AI Instructions', '✅', '✅', '✅'],
+        ['Create AI Instructions', '✅', '✅', '✅'],
+        ['Edit AI Instructions', '✅', '✅', '✅'],
+        ['Delete AI Instructions', '✅', '✅', '✅'],
+        ['List Saved Messages', '✅', '✅', '✅'],
+        ['Create Saved Message', '✅', '✅', '✅'],
+        ['Edit Saved Message', '✅', '✅', '✅'],
+        ['Delete Saved Message', '✅', '✅', '✅'],
+        ['Transcribe Voice Notes', '✅', '✅', '✅'],
+        ['Submit AI Feedback', '✅', '✅', '✅'],
       ],
     },
     {

@@ -57,6 +57,14 @@ No. Eneris never sells your inspection data or your clients' information, and ne
 
 <details>
 
+<summary>Can Eneris AI change my report without my approval?</summary>
+<p>
+No. Eneris AI only drafts suggestions, and nothing changes on your Inspection Form until you accept one. The exception is **Auto-accept**, a per-chat switch you turn on yourself. Even then, every change is listed under **Suggestions** so you can review it and undo it. Voice notes are transcribed for you to review and the audio is never stored. See [Eneris AI](/docs/concepts/eneris-ai) for details.
+</p>
+</details>
+
+<details>
+
 <summary>What languages are supported?</summary>
 <p>
 At this time, the only officially supported language is English. Additional language support is planned.

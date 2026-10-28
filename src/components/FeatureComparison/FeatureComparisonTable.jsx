@@ -28,6 +28,7 @@ export default function FeatureTable() {
     ['Online scheduling', 'Available', 'Available', ''],
     ['Wind Mitigation + 4 Point', 'Available', 'Available', 'Florida OIR 2026-compliant supplementary forms.'],
     ['Custom files', 'Available', 'Available', 'See Reference Files.'],
+    ['Eneris AI', 'Available', 'Unplanned', 'Beta. Drafts suggested form edits from your notes, photos, and voice notes.'],
     ['TREC form', 'Planned', 'Available', ''],
     ['Automations', 'Planned', 'Unplanned', ''],
     ['ISN integration support', 'Available', 'Available', 'Elevate imports ISN orders as Inspections and sends published report links back to the ISN order. Legacy only pushes reports to ISN.']
