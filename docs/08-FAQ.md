@@ -51,7 +51,7 @@ Inspection data is kept indefinitely, unless specifically stated otherwise ([suc
 
 <summary>Does Eneris share my inspection data and client information with third-parties such as insurance firms or data brokers?</summary>
 <p>
-No. Eneris is solely dedicated to providing inspectors with quality inspection software and does not have any incentive to share/sell your information.
+No. Eneris never sells your inspection data or your clients' information, and never shares it with insurance firms, data brokers, or advertisers. We share it only with the service providers that run Eneris (such as cloud hosting, payments, email, and AI), who may use it only to provide those services to us, and with the people you choose to send reports to. See our [Privacy Policy](https://eneris.ca/privacy-policy) for details.
 </p>
 </details>
 
